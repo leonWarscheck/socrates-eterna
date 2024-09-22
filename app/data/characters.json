@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Dilbert*",
+    "image": "dilbert-1339d3d82e00b6b14ebe1332ef869ca1.jpg"
+  },
+  {
+    "name": "Dogbert",
+    "image": "dogbert-0a98df7d560fe35a4654715f65948b79.jpg"
+  },
+  { "name": "Boss*", "image": "the-boss-1624a6b9f4805027f8fe409f4de9e2aa.jpg" },
+  { "name": "Wally*", "image": "wally-de1955d6e4928d31991e140d729e3a31.jpg" },
+  { "name": "Alice", "image": "alice-460641ee03270662d4e226b8af6db7a4.jpg" },
+  { "name": "Asok*", "image": "asok-e1f95d0c1c2709a8e4c50e3f9ea6f9a8.jpg" },
+  {
+    "name": "Catbert",
+    "image": "catbert-f6188c8982857a5d86cd0e1de267dcc1.jpg"
+  },
+  { "name": "Carol*", "image": "carol-5bd2e7a868d6cc3747b77930e0ad9f55.jpg" },
+  {
+    "name": "Ratbert",
+    "image": "ratbert-d2245ff9c8c4cf0e8cbb64cfeba4e31b.jpg"
+  },
+  { "name": "Ted", "image": "ted-23d60166d8674b04fad78e83877a9683.jpg" },
+  { "name": "Tina", "image": "tina-78ab7d3eb1512ca566a81323dd9fa358.jpg" },
+  {
+    "name": "Bob Dinosaur",
+    "image": "bob-the-dinosaur-9edea6f399ca74f2903bf0befde527e5.jpg"
+  },
+  {
+    "name": "Elbonians",
+    "image": "elbonians-594bc6ee039b54dd736f172507b97589.jpg"
+  },
+  {
+    "name": "Garbageman",
+    "image": "the-garbageman-41140e3739960f6d4e481911ebf50773.jpg"
+  },
+  { "name": "Dilmom", "image": "dilmom-ce293a1b87fded13aeba89e12ca6cad4.jpg" },
+  { "name": "CEO*", "image": "ceo-7b81a35eab09b4c8be7d65c4cda87e52.jpg" },
+  { "name": "Robot", "image": "robot-66a125c075fb8d6bf6e6bb6d65af62d5.jpg" },
+  { "name": "Phil", "image": "phil-cfd6bea694c81d1cdc3a477ab44c236a.jpg" },
+  { "name": "Mordac", "image": "mordac-9581cf53c9c4617f414482f1451aaee9.jpg" },
+  { "name": "Topper", "image": "topper-723d3d1a7a63e0bcc6508f77c126c615.jpg" },
+  {
+    "name": "Company Lawyer",
+    "image": "company-lawyer-ca43b3a0dbba7559f5b811e28054db80.jpg"
+  }
+]

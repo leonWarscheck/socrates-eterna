@@ -1,0 +1,102 @@
+import { Link, useRouteLoaderData, useLocation } from "@remix-run/react";
+import { useState, useEffect } from "react";
+
+
+export default function Header() {
+  const location = useLocation()
+  const query = new URLSearchParams(location.search).get("search") || "";
+  const [canHover, setCanHover] = useState(false)
+  const [scrollShow, setScrollShow] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => { setCanHover(true) }, 2800)
+    return setCanHover(false)
+  }, [location])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY <= 210) {
+        setScrollShow(false)
+      } else {
+        setScrollShow(true)
+      }
+    };
+
+
+    window.addEventListener("scroll", handleScroll);
+
+    return ()=> window.removeEventListener("scroll", handleScroll);
+  }, [])
+
+  console.log("scrollShow: ", scrollShow)
+
+  console.log(query || "noquery")
+
+  return (
+    <>
+      <header
+        onClick={() => setCanHover(true)}
+        id="header-home"
+        className={` h-16 bg-neutral-100 items-center flex fixed w-full  grow z-20
+      ${!scrollShow && "opacity-0"}
+      ${location.pathname === "/" || "hidden"}
+
+      transition-opacity  ${canHover && "hover:opacity-100"} duration-1000  `}
+      >
+        <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
+          <Link to="/" className="">
+            <img
+              className="h-24 mt-px border-dilre border-"
+              src="/main/dilbert-logo-515f1f57d74079af0c64a41158ded433_filled.png"
+              alt=""
+            />
+          </Link>
+
+          <ul className="text-base  space-x-4 flex ml-auto ">
+            <li className="hover:text-neutral-500">
+              <Link to="/about">About</Link>
+            </li>
+            <li className="hover:text-neutral-500">
+              <Link to="/books">Books</Link>
+            </li>
+            <li className="hover:text-neutral-500 target:text-neutral-500 pr-2 4 dmd:pr- 0">
+              <Link to="/classic-search">Classic</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <header
+        id="header"
+        className={` h-16 bg-neutral-100 items-center flex fixed w-full  grow z-20
+      
+      ${location.pathname === "/classic-search" && "landscape-super-narrow:bg-opacity- 0"}
+      ${location.pathname === "/" && "hidden"}
+      ${query ? "hidden" : ""}
+      `}
+      >
+        <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
+          <Link to="/" className="">
+            <img
+              className="h-24 mt-px border-dilre border-"
+              src="/main/dilbert-logo-515f1f57d74079af0c64a41158ded433_filled.png"
+              alt=""
+            />
+          </Link>
+
+          <ul className="text-base  space-x-4 flex ml-auto ">
+            <li className="hover:text-neutral-500">
+              <Link prefetch="render" to="/about">About</Link>
+            </li>
+            <li className="hover:text-neutral-500">
+              <Link prefetch="render" to="/books">Books</Link>
+            </li>
+            <li className="hover:text-neutral-500 target:text-neutral-500 pr-2 4 dmd:pr- 0">
+              <Link to="/classic-search">Classic</Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </>
+  );
+}
