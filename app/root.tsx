@@ -39,7 +39,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-yellow- overscroll-none ">
+      <body className="bg-yellow- overscroll-none fontlight socrates bg-purple-1000 text-purple-100">
         <div className="min-h-dvh flex flex-col selection:bg-neutral-300">
           <Header />
           {children}

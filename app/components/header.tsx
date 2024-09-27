@@ -37,7 +37,7 @@ export default function Header() {
       <header
         onClick={() => setCanHover(true)}
         id="header-home"
-        className={` h-16 bg-neutral-100 items-center flex fixed w-full  grow z-20
+        className={` h-16 bg-purple-950 items-center flex fixed w-full  grow z-20
       ${!scrollShow && "opacity-0"}
       ${location.pathname === "/" || "hidden"}
 
@@ -46,13 +46,13 @@ export default function Header() {
         <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
           <Link to="/" className="">
             <img
-              className="h-24 mt-px border-dilre border-"
-              src="/main/dilbert-logo-515f1f57d74079af0c64a41158ded433_filled.png"
+              className="h-12 mt- border-dilre border-"
+              src="/main/omega-logo.png"
               alt=""
             />
           </Link>
 
-          <ul className="text-base  space-x-4 flex ml-auto ">
+          <ul className=" font- light text- sm text-purple-200 space-x-4 flex ml-auto ">
             <li className="hover:text-neutral-500">
               <Link to="/about">About</Link>
             </li>
@@ -60,7 +60,7 @@ export default function Header() {
               <Link to="/books">Books</Link>
             </li>
             <li className="hover:text-neutral-500 target:text-neutral-500 pr-2 4 dmd:pr- 0">
-              <Link to="/classic-search">Classic</Link>
+              <Link to="/comics">Comics</Link>
             </li>
           </ul>
         </nav>
@@ -68,9 +68,9 @@ export default function Header() {
 
       <header
         id="header"
-        className={` h-16 bg-neutral-100 items-center flex fixed w-full  grow z-20
+        className={` h-16 bg-purple-950 items-center flex fixed w-full  grow z-20
       
-      ${location.pathname === "/classic-search" && "landscape-super-narrow:bg-opacity- 0"}
+      ${location.pathname === "/comics" && "landscape-super-narrow:bg-opacity- 0"}
       ${location.pathname === "/" && "hidden"}
       ${query ? "hidden" : ""}
       `}
@@ -78,13 +78,13 @@ export default function Header() {
         <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
           <Link to="/" className="">
             <img
-              className="h-24 mt-px border-dilre border-"
-              src="/main/dilbert-logo-515f1f57d74079af0c64a41158ded433_filled.png"
+              className="h-12 mt-px border-dilre border-"
+              src="/main/omega-logo.png"
               alt=""
             />
           </Link>
 
-          <ul className="text-base  space-x-4 flex ml-auto ">
+          <ul className="text-base text-purple-200  space-x-4 flex ml-auto ">
             <li className="hover:text-neutral-500">
               <Link prefetch="render" to="/about">About</Link>
             </li>
@@ -92,7 +92,7 @@ export default function Header() {
               <Link prefetch="render" to="/books">Books</Link>
             </li>
             <li className="hover:text-neutral-500 target:text-neutral-500 pr-2 4 dmd:pr- 0">
-              <Link to="/classic-search">Classic</Link>
+              <Link to="/comics">Comics</Link>
             </li>
           </ul>
         </nav>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ModeSelector({ mode, setMode }) {
   return (
-    <div className="flex dmd:mt-8 mt-6 landscape-narrow:mb- px-4 text-sm text-neutral-500 font-ligh ">
+    <div className="flex dmd:mt-8 mt-6 landscape-narrow:mb- px-4 text-sm text-purple-200 font-ligh ">
       <div className="mx-auto  flex ">
         <h3 className="pr-4 dmd:py-0 mx-auto pb-2 ">Search by:</h3>
         <ul className=" flex space-x-4 ">
@@ -11,7 +11,7 @@ export default function ModeSelector({ mode, setMode }) {
             <button
               onClick={() => setMode("meaning")}
               className={
-                (mode === "meaning" && `text-dilred underline`) ||
+                (mode === "meaning" && `text-purple-400 underline`) ||
                 `hover:text-dilred`
               }
             >

@@ -19,12 +19,12 @@ export default function Footer() {
 
   // console.log(location.hash)
   return (
-    <footer className={`  mt-aut bg-dilred items-center flex  w-full ${isSnapEnabled && "snap-start snap-always"} `}>
+    <footer className={`  mt-aut bg-purple-950 items-center flex  w-full ${isSnapEnabled && "snap-start snap-always"} `}>
       <nav className="max-w-3xl flex flex-col flex-gro items-center px-4 text-neutral-100 text-xs tiny:text-sm mx-auto font-light w-full">
         <div className="flex gap-x-3 dmd:gap-x-4 pt-6 pb-3">
           <Link
             className="hover:underline"
-            to="https://www.x.com/ScottAdamsSays"
+            to="https://www.x.com"
                 target="_blank"
                 rel="noopener norefferrer"
           >
@@ -32,7 +32,7 @@ export default function Footer() {
           </Link>
           <Link
             className="hover:underline"
-            to="https://www.instagram.com/ScottAdams925"
+            to="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener norefferrer"
           >
@@ -40,7 +40,7 @@ export default function Footer() {
           </Link>
           <Link
             className="hover:underline"
-            to="https://www.linkedin.com/in/scott-adams-52b1595a/"
+            to="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener norefferrer"
           >
@@ -48,15 +48,15 @@ export default function Footer() {
           </Link>
           <Link
             className="hover:underline"
-            to="https://scottadams.locals.com"
+            to="https://patreon.com"
                 target="_blank"
                 rel="noopener norefferrer"
           >
-            Locals.com
+            Patreon
           </Link>
           <Link
             className="hover:underline"
-            to="https://www.youtube.com/RealCoffeeWithScottAdams"
+            to="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener norefferrer"
           >
@@ -71,7 +71,7 @@ export default function Footer() {
             {" "}
             Licensing & Advertisement{" "}
           </Link>
-          <div className=""> © 2024 Dilbert.com - All Rights Reserved.</div>
+          <div className=""> © 2024 Socrates-Eterna.com - All Rights Reserved.</div>
         </div>
       </nav>
     </footer>

@@ -8,7 +8,7 @@ import SearchBar from "~/components/SearchBar";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Classic Comics | Dilbert.com" },
+    { title: "Comics | Socrates Eterna" },
     { name: "Explore the Classics", content: "AI Powered Search by Meaning, Date and Characters!" },
   ];
 };

@@ -231,3 +231,75 @@ return (
               <li>Character</li>
               <li>Buzzword</li>
             </ul> */}
+
+
+
+
+
+
+ {/* <div id="ad2 md" className=" hidden relative dmd:flex bg-purple-1000 text-whit w-full h- -mt-3  shrink-0 mb-12 border-8 border-purple-950 rounded-2xl">
+            <img
+              className=" h-40  p- mx- 6 mt-6 object-cover bg-pink- -mb-6 ml-4 bg-pink- 500"
+              src="/main/omega-logo.png"
+              alt=""
+            />
+            <p className="rounded-md absolute text-purple- font-bold text-base -top-3 -left-3 border-2 bg-dilred border-purple-500 px-1">Available Now!</p>
+
+
+            <div className="flex flex-col mr-4 mt-4 pr-6 ml-">
+              {" "}
+              <div className="flex py-4 text-center mx-auto text-3xl">
+                <h2 className="font-bold ">
+                  2025 Page-A-Day Calendar
+                </h2>
+
+              </div>
+              <p className="overflow-hidden text-whit  text-center text- justify hyphens-auto text- pretty mb- bg- white">
+              <span className="font-semibold uppercas">Double Socrates!</span>  Back by popular demand, now featuring both <span className="font-semibol italic">Socrates Eterna and </span> <span className="font-semibol italic">Socrates Pantheon!</span>  2 comics each day, printed in Athens!
+              </p>
+              <Link
+                to="/books"
+                className="rounded-lg font-light text- hover:underline bg-dilred text-white mt-4 pt-1 h-8 px-4 mx-auto mb-6 "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                click to shop<span id="get-reborn1"></span>
+              </Link>
+            </div>
+          </div> */}
+
+
+
+
+          {/* <div id="ad2 sm" className="flex dmd:hidden flex-col bg-neutral-100 w-full shrink-0 mb-16 border-8 border-dilred -mt-2">
+            <div className="relative  pt-12   mx-auto my-auto">
+              <img
+                className="h-72 w-full  object-cover -mb-4"
+                src="/books/calender.webp"
+                alt=""
+              />
+              <p className="absolute top-8 -left-1.5 text-dilre font-bold text-base border-2 bg-neutral-100 border-dilred px-1">
+                Available Now!
+              </p>
+            </div>
+            <div className="flex flex-col pb-4 px-6">
+              <div className="flex pb-4 text-xl ">
+                <h2 className="font-bold mx-auto text-center text-2xl  mr -2 ">
+                  2025 Page-A-Day Calendar
+                </h2>
+
+              </div>
+
+              <p className="overflow-hidden text-whit  text-center text- justify hyphens-auto text- pretty mb- bg- white">
+                <span className="font-semibold uppercas">Double Socrates!</span>  Back by popular demand, now featuring both <span className="font-semibol italic">Socrates Eterna and </span> <span className="font-semibol italic">Socrates Pantheon!</span>  2 comics each day, printed in Athens!
+              </p> <Link
+                to="/books"
+                className="font-light text- hover:underline bg-dilred text-white mt-5 pt-1 h-8 px-4 mx-auto mb-4 "
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                click to shop
+              </Link>
+              <span id="get-reborn"></span>
+            </div>
+          </div> */}

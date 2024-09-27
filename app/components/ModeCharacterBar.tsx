@@ -53,7 +53,7 @@ export default function ModeCharacterBar({ setMode }) {
       ref={dropdownRef} >
       <Link
         onClick={() => setMode("meaning")}
-        to="/classic-search"
+        to="/comics"
         className=" text-3xl dmd:text-[2.9rem]/9 text-center text-dilred font-bold mb-4 dmd:mb-0 mx-auto"
       >
         Dilbert

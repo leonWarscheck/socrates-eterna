@@ -19,7 +19,8 @@ const config = {
     },
     extend: {
       colors: {
-        dilred: "#CD0821",
+        dilred: "#7e22ce",
+        "purple-1000": "#230b36",
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -54,10 +55,8 @@ const config = {
           foreground: 'hsl(var(--card-foreground))',
         },
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+      fontFamily:{
+        "socrates": ['Toxigenesis', 'sans-serif'],
       },
       keyframes: {
         'accordion-down': {
@@ -71,7 +70,7 @@ const config = {
       },
       screens: {
         xs: '400px',
-        tiny: "374px",
+        tiny: "360px", // 374
         small: "490px",
         dmd: "667px",//768, 667
         'full-md': "887px",
@@ -79,7 +78,7 @@ const config = {
         'landscape-narrow': { 'raw': '(max-height: 940px) and (orientation: landscape)' }, // 769px
         'landscape-narrow-2': { 'raw': '(max-width: 940px) and (max-height: 430px )' },
         'landscape-super-narrow': { 'raw': '(max-height: 375px) and (orientation: landscape)' },
-        'portrait-narrow': { 'raw':'(max-height: 800px)'}
+        'portrait-narrow': { 'raw':'(max-height: 770px)'}
       
       },
       width: {

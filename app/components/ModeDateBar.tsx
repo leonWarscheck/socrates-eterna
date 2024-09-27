@@ -13,7 +13,7 @@ export default function ModeDateBar({ setMode }) {
     <div className="max-w-4xl flex flex-col dmd:flex-row  w-full   mx-auto px-4 mt-6 dmd:mt-8 mb-4 bg-teal-5 ">
       <Link
         onClick={() => setMode("meaning")}
-        to="/classic-search"
+        to="/comics"
         className=" text-3xl dmd:text-[2.9rem]/9 text-center text-dilred font-bold mb-4 dmd:mb-0 mx-auto"
       >
         Dilbert

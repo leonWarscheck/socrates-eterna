@@ -4,7 +4,7 @@ import { showHeader } from "~/utils/scrollHeader";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Lifechanging Books | Dilbert.com" },
+    { title: "Books | Socrates Eterna" },
     // { name: "Uncensored and Spiciere Than Ever!", content: "Find Out What Happened to Dilbert!", 'og:image': "/favicon.ico",  },
   ];
 };
@@ -15,8 +15,8 @@ export default function Books() {
 
   return (
     <>
-      <main id="sm" className="  max-w-4xl w-full mx-auto dmd:hidden flex flex-col h-scree grow mt-28 gap-10 px-4 mb-20 min-h-dvh overflow-y-scrol">
-        <div
+      <main id="sm" className="  max-w-4xl w-full mx-auto dmd:hidden flex flex-col h-scree grow mt-24 gap-10 px-4 mb-20 min-h-dvh overflow-y-scrol">
+        {/* <div
           onClick={() =>
             alert(
               "Here the user will be able to filter for either Non-Dilbert or Dilbert books.",
@@ -30,7 +30,7 @@ export default function Books() {
           <button className="text-neutral-500 hover:underline bg-neutral-100 px-2 p-1">
             Dilbert Books
           </button>
-        </div>
+        </div> */}
 
 
 
@@ -63,19 +63,19 @@ export default function Books() {
             <p className="overflow-hidden text-white  text-justify hyphens-auto mb-5">
             <span className="font-bold">Double Dilbert! </span>
 
-By popular demand, the Dilbert calendar is back, and this time, it has been created entirely in America.
+By popular demand, the Socrates Eterna calendar is back, and this time, it has been created entirely in Athens.
 
 Better yet, this edition is printed on two sides, for twice the comics!
 Whaaaaat???
 <br/>
 <br/><span className="font-bold">
-Front of page:</span> Classic Dilbert comics as always.
+Front of page:</span> Socrates Eterna comics as always.
 
 <br/><span className="font-bold">
-Back of page:</span> Dilbert Reborn (a “spicier” Dilbert comic).
+Back of page:</span> Socrates Pantheon (advanced concept comics). 
 <br/>
 <br/>
-Dilbert Reborn comics have been created more recently, often featuring provocative topics you might not want to share with your humorless coworkers. Rated PG-13, but still, it’s a dangerous world out there, so be careful.
+Socrates Pantheon comics have been created more recently, often featuring mind shattering self reflections that might agitate the people around you. But who knows, sometimes the right person meets the right message!
 
             </p>
           </div>

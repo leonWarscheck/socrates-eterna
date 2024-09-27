@@ -479,7 +479,7 @@ export default function About() {
               <div className="flex gap-3 items-center  text-xl pt- pb-  ">
                 <Link
                   className="hover:underline"
-                  to="https://www.x.com/ScottAdamsSays"
+                  to="https://www.x.com"
                 target="_blank"
                 rel="noopener norefferrer"
                 >
@@ -487,7 +487,7 @@ export default function About() {
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.instagram.com/ScottAdams925"
+                  to="https://www.instagram.com"
                 target="_blank"
                 rel="noopener norefferrer"
                 >
@@ -495,7 +495,7 @@ export default function About() {
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.linkedin.com/in/scott-adams-52b1595a/"
+                  to="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener norefferrer"
                 >
@@ -505,15 +505,15 @@ export default function About() {
               <div className="flex gap-3 text-xl pt-1 pb-">
                 <Link
                   className="hover:underline"
-                  to="https://scottadams.locals.com"
+                  to="https://patreon.com"
                 target="_blank"
                 rel="noopener norefferrer"
                 >
-                  Locals.com
+                Patreon
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.youtube.com/RealCoffeeWithScottAdams"
+                  to="https://www.youtube.com/"
                 target="_blank"
                 rel="noopener norefferrer"
                 >
@@ -531,7 +531,6 @@ export default function About() {
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "About | Dilbert.com" },
-    { name: "description", content: "Scott Adams Adventurous Life, Full of Challenges to Overcome..." },
+    { title: "About | Socrates Eterna" },
   ];
 };
