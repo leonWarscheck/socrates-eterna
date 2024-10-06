@@ -54,14 +54,14 @@ export default function ModeCharacterBar({ setMode }) {
       <Link
         onClick={() => setMode("meaning")}
         to="/comics"
-        className=" text-3xl dmd:text-[2.9rem]/9 text-center text-dilred font-bold mb-4 dmd:mb-0 mx-auto"
+        className=" text-3xl dmd:text-[2.9rem]/9 text-center text-dilred w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
       >
-        Dilbert
+      <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
       </Link>
-      <div id="sm md dropdown" className="relative max-w- xl dmd:ml-6 w-full dmd:hidde n bg-pink-">
+      <div id="sm md dropdown" className="relative max-w- xl dmd:ml-6 w-full dmd:hidde ">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className=" flex items-center justify-between w-full p-3  border-2  h-10  bg-white text-left border-neutral-300 "
+          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-purple-950 text-left border-dilred ${isOpen ? "rounded-t-lg" :"rounded-lg"}`} 
         >
           {selectedCharacter ? (
             <div className="flex items-center">
@@ -92,14 +92,14 @@ export default function ModeCharacterBar({ setMode }) {
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute w-ful mt- 1 bg-white border-x-2 border-b-2 border-neutral-300 z-10 overflow-y-scroll h-[40dvh] right-0 left-0 ">
+          <ul className="absolute w-ful mt- 1 bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-dilred rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0 ">
             {characters.map((character) => (
               <li
                 key={character.name}
                 onClick={() => handleSelect(character)}
-                className="p-2 hover:bg-gray-100 cursor-pointer odd:bg-neutral-50"
+                className="p-2 hover:bg-dilred cursor-pointer odd:bg-purple-950"
               ><Link
-                to={`/classic-search?search=${character.name}`}
+                to={`/comics?search=${character.name}`}
                 className="text-sm"
               >
                   <div className="flex items-center text-base">

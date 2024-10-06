@@ -12,7 +12,7 @@ export default function ModeSelector({ mode, setMode }) {
               onClick={() => setMode("meaning")}
               className={
                 (mode === "meaning" && `text-purple-400 underline`) ||
-                `hover:text-dilred`
+                `hover:text-purple-400`
               }
             >
               {" "}
@@ -23,8 +23,8 @@ export default function ModeSelector({ mode, setMode }) {
             <button
               onClick={() => setMode("date")}
               className={
-                (mode === "date" && `text-dilred underline`) ||
-                `hover:text-dilred`
+                (mode === "date" && `text-purple-400 underline`) ||
+                `hover:text-purple-400`
               }
             >
               Date
@@ -38,8 +38,8 @@ export default function ModeSelector({ mode, setMode }) {
                 // alert('The Sample Comics so far only contain: Dilbert, Boss, Wally, Asok, Carol and Ceo.');
               }}
               className={
-                (mode === "character" && `text-dilred underline`) ||
-                `hover:text-dilred`
+                (mode === "character" && `text-purple-400 underline`) ||
+                `hover:text-purple-400`
               }
             >
               Character

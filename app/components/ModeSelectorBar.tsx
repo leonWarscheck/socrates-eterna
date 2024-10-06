@@ -2,15 +2,15 @@ import React from "react";
 
 export default function ModeSelectorBar({ mode, setMode }) {
   return (
-    <div className="flex text-base text-neutral-500 mt- max-w-4xl mx-auto px-4 w-full pb-2 bg-teal- ">
+    <div className="flex text-base mt- max-w-4xl mx-auto px-4 w-full pb-2 bg-teal- ">
       <h3 className="pr-4 py-0 ml-auto dmd:ml-0 ">Search by:</h3>
       <ul className=" flex gap-x-4 mr-auto ">
         <li className="">
           <button
             onClick={() => setMode("meaning")}
             className={
-              (mode === "meaning" && `text-dilred underline`) ||
-              `hover:text-dilred`
+            (mode === "meaning" && `text-purple-400 underline`) ||
+              `hover:text-purple-400`
             }
           >
             Meaning
@@ -20,8 +20,8 @@ export default function ModeSelectorBar({ mode, setMode }) {
           <button
             onClick={() => setMode("date")}
             className={
-              (mode === "date" && `text-dilred underline`) ||
-              `hover:text-dilred`
+              (mode === "date" && `text-purple-400 underline`) ||
+              `hover:text-purple-400`
             }
           >
             Date
@@ -36,8 +36,8 @@ export default function ModeSelectorBar({ mode, setMode }) {
               // );
             }}
             className={
-              (mode === "character" && `text-dilred underline`) ||
-              `hover:text-dilred`
+              (mode === "character" && `text-purple-400 underline`) ||
+              `hover:text-purple-400`
             }
           >
             Character

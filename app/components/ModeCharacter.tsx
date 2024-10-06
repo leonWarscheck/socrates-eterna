@@ -78,7 +78,7 @@ export default function ModeCharacter({ isSearching}) {
                 className="p-2 hover:bg-gray-100 cursor-pointer odd:bg-neutral-50"
               ><Link
               prefetch="intent"
-                to={`/classic-search?search=${character.name}`}
+                to={`/comics?search=${character.name}`}
                 className="text-sm"
               >
                   <div className="flex items-center">
@@ -127,7 +127,7 @@ export default function ModeCharacter({ isSearching}) {
           return (
             <Link
             prefetch="intent"
-              to={`/classic-search?search=${character.name}`}
+              to={`/comics?search=${character.name}`}
               key={character.name}
               className=" shrink-0 group  min-w-14 max-w-14  h-20 mx-2 mb-2 mt-1  flex flex-col items-center"
             // onClick={}

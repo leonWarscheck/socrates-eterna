@@ -40,10 +40,11 @@ export async function loader({ request }) {
   return json({ query, results });
 }
 
+
+
 export default function ClassicSearch() {
   const { query, results } = useLoaderData<LoaderData>();
   const [mode, setMode] = useState("meaning");
-
   const navigation = useNavigation();
   const isSearching = navigation.location?.search
 
@@ -51,7 +52,7 @@ export default function ClassicSearch() {
   useEffect(() => setMode("meaning"), []);
 
   return (
-    <main className=" min-h-dvh flex flex-col grow min-h-[calc(100dvh-1.5rem)">
+    <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)]">
       {!query && <SearchLanding query={query} setMode={setMode} mode={mode} isSearching={isSearching} />}
       {query && <SearchBar query={query} setMode={setMode} mode={mode} isSearching={isSearching}/> }
       {query && <RenderResults loaderResults={results} />}

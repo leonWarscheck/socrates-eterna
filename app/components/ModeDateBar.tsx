@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/datepicker.css";
 import { Form, Link } from "@remix-run/react";
-import RandomDilbertButton from "./RandomDilbertButton";
+import RandomDilbertButton from "./RandomComicButton";
 
 export default function ModeDateBar({ setMode }) {
   const [selectedOption, setSelectedOption] = useState("month");
@@ -12,11 +12,10 @@ export default function ModeDateBar({ setMode }) {
   return (
     <div className="max-w-4xl flex flex-col dmd:flex-row  w-full   mx-auto px-4 mt-6 dmd:mt-8 mb-4 bg-teal-5 ">
       <Link
-        onClick={() => setMode("meaning")}
         to="/comics"
-        className=" text-3xl dmd:text-[2.9rem]/9 text-center text-dilred font-bold mb-4 dmd:mb-0 mx-auto"
+        className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-4 w-[300px] bg-red-  text-dilred font-bold mt- 2.5 dmd:mb-0 -ml-1 "
       >
-        Dilbert
+        <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
       </Link>
       <>
         {/* Small Screen Form */}
@@ -126,7 +125,7 @@ export default function ModeDateBar({ setMode }) {
               </label>
               <input
                 type="month"
-                className="ml-2 border-2 border-gray-300 px-2 py-1 h-10 focus:bg-white"
+                className="ml-2 border-2 border-dilred rounded-lg bg-purple-950 px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
                 disabled={selectedOption !== "month"}
               />
             </div>
@@ -145,7 +144,7 @@ export default function ModeDateBar({ setMode }) {
               </label>
               <input
                 type="date"
-                className="ml-2 border-2 border-gray-300 px-2 py-1 h-10 focus:bg-white"
+                className="ml-2 border-2 border-dilred bg-purple-950 focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
                 disabled={selectedOption !== "day"}
               />
             </div>
@@ -157,9 +156,9 @@ export default function ModeDateBar({ setMode }) {
                 );
               }}
               type="submit"
-              className="bg-dilred flex  hover:bg-red-600 text-white pt-3 px-2 pb-1 shrink- 0 ml-4 "
+              className="bg-dilred   hover:bg-purple-600 rounded-lg h-10  px-4   shrink- 0 ml-4 mr-"
             >
-              Date Search
+              <img src="/main/search.png" alt="" className="invert size-3 tiny:size-4" />
             </button>
 
           </div>

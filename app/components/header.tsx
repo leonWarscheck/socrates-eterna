@@ -46,20 +46,20 @@ export default function Header() {
         <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
           <Link to="/" className="">
             <img
-              className="h-12 mt- border-dilre border-"
+              className="h-12 mt- ml-1 border-dilre border- hover:opacity-70"
               src="/main/omega-logo.png"
               alt=""
             />
           </Link>
 
-          <ul className=" font- light text- sm text-purple-200 space-x-4 flex ml-auto ">
-            <li className="hover:text-neutral-500">
-              <Link to="/about">About</Link>
+          <ul className="text-base text-purple-200  space-x-4 flex ml-auto ">
+            <li className="hover:text-purple-400">
+              <Link prefetch="render" to="/about">About</Link>
             </li>
-            <li className="hover:text-neutral-500">
-              <Link to="/books">Books</Link>
+            <li className="hover:text-purple-400">
+              <Link prefetch="render" to="/books">Books</Link>
             </li>
-            <li className="hover:text-neutral-500 target:text-neutral-500 pr-2 4 dmd:pr- 0">
+            <li className="hover:text-purple-400 target:text-neutral-500 pr-2 4 dmd:pr- 0">
               <Link to="/comics">Comics</Link>
             </li>
           </ul>
@@ -78,20 +78,20 @@ export default function Header() {
         <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
           <Link to="/" className="">
             <img
-              className="h-12 mt-px border-dilre border-"
+              className="h-12 ml-1 hover:opacity-60 border-dilre border-"
               src="/main/omega-logo.png"
               alt=""
             />
           </Link>
 
           <ul className="text-base text-purple-200  space-x-4 flex ml-auto ">
-            <li className="hover:text-neutral-500">
+            <li className="hover:text-purple-400">
               <Link prefetch="render" to="/about">About</Link>
             </li>
-            <li className="hover:text-neutral-500">
+            <li className="hover:text-purple-400">
               <Link prefetch="render" to="/books">Books</Link>
             </li>
-            <li className="hover:text-neutral-500 target:text-neutral-500 pr-2 4 dmd:pr- 0">
+            <li className="hover:text-purple-400 target:text-neutral-500 pr-2 4 dmd:pr- 0">
               <Link to="/comics">Comics</Link>
             </li>
           </ul>

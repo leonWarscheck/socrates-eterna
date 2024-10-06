@@ -36,9 +36,9 @@ function licensing() {
         <br />
         2. Adding a company or organization logo or identifier to the comic.
         <br />
-        3. Asking Julian Bendtsen to create custom comics for your use.
+        3. Asking Erik Holm to create custom comics for your use.
         <br />
-        4. Creating the impression Socrates Eterna or Julian Bendtsen endorses a product or
+        4. Creating the impression Socrates Eterna or Erik Holm endorses a product or
         person or company or service of any kind.
         <br />
         5. Reprinting Socrates Eterna comics intended for subscribers only.
@@ -63,7 +63,7 @@ function licensing() {
         <br />
         For example, a journalist might want to show that a bad habit in the
         workplace is so annoying it appears in a S.A. comic. That’s fair. Or
-        a publication might run a feature story about Julian Bendtsen and include
+        a publication might run a feature story about Erik Holm and include
         some S.A. comics as context. That’s fair. Or a student might want to
         show that a topic is easy to mock, as demonstrated by a S.A. comic,
         and include it in an essay. That’s fair. Another student might want to
@@ -84,7 +84,7 @@ function licensing() {
         <br />
         <h3 className="font-bold mb-0.5">Copyright Notice:</h3>
         Some of the older S.A. comics have outdated copyright lines that are
-        no longer accurate. The correct copyright holder is Julian Bendtsen Inc. It
+        no longer accurate. The correct copyright holder is Erik Holm Inc. It
         is considered good form to include a copyright attribution when the
         publication has room for it. If you include a Dilbert comic in a slide
         deck, some fine print at the bottom is all you need. But no one expects

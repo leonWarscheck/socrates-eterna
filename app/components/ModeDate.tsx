@@ -49,9 +49,9 @@ export default function ModeDate() {
             );
           }}
             
-            className="bg-dilred text-sm small:text-sm hover:bg-red-600 text-white pt-3 px-2 pb-1"
+            className="bg-dilred text-sm small:text-sm hover:bg-red-600 text-white pt-3 px-2 pb-1 rounded-md"
           >
-            Dilbert Date Search
+            Eterna Date Search
           </button>
         </div>
       </Form>
@@ -73,7 +73,7 @@ export default function ModeDate() {
             </label>
             <input
               type="month"
-              className="ml-2 border-2 border-gray-200 px-2 py-1 h-10 focus:outline-neutral-300 focus:bg-white"
+              className="ml-2 border-2 border-dilred px-2 py-1 h-10 bg-purple-1000 focus:outline-none focus:bg-purple-950 rounded-lg"
               disabled={selectedOption !== "month"}
             />
           </div>
@@ -92,7 +92,7 @@ export default function ModeDate() {
             </label>
             <input
               type="date"
-              className="ml-2 border-2 border-gray-200 px-2 py-1 h-10 focus:outline-neutral-300 focus:bg-white"
+              className="ml-2 border-2 bg-purple-1000 border-dilred px-2 py-1 h-10 focus:outline-none focus:bg-purple-950 rounded-lg"
               disabled={selectedOption !== "day"}
             />
           </div>
@@ -107,9 +107,9 @@ export default function ModeDate() {
               );
             }}
             type="submit"
-            className="bg-dilred text-sm small:text-sm hover:bg-red-600 text-white pt-3 px-2 pb-1"
+            className="bg-dilred text-sm small:text-sm hover:bg-purple-600 h-9 px-4  rounded"
           >
-            Dilbert Date Search
+            Eterna Date Search
           </button>
         </div>
       </Form>

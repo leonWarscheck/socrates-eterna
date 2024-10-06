@@ -24,7 +24,7 @@ export const meta: MetaFunction = () => {
 export default function Index() {
 
   return (
-    <main className="mb-16">
+    <main className="">
       <section className="bg-purple-950 min-h-dvh flex items-center relative dlg:pt-[26vw] pt-[40vw]">
         <div
           className="
@@ -34,9 +34,9 @@ export default function Index() {
             landscape-narrow:bg-[center_top_-4.9rem
           
             bg-purple-950
-            bg-[url('/main/lp2cs7-sm.jpg')]
-            dmd:bg-[url('/main/lp2cs7-md.jpg')]
-            dlg:bg-[url('/main/s-hero-lg.jpg')]
+            bg-[url('/hero/sm.jpg')]
+            dmd:bg-[url('/hero/md.jpg')]
+            dlg:bg-[url('/hero/lg.jpg')]
             absolute 
             top-0
             right-0
@@ -63,13 +63,13 @@ export default function Index() {
             Get Started
           </Link>
           <Link
-            to="#get-reborn1"
-            className="hidden dmd:block px-6 py-2 font- socrates  mx-auto mt-7 text-2xl text-white border2 rounded-lg border-purple-400 bg-purple-700 hover:bg-purple-600"
+            to="#join-pantheon"
+            className="hidden dmd:block px-6 py-2 font- socrates  mx-auto mt-7 text-2xl text-white border-2 rounded-lg border-dilred pulse-border bg-purple-700 hover:bg-purple-600"
           >
           Get Started
           </Link>
           <Link
-            className="mt-4 text-center text-neutral-500 font-ligh underline font- socrates"
+            className="mt-4 text-center text-purple-400 font-ligh underline font- socrates"
             to="/comics"
           >
             or explore the Eterna comics
@@ -81,7 +81,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="">
+      <section className="  pb-16">
         {/* <div className="flex text-center bg-dilred"></div> */}
         <div className="flex flex-col px-4 pt-16 mb- mx-auto w-full max-w-4xl grow">
           <h2 className="flex mx-auto text-5xl text-center font-bold text-purple-100">
@@ -91,11 +91,11 @@ export default function Index() {
             <br />
             <br />
             <p className="text-xl font-bold text-justif">
-              Soul exploring cartoonist Julian Bendtsen has emerged from his 3 year retreat and upgraded his work to a purer and more actionable version titled Socrates Pantheon.
+              Soul exploring cartoonist Erik Holm has emerged from his 3 year retreat and upgraded his work to a purer and more actionable version titled Socrates Pantheon.
             </p>
             <br />
             <p>
-              <span className="font-bold">Why did Julian retreat?</span>{" "}
+              <span className="font-bold">Why did Erik retreat?</span>{" "}
               ...because he was involuntarily struck by a vision to fast and sit silent on mount Olympus until his next chapter for impacting the world emerges.
             </p>
             <br />
@@ -106,28 +106,30 @@ export default function Index() {
             <p>
             I painstakingly looked for all the places where I was wrong. I found hidden scriptures, met multiple new mentors by chance and had otherworldly encounters with humans and other beings... </p>
             <br />
+            <br />
+<img src="/main/o11.jpg" alt="" />
+            <br />
+            <br />
             <p className="">
-            Stories that are too mind shattering for the untrained character. Stories that lead me to new dimensions of tapping into my strenghts. Stories that helped me to lead others to find the same insights, and to merge philosophy with action! 
+            Stories that are too mind shattering for the untrained character. Stories that lead me to new dimensions of tapping into my strengths. Stories that helped me to lead others to find the same insights, and to merge philosophy with action! 
             </p>
+            <p id="join-pantheon"></p>
             <br />
-            Socrates Pantheon is the right place to follow your curiousity.  
-            <span id="get-reborn1"></span>
-            
+            Pantheon is your gate-way to discover your purpose...  
+            <br/>
             <br />
-            <br />
-            <br />
+            {/* <br /> */}
           </section>
-
-          <section className="px4 py-6 mx-auto w-full bg- rounded-2xl">
-            <h2 className="text-4xl font-bold text-center text-purple-200">
+          <section className="px4 py-6 mx-auto w-full bg- rounded-2xl mt- 10">
+            <h2 className="text-5xl font-bold text-center text-purple-200">
               Join the PANTHEON
             </h2>
-            <table className="mt-6 bg-purple-1000 table-auto  border-purple-700 rounded">
-              <thead className="sticky  z-10">
+            <table className="mt-6 bg- purple-1000 table-auto  border-purple-700 rounded">
+              <thead className="sticky top-16  z-10 bg-purple-1000">
                 <tr className="h-24 ">
-                  <th className="w-1/2 bg-purple-1000">
+                  <th className="w-1/2 ">
                     <Link
-                      className="px-3 py-2 text-base rounded-lg  bg-dilred small:text-xl hover:bg-purple-600 mb-"
+                      className="px-6 py-2 text-base rounded-lg  bg-dilred small:text-xl hover:bg-purple-600 mb-"
                       to="https://www.x.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -137,7 +139,7 @@ export default function Index() {
                   </th>
                   <th className="w-1/2">
                     <Link
-                      className="px-3 py-2 text-base rounded-lg bg-dilred small:text-xl hover:bg-purple-600 mb-"
+                      className="px-6 py-2 text-base border border-dilred pulse-border rounded-lg bg-dilred small:text-xl hover:bg-purple-600 mb-"
                       to="https://patreon.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -149,48 +151,48 @@ export default function Index() {
               </thead>
               <tbody className="text-center ">
                 <tr className="border-purple-700 border-y-2">
-                  <td className="py-6 bg-purple-1000">3$ / month</td>
+                  <td className="py-6 bg-purple- 1000">3$ / month</td>
                   <td>7$ / month</td>
                 </tr>
                 <tr className="border-purple-700 border-y-2">
-                  <td className="py-6 bg-purple-1000">Socrates PANTHEON daily</td>
+                  <td className="py-6 bg-purple- marker:1000">Socrates PANTHEON daily</td>
                   <td>Socrates PANTHEON daily</td>
                 </tr>
                 <tr className="border-purple-700 border-y-2">
-                  <td className="py-6 bg-purple-1000">
+                  <td className="py-6 bg-purple- 1000">
                     Daily Socrates Calendar (digital version)
                   </td>
                   <td>Daily Socrates Calendar (digital version)</td>
                 </tr>
                 <tr className="border-purple-700 border-y-2">
-                  <td className="bg-purple-1000">x</td>
+                  <td className="bg-purple- 1000">x</td>
                   <td className="py-6">
                     "Philosophers Read News" comic (usually daily) - about the
                     headlines
                   </td>
                 </tr>
                 <tr className="border-purple-700 border-y-2">
-                  <td className="bg-purple-1000">x</td>
+                  <td className="bg-purple- 1000">x</td>
                   <td className="py-6">
                     My morning livestreams without commercials
                   </td>
                 </tr>
                 <tr className="border-purple-700 border-y-2">
-                  <td className="bg-purple-1000">x</td>
+                  <td className="bg-purple- 1000">x</td>
                   <td className="py-6">My behind-the-scenes content</td>
                 </tr>
                 <tr className="border-purple-700 border-y-2">
-                  <td className="bg-purple-1000">x</td>
+                  <td className="bg-purple- 1000">x</td>
                   <td className="py-6">Access to the PANTHEON network of highly driven, likeminded people</td>
                 </tr>
                 <tr className="border-purple-700 border-y-2">
-                  <td className="bg-purple-1000">x</td>
+                  <td className="bg-purple- 1000">x</td>
                   <td className="py-6">
                     Take part in the evening "PANTHEON" group calls.
                   </td>
                 </tr>
                 <tr className="border-purple-700 border-b-2">
-                  <td className="bg-purple-1000">x</td>
+                  <td className="bg-purple- 1000">x</td>
                   <td className="py-6">
                     Over 200 of my Psychology Lessons (2-4 minutes) on improving your
                     life!
