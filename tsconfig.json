@@ -8,7 +8,7 @@
     "**/.client/**/*.tsx",
     "app/utils/createCollection.js",
     "app/utils/insertNewComicDataToDb.js",
-    "app/utils/singleUse/upsertDataset.js",
+    "app/data/upsertDataset.js",
     "app/components/archive",
     "tailwind.config.js",
     "netlify-edge-plugin.ts"

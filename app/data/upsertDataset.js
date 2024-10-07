@@ -5,8 +5,8 @@ import fs from "fs";
 const pc = new Pinecone({
   apiKey: "77c91cfa-38e5-4acd-8000-ada86d4066f7",
 });
-const index = pc.index("search-poc");
-const namespace = index.namespace("poc-dataset");
+const index = pc.index("socrates-search");
+const namespace = index.namespace("socrates-namespace");
 // const upsertFunc = index.namespace("poc-dataset").upsert;
 
 const filePath = path.resolve("../data/comicData.json");

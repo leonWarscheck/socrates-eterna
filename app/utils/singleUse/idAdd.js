@@ -31,7 +31,7 @@ const processComicData = async () => {
     );
 
     console.log(
-      "Data transformation complete. Transformed data saved to transformedComicData.json",
+      "Data transformation complete. Transformed data saved to comicData.json",
     );
   } catch (error) {
     console.error("Error processing comic data:", error);
