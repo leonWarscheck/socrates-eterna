@@ -3,7 +3,7 @@ import characters from "app/data/characters.json";
 import { useState, useRef, useEffect } from "react";
 
 
-export default function ModeCharacter({ isSearching}) {
+export default function ModeCharacter({ isSearching }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const dropdownRef = useRef(null);
@@ -33,17 +33,88 @@ export default function ModeCharacter({ isSearching}) {
 
   return (
     <>
-      <div id="sm md dropdown" className="relative max-w-xl mx-auto px-4 w-full dmd:hidden landscape-narrow-2:block bg-pink-"
-      ref={dropdownRef} >
+
+<div id="sm md dropdown" className="relative max-w-xl w-full dmd:hidde  mx-auto px-4">
         <button
-         disabled={isSearching}
+          onClick={() => setIsOpen(!isOpen)}
+          className={`flex items-center justify-between w-full   p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-purple-950 text-left border-dilred ${isOpen ? "rounded-t-lg" :"rounded-lg"}`} 
+        >
+          {selectedCharacter ? (
+            <div className="flex items-center px-4">
+              <img
+                src={`characters/${selectedCharacter.image}`}
+                alt={`An image of ${selectedCharacter.name}`}
+                className="w-7 h-7 mr-3 object-cover"
+              />
+              <span>{selectedCharacter.name}</span>
+            </div>
+          ) : (
+            <span className="">Select a character</span>
+          )}
+          <svg
+            className={`w-5 h-5 transform transition-transform ${isOpen ? "rotate-180" : ""
+              }`}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+        {isOpen && (
+          <ul className="absolute w-ful mt- 1 bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-dilred rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0 mx-4">
+            {characters.map((character) => (
+              <li
+                key={character.name}
+                onClick={() => handleSelect(character)}
+                className="p-2 hover:bg-dilred cursor-pointer odd:bg-purple-950"
+              ><Link
+                to={`/comics?search=${character.name}`}
+                className="text-sm"
+              >
+                  <div className="flex items-center text-base">
+
+                    <img
+                      src={`characters/${character.image}`}
+                      alt={`An image of ${character.name}`}
+                      className="w-14 h-14 mr-3 object-cover"
+                    />
+
+                    {character.name}
+
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+        <div className="flex gap-4 mx-auto mt-6 w-full bg-amber-">
+          <button
+            onClick={() => setIsOpen(true)}
+            className="bg-dilred text-sm small:text-sm hover:bg-purple-600  px-2 h-9 mx-auto rounded-md"
+          >
+           Character Search
+          </button>
+        </div>
+      </div >
+
+      {/* <div id="sm md dropdown" className="relative max-w-xl mx-auto px-4 w-full dmd:hidde landscape-narrow-2:block bg-pink-"
+        ref={dropdownRef} >
+        <button
+          disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}
           className=" flex items-center justify-between w-full p-3  border-2 border-neutral-200  h-10  bg-white text-left  "
         >
           {selectedCharacter ? (
             <div className="flex items-center">
               <img
-              loading="lazy"
+                loading="lazy"
                 src={`characters/${selectedCharacter.image}`}
                 alt={`An image of ${selectedCharacter.name}`}
                 className="w-7 h-7 mr-3 object-cover"
@@ -77,7 +148,7 @@ export default function ModeCharacter({ isSearching}) {
                 onClick={() => handleSelect(character)}
                 className="p-2 hover:bg-gray-100 cursor-pointer odd:bg-neutral-50"
               ><Link
-              prefetch="intent"
+                prefetch="intent"
                 to={`/comics?search=${character.name}`}
                 className="text-sm"
               >
@@ -98,31 +169,22 @@ export default function ModeCharacter({ isSearching}) {
           </ul>
         )}
 
-        {/* <div className={`w-full h-1.5 ${isOpen ? 'bg-neutral-300' : 'bg-dilred'} `}></div> */}
 
         <div className="flex gap-4 mx-auto mt-6 w-full bg-amber-">
           <button
-          onClick={(event) => {
-            event.preventDefault();
-            alert(
-              "Only characters* marked with ' * ' are in the database at this size."
-            );
-            setIsOpen(true)
-
-          }}
-            
-            className="bg-dilred text-sm small:text-sm hover:bg-red-600 text-white pt-3 px-2 pb-1 mx-auto"
+            onClick={() => setIsOpen(true)}
+            className="bg-dilred text-sm small:text-sm hover:bg-purple-600  px-2 h-9 mx-auto rounded-md"
           >
-            Dilbert Character Search
+           Character Search
           </button>
-          </div>
-      </div >
+        </div>
+      </div > */}
 
 
 
 
 
-      <div id="lg grid" className="dmd:grid dmd:grid-cols-7 grid-cols-7 gap-x- hidden mx-4 dmd:gap-x-6 gap-y-3 mt-2 -mb-2.5  max-w-2xl dmd:mx-auto overflow-x-scroll landscape-narrow-2:hidden">
+      {/* <div id="lg grid" className="dmd:grid dmd:grid-cols-7 grid-cols-7 gap-x- hidden mx-4 dmd:gap-x-6 gap-y-3 mt-2 -mb-2.5  max-w-2xl dmd:mx-auto overflow-x-scroll landscape-narrow-2:hidden">
         {characters.map((character) => {
           return (
             <Link
@@ -143,7 +205,7 @@ export default function ModeCharacter({ isSearching}) {
             </Link>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 }
