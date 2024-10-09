@@ -499,7 +499,7 @@ export default function About() {
 
         <section id="follow"
           className="relative h-screen flex flex-col  snap-start snap-always bg-gradient-to-b from-purple-1000 to-purple-900">
-          <div className=" pulse-border border-2 flex items-center max-w-4xl w-full my-auto mx-auto gap-14 bg -gradient-to-b from-purple-950 to-purple-900 h-52 z- rounded-xl">
+          <div className=" pulse-border border-y-2 flex items-center max-w-7xl w-full my-auto mx-auto gap-14 bg -gradient-to-b from-purple-950 to-purple-900 h-52 z- rounded- xl">
             <div className="mx-auto flex flex-col items-center my-auto ">
               <h2 className="text-4xl font-bold pb-4 drop-shadow-2xl">Follow Erik</h2>
               <div className="flex gap-3 items-center  text-xl pt- pb-  ">

@@ -19,9 +19,10 @@ export default function Footer() {
 
   // console.log(location.hash)
   return (
-    <footer className={`  mt-aut bg-purple-950 items-center flex  w-full ${isSnapEnabled && "snap-start snap-always"} `}>
-      <nav className="max-w-3xl flex flex-col flex-gro items-center px-4 text-neutral-100 text-xs tiny:text-sm mx-auto font-light w-full">
-        <div className="flex gap-x-3 dmd:gap-x-4 pt-6 pb-3">
+    <footer className={`  mt-aut bg-purple-950 items-center flex h-16 w-full ${isSnapEnabled && "snap-start snap-always"} `}>
+      
+      <nav className="max-w-7xl flex gap-x-4 flex-gro items-center px-4 text-neutral-100 text-xs tiny:text-sm mx-auto font-light w-full">
+        <div className="flex gap-x-3 dmd:gap-x-4  mr-auto">
           <Link
             className="hover:underline"
             to="https://www.x.com"
@@ -63,15 +64,15 @@ export default function Footer() {
             Youtube
           </Link>
         </div>
-        <div className="flex gap-3 text-center  sm:flex-row flex-col items-center mx-auto mb-6  ">
+        <div className="flex gap-x-4 text-center  sm:flex-row flex-col items-center ml-auto  ">
           <Link
-            className="hover:decoration-solid underline decoration-dotted "
+            className="decoration-dotted hover:underline "
             to="/licensing"
           >
             {" "}
-            Licensing & Advertisement{" "}
+            © 2024 Socrates-Eterna.com - All Rights Reserved.
           </Link>
-          <div className=""> © 2024 Socrates-Eterna.com - All Rights Reserved.</div>
+          {/* <div className=""> </div> */}
         </div>
       </nav>
     </footer>

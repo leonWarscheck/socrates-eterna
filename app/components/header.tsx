@@ -43,7 +43,7 @@ export default function Header() {
 
       transition-opacity  ${canHover && "hover:opacity-100"} duration-1000  `}
       >
-        <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
+        <nav className="max-w-7xl  mx-auto  flex  flex-grow items-center px-4">
           <Link to="/" className="">
             <img
               className="h-12 mt- ml-1 border-dilre border- hover:opacity-70"
@@ -75,7 +75,7 @@ export default function Header() {
       ${query ? "hidden" : ""}
       `}
       >
-        <nav className="max-w-4xl   mx-auto flex  flex-grow items-center px-4">
+        <nav className="max-w-7xl   mx-auto flex  flex-grow items-center px- 4">
           <Link to="/" className="">
             <img
               className="h-12 ml-1 hover:opacity-60 border-dilre border-"
