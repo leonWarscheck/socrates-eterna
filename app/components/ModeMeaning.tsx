@@ -9,7 +9,7 @@ export default function ModeMeaning({ query, isSearching }) {
     <Form className="max-w-xl flex flex-col mx-auto w-full ">
       <div className="relative w-full mx-auto"> {/* Parent div for relative positioning */}
         <input
-          className="border-2 bg-purple-1000 border-dilred focus:outline-none grow h-10 px-4 rounded-lg w-full "
+          className="border-2 bg-purple- 1000 bg-transparent border-dilred focus:outline-none grow h-10 px-4 rounded-lg w-full "
           type="search"
           defaultValue={query}
           name="search"

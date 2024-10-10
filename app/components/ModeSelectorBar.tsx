@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ModeSelectorBar({ mode, setMode }) {
   return (
-    <div className="flex text-base mt- max-w-4xl mx-auto px-4 w-full pb-2 bg-teal- ">
+    <div className="flex text-base mt- max-w-4xl  px-4 w-full pb-2 bg-teal- ">
       <h3 className="pr-4 py-0 ml-auto dmd:ml-0 ">Search by:</h3>
       <ul className=" flex gap-x-4 mr-auto ">
         <li className="">

@@ -73,7 +73,7 @@ export default function ModeDate() {
             </label>
             <input
               type="month"
-              className="ml-2 border-2 border-dilred px-2 py-1 h-10 bg-purple-1000 focus:outline-none focus:bg-purple-950 rounded-lg"
+              className="ml-2 border-2 border-dilred px-2 py-1 h-10 bg-transparent  focus:outline-none focus:bg-purple-950 rounded-lg"
               disabled={selectedOption !== "month"}
             />
           </div>
@@ -92,7 +92,7 @@ export default function ModeDate() {
             </label>
             <input
               type="date"
-              className="ml-2 border-2 bg-purple-1000 border-dilred px-2 py-1 h-10 focus:outline-none focus:bg-purple-950 rounded-lg"
+              className="ml-2 border-2 bg-transparent border-dilred px-2 py-1 h-10 focus:outline-none focus:bg-purple-950 rounded-lg"
               disabled={selectedOption !== "day"}
             />
           </div>

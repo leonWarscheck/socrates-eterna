@@ -52,7 +52,7 @@ export default function ClassicSearch() {
   useEffect(() => setMode("meaning"), []);
 
   return (
-    <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)]">
+    <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">
       {!query && <SearchLanding query={query} setMode={setMode} mode={mode} isSearching={isSearching} />}
       {query && <SearchBar query={query} setMode={setMode} mode={mode} isSearching={isSearching}/> }
       {query && <RenderResults loaderResults={results} />}

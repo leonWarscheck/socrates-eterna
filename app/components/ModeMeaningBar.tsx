@@ -4,7 +4,7 @@ import { Form, Link } from "@remix-run/react";
 
 export default function ModeMeaningBar({ query }) {
   return (
-    <Form className="max-w-4xl flex flex-col dmd:flex-row mx-auto w-full px-4  mt-6 dmd:mt-8 mb-4">
+    <Form className="max-w-4xl flex flex-col dmd:flex-row w-full px-4  mt-6 dmd:mt-8 mb-4">
       <Link
         to="/comics"
         className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-6 w-[386px] bg-red-5  text-dilred font-bold mb-4 dmd:mb-0 -mt- 1.5 -ml-1 "

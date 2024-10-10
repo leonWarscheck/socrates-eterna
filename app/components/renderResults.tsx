@@ -2,7 +2,8 @@ import { format } from "date-fns";
 
 export default function RenderResults({ loaderResults }) {
   return (
-    <div className="max-w-4xl mx-auto px-4 mt-48 dmd:mt-[9.5rem]  ">
+    <div className="max-w-7xl mx-auto w-full">
+    <div className="max-w-4xl px-4 mt-48 dmd:mt-[9.5rem]  ">
       {loaderResults &&
         loaderResults.map((comic) => {
           // Convert published date to a Date object
@@ -27,5 +28,6 @@ export default function RenderResults({ loaderResults }) {
           );
         })}
     </div>
+</div>
   );
 }

@@ -49,7 +49,7 @@ export default function ModeCharacterBar({ setMode }) {
 
 
   return (
-    <div className="max-w-4xl flex flex-col dmd:flex-row  w-full   mx-auto px-4 mt-6 dmd:mt-8 mb-4 bg-teal- "
+    <div className="max-w-4xl flex flex-col dmd:flex-row  w-full    px-4 mt-6 dmd:mt-8 mb-4 bg-teal- "
       ref={dropdownRef} >
       <Link
         onClick={() => setMode("meaning")}

@@ -10,7 +10,7 @@ export default function ModeDateBar({ setMode }) {
     setSelectedOption(e.target.value);
   };
   return (
-    <div className="max-w-4xl flex flex-col dmd:flex-row  w-full   mx-auto px-4 mt-6 dmd:mt-8 mb-4 bg-teal-5 ">
+    <div className="max-w-4xl flex flex-col dmd:flex-row  w-full    px-4 mt-6 dmd:mt-8 mb-4 bg-teal-5 ">
       <Link
         to="/comics"
         className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-4 w-[300px] bg-red-  text-dilred font-bold mt- 2.5 dmd:mb-0 -ml-1 "

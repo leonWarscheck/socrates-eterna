@@ -318,48 +318,47 @@ export default function Books() {
 
 
 
-        <div className="bg-purple-800 max-w- 7xl mx-auto w-full mb-8">
-          <div id="calendar" className=" relative flex bg-purple- 900 w-full h- 80 shrink-0 rounded-xl max-w-4xl mx-auto pt-10 pb-6">
+        {/* <div className="bg-purple-800 max-w- 7xl mx-auto w-full mb-16">
+          <div id="calendar" className=" relative flex bg-purple- 900 w-full h- 80  rounded-xl max-w-4xl mx-auto py-8">
             <img
-              className=" h- 80 size-1/6 ml-10 mr-8 p- mx- 6 my-auto object-cover"
+              className=" h-44 ml-12 mr-8 p- mx- 6 my- auto object-cover bg- white"
               src="/books/calendar03.png"
               alt=""
             />
-            {/* <p className="absolute bg-purple-950 text-purple-100 rounded-lg py-1 border-purple-100 font-bold text-sm top-16 left-4 border-2  px-2">Available Now!</p> */}
+            <p className="absolute bg-purple-950 text-purple-100 rounded-lg py-1 border-purple-100 font-bold text-sm top-16 left-4 border-2  px-2">Available Now!</p>
 
 
-            <div className="flex flex-col mr-4 mt-4 pr-6 ml-6 mb-4">
+            <div className="flex flex-col mr-4 pr-6 ml-6 my-auto">
               <div className="flex py-4 text-lg">
                 <h2 className="font-bold text-2xl">
                   2025 Page-A-Day Calendar
                 </h2>
-                <Link
-                  to="https://www.amazon.com"
-                  className="font-light  hover:underline bg-purple-950  h-9 px-4 pt-px ml-auto border-2 border-white rounded-lg "
-                  target="_blank"
-                  rel="noopener norefferrer"
-                >
-                  click to shop
-                </Link>
+
               </div>
-              <p className="overflow-hidden text-lg  text- justify hyphens-auto mb-5">
+              <p className="overflow-hidden text-lg  text- justify hyphens-auto mb-3">
                 <span className="font-bold">Available Now! </span>
 
                 Back by popular demand, now featuring both <span className="font-semibol italic">Socrates Eterna and </span> <span className="font-semibol italic">Socrates Pantheon!</span>  2 comics each day, printed in Athens!
                 <br />
-                <br />
               </p>
-
+              <Link
+                to="https://www.amazon.com"
+                className="font-normal text-sm  hover:underline bg-purple-950  h-8 px-4 pt-1  mr-auto 4 borde border-white rounded-lg "
+                target="_blank"
+                rel="noopener norefferrer"
+              >
+                click to shop
+              </Link>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* <div className="h-8 bg-purple-900 w-full"><div className="bg-purple-950 w-1/2 h-8"></div> <div></div></div> */}
 
         {/*ROW 1111111111111111111111111*/}
 
-        <div className="flex max-w-7xl mx-auto my-8 gap-x-8">
+        <div className="flex max-w-7xl mx-auto my-8 gap-x-8 mt-16 ">
 
-          <div id="eterna" className=" relative flex bg-purple- 950 rounded-xl w-1/2  shrink- 0 ">
+          <div id="eterna" className=" relative flex bg-purple-900 rounded-xl w-1/2  shrink- 0 ">
 
             <img
               className=" h-[300px] mx-6 mt-8 border-2 border-purple-100 "
