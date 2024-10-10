@@ -18,7 +18,7 @@ export default function SearchBar({ query, mode, setMode, isSearching }) {
           <ModeSelectorBar mode={mode} setMode={setMode} />
         </div>
         <div className="size-10 bg-transparent rounded-lg border-2 border-dilred ml-auto mt-8 mr- 4">
-          <img className="size-4 mt-2.5 mx-auto" src="/main/share.svg" alt="" />
+          <img className="size-4 mt-2.5 mx-auto" src="/main/share3.svg" alt="" />
 
 
         </div>

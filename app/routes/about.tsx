@@ -6,10 +6,8 @@ export default function About() {
 
 
   useEffect(() => {
-    console.log("useEffect running");
     setTimeout(() => {
       window.scrollTo(0, 0);
-      console.log("scrollTo ran");
     }, 11);
   }, []);
 
@@ -28,13 +26,13 @@ export default function About() {
             <div className="w-full  flex flex-col items-center my-auto ">
               <h1 className="text-dilred  font-bold 
               pb-4 pt-14 text-xl small:text-3xl text-center">
-                ABOUT <span className="border-2 border-dilred ml-0.5 px-2 p-1 pt-4">SCOTT ADAMS</span>
+                ABOUT <span className="border-2 border-dilred ml-0.5 px-2 p-1 pt-4"></span>
               </h1>
             </div>
             <img
               className=" mr-aut
               w-full "
-              src="/portraits/scottPortrait.webp"
+              src="/portraits/Portrait.webp"
               alt=""
             />
             <p className="  animate-pulse text-neutral-500 pb-10  
@@ -106,28 +104,25 @@ export default function About() {
               </h2>
               <p className="text-sm">
                 {" "}
-                The chapters on this About page are mockups to demo the design
-                concept. If you like it, I will finish the whole journey, also
-                with real pictures. Maybe we can also finetune the page to make it
-                even more obvious that you are a caring human and not a racist.
+               
               </p>
             </div>
             <div className=" flex flex-col gap-4 p-4 pb-10 ">
               <div className="flex gap-4 ">
                 <img
                   className="w-1/3 mt-2.5 object-cover"
-                  src="/characters/dogbert-0a98df7d560fe35a4654715f65948b79.jpg"
+                  src="/characters/dog.jpg"
                   alt=""
                 />
                 <img
                   className="w-2/3  object-cover overflow-hidden"
-                  src="/portraits/Scott-Adams.webp"
+                  src="/portraits/.webp"
                   alt=""
                 />
               </div>
               <img
                 className="size-2/3 mx-auto object-cover"
-                src="/portraits/dilbert-c-17dec98-dd-mac-scott-adams-the-creator-of-dilbert-the-comic-strip-has-a-new-project.webp"
+                src="/portraits/.webp"
                 alt=""
               />
             </div>
@@ -143,19 +138,19 @@ export default function About() {
               <div className="flex gap-3 items-center  text-xl pt- pb-  ">
                 <Link
                   className="hover:underline"
-                  to="https://www.twitter.com/@ScottAdams.com"
+                  to="https://www.twitter.com/@.com"
                 >
                   X.com
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.instagram.com/ScottAdams925"
+                  to="https://www.instagram.com/"
                 >
                   Instagram
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.linkedin.com/in/scott-adams-52b1595a/"
+                  to="https://www.linkedin.com/in/"
                 >
                   LinkedIn
                 </Link>
@@ -163,13 +158,13 @@ export default function About() {
               <div className="flex gap-3 text-xl pt-1 pb-">
                 <Link
                   className="hover:underline"
-                  to="https://www.scottadams.locals.com"
+                  to="https://www..com"
                 >
                   Locals.com
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.youtube.com/RealCoffeeWithScottAdams"
+                  to="https://www.youtube.com/"
                 >
                   Youtube
                 </Link>
@@ -203,7 +198,7 @@ export default function About() {
             <img
               className=" mr- auto
               w-1/2  "
-              src="/portraits/scottPortrait.webp"
+              src="/portraits/.webp"
               alt=""
             />
           </div>
@@ -268,18 +263,18 @@ export default function About() {
               <div className="flex gap-4 ">
                 <img
                   className="size-1/3 mt-2.5 object-cover"
-                  src="/characters/dogbert-0a98df7d560fe35a4654715f65948b79.jpg"
+                  src="/characters/dog.jpg"
                   alt=""
                 />
                 <img
                   className="w-2/3  object-cover"
-                  src="/portraits/Scott-Adams.webp"
+                  src="/portraits/.webp"
                   alt=""
                 />
               </div>
               <img
                 className="size-2/3 mx-auto object-cover"
-                src="/portraits/dilbert-c-17dec98-dd-mac-scott-adams-the-creator-of-dilbert-the-comic-strip-has-a-new-project.webp"
+                src="/portraits/.webp"
                 alt=""
               />
             </div>
@@ -287,13 +282,7 @@ export default function About() {
               <h2 className="text-dilred text-2xl font-bold pb-4 ">
                 3. Mock Up Chapter
               </h2>
-              <p className="text-xs">
-                {" "}
-                The chapters on this About page are mockups to demo the design
-                concept. If you like it, I will finish the whole journey, also
-                with real pictures. Maybe we can also finetune the page to make it
-                even more obvious that you are a caring human and not a racist.
-              </p>
+              <p className="text-xs"></p>
               <div className="flex gap-3 text-xl pt- pb-"></div>
             </div>
           </div>
@@ -308,19 +297,19 @@ export default function About() {
               <div className="flex gap-3 items-center  text-xl pt- pb-  ">
                 <Link
                   className="hover:underline"
-                  to="https://www.twitter.com/@ScottAdams.com"
+                  to="https://www.twitter.com/@.com"
                 >
                   X.com
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.instagram.com/ScottAdams925"
+                  to="https://www.instagram.com/"
                 >
                   Instagram
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.linkedin.com/in/scott-adams-52b1595a/"
+                  to="https://www.linkedin.com/in/"
                 >
                   LinkedIn
                 </Link>
@@ -328,13 +317,13 @@ export default function About() {
               <div className="flex gap-3 text-xl pt-1 pb-">
                 <Link
                   className="hover:underline"
-                  to="https://www.scottadams.locals.com"
+                  to="https://www..com"
                 >
                   Locals.com
                 </Link>
                 <Link
                   className="hover:underline"
-                  to="https://www.youtube.com/RealCoffeeWithScottAdams"
+                  to="https://www.youtube.com/"
                 >
                   Youtube
                 </Link>
