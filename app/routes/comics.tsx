@@ -42,7 +42,7 @@ export async function loader({ request }) {
 
 
 
-export default function ClassicSearch() {
+export default function comicSearch() {
   const { query, results } = useLoaderData<LoaderData>();
   const [mode, setMode] = useState("meaning");
   const navigation = useNavigation();

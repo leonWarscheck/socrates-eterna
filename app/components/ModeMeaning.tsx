@@ -9,7 +9,7 @@ export default function ModeMeaning({ query, isSearching }) {
     <Form className="max-w-xl flex flex-col mx-auto w-full ">
       <div className="relative w-full mx-auto"> {/* Parent div for relative positioning */}
         <input
-          className="border-2 bg-purple- 1000 bg-transparent border-dilred focus:outline-none grow h-10 px-4 rounded-lg w-full "
+          className="border-2 bg-purple- 1000 bg-transparent border-primary1 focus:outline-none grow h-10 px-4 rounded-lg w-full "
           type="search"
           defaultValue={query}
           name="search"
@@ -26,7 +26,7 @@ export default function ModeMeaning({ query, isSearching }) {
         <button
           disabled={isSearching}
           type="submit"
-          className="bg-dilred   text-sm small:text-sm hover:bg-purple-600 px-4 py- 2 rounded-md"
+          className="bg-primary1   text-sm small:text-sm hover:bg-purple-600 px-4 py- 2 rounded-md"
         >
           Eterna Search
         </button>

@@ -54,14 +54,14 @@ export default function ModeCharacterBar({ setMode }) {
       <Link
         onClick={() => setMode("meaning")}
         to="/comics"
-        className=" text-3xl dmd:text-[2.9rem]/9 text-center text-dilred w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
+        className=" text-3xl dmd:text-[2.9rem]/9 text-center text-primary1 w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
       >
-      <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
+        <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
       </Link>
       <div id="sm md dropdown" className="relative max-w- xl dmd:ml-6 w-full dmd:hidde ">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-purple-950 text-left border-dilred ${isOpen ? "rounded-t-lg" :"rounded-lg"}`} 
+          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-purple-950 text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"}`}
         >
           {selectedCharacter ? (
             <div className="flex items-center">
@@ -92,12 +92,12 @@ export default function ModeCharacterBar({ setMode }) {
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute w-ful mt- 1 bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-dilred rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0 ">
+          <ul className="absolute w-ful mt- 1 bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-primary1 rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0 ">
             {characters.map((character) => (
               <li
                 key={character.name}
                 onClick={() => handleSelect(character)}
-                className="p-2 hover:bg-dilred cursor-pointer odd:bg-purple-950"
+                className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
                 to={`/comics?search=${character.name}`}
                 className="text-sm"
@@ -119,7 +119,7 @@ export default function ModeCharacterBar({ setMode }) {
           </ul>
         )}
 
-        {/* <div className={`w-full h-1 ${isOpen ? 'bg-neutral-300' : 'bg-dilred'} `}></div> */}
+        {/* <div className={`w-full h-1 ${isOpen ? 'bg-neutral-300' : 'bg-primary1'} `}></div> */}
       </div >
     </div>
   );

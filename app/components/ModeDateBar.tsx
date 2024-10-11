@@ -13,7 +13,7 @@ export default function ModeDateBar({ setMode }) {
     <div className="max-w-4xl flex flex-col dmd:flex-row  w-full    px-4 mt-6 dmd:mt-8 mb-4 bg-teal-5 ">
       <Link
         to="/comics"
-        className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-4 w-[300px] bg-red-  text-dilred font-bold mt- 2.5 dmd:mb-0 -ml-1 "
+        className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-4 w-[300px] bg-red-  text-primary1 font-bold mt- 2.5 dmd:mb-0 -ml-1 "
       >
         <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
       </Link>
@@ -55,7 +55,7 @@ export default function ModeDateBar({ setMode }) {
               );
             }}
             type="submit"
-            className="bg-dilred dmd:hidden mr-auto  hover:bg-red-600 text-white shrink-0 pt- 2 tiny: pt-3  px-2 pb-1 h-full "
+            className="bg-primary1 dmd:hidden mr-auto  hover:bg-red-600 text-white shrink-0 pt- 2 tiny: pt-3  px-2 pb-1 h-full "
           >
             <img src="/main/search.png" alt="" className="invert size-3 tiny:size-4" />
           </button>
@@ -102,7 +102,7 @@ export default function ModeDateBar({ setMode }) {
                 );
               }}
 
-              className="bg-dilred  hover:bg-red-600 text-white pt-3 px-2 pb-1 "
+              className="bg-primary1  hover:bg-red-600 text-white pt-3 px-2 pb-1 "
             >
               Dilbert Date Search
             </button>
@@ -125,7 +125,7 @@ export default function ModeDateBar({ setMode }) {
               </label>
               <input
                 type="month"
-                className="ml-2 border-2 border-dilred rounded-lg bg-purple-950 px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
+                className="ml-2 border-2 border-primary1 rounded-lg bg-purple-950 px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
                 disabled={selectedOption !== "month"}
               />
             </div>
@@ -144,7 +144,7 @@ export default function ModeDateBar({ setMode }) {
               </label>
               <input
                 type="date"
-                className="ml-2 border-2 border-dilred bg-purple-950 focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
+                className="ml-2 border-2 border-primary1 bg-purple-950 focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
                 disabled={selectedOption !== "day"}
               />
             </div>
@@ -156,7 +156,7 @@ export default function ModeDateBar({ setMode }) {
                 );
               }}
               type="submit"
-              className="bg-dilred   hover:bg-purple-600 rounded-lg h-10  px-4   shrink- 0 ml-4 mr-"
+              className="bg-primary1   hover:bg-purple-600 rounded-lg h-10  px-4   shrink- 0 ml-4 mr-"
             >
               <img src="/main/search.png" alt="" className="invert size-3 tiny:size-4" />
             </button>

@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       colors: {
-        dilred: "#7e22ce",
+        primary1: "#7e22ce",
         "purple-1000": "#230b36",
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -75,6 +75,7 @@ const config = {
         dmd: "667px",//768, 667
         'full-md': "887px",
         dlg: "1024px",
+        sxl: "1080px",
         'landscape-narrow': { 'raw': '(max-height: 940px) and (orientation: landscape)' }, // 769px
         'landscape-narrow-2': { 'raw': '(max-width: 940px) and (max-height: 430px )' },
         'landscape-super-narrow': { 'raw': '(max-height: 375px) and (orientation: landscape)' },

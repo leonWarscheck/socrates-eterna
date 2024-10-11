@@ -72,6 +72,7 @@ export default function Header() {
       
       ${location.pathname === "/comics" && "landscape-super-narrow:bg-opacity- 0"}
       ${location.pathname === "/" && "hidden"}
+      ${location.pathname === "/test" && "hidden"}
       ${query ? "hidden" : ""}
       `}
       >

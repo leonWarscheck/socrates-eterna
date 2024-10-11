@@ -19,7 +19,7 @@ export default function Footer() {
 
   // console.log(location.hash)
   return (
-    <footer className={`  mt-aut bg-purple-950 items-center flex h-16 w-full ${isSnapEnabled && "snap-start snap-always"} `}>
+    <footer className={` ${location.pathname === "/test" && "hidden"}  mt-aut bg-purple-950 items-center flex h-16 w-full ${isSnapEnabled && "snap-start snap-always"} `}>
       
       <nav className="max-w-7xl flex gap-x-4 flex-gro items-center px-4 text-neutral-100 text-xs tiny:text-sm mx-auto font-light w-full">
         <div className="flex gap-x-3 dmd:gap-x-4  mr-auto">

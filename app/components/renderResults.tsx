@@ -13,7 +13,7 @@ export default function RenderResults({ loaderResults }) {
           const formattedDate = format(publishedDate, "eeee, dd-MM-yyyy");
           return (
             <div key={comic.metadata.filename} className="mb-14">
-              <div className="flex text-neutral-500 italic mb-1">
+              <div className="flex text-purple-00 italic mb-1">
                 <p className="text-sm">{formattedDate}</p>
 
                 <h2 className="font-bol italic text-sm ml-2">

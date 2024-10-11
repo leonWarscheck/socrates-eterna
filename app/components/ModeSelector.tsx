@@ -54,8 +54,8 @@ export default function ModeSelector({ mode, setMode }) {
                 // alert('The Sample Comics so far only contain: Dilbert, Boss, Wally, Asok, Carol and Ceo.');
               }}
               className={
-                (mode === "character" && `text-dilred underline`) ||
-                `hover:text-dilred`
+                (mode === "character" && `text-primary1 underline`) ||
+                `hover:text-primary1`
               }
             >
             <img className="size-2.5 -mb-[0.75px] opacity-70" src="/main/question.png" alt="" />
@@ -66,8 +66,8 @@ export default function ModeSelector({ mode, setMode }) {
           <button
             onClick={() => setMode("keyword")}
             className={
-              (mode === "keyword" && `text-dilred underline`) ||
-              `hover:text-dilred`
+              (mode === "keyword" && `text-primary1 underline`) ||
+              `hover:text-primary1`
             }
           >
             Keyword

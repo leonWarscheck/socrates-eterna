@@ -1,0 +1,38 @@
+[
+  {
+    "id": "aa9c92b1-6aa8-43af-8fc9-10df07b7c738",
+    "title": "Eterna: A Journey Beyond Time",
+    "year": "2024",
+    "covertext": "Follow Socrates on a journey through history like never before. In Eterna: A Journey Beyond Time, the father of philosophy travels across centuries, confronting the great thinkers and ideologies that shaped each era. <br/> From the rise of empires to the age of technology, Socrates questions the beliefs, values, and visions of the future, challenging humanity to reflect on its progress and pitfalls. Through his timeless lens, explore the evolution of thought and the eternal quest for truth.",
+    "coverimage": "/books/eterna.jpg",
+    "purchaseLink": "https://www.amazon.com",
+    "new": true
+  },
+  {
+    "id": "94c79168-875d-4e39-b640-f172b3c5bca4",
+    "title": "The Socratic Method: Tools for the Modern Age",
+    "year": "2019",
+    "covertext": "Unlock timeless wisdom for today's complex world. In The Socratic Method: Tools for the Modern Age, discover how the ancient art of questioning can sharpen your critical thinking, solve problems, and foster meaningful conversations.<br/> This guide adapts Socrates' techniques to address modern challenges, empowering you to approach life's toughest questions with clarity and insight. It will equip you with powerful tools for deeper understanding and decision-making.",
+    "coverimage": "/books/tools.jpg",
+    "purchaseLink": "https://www.amazon.com",
+    "new": false
+  },
+  {
+    "id": "d8125647-0771-4620-a216-0bb6881874c3",
+    "title": "Socrates and the Age of Reason",
+    "year": "2016",
+    "covertext": "Journey back to the roots of Western philosophy in Socrates and the Age of Reason. This compelling exploration brings to life the wisdom of Socrates, the father of critical thinking, and his enduring influence on the modern age. <br/> From his profound dialogues in ancient Athens to his timeless methods of inquiry, Socrates laid the foundation for rational thought and the pursuit of truth. In this book, discover how his teachings shaped the Age of Reason and continue to inspire thinkers, revolutionaries, and visionaries today.",
+    "coverimage": "/books/reason.jpg",
+    "purchaseLink": "https://www.amazon.com",
+    "new": false
+  },
+  {
+    "id": "fd1a3614-7add-4353-8743-24fbdbb2a7a7",
+    "title": "Plato's Secret Notes",
+    "year": "2012",
+    "covertext": "Journey back to the roots of Western philosophy in Socrates and the Age of Reason. This compelling exploration brings to life the wisdom of Socrates, the father of critical thinking, and his enduring influence on the modern age. <br/> From his profound dialogues in ancient Athens to his timeless methods of inquiry, Socrates laid the foundation for rational thought and the pursuit of truth. In this book, discover how his teachings shaped the Age of Reason and continue to inspire thinkers, revolutionaries, and visionaries today.",
+    "coverimage": "/books/secret.jpg",
+    "purchaseLink": "https://www.amazon.com",
+    "new": false
+  }
+]

@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 import path from "path";
 
 // Define the path to your JSON file
-const filePath = path.resolve("../data/comicData.json");
-const transformedFilePath = path.resolve("../data/comicData.json");
+const filePath = path.resolve("../data/booksData.json");
+const transformedFilePath = path.resolve("../data/booksData.json");
 
 // Function to transform the data
 const transformData = (data) => {
@@ -20,6 +20,7 @@ const processComicData = async () => {
     // Read the original comic data
     const rawData = await fs.readFile(filePath, "utf8");
     const comicData = JSON.parse(rawData);
+    console.log(comicData)
 
     // Transform the data
     const transformedData = transformData(comicData);

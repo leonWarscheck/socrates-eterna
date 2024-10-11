@@ -34,10 +34,10 @@ export default function ModeCharacter({ isSearching }) {
   return (
     <>
 
-<div id="sm md dropdown" className="relative max-w-xl w-full dmd:hidde  mx-auto px-4">
+      <div id="sm md dropdown" className="relative max-w-xl w-full dmd:hidde  mx-auto px-4">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-between w-full   p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-transparent text-left border-dilred ${isOpen ? "rounded-t-lg" :"rounded-lg"}`} 
+          className={`flex items-center justify-between w-full   p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-transparent text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"}`}
         >
           {selectedCharacter ? (
             <div className="flex items-center px-4">
@@ -68,12 +68,12 @@ export default function ModeCharacter({ isSearching }) {
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute w-ful mt- 1 bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-dilred rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0 mx-4">
+          <ul className="absolute w-ful mt- 1 bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-primary1 rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0 mx-4">
             {characters.map((character) => (
               <li
                 key={character.name}
                 onClick={() => handleSelect(character)}
-                className="p-2 hover:bg-dilred cursor-pointer odd:bg-purple-950"
+                className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
                 to={`/comics?search=${character.name}`}
                 className="text-sm"
@@ -97,9 +97,9 @@ export default function ModeCharacter({ isSearching }) {
         <div className="flex gap-4 mx-auto mt-6 w-full bg-amber-">
           <button
             onClick={() => setIsOpen(true)}
-            className="bg-dilred text-sm small:text-sm hover:bg-purple-600  px-2 h-9 mx-auto rounded-md"
+            className="bg-primary1 text-sm small:text-sm hover:bg-purple-600  px-2 h-9 mx-auto rounded-md"
           >
-           Character Search
+            Character Search
           </button>
         </div>
       </div >
@@ -173,7 +173,7 @@ export default function ModeCharacter({ isSearching }) {
         <div className="flex gap-4 mx-auto mt-6 w-full bg-amber-">
           <button
             onClick={() => setIsOpen(true)}
-            className="bg-dilred text-sm small:text-sm hover:bg-purple-600  px-2 h-9 mx-auto rounded-md"
+            className="bg-primary1 text-sm small:text-sm hover:bg-purple-600  px-2 h-9 mx-auto rounded-md"
           >
            Character Search
           </button>

@@ -58,37 +58,28 @@ export default function Index() {
           </h3>
           <Link
             to="#get-reborn"
-            className=" dmd:hidden px-3 pt-3 pb-1 mx-auto mt-7 text-xl text-white border2 bg-dilred hover:bg-red-600"
+            className=" dmd:hidden px-3 pt-3 pb-1 mx-auto mt-7 text-xl text-white border2 bg-primary1 hover:bg-red-600"
           >
             Get Started
           </Link>
-          <Link
-            to="#join-pantheon"
-            className="hidden dmd:block px-6 py-2 font- socrates  mx-auto mt-7 text-2xl text-white border-2 rounded-lg border-dilred pulse-border bg-purple- hover:bg-purple-600"
-          >
-            Get Started
-          </Link>
-          <Link
-            className="mt-4 text-center text-purple-400 font-ligh underline font- socrates"
-            to="/comics"
-          >
-            or explore the Eterna comics
-          </Link>
+          <div className="flex bg-teal- 500 text-xl mt-10 gap-6">
+            <Link
+              to="#join-pantheon"
+              className="hidden dmd:block px-4 py-2 font- socrates bg-primary1  ml-auto  text-xl text-white border-2 rounded-lg border-primary1 pulse- border bg-purple- hover:bg-purple-600"
+            >
+              Pantheon Membership
+            </Link>
+            <Link
+              className=" text-cente text-purple-40 px-4 py-2 border-2 rounded-lg font-ligh mr-auto  font- socrates"
+              to="/comics"
+            >Search Comics</Link>
+          </div>
         </div>
 
         <div className="absolute bottom-[4dvh] w-full portrait-narrow:hidden ">
           <img src="/main/down-arrow.png" alt="" className="mx-auto size-4  animate-pulse invert opacity-80" />
         </div>
       </section>
-
-      {/* <div className="col">
-        <div className="flex">
-          <div>Copy</div>
-          <img src="" alt="" />
-        </div>
-        <div className="flex">Table</div>
-        <div className="flex">License</div>
-      </div> */}
 
       <section id="landing page" className=" flex flex-col ">
         <div id="copy" className="flex bg-teal- 500  mb- mx-auto w-full max-w-7xl grow">
@@ -124,17 +115,15 @@ export default function Index() {
         </div>
 
         <div id="table" className=" mx-auto w-full  pt-28 pb-16 bg-gradient-to-b from-purple-950 via-purple-1000 to-purple-1000 px-4 ">
-          <h2 className="text-4xl pb-5 font-bold text-center text-purple-200">
-            Join the PANTHEON
-          </h2>
+          <h2 className="text-4xl pb-5 font-bold text-center text-purple-200">Join the PANTHEON</h2>
           <table className="mt-8 bg-purple- 400 table-auto mx-auto  max-w-7xl w-full">
             <thead className="sticky top-[62px] border-t-2 border-purple-900  z-10 bg-purple-1000">
-              <tr className="w-full border-b-2 border-dilred">
+              <tr className="w-full border-b-2 border-primary1">
                 <th className="w-1/2 text-xl text-left pl-4 ">Including</th>
                 <th className="w-1/4   ">
                   <div className="flex flex-col pt-4 ">
                     <Link
-                      className="px-6 py-2  mx-auto text-base rounded-lg  bg-dilred small:text-xl hover:bg-purple-600 mb-"
+                      className="px-6 py-2  mx-auto text-base rounded-lg  bg-primary1 small:text-xl hover:bg-purple-600 mb-"
                       to="https://www.x.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -147,7 +136,7 @@ export default function Index() {
                 <th className="w-1/4  bg-purple-950">
                   <div className="flex flex-col pt-4 ">
                     <Link
-                      className="px-6 py-2  mx-auto text-base rounded-lg  bg-dilred small:text-xl hover:bg-purple-600 mb-"
+                      className="px-6 py-2  mx-auto text-base rounded-lg  bg-primary1 small:text-xl hover:bg-purple-600 mb-"
                       to="https://www.patreon.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -251,15 +240,19 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-full  pt-28 pb-20">
+        <div className="flex flex-col w-full  pt-36 pb-28">
           <h3 className="text-center text-4xl font-bold font-socrates pb-2">Join the PANTHEON, now!</h3>
           <h4 className="text-center text-xl">Special Offer: Purchase the full year membership and gain instant access to the retreat ticket store.</h4>
           <Link
             to="#join-pantheon"
-            className="hidden dmd:block px-6 py-2 font- socrates  mx-auto mt-7 text-2xl text-white border-2 rounded-lg border-dilred pulse-border bg-purple- hover:bg-purple-600"
+            className="hidden dmd:block px-6 py-2 font- socrates  mx-auto mt-7 text-2xl text-white border-2 rounded-lg border-primary1 pulse-border bg-purple- hover:bg-purple-600"
           >
             Get Started
           </Link>
+          <Link
+            className=" text-cente text-purple-400 px-4 py-2  underline  font-ligh mx-auto pt-6  font- socrates"
+            to="/comics"
+          >or explore the Eterna Comic Search</Link>
         </div>
 
 
