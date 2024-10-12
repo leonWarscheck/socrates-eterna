@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../styles/datepicker.css";
 import { Form, Link } from "@remix-run/react";
 import RandomDilbertButton from "./RandomComicButton";
 

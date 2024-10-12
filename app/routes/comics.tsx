@@ -2,9 +2,9 @@ import { MetaFunction, useLoaderData, Form, useNavigation } from "@remix-run/rea
 import { json } from "@remix-run/node";
 import { useState, useEffect } from "react";
 import { semanticSearch } from "~/utils/semanticSearchLogic";
-import RenderResults from "~/components/renderResults";
-import SearchLanding from "~/components/SearchLanding";
-import SearchBar from "~/components/SearchBar";
+import RenderResults from "~/components/Comics/RenderResults";
+import SearchLanding from "~/components/Comics/SearchLanding";
+import SearchBar from "~/components/Comics/SearchBar";
 
 export const meta: MetaFunction = () => {
   return [

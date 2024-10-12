@@ -17,20 +17,22 @@ export default function Header() {
     const handleScroll = () => {
       if (window.scrollY <= 210) {
         setScrollShow(false)
+       
       } else {
         setScrollShow(true)
       }
     };
 
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
 
     return ()=> window.removeEventListener("scroll", handleScroll);
   }, [])
 
-  console.log("scrollShow: ", scrollShow)
+  // console.log("scrollShow: ", scrollShow)
 
-  console.log(query || "noquery")
+  // console.log(query || "noquery")
 
   return (
     <>
@@ -46,7 +48,7 @@ export default function Header() {
         <nav className="max-w-7xl  mx-auto  flex  flex-grow items-center px-4">
           <Link to="/" className="">
             <img
-              className="h-12 mt- ml-1 border-dilre border- hover:opacity-70"
+              className="h-12    hover:opacity-70"
               src="/main/omega-logo.png"
               alt=""
             />
@@ -59,7 +61,7 @@ export default function Header() {
             <li className="hover:text-purple-400">
               <Link prefetch="render" to="/books">Books</Link>
             </li>
-            <li className="hover:text-purple-400 target:text-neutral-500 pr-2 4 dmd:pr- 0">
+            <li className="hover:text-purple-400 target:text-neutral-500 ">
               <Link to="/comics">Comics</Link>
             </li>
           </ul>
@@ -76,10 +78,10 @@ export default function Header() {
       ${query ? "hidden" : ""}
       `}
       >
-        <nav className="max-w-7xl   mx-auto flex  flex-grow items-center px- 4">
+        <nav className="max-w-7xl   mx-auto flex  flex-grow items-center px-4">
           <Link to="/" className="">
             <img
-              className="h-12 ml-1 hover:opacity-60 border-dilre border-"
+              className="h-12 hover:opacity-60 border-dilre border-"
               src="/main/omega-logo.png"
               alt=""
             />
@@ -92,7 +94,7 @@ export default function Header() {
             <li className="hover:text-purple-400">
               <Link prefetch="render" to="/books">Books</Link>
             </li>
-            <li className="hover:text-purple-400 target:text-neutral-500 pr-2 4 dmd:pr- 0">
+            <li className="hover:text-purple-400 target:text-neutral-500 ">
               <Link to="/comics">Comics</Link>
             </li>
           </ul>

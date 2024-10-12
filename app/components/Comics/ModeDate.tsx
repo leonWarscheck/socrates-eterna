@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "../styles/datepicker.css";
 import { Form } from "@remix-run/react";
 
 export default function ModeDate() {
