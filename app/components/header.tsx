@@ -40,7 +40,7 @@ export default function Header() {
         onClick={() => setCanHover(true)}
         id="header-home"
         className={` h-16 bg-purple-950 items-center flex fixed w-full  grow z-20
-      ${!scrollShow && "opacity-0"}
+      ${!scrollShow && "opacity- 0"}
       ${location.pathname === "/" || "hidden"}
 
       transition-opacity  ${canHover && "hover:opacity-100"} duration-1000  `}

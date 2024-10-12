@@ -35,7 +35,7 @@ export default function SearchBar({ query, mode, setMode, isSearching }) {
 
   return (
     <div
-      className={`fixed mt-16 w-full bg-purple-1000 min-h-30 transition-transform duration-300 ${
+      className={`fixed mt-16 w-full bg-purple-1000 min-h-30 transition-transform duration-500 ${
         isSearching && "animate-pulse"
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >

@@ -6,10 +6,11 @@ export default function HeroSectionTop() {
     <section id="hero" className="bg-purple-950 min-h-dvh flex items-center relative dlg:pt-[26vw] pt-[40vw]">
         <div
           className="
-            bg-top
+            bg- top
             bg-no-repeat
             bg-[length:100%]
-            landscape-narrow:bg-[center_top_-4.9rem
+            landscape-narrow:
+            bg-[center_top_+3.5rem]
           
             bg-purple-950
             bg-[url('/hero/sm.jpg')]
@@ -26,7 +27,7 @@ export default function HeroSectionTop() {
         <div
           id="title"
           className="
-          flex z-10 flex-col px- 4 mx-auto max-w- mb-10 text-center dlg:max-w-5x text-white grow "
+          flex z-10 flex-col px- 4 mx-auto max-w-  text-center dlg:max-w-5x text-white grow "
         >
           <h2 className="font-socrates leading3 text-[55px] tiny:text-6xl dlg:text-[85px] font-bold text-center leading- [69px]">
             JOIN THE PANTHEON
@@ -34,16 +35,11 @@ export default function HeroSectionTop() {
           <h3 className="font-socrates text-center text-4xl px- dlg:text-5xl hyphens-auto mt-2.5 font-semibold">
             Gain Exclusive Insight and Fellowship
           </h3>
-          <Link
-            to="#get-reborn"
-            className=" dmd:hidden px-3 pt-3 pb-1 mx-auto mt-7 text-xl text-white border2 bg-primary1 hover:bg-red-600"
-          >
-            Get Started
-          </Link>
-          <div className="flex bg-teal- 500 text-xl mt-10 gap-6">
+          
+          <div className="flex bg-teal- 500 text-xl mt-8 gap-6">
             <Link
               to="#join-pantheon"
-              className="hidden dmd:block px-4 py-2 font- socrates bg-primary1  ml-auto  text-xl text-white border-2 rounded-lg border-primary1  bg-purple- hover:bg-purple-600"
+              className="block px-4 py-2 font- socrates bg-primary1  ml-auto  text-xl text-white border-2 rounded-lg border-primary1  bg-purple- hover:bg-purple-600"
             >
               Pantheon Membership
             </Link>
