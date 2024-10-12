@@ -12,7 +12,7 @@ export default function Books() {
   return (
     <main id="md-lg" className=" hidde w-full dmd: flex flex-col grow mt-16   bg-gradient-to-b from-purple-1000 to-purple-900">
 
-      <ul className="mx-auto max-w-7xl px-4 gap-8 mt-8 dlg:px-0 grid grid-cols-1 sxl:grid-cols-2">
+      <ul className="mx-auto max-w-7xl py-8 px-4 gap-8 mt-8 grid grid-cols-1 sxl:grid-cols-2">
 
         {books.map((book) => (
           <li key={book.id}

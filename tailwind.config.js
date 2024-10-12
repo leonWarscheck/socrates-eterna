@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss';
+// import type { Config } from 'tailwindcss';
 
 const config = {
   content: [
@@ -76,6 +76,7 @@ const config = {
         'full-md': "887px",
         dlg: "1024px",
         sxl: "1080px",
+        xl7: "1280px",
         'landscape-narrow': { 'raw': '(max-height: 940px) and (orientation: landscape)' }, // 769px
         'landscape-narrow-2': { 'raw': '(max-width: 940px) and (max-height: 430px )' },
         'landscape-super-narrow': { 'raw': '(max-height: 375px) and (orientation: landscape)' },
@@ -98,6 +99,6 @@ const config = {
   },
   // eslint-disable-next-line unicorn/prefer-module
   plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
-} satisfies Config;
+} // satisfies Config;
 
 export default config;

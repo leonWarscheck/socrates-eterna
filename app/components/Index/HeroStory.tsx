@@ -29,7 +29,7 @@ export default function HeroStory() {
       <br />
       <p id="join-pantheon"></p>
     </div>
-    <img className="flex w-2/4 object-cover " src="/hero/fade1a.jpeg" alt="" />
+    <img className="flex w-2/4 object-cover xl7:pr-4 " src="/hero/fade1a.jpeg" alt="" />
 
 
   </div>
