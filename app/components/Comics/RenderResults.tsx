@@ -1,9 +1,10 @@
 import { format } from "date-fns";
+import SideAd from "./SideAd";
 
 export default function RenderResults({ loaderResults }) {
   return (
-    <div className="max-w-7xl mx-auto w-full">
-    <div className="max-w-4xl px-4 mt-48 dmd:mt-[9.5rem]  ">
+    <div className="flex max-w-7xl mx-auto w-full">
+    <div className="flex flex-col mx-auto shrink-0 max-w-4xl px-4 mt-10 dmd:mt-[13.5rem] ">
       {loaderResults &&
         loaderResults.map((comic) => {
           // Convert published date to a Date object
@@ -28,6 +29,7 @@ export default function RenderResults({ loaderResults }) {
           );
         })}
     </div>
+    {/* <SideAd/> */}
 </div>
   );
 }

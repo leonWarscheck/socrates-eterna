@@ -75,7 +75,7 @@ const config = {
         dmd: "667px",//768, 667
         'full-md': "887px",
         dlg: "1024px",
-        sxl: "1080px",
+        sxl: "1110px",
         xl7: "1280px",
         'landscape-narrow': { 'raw': '(max-height: 940px) and (orientation: landscape)' }, // 769px
         'landscape-narrow-2': { 'raw': '(max-width: 940px) and (max-height: 430px )' },
