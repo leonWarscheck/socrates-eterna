@@ -4,4 +4,4 @@ node_modules
 /build
 .env
 qs.txt
-/app/zarchive
+/app/archive
