@@ -15,7 +15,7 @@ export default function RandomComicButton({ isSearching }) {
   return (
     <Link
       prefetch="intent"
-      to={`/comics?search=${keyword}`}
+      to={`/results?mode=meaning&search=${keyword}`}
       className="bg-primary1   text-sm small:text-sm hover:bg-purple-600 rounded-md pt-2 px-4 "
     >
       Random Comics

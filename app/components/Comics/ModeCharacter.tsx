@@ -75,7 +75,7 @@ export default function ModeCharacter({ isSearching }) {
                 onClick={() => handleSelect(character)}
                 className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
-                to={`/comics?search=${character.name}`}
+                to={`/results?mode=character&search=${character.name}`}
                 className="text-sm"
               >
                   <div className="flex items-center text-base">
@@ -98,6 +98,7 @@ export default function ModeCharacter({ isSearching }) {
           <button
             onClick={() => setIsOpen(true)}
             className="bg-primary1 text-sm small:text-sm hover:bg-purple-600  px-2 h-9 mx-auto rounded-md"
+            disabled={isSearching}
           >
             Character Search
           </button>

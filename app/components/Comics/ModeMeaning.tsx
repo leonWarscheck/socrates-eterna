@@ -1,17 +1,17 @@
 import React from "react";
 import RandomDilbertButton from "./RandomComicButton";
-import { Form, useNavigation } from "@remix-run/react";
+import { Form, } from "@remix-run/react";
 
-export default function ModeMeaning({ query, isSearching }) {
+export default function ModeMeaning({ isSearching}) {
 
 
   return (
     <Form className="max-w-xl flex flex-col mx-auto w-full ">
+      <input type="hidden" name="mode" value="meaning" />
       <div className="relative w-full mx-auto"> {/* Parent div for relative positioning */}
         <input
           className="border-2 bg-purple- 1000 bg-transparent border-primary1 focus:outline-none grow h-10 px-4 rounded-lg w-full "
           type="search"
-          defaultValue={query}
           name="search"
           placeholder=""
         />

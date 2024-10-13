@@ -1,6 +1,7 @@
+import { Link } from "@remix-run/react";
 import React from "react";
 
-export default function ModeSelector({ mode, setMode }) {
+export default function ModeSelector({ mode }) {
   return (
     <div className="flex dmd:mt-8 mt-6 landscape-narrow:mb- px-4 text-sm text-purple-200 font-ligh ">
       <div className="mx-auto  flex ">
@@ -8,8 +9,8 @@ export default function ModeSelector({ mode, setMode }) {
         <ul className=" flex space-x-4 ">
           <li className="">
             {" "}
-            <button
-              onClick={() => setMode("meaning")}
+            <Link
+            to={`?mode=meaning`}
               className={
                 (mode === "meaning" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
@@ -17,62 +18,31 @@ export default function ModeSelector({ mode, setMode }) {
             >
               {" "}
               Meaning<span className="text-x align-supe"></span>
-            </button>{" "}
+            </Link>{" "}
           </li>
           <li>
-            <button
-              onClick={() => setMode("date")}
+            <Link
+             to={`?mode=date`}
               className={
                 (mode === "date" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
               }
             >
               Date
-            </button>
+            </Link>
           </li>
           <li>
             {" "}
-            <button
-              onClick={() => {
-                setMode("character");
-                // alert('The Sample Comics so far only contain: Dilbert, Boss, Wally, Asok, Carol and Ceo.');
-              }}
+            <Link
+            to={`?mode=character`}
               className={
                 (mode === "character" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
               }
             >
               Character
-            </button>
+            </Link>
           </li>
-          {/* <li>
-            {" "}
-            <button
-            className=" text-xs border rounded-full px-1.5"
-              onClick={() => {
-                setMode("character");
-                // alert('The Sample Comics so far only contain: Dilbert, Boss, Wally, Asok, Carol and Ceo.');
-              }}
-              className={
-                (mode === "character" && `text-primary1 underline`) ||
-                `hover:text-primary1`
-              }
-            >
-            <img className="size-2.5 -mb-[0.75px] opacity-70" src="/main/question.png" alt="" />
-            
-            </button>
-          </li> */}
-          {/* <li>
-          <button
-            onClick={() => setMode("keyword")}
-            className={
-              (mode === "keyword" && `text-primary1 underline`) ||
-              `hover:text-primary1`
-            }
-          >
-            Keyword
-          </button>
-        </li> */}
         </ul>
       </div>
     </div>

@@ -40,7 +40,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="bg-yellow- overscroll-none fontlight socrates bg-purple-1000 text-purple-100">
-        <div className="min-h-dvh flex flex-col selection:bg-neutral-300">
+        <div className="min-h-dvh flex flex-col selection:bg-purple-700">
           <Header />
           {children}
           <Footer />

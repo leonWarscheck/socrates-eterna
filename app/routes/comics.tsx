@@ -1,71 +1,50 @@
-import { MetaFunction, useLoaderData, Form, useNavigation } from "@remix-run/react";
-import { json } from "@remix-run/node";
-import { useState, useEffect } from "react";
-import { semanticSearch } from "~/utils/semanticSearchLogic";
-import { dateSearch } from "~/utils/dateSearchLogic";
-import RenderResults from "~/components/Comics/RenderResults";
-import SearchLanding from "~/components/Comics/SearchLanding";
-import SearchBar from "~/components/Comics/SearchBar";
+import { json, LoaderFunctionArgs, redirect } from '@remix-run/node';
+import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
+import ModeMeaning from '~/components/Comics/ModeMeaning';
+import ModeDate from '~/components/Comics/ModeDate';
+import ModeCharacter from '~/components/Comics/ModeCharacter';
+import ModeSelector from '~/components/Comics/ModeSelector';
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: "Comics | Socrates Eterna" },
-    { name: "Explore the Classics", content: "AI Powered Search by Meaning, Date and Characters!" },
-  ];
-};
+export function getSearchParams(request: Request) {
+    const url = new URL(request.url);
+    const mode = url.searchParams.get('mode') || 'meaning';
+    const query = url.searchParams.get('search') || '';
 
-interface Metadata {
-  filename: string;
-  title: string;
-  publishedAt: string;
+    return { mode, query };
 }
 
-interface ComicData {
-  id: string;
-  score: number;
-  values: any[];
-  metadata: Metadata;
+export async function loader({ request }: LoaderFunctionArgs) {
+    const { mode, query} = getSearchParams(request);
+
+    if (query) {
+        const params = new URLSearchParams(
+            Object.fromEntries(
+                Object.entries({ query, mode}).filter(
+                    ([_, value]) => value,
+                ),
+            ),
+        );
+        return redirect(`/results?${params.toString()}`);
+    }
+
+    return json({ mode });
 }
 
-interface LoaderData {
-  query: string;
-  dateQuery: string;
-  results: ComicData[];
-}
-
-export async function loader({ request }) {
-  const url = new URL(request.url);
-  const query = url.searchParams.get("search") || "";
-  console.log(`query: ${query ? query : "no query"}`);
-
-  const dateQuery = url.searchParams.get("date") || "";
-  console.log(`dateQuery: ${dateQuery ? dateQuery : "no dateQuery"}`);
+export default function comics() {
+    const { mode } = useLoaderData<typeof loader>();
+    const navigation = useNavigation();
+    const isSearching = navigation.location?.search
 
 
-  const results = query ? await semanticSearch(query) : dateQuery ? await dateSearch(dateQuery) : [];
-
-  // console.log("results: ",results)
-
-  return json({ query, dateQuery, results });
-}
-
-
-
-export default function comicSearch() {
-  const { query, dateQuery, results } = useLoaderData<LoaderData>();
-  const [mode, setMode] = useState("meaning");
-
-  const navigation = useNavigation();
-  const isSearching = navigation.location?.search
- console.log("destructured res: ", results)
-
-  // useEffect(() => setMode("meaning"), []);
-
-  return (
-    <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">
-      {!query && !dateQuery && <SearchLanding query={query} setMode={setMode} mode={mode} isSearching={isSearching} />}
-      {query || dateQuery && <SearchBar query={query} setMode={setMode} mode={mode} isSearching={isSearching} />}
-      {query || dateQuery && <RenderResults loaderResults={results} />}
-    </main>
-  );
+    return (
+        <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">
+            <div className={`flex flex-col landscape-narrow:pt-[5dvh]  my-auto ${isSearching && "animate-pulse"} `}>
+                <h2 className="text-7xl dmd:text-8xl text-center text-purple-300 font-bold font-socrates mt- mb-4 tracking- wider"><img src="/main/eterna-raw.png" className="w-[300px] mb-2 mx-auto"></img></h2>
+                {mode === "meaning" && <ModeMeaning isSearching={isSearching} />}
+                {mode === "date" && <ModeDate {...{ isSearching }} />}
+                {mode === "character" && <ModeCharacter isSearching={isSearching} />}
+                <ModeSelector mode={mode}/>
+            </div>
+        </main>
+    )
 }

@@ -2,7 +2,7 @@ import characters from "app/data/characters.json";
 import { Link, useLocation } from "@remix-run/react";
 import { useRef, useEffect, useState } from "react";
 
-export default function ModeCharacterBar({ setMode }) {
+export default function ModeCharacterBar({ isSearching }) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const searchName = searchParams.get("search");
@@ -52,7 +52,6 @@ export default function ModeCharacterBar({ setMode }) {
     <div className="max-w-4xl flex flex-col dmd:flex-row  w-full    px-4 mt-6 dmd:mt-8 mb-4 bg-teal- "
       ref={dropdownRef} >
       <Link
-        onClick={() => setMode("meaning")}
         to="/comics"
         className=" text-3xl dmd:text-[2.9rem]/9 text-center text-primary1 w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
       >
@@ -60,6 +59,7 @@ export default function ModeCharacterBar({ setMode }) {
       </Link>
       <div id="sm md dropdown" className="relative max-w- xl dmd:ml-6 w-full dmd:hidde ">
         <button
+          disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}
           className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-purple-950 text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"}`}
         >
@@ -99,7 +99,7 @@ export default function ModeCharacterBar({ setMode }) {
                 onClick={() => handleSelect(character)}
                 className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
-                to={`/comics?search=${character.name}`}
+                to={`/results?mode=character&search=${character.name}`}
                 className="text-sm"
               >
                   <div className="flex items-center text-base">
