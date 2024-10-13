@@ -39,12 +39,12 @@ export default function HeroSectionTop() {
           <div className="flex bg-teal- 500 text-xl mt-8 gap-6">
             <Link
               to="#join-pantheon"
-              className="block px-4 py-2 font- socrates bg-primary1  ml-auto  text-xl text-white border-2 rounded-lg border-primary1  bg-purple- hover:bg-purple-600"
+              className="block px-8 py-2 font- socrates bg-primary1  ml-auto   text-white border-2 rounded-lg border-primary1  bg-purple- hover:bg-purple-600"
             >
               Pantheon Membership
             </Link>
             <Link
-              className=" text-cente text-purple-40 px-4 py-2 border-2 rounded-lg font-ligh mr-auto  font- socrates"
+              className=" text-cente text-purple-40 px-8 py-2 border-2 rounded-lg font-ligh mr-auto  font- socrates"
               to="/comics"
             >Search Comics</Link>
           </div>

@@ -10,32 +10,32 @@ export default function SearchBar({ query, mode, setMode, isSearching }) {
   const [isVisible, setIsVisible] = useState(true); // state to control visibility
   const [lastScrollPos, setLastScrollPos] = useState(0); // state to track last scroll position
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
- console.log(currentScrollPos)
-      // Detect scroll direction and hide/show after 100 pixels of scroll
-      if (currentScrollPos - lastScrollPos > 2) {
-        setIsVisible(false); // Scrolling down
-      } else if (lastScrollPos - currentScrollPos > 5) {
-        setIsVisible(true); // Scrolling up
-      }
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const currentScrollPos = window.scrollY;
+//  console.log(currentScrollPos)
+//       // Detect scroll direction and hide/show after 100 pixels of scroll
+//       if (currentScrollPos - lastScrollPos > 2) {
+//         setIsVisible(false); // Scrolling down
+//       } else if (lastScrollPos - currentScrollPos > 5) {
+//         setIsVisible(true); // Scrolling up
+//       }
 
-      // Update last scroll position
-      setLastScrollPos(currentScrollPos);
-    };
+//       // Update last scroll position
+//       setLastScrollPos(currentScrollPos);
+//     };
 
-    window.addEventListener("scroll", handleScroll);
+//     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollPos]);
+//     // Cleanup event listener on component unmount
+//     return () => {
+//       window.removeEventListener("scroll", handleScroll);
+//     };
+//   }, [lastScrollPos]);
 
   return (
     <div
-      className={`fixed mt-16 w-full bg-purple-1000 min-h-30 transition-transform duration-500 ${
+      className={`fixe mt-16 w-full bg-purple-1000 min-h-30 transition-transform duration-500 ${
         isSearching && "animate-pulse"
       } ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >

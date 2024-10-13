@@ -17,7 +17,7 @@ export default function RetreatSection() {
           </div>
           <div className="flex flex-col w-96">
             <div className='aspect-square max-h-56   mx-auto mb-8'>
-            <img className=" h-full w-full object-cover rounded-2xl " src="/landing/erik.jpg" alt="" />
+            <img className=" h-full w-full object-cover rounded-2xl " src="/landing/r7.jpg" alt="" />
             </div>
             <h4>Breakthrough Mentoring</h4>
             <p className="text-base font-normal pt-4">Get personal mentoring from Erik Holm to take your life to the next level and awaken the peaceful warrior within yourself. </p>

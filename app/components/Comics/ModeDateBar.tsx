@@ -114,7 +114,7 @@ export default function ModeDateBar({ setMode }) {
               <label className="inline-flex items-center shrink-0">
                 <input
                   type="radio"
-                  name="dateType"
+                  name="date"
                   value="month"
                   className="form-radio"
                   checked={selectedOption === "month"}
@@ -133,7 +133,7 @@ export default function ModeDateBar({ setMode }) {
               <label className="inline-flex items-center">
                 <input
                   type="radio"
-                  name="dateType"
+                  name="date"
                   value="day"
                   className="form-radio"
                   checked={selectedOption === "day"}
@@ -148,12 +148,7 @@ export default function ModeDateBar({ setMode }) {
               />
             </div>
             <button
-              onClick={(event) => {
-                event.preventDefault();
-                alert(
-                  "This is a mockup. Date Search only makes sense to implement, once we import all of your comics into the database."
-                );
-              }}
+              
               type="submit"
               className="bg-primary1   hover:bg-purple-600 rounded-lg h-10  px-4   shrink- 0 ml-4 mr-"
             >
