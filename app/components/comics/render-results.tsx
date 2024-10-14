@@ -1,5 +1,5 @@
 import { format } from "date-fns";
-import ScrollToTopButton from "./ScrollToTopButton";
+import ScrollToTopButton from "./scroll-to-top-bottom";
 
 export default function RenderResults({ loaderResults }) {
 

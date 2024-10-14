@@ -1,14 +1,14 @@
 import { MetaFunction, useLoaderData, useNavigation } from "@remix-run/react";
-import ModeSelectorBar from "~/components/Comics/ModeSelectorBar";
-import ModeMeaningBar from "~/components/Comics/ModeMeaningBar";
-import ModeDateBar from "~/components/Comics/ModeDateBar";
-import ModeCharacterBar from "~/components/Comics/ModeCharacterBar";
+import ModeSelectorBar from "~/components/comics/mode-selector-bar";
+import ModeMeaningBar from "~/components/comics/mode-meaning-bar";
+import ModeDateBar from "~/components/comics/mode-date-bar";
+import ModeCharacterBar from "~/components/comics/mode-character-bar";
 import { getSearchParams } from './comics';
 import { json, LoaderFunctionArgs } from '@remix-run/node';
-import RenderResults from "~/components/Comics/RenderResults";
+import RenderResults from "~/components/comics/render-results";
 import { semanticSearch } from "~/utils/semanticSearchLogic";
 import { dateSearch } from "~/utils/dateSearchLogic";
-import SearchBar from "~/components/Comics/SearchBar";
+import SearchBar from "~/components/comics/search-bar";
 import { useState, useEffect } from "react";
 
 
@@ -49,22 +49,22 @@ export async function loader({ request }: LoaderFunctionArgs) {
   // console.log("semanticQuery:", semanticQuery);
   console.log("mode:", mode, "query:", query);
   const results = semanticQuery ? await semanticSearch(semanticQuery) : dateQuery ? await dateSearch(dateQuery) : "";
-    // console.log("results", results)
+  // console.log("results", results)
   return json({ mode, results, query });
 }
 
 
 export default function Results() {
   const { mode, query, results: latestResults } = useLoaderData<typeof loader>();
-  const [results, setResults]=useState(latestResults)
+  const [results, setResults] = useState(latestResults)
   const navigation = useNavigation();
   const isSearching = navigation.location?.search
-  
-  useEffect(()=>{
-    if(latestResults.length){
+
+  useEffect(() => {
+    if (latestResults.length) {
       setResults(latestResults);
     }
-  },[latestResults]);
+  }, [latestResults]);
 
   return (
     <main className=" relative flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">

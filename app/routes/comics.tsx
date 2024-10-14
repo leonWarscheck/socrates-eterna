@@ -1,9 +1,9 @@
 import { json, LoaderFunctionArgs, redirect } from '@remix-run/node';
 import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
-import ModeMeaning from '~/components/Comics/ModeMeaning';
-import ModeDate from '~/components/Comics/ModeDate';
-import ModeCharacter from '~/components/Comics/ModeCharacter';
-import ModeSelector from '~/components/Comics/ModeSelector';
+import ModeMeaning from '~/components/comics/mode-meaning';
+import ModeDate from '~/components/comics/mode-date';
+import ModeCharacter from '~/components/comics/mode-character';
+import ModeSelector from '~/components/comics/mode-selector';
 
 export function getSearchParams(request: Request) {
     const url = new URL(request.url);

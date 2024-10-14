@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Link } from "@remix-run/react";
-import RandomDilbertButton from "./RandomComicButton";
+import RandomDilbertButton from "./random-comic-button";
 
 export default function ModeDateBar({ isSearching }) {
   const [selectedOption, setSelectedOption] = useState("month");

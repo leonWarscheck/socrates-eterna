@@ -1,8 +1,8 @@
 import React from "react";
-import RandomDilbertButton from "./RandomComicButton";
+import RandomDilbertButton from "./random-comic-button";
 import { Form, } from "@remix-run/react";
 
-export default function ModeMeaning({ isSearching}) {
+export default function ModeMeaning({ isSearching }) {
 
 
   return (

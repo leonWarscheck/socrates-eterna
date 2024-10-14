@@ -1,8 +1,8 @@
 import { Form, Link } from "@remix-run/react";
-import ModeSelectorBar from "./ModeSelectorBar";
-import ModeMeaningBar from "./ModeMeaningBar";
-import ModeDateBar from "./ModeDateBar";
-import ModeCharacterBar from "./ModeCharacterBar";
+import ModeSelectorBar from "./mode-selector-bar";
+import ModeMeaningBar from "./mode-meaning-bar";
+import ModeDateBar from "./mode-date-bar";
+import ModeCharacterBar from "./mode-character-bar";
 
 import { useState, useEffect } from "react";
 
