@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@vercel/remix";
 import { Link, useSearchParams } from "@remix-run/react";
 import { useEffect } from "react";
 import CtaBottom from "~/components/index/cta-bottom";

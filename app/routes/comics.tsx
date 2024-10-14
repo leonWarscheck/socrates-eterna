@@ -1,4 +1,4 @@
-import { json, LoaderFunctionArgs, redirect } from '@remix-run/node';
+import { json, LoaderFunctionArgs, redirect } from '@vercel/remix';
 import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
 import ModeMeaning from '~/components/comics/mode-meaning';
 import ModeDate from '~/components/comics/mode-date';
@@ -14,12 +14,12 @@ export function getSearchParams(request: Request) {
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
-    const { mode, query} = getSearchParams(request);
+    const { mode, query } = getSearchParams(request);
 
     if (query) {
         const params = new URLSearchParams(
             Object.fromEntries(
-                Object.entries({ query, mode}).filter(
+                Object.entries({ query, mode }).filter(
                     ([_, value]) => value,
                 ),
             ),
@@ -43,7 +43,7 @@ export default function comics() {
                 {mode === "meaning" && <ModeMeaning isSearching={isSearching} />}
                 {mode === "date" && <ModeDate {...{ isSearching }} />}
                 {mode === "character" && <ModeCharacter isSearching={isSearching} />}
-                <ModeSelector mode={mode}/>
+                <ModeSelector mode={mode} />
             </div>
         </main>
     )

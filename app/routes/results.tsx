@@ -4,7 +4,7 @@ import ModeMeaningBar from "~/components/comics/mode-meaning-bar";
 import ModeDateBar from "~/components/comics/mode-date-bar";
 import ModeCharacterBar from "~/components/comics/mode-character-bar";
 import { getSearchParams } from './comics';
-import { json, LoaderFunctionArgs } from '@remix-run/node';
+import { json, LoaderFunctionArgs } from '@vercel/remix';
 import RenderResults from "~/components/comics/render-results";
 import { semanticSearch } from "~/utils/semanticSearchLogic";
 import { dateSearch } from "~/utils/dateSearchLogic";
