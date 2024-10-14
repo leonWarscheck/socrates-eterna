@@ -1,4 +1,6 @@
-import { json, LoaderFunctionArgs, redirect } from '@vercel/remix';
+import { json,  redirect } from '@vercel/remix';
+import type {LoaderFunctionArgs} from '@remix-run/node';
+
 import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
 import ModeMeaning from '~/components/comics/mode-meaning';
 import ModeDate from '~/components/comics/mode-date';
