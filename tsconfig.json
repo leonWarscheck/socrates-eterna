@@ -11,7 +11,6 @@
     "app/data/upsertDataset.js",
     "app/components/archive",
     "tailwind.config.js",
-    "netlify-edge-plugin.ts"
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
@@ -26,7 +25,7 @@
     "strict": false,
     "allowJs": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": false,
+    "forceConsistentCasingInFileNames": false, // ! was true most of the time
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]

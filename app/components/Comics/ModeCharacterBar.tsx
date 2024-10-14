@@ -12,7 +12,6 @@ export default function ModeCharacterBar({ isSearching }) {
   const dropdownRef = useRef(null);
 
   const handleSelect = (character) => {
-    console.log("character: ", character)
     setSelectedCharacter(character);
     setIsOpen(false);
   };

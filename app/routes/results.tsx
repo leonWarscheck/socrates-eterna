@@ -38,20 +38,33 @@ interface LoaderData {
   results: ComicData[];
 }
 
+
+
 export async function loader({ request }: LoaderFunctionArgs) {
   const { mode, query } = getSearchParams(request);
-  const dateQuery = mode === "date" ? query : ""
-  console.log("dateQuery:", dateQuery)
-  const semanticQuery = mode === "meaning" || "character" ? query : "";
-  console.log("semanticQuery:", semanticQuery)
-  const results = query ? await semanticSearch(semanticQuery) : dateQuery ? await dateSearch(dateQuery) : "";
+  const dateQuery = mode === "date" ? query : "";
+  // console.log("dateQuery:", dateQuery);
+
+  const semanticQuery = mode === "meaning" || mode === "character" ? query : "";
+  // console.log("semanticQuery:", semanticQuery);
+  console.log("mode:", mode, "query:", query);
+  const results = semanticQuery ? await semanticSearch(semanticQuery) : dateQuery ? await dateSearch(dateQuery) : "";
+    // console.log("results", results)
   return json({ mode, results, query });
 }
 
+
 export default function Results() {
-  const { mode, query, results } = useLoaderData<typeof loader>();
+  const { mode, query, results: latestResults } = useLoaderData<typeof loader>();
+  const [results, setResults]=useState(latestResults)
   const navigation = useNavigation();
   const isSearching = navigation.location?.search
+  
+  useEffect(()=>{
+    if(latestResults.length){
+      setResults(latestResults);
+    }
+  },[latestResults]);
 
   return (
     <main className=" relative flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">

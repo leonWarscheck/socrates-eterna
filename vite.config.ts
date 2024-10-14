@@ -1,7 +1,6 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
@@ -25,6 +24,5 @@ export default defineConfig({
       quality: 80,
     },}),
     tsconfigPaths(),
-    netlifyPlugin()
   ],
 });
