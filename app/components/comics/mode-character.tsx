@@ -42,7 +42,7 @@ export default function ModeCharacter({ isSearching }) {
           {selectedCharacter ? (
             <div className="flex items-center px-4">
               <img
-                src={`characters/${selectedCharacter.image}`}
+                src={`/characters/${selectedCharacter.image}`}
                 alt={`An image of ${selectedCharacter.name}`}
                 className="w-7 h-7 mr-3 object-cover"
               />
@@ -75,13 +75,13 @@ export default function ModeCharacter({ isSearching }) {
                 onClick={() => handleSelect(character)}
                 className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
-                to={`/results?mode=character&search=${character.name}`}
+                to={`/results/character?search=${character.name}`}
                 className="text-sm"
               >
                   <div className="flex items-center text-base">
 
                     <img
-                      src={`characters/${character.image}`}
+                      src={`/characters/${character.image}`}
                       alt={`An image of ${character.name}`}
                       className="w-14 h-14 mr-3 object-cover"
                     />

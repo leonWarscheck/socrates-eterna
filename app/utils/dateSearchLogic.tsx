@@ -1,9 +1,9 @@
 import comicData from "../data/comicData.json";
 
-export async function dateSearch(dateQuery, limit = 3) {
-    console.log("dQ:", dateQuery)
+export async function dateSearch(query, limit = 3) {
+    console.log("query:", query)
     console.log("limit:", limit)
-    const targetDate = new Date(dateQuery).getTime();
+    const targetDate = new Date(query).getTime();
     const closestToDateComics = [...comicData]
     .sort((a, b) => {
         const aDifference = Math.abs(new Date(a.metadata.published).getTime() - targetDate);
@@ -12,7 +12,7 @@ export async function dateSearch(dateQuery, limit = 3) {
     })
     .slice(0, limit);
     
-    console.log("hello", targetDate)
+    console.log("targetDate", targetDate)
     const cleanResults = closestToDateComics.map((comic) => ({
         id: comic.id,
         metadata: {

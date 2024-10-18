@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+html,
+body {
+
+    color-scheme: dark;
+}
+
 @font-face {
     font-family: 'Toxigenisis';
     src: url('/fonts/toxigenisis-bd.otf') format('opentype');
@@ -10,22 +16,3 @@
     font-style: normal;
   }
 
-  @keyframes pulse {
-    0% {
-      border-color: #7e22ce ;
-      /* transform: scale(1); */
-    }
-    50% {
-      border-color: #c084fc;
-      /* transform: scale(1.05); */
-    }
-    100% {
-      border-color: #7e22ce;
-      /* transform: scale(1); */
-    }
-  }
-  
-  .pulse-border {
-    animation: pulse 6s infinite;
-  }
-  

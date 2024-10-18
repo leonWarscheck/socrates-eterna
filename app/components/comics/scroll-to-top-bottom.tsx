@@ -25,7 +25,7 @@ export default function ScrollToTopButton() {
 
     return (
         <div className={`
-            sticky bottom-0 size-14 bg-opacity- 50 bg-primary1  rounded-ful self-end transition-all duration-300 motion-reduce:transition-none
+            sticky bottom-0 size-14 bg-opacity- 50 bg-primary1 hover:bg-purple-1000 rounded-ful self-end transition-all duration-300 motion-reduce:transition-none
             ${isVisible
                 ? 'translate-y-0 opacity-100'
                 : 'pointer-events-none translate-y-4 opacity-0 motion-reduce:pointer-events-auto motion-reduce:translate-y-0 motion-reduce:opacity-100'

@@ -51,7 +51,7 @@ export default function ModeCharacterBar({ isSearching }) {
     <div className="max-w-4xl flex flex-col dmd:flex-row  w-full    px-4 mt-6 dmd:mt-8 mb-4 bg-teal- "
       ref={dropdownRef} >
       <Link
-        to="/comics"
+        to="/comics/meaning"
         className=" text-3xl dmd:text-[2.9rem]/9 text-center text-primary1 w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
       >
         <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
@@ -65,7 +65,7 @@ export default function ModeCharacterBar({ isSearching }) {
           {selectedCharacter ? (
             <div className="flex items-center">
               <img
-                src={`characters/${selectedCharacter.image}`}
+                src={`/characters/${selectedCharacter.image}`}
                 alt={`An image of ${selectedCharacter.name}`}
                 className="w-7 h-7 mr-3 object-cover"
               />
@@ -98,13 +98,13 @@ export default function ModeCharacterBar({ isSearching }) {
                 onClick={() => handleSelect(character)}
                 className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
-                to={`/results?mode=character&search=${character.name}`}
+                to={`/results/character?search=${character.name}`}
                 className="text-sm"
               >
                   <div className="flex items-center text-base">
 
                     <img
-                      src={`characters/${character.image}`}
+                      src={`/characters/${character.image}`}
                       alt={`An image of ${character.name}`}
                       className="w-14 h-14 mr-3 object-cover"
                     />

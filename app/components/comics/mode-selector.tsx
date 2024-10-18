@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
-import React from "react";
 
 export default function ModeSelector({ mode }) {
+  console.log("mode in ModeSelector:", mode)
   return (
     <div className="flex dmd:mt-8 mt-6 landscape-narrow:mb- px-4 text-sm text-purple-200 font-ligh ">
       <div className="mx-auto  flex ">
@@ -10,7 +10,7 @@ export default function ModeSelector({ mode }) {
           <li className="">
             {" "}
             <Link
-            to={`?mode=meaning`}
+            to={`/comics/meaning`}
               className={
                 (mode === "meaning" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
@@ -22,8 +22,8 @@ export default function ModeSelector({ mode }) {
           </li>
           <li>
             <Link
-             to={`?mode=date`}
-              className={
+             to="/comics/date"
+             className={
                 (mode === "date" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
               }
@@ -34,7 +34,7 @@ export default function ModeSelector({ mode }) {
           <li>
             {" "}
             <Link
-            to={`?mode=character`}
+            to={`/comics/character`}
               className={
                 (mode === "character" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`

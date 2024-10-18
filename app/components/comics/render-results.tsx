@@ -5,7 +5,7 @@ export default function RenderResults({ loaderResults }) {
 
   return (
     <div className="flex max-w-7xl mx-auto w-full">
-      <div className="flex flex-col mx-auto shrink-0 max-w-4xl px-4 -mt-2 dmd:mt- [13.5rem] ">
+      <div className="flex flex-col mx-auto shrink- max-w-4xl px-4 -mt-2 dmd:mt- [13.5rem] ">
         {loaderResults &&
           loaderResults.map((comic) => {
             const publishedDate = new Date(comic.metadata.published);
@@ -21,7 +21,7 @@ export default function RenderResults({ loaderResults }) {
                   </h2>
                 </div>
                 <img
-                  src={`comics/${comic.metadata.filename}`}
+                  src={`/comics/${comic.metadata.filename}`}
                   alt={comic.metadata.title}
                 />
               </div>

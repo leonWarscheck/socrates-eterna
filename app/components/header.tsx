@@ -62,7 +62,7 @@ export default function Header() {
               <Link prefetch="render" to="/books">Books</Link>
             </li>
             <li className="hover:text-purple-400 target:text-neutral-500 ">
-              <Link to="/comics">Comics</Link>
+              <Link to="/comics/meaning">Comics</Link>
             </li>
           </ul>
         </nav>
@@ -95,7 +95,7 @@ export default function Header() {
               <Link prefetch="render" to="/books">Books</Link>
             </li>
             <li className="hover:text-purple-400 target:text-neutral-500 ">
-              <Link to="/comics">Comics</Link>
+              <Link to="/comics/meaning">Comics</Link>
             </li>
           </ul>
         </nav>

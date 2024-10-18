@@ -6,9 +6,8 @@ export default function ModeSelectorBar({ mode }) {
       <h3 className="pr-4 py-0 ml-auto dmd:ml-0 ">Search by:</h3>
       <ul className=" flex gap-x-4 mr-auto ">
           <li className="">
-            {" "}
             <Link
-            to={`?mode=meaning`}
+            to={`/results/meaning`}
               className={
                 (mode === "meaning" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
@@ -20,7 +19,7 @@ export default function ModeSelectorBar({ mode }) {
           </li>
           <li>
             <Link
-             to={`?mode=date`}
+             to={`/results/date`}
               className={
                 (mode === "date" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
@@ -32,7 +31,7 @@ export default function ModeSelectorBar({ mode }) {
           <li>
             {" "}
             <Link
-            to={`?mode=character`}
+            to={`/results/character`}
               className={
                 (mode === "character" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
