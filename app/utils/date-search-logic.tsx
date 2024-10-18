@@ -14,7 +14,7 @@ export function getCleanResults(matches) {
 
 
 export async function dateSearch(query, limit = 3) {
-    console.log("query:", query)
+    console.log("queryDate:", query)
     console.log("limit:", limit)
     const targetDate = new Date(query).getTime();
     const closestToDateComics = [...comicData]

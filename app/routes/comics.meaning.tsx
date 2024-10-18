@@ -15,7 +15,7 @@ export function getSearchParams(request: Request) {
 
 export async function loader({ request }: LoaderFunctionArgs) {
     const { search } = getSearchParams(request);
-    console.log("query in meaning loader:", search)
+    // console.log("query in comic/meaning loader:", search)
     if (search) {
         const params = new URLSearchParams(
             Object.fromEntries(

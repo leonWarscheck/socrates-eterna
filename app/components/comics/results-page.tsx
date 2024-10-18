@@ -13,6 +13,7 @@ export default function ResultsPage( {children, results, mode, isSearching}) {
   //     setResults(latestResults);
   //   }
   // }, [latestResults]);
+  console.log("results from pagecomp:", results)
 
   return (
     <main className=" relative flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">

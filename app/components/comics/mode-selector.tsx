@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 
 export default function ModeSelector({ mode }) {
-  console.log("mode in ModeSelector:", mode)
+  // console.log("mode in ModeSelector:", mode)
   return (
     <div className="flex dmd:mt-8 mt-6 landscape-narrow:mb- px-4 text-sm text-purple-200 font-ligh ">
       <div className="mx-auto  flex ">

@@ -6,28 +6,23 @@ import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remi
 import ModeCharacter from '~/components/comics/mode-character';
 
 
+
+
 export function getSearchParams(request: Request) {
     const url = new URL(request.url);
-    const query = url.searchParams.get('search') || '';
+    const search = url.searchParams.get('search') || '';
 
-    return { query };
-}
-
-export function getSlugParams(request: Request) {
-    const url = new URL(request.url);
-    const query = ""
-
-    return { query };
+    return { search };
 }
 
 export async function loader({ request }: LoaderFunctionArgs) {
 
-    const { query } = getSlugParams(request);// Extract mode and query from the URL params
-    console.log("query:", query);
-    if (query) {
+    const { search } = getSearchParams(request);
+    // console.log("queryChar:", search);
+    if (search) {
         const params = new URLSearchParams(
             Object.fromEntries(
-                Object.entries({ query }).filter(
+                Object.entries({ search }).filter(
                     ([_, value]) => value,
                 ),
             ),
