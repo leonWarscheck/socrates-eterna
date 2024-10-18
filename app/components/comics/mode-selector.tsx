@@ -10,7 +10,8 @@ export default function ModeSelector({ mode }) {
           <li className="">
             {" "}
             <Link
-            to={`/comics/meaning`}
+              prefetch="render"
+              to={`/comics/meaning`}
               className={
                 (mode === "meaning" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
@@ -22,8 +23,9 @@ export default function ModeSelector({ mode }) {
           </li>
           <li>
             <Link
-             to="/comics/date"
-             className={
+              prefetch="render"
+              to="/comics/date"
+              className={
                 (mode === "date" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
               }
@@ -34,7 +36,8 @@ export default function ModeSelector({ mode }) {
           <li>
             {" "}
             <Link
-            to={`/comics/character`}
+              prefetch="render"
+              to={`/comics/character`}
               className={
                 (mode === "character" && `text-purple-400 underline`) ||
                 `hover:text-purple-400`
