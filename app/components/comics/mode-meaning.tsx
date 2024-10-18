@@ -42,12 +42,9 @@ export default function ModeMeaning({ isSearching }) {
           className="border-2 bg-purple-1000 bg-transparent border-primary1 focus:outline-none grow h-10 px-4 rounded-lg w-full placeholder:text-purple-400"
           type="text"
           name="search"
-          // value={searchQuery} // Bind input value to searchQuery state
           placeholder={placeholder}
-          // onChange={handleInputChange} // Capture the input change
-          // onKeyDown={handleKeyDown} // Handle Enter key press
           onBlur={() => setPlaceholder("")}
-          onFocus={handleFocus}
+          onClick={handleFocus}
         />
         <img
           src="/main/search.png"
