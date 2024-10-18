@@ -35,7 +35,7 @@ export async function loader({ request }) {
     console.log(`query: ${query ? query : "no query"}`);
 
     const results = query ? await semanticSearch(query) : [];
-    // console.log("results:", results)
+    console.log("results:", results)
 
     return json({ query, results });
 }

@@ -1,4 +1,5 @@
 import { Pinecone } from "@pinecone-database/pinecone";
+import { getCleanResults } from "./date-search-logic";
 
 const pc = new Pinecone({ apiKey: "77c91cfa-38e5-4acd-8000-ada86d4066f7" });
 
@@ -15,5 +16,7 @@ export async function getPineconeResults(queryEmbeddings) {
     })
   ).matches;
 
-  return queryResponse;
+  const cleanResponse = getCleanResults(queryResponse)
+
+  return cleanResponse;
 }
