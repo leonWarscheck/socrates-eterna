@@ -3,30 +3,7 @@ import { json,  redirect } from '@vercel/remix';
 import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
 import ModeSelector from '~/components/comics/mode-selector';
 
-export function getSearchParams(request: Request) {
-    const url = new URL(request.url);
-    const mode = url.searchParams.get('mode') || 'meaning';
-    const query = url.searchParams.get('search') || '';
 
-    return { mode, query };
-}
-
-export async function loader({ request }: LoaderFunctionArgs) {
-    const { mode, query } = getSearchParams(request);
-
-    if (query) {
-        const params = new URLSearchParams(
-            Object.fromEntries(
-                Object.entries({ query, mode }).filter(
-                    ([_, value]) => value,
-                ),
-            ),
-        );
-        return redirect(`/results?${params.toString()}`);
-    }
-
-    return json({ mode });
-}
 
 export default function ComicsPage({children, isSearching, mode}) {
    
