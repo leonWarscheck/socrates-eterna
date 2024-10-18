@@ -26,7 +26,7 @@ export default function PriceTable() {
               <th className="w-1/4  bg-purple-950">
                 <div className="flex flex-col pt-4 ">
                   <Link
-                    className="px-6 py-2  mx-auto text-base rounded-lg  bg-primary1 small:text-xl hover:bg-purple-600 mb-"
+                    className="px-6 py-2  mx-auto text-base rounded-lg animate-bg-pulse- slow animate-bg-pulse-slow2  bg-primary1 border- small:text-xl hover:bg-purple-600 mb-"
                     to="https://www.patreon.com"
                     target="_blank"
                     rel="noopener noreferrer"

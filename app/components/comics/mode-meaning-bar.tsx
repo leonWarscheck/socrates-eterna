@@ -38,7 +38,7 @@ export default function ModeMeaningBar({ isSearching, query }) {
           name="search"
           placeholder={placeholder}
           onBlur={() => setPlaceholder("Find a comic by related words not included in it's text...")}
-          onFocus={() => handleFocus()}
+          onClick={() => handleFocus()}
         />
         <button
           type="submit"

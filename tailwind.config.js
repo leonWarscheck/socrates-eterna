@@ -23,7 +23,9 @@ const config = {
       },
       animation: {
         'pulse-slow': 'pulse 6s infinite',
-        'border-pulse': 'pulse-border 6s infinite',
+        'border-pulse': 'pulse-border 16s infinite',
+        'bg-pulse-slow': 'backgroundPulse 8s infinite',
+        'bg-pulse-slow2': 'backgroundPulse2 6s infinite',
       },
       keyframes: {
         'pulse-border': {
@@ -33,6 +35,14 @@ const config = {
         pulse: {
           '0%, 100%': { opacity: 1 },
           '50%': { opacity: 0.5 },
+        },
+        backgroundPulse: {
+          '0%, 100%': { backgroundColor: '#581c87' },// 700
+          '50%':{ backgroundColor: '#7e22ce' },  // 400
+        },
+        backgroundPulse2: {
+          '0%, 100%': { backgroundColor: '#7e22ce' },// 700
+          '50%':{ backgroundColor: '#a855f7' },  // 400
         },
       },
       fontFamily:{

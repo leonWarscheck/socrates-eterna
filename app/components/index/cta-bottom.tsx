@@ -8,7 +8,7 @@ export default function CtaBottom() {
           <h4 className="text-center text-2xl max-w-4xl mx-auto">Special Offer: Purchase the full year membership and gain instant access to the retreat ticket store.</h4>
           <Link
             to="#join-pantheon"
-            className="px-6 py-2 font- socrates  mx-auto mt-7 text-2xl text-white border-2 rounded-lg border-primary1 pulse-border bg-purple- hover:bg-purple-600"
+            className="px-6 py-2 font- socrates  mx-auto mt-7 text-2xl text-white border-2 rounded-lg border-primary1 animate-border-pulse bg-purple- hover:bg-purple-600"
           >
             Get Started
           </Link>

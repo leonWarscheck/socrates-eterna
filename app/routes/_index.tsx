@@ -1,12 +1,9 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Link, useSearchParams } from "@remix-run/react";
-import { useEffect } from "react";
 import CtaBottom from "~/components/index/cta-bottom";
 import HeroSectionTop from "~/components/index/hero-top";
 import HeroStory from "~/components/index/hero-story";
 import PriceTable from "~/components/index/price-table";
 import RetreatSection from "~/components/index/retreat-section";
-import { initScrollHeader } from "~/utils/scrollHeader";
 
 export const meta: MetaFunction = () => {
   return [

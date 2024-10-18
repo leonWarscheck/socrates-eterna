@@ -10,7 +10,7 @@
     "app/utils/insertNewComicDataToDb.js",
     "app/data/upsert-dataset.js",
     "app/components/archive",
-    "tailwind.config.js",
+    "tailwind.config.js", "app/routes/$.ts",
   ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
