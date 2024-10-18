@@ -2,7 +2,7 @@ import ModeDateBar from '~/components/comics/mode-date-bar'
 import ResultsPage from '~/components/comics/results-page'
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { json } from "@remix-run/node";
-import { dateSearch } from '~/utils/dateSearchLogic';
+import { dateSearch } from '~/utils/date-search-logic';
 
 interface Metadata {
     filename: string;
@@ -38,7 +38,7 @@ export async function loader({ request }) {
 
     const results = query ? await dateSearch(query) : "";
 
-    // console.log("results:", results ? results : "no results")
+    console.log("results:", results ? results : "no results")
 
     return json({ query, results });
 }

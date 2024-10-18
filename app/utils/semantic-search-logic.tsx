@@ -1,5 +1,5 @@
-import { getQueryEmbeddings } from "./getQueryEmbeddings";
-import { getPineconeResults } from "./getPineconeResults";
+import { getQueryEmbeddings } from "./get-query-embeddings";
+import { getPineconeResults } from "./get-pinecone-results";
 
 export async function semanticSearch(query: string) {
   const queryEmbeddings = await getQueryEmbeddings(query);

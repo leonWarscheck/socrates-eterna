@@ -1,4 +1,4 @@
-import comicData from "../data/comicData.json";
+import comicData from "../data/comic-data.json";
 
 export async function dateSearch(query, limit = 3) {
     console.log("query:", query)

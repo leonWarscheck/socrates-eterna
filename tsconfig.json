@@ -8,7 +8,7 @@
     "**/.client/**/*.tsx",
     "app/utils/createCollection.js",
     "app/utils/insertNewComicDataToDb.js",
-    "app/data/upsertDataset.js",
+    "app/data/upsert-dataset.js",
     "app/components/archive",
     "tailwind.config.js",
   ],

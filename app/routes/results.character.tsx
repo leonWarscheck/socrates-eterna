@@ -4,7 +4,7 @@ import ResultsPage from '~/components/comics/results-page'
 import ModeMeaningBar from '~/components/comics/mode-meaning-bar'
 import { useNavigation, useLoaderData } from '@remix-run/react'
 import ModeCharacterBar from '~/components/comics/mode-character-bar'
-import { semanticSearch } from '~/utils/semanticSearchLogic'
+import { semanticSearch } from '~/utils/semantic-search-logic'
 import { json } from "@remix-run/node";
 
 interface Metadata {
