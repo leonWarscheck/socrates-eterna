@@ -7,6 +7,7 @@ export default function ModeSelectorBar({ mode }) {
       <ul className=" flex gap-x-4 mr-auto ">
           <li className="">
             <Link
+            prefetch="render"
             to={`/results/meaning`}
               className={
                 (mode === "meaning" && `text-purple-400 underline`) ||
@@ -19,6 +20,7 @@ export default function ModeSelectorBar({ mode }) {
           </li>
           <li>
             <Link
+            prefetch="render"
              to={`/results/date`}
               className={
                 (mode === "date" && `text-purple-400 underline`) ||
@@ -31,6 +33,7 @@ export default function ModeSelectorBar({ mode }) {
           <li>
             {" "}
             <Link
+            prefetch="render"
             to={`/results/character`}
               className={
                 (mode === "character" && `text-purple-400 underline`) ||
