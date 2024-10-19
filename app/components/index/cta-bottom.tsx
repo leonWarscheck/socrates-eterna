@@ -14,7 +14,7 @@ export default function CtaBottom() {
           </Link>
           <Link
             className=" text-cente text-purple-400 px-4 py-2  underline  font-ligh mx-auto pt-6  font- socrates"
-            to="/comics"
+            to="/comics/meaning"
           >or explore the Eterna Comic Search</Link>
         </div>
   )

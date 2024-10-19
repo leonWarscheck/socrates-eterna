@@ -37,8 +37,8 @@ const config = {
           '50%': { opacity: 0.5 },
         },
         backgroundPulse: {
-          '0%, 100%': { backgroundColor: '#581c87' },// 700
-          '50%':{ backgroundColor: '#7e22ce' },  // 400
+          '0%, 100%': { backgroundColor: '#6b21a8' },// 700
+          '50%':{ backgroundColor: '#9333ea' },  // 400
         },
         backgroundPulse2: {
           '0%, 100%': { backgroundColor: '#7e22ce' },// 700

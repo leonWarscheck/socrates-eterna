@@ -48,11 +48,10 @@ export async function loader({ request }) {
 
 
 export default function ResultsMeaningRoute() {
-    const { results } = useLoaderData<LoaderData>()
+    const { results, query } = useLoaderData<LoaderData>()
     const navigation = useNavigation();
     const isSearching = !!navigation.location?.search;
     const mode = "meaning";
-    const query = ""
 
     return (
         <ResultsPage {...{ mode, results, isSearching, query }}>

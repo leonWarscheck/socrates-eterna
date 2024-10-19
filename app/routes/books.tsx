@@ -24,7 +24,7 @@ export default function Books() {
                 alt=""
               />
             </div>
-            <p className={`absolute ${book.new || "hidden"} bg-primary1 rounded-lg font-bold text-base top-4 left-4 border-2  px-1`}>
+            <p className={`absolute ${book.new ? "": "hidden"} bg-primary1 rounded-lg font-bold text-base top-4 left-4 border-2  px-1`}>
               NEW
             </p>
             <div className="flex flex-col m-4 pr-2 ">
@@ -35,7 +35,7 @@ export default function Books() {
                 </h2>
                 <Link
                   to={book.purchaseLink}
-                  className="font-light  hover:underline bg-primary1 rounded-lg pt-px h-8 px-4 ml-auto  "
+                  className={`font-light  hover:bg-purple-600 bg-primary1 rounded-lg pt-px h-8 px-4 ml-auto ${book.new && "animate-bg-pulse-slow2 hover:underline"} `} 
                   target="_blank"
                   rel="noopener norefferrer"
                 >

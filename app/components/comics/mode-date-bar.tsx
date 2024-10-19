@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Form, Link } from "@remix-run/react";
 
-export default function ModeDateBar({ isSearching }) {
+export default function ModeDateBar({ isSearching, query }) {
   const [radioButton, setRadioButton] = useState("month");
 
   return (
@@ -34,8 +34,9 @@ export default function ModeDateBar({ isSearching }) {
 
               <input
                 type="month"
-                className="ml-2 border-2 border-primary1 rounded-lg bg-purple-950 px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
+                className="ml-2 border-2 border-primary1 rounded-lg bg-transparent px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
                 name="month"
+                value={query}
                 disabled={radioButton !== "month"}
               />
             </div>
@@ -58,8 +59,9 @@ export default function ModeDateBar({ isSearching }) {
 
               <input
                 type="date"
-                className="ml-2 border-2 border-primary1 bg-purple-950 focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
+                className="ml-2 border-2 border-primary1 bg-transparent focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
                 name="day"
+                value={query}
                 disabled={radioButton !== "day"}
               />
             </div>

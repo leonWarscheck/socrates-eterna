@@ -12,7 +12,7 @@ const placeholders = ["'cigar' finds a comic about cuba...", "'branding' finds a
 
 
 export default function ModeMeaningBar({ isSearching, query }) {
-  const [placeholder, setPlaceholder] = useState("Find a comic by related words not included in it's text...")
+  const [placeholder, setPlaceholder] = useState("")
   const indexRef = useRef(0)
 
   const handleFocus = () => {
@@ -32,13 +32,13 @@ export default function ModeMeaningBar({ isSearching, query }) {
       </Link>
       <div className=" flex  grow ml-auto w-full ">
         <input
-          className="border-y-2 border-l-2 border-primary1 rounded-l-lg bg-purple-1000 focus:outline-none focus:bg-purple-1000 grow h-10 px-3 placeholder:text-purple-400 placeholder:text-"
+          className="border-y-2 border-l-2 border-primary1 rounded-l-lg bg-transparent focus:outline-none focus:bg-purple-1000 grow h-10 px-3 placeholder:text-purple-400 placeholder:text-"
           type="search"
           defaultValue={query}
           name="search"
           placeholder={placeholder}
-          onBlur={() => setPlaceholder("Find a comic by related words not included in it's text...")}
-          onClick={() => handleFocus()}
+          onBlur={() => setPlaceholder("")}
+          onClick={handleFocus}
         />
         <button
           type="submit"

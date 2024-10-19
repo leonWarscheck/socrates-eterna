@@ -60,7 +60,7 @@ export default function ModeCharacterBar({ isSearching }) {
         <button
           disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-purple-950 text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"}`}
+          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2  h-10  bg-transparent text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"}`}
         >
           {selectedCharacter ? (
             <div className="flex items-center">
