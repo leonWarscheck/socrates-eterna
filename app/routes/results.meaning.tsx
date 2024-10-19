@@ -4,7 +4,7 @@ import ResultsPage from '~/components/comics/results-page'
 import ModeMeaningBar from '~/components/comics/mode-meaning-bar'
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { semanticSearch } from '~/utils/semantic-search-logic'
-import { json } from "@remix-run/node";
+import { json, createCookieSessionStorage } from "@remix-run/node";
 
 interface Metadata {
     filename: string;
@@ -38,15 +38,16 @@ export async function getPotentialResults(request) {
     return results
 }
 
-
-export async function getLatestAndSavedResults(potentialResults) {
-    const { getSession, commitSession } = createCookieSessionStorage({
+const { getSession, commitSession } = createCookieSessionStorage({
          cookie: {
       name: "__session",
       secrets: ["r33m11xr0ck55"],
       sameSite: "lax",
     },
 });
+
+export async function getLatestAndSavedResults(potentialResults) {
+    
 
     const session = await getSession()
 
@@ -55,7 +56,8 @@ export async function getLatestAndSavedResults(potentialResults) {
 
     async function saveLatestResults(latestResults) {
         session.set("savedResults", latestResults)
-        session.commitSession()
+        
+        // await commitSession(session)
 
     }
     await saveLatestResults(latestResults);
@@ -65,10 +67,12 @@ export async function getLatestAndSavedResults(potentialResults) {
 }
 
 export async function loader({ request }) {
-    const potentialResults = getPotentialResults(request)
-    const results = getLatestAndSavedResults(potentialResults)
+    const potentialResults = await getPotentialResults(request)
+    const results = await getLatestAndSavedResults(potentialResults)
 
-    return json({ results });
+    const session = await getSession();  // To commit the session
+    return json({ results }, { headers: { "Set-Cookie": await commitSession(session) } });
+
 }
 
 */}
@@ -95,10 +99,11 @@ export async function loader({ request }) {
 
 
 export default function ResultsMeaningRoute() {
-    const { results, query } = useLoaderData<LoaderData>()
+    const { results } = useLoaderData<LoaderData>()
     const navigation = useNavigation();
     const isSearching = !!navigation.location?.search;
     const mode = "meaning";
+    const query = ""
 
     return (
         <ResultsPage {...{ mode, results, isSearching, query }}>
