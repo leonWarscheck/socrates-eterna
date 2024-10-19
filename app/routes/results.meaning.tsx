@@ -5,6 +5,7 @@ import ModeMeaningBar from '~/components/comics/mode-meaning-bar'
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { semanticSearch } from '~/utils/semantic-search-logic'
 import { json, createCookieSessionStorage } from "@remix-run/node";
+import { getLatestAndSavedResults, getPotentialResults, getSession, commitSession} from "~/utils/cookie-stuff.server"
 
 interface Metadata {
     filename: string;
@@ -26,73 +27,36 @@ interface LoaderData {
 }
 
 // ! NOT stable
-{/* 
-export async function getPotentialResults(request) {
-    const url = new URL(request.url);
-    const query = url.searchParams.get("search") || "";
-    console.log(`query: ${query ? query : "no query"}`);
+// {/* 
 
-    const results = query ? await semanticSearch(query) : [];
-    console.log("results:", results)
-
-    return results
-}
-
-const { getSession, commitSession } = createCookieSessionStorage({
-         cookie: {
-      name: "__session",
-      secrets: ["r33m11xr0ck55"],
-      sameSite: "lax",
-    },
-});
-
-export async function getLatestAndSavedResults(potentialResults) {
-    
-
-    const session = await getSession()
-
-    const savedResults = await session.get("savedResults")
-    const latestResults = potentialResults ?? savedResults
-
-    async function saveLatestResults(latestResults) {
-        session.set("savedResults", latestResults)
-        
-        // await commitSession(session)
-
-    }
-    await saveLatestResults(latestResults);
-
-    return latestResults
-
-}
 
 export async function loader({ request }) {
     const potentialResults = await getPotentialResults(request)
     const results = await getLatestAndSavedResults(potentialResults)
 
-    const session = await getSession();  // To commit the session
+    const session = await getSession();
     return json({ results }, { headers: { "Set-Cookie": await commitSession(session) } });
 
 }
 
-*/}
+// */}
 
 
 
 
 
 // ! stable
-export async function loader({ request }) {
-    const url = new URL(request.url);
+// export async function loader({ request }) {
+//     const url = new URL(request.url);
 
-    const query = url.searchParams.get("search") || "";
-    console.log(`query: ${query ? query : "no query"}`);
+//     const query = url.searchParams.get("search") || "";
+//     console.log(`query: ${query ? query : "no query"}`);
 
-    const results = query ? await semanticSearch(query) : [];
-    console.log("results:", results)
+//     const results = query ? await semanticSearch(query) : [];
+//     console.log("results:", results)
 
-    return json({ query, results });
-}
+//     return json({ query, results });
+// }
 
 
 
