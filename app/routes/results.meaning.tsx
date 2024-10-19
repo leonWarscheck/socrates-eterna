@@ -40,7 +40,14 @@ export async function getPotentialResults(request) {
 
 
 export async function getLatestAndSavedResults(potentialResults) {
-    const { getSession, commitSession } = createCookieSessionStorage()
+    const { getSession, commitSession } = createCookieSessionStorage({
+         cookie: {
+      name: "__session",
+      secrets: ["r33m11xr0ck55"],
+      sameSite: "lax",
+    },
+});
+
     const session = await getSession()
 
     const savedResults = await session.get("savedResults")
