@@ -1,5 +1,6 @@
 import { createCookieSessionStorage, json } from "@remix-run/node";
 import { semanticSearch } from "./semantic-search-logic";
+import { dateSearch } from "./date-search-logic";
 
 
 export const { getSession, commitSession } = createCookieSessionStorage({
@@ -36,7 +37,7 @@ export const { getSession, commitSession } = createCookieSessionStorage({
 
     console.log("results/date:", !!results)
 
-    return results;
+    return {results, query};
 }
 
   

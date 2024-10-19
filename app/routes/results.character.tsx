@@ -6,6 +6,7 @@ import { useNavigation, useLoaderData } from '@remix-run/react'
 import ModeCharacterBar from '~/components/comics/mode-character-bar'
 import { semanticSearch } from '~/utils/semantic-search-logic'
 import { json } from "@remix-run/node";
+import { getLatestAndSavedResults, getPotentialResults, commitSession } from "~/utils/session-tools.server"
 
 interface Metadata {
     filename: string;
@@ -29,16 +30,14 @@ interface LoaderData {
 
 
 export async function loader({ request }) {
-    const url = new URL(request.url);
+    const potentialResults = await getPotentialResults(request);
 
-    const query = url.searchParams.get("search") || "";
-    console.log("query/character:", !!query);
+    const { latestResults, session } = await getLatestAndSavedResults(request, potentialResults);
 
-
-    const results = query ? await semanticSearch(query) : "";
-    console.log("results/character:", !!results)
-
-    return json({ query, results });
+    return json(
+        { results: latestResults },
+        { headers: { "Set-Cookie": await commitSession(session) } }
+    );
 }
 
 

@@ -39,7 +39,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }) {
                 type="month"
                 className="ml-2 border-2 border-primary1 rounded-lg bg-transparent px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
                 name="month"
-                value={ radioButton === "month" ? query : ""}
+                value={ query }
                 onChange={(e)=> setQuery(e.target.value)}
                 disabled={radioButton !== "month"}
               />
@@ -65,7 +65,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }) {
                 type="date"
                 className="ml-2 border-2 border-primary1 bg-transparent focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
                 name="day"
-                value={ radioButton === "day" ? query : ""}
+                value={ query }
                 onChange={(e)=> setQuery(e.target.value)}
                 disabled={radioButton !== "day"}
               />
