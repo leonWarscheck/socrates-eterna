@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import OpenAI from "openai";
 
-const filePath = path.resolve("../data/comicData.json");
+const filePath = path.resolve("../../data/comic-data.json");
 const OPENAI_API_KEY =
   "sk-proj-ODL4ukNk3dW0mkygmbLfT3BlbkFJBip53QMdS78DUTjTfhoC";
 

@@ -9,7 +9,7 @@ const index = pc.index("socrates-search");
 const namespace = index.namespace("socrates-namespace");
 // const upsertFunc = index.namespace("poc-dataset").upsert;
 
-const filePath = path.resolve("../data/comicData.json");
+const filePath = path.resolve("../data/comic-Data.json");
 const dataset = JSON.parse(fs.readFileSync(filePath, "utf8"));
 
 async function asyncForEach(array, callback) {
