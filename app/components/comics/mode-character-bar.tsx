@@ -54,7 +54,9 @@ export default function ModeCharacterBar({ isSearching }) {
         to="/comics/meaning"
         className=" text-3xl dmd:text-[2.9rem]/9 text-center text-primary1 w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
       >
-        <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
+ <div className=" aspect-[1404/245] h-9 mt-[1.5px]">
+          <img src="/main/socrates-raw.png" alt="" className=" h-full w-full" />
+        </div>
       </Link>
       <div id="sm md dropdown" className="relative max-w- xl dmd:ml-6 w-full dmd:hidde ">
         <button

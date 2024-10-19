@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Form, Link } from "@remix-run/react";
 
-export default function ModeDateBar({ isSearching, query }) {
+export default function ModeDateBar({ isSearching, query: latestQuery }) {
   const [radioButton, setRadioButton] = useState("month");
+  const [query, setQuery]= useState(latestQuery)
 
   return (
     <div className="max-w-4xl flex flex-col dmd:flex-row  w-full    px-4 mt-6 dmd:mt-8 mb-4 bg-teal-5 ">
@@ -10,7 +11,9 @@ export default function ModeDateBar({ isSearching, query }) {
         to="/comics/meaning"
         className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-4 w-[300px] bg-red-  text-primary1 font-bold mt- 2.5 dmd:mb-0 -ml-1 "
       >
-        <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
+        <div className=" aspect-[1404/245] h-9 mt-[1.5px]">
+          <img src="/main/socrates-raw.png" alt="" className=" h-full w-full" />
+        </div>
       </Link>
       <>
 
@@ -27,7 +30,7 @@ export default function ModeDateBar({ isSearching, query }) {
                   value="month"
                   className="form-radio"
                   checked={radioButton === "month"}
-                  onChange={()=> setRadioButton("month")}
+                  onChange={() => setRadioButton("month")}
                 />
                 <span className="ml-2 shrink-0">by Month</span>
               </label>
@@ -36,7 +39,8 @@ export default function ModeDateBar({ isSearching, query }) {
                 type="month"
                 className="ml-2 border-2 border-primary1 rounded-lg bg-transparent px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
                 name="month"
-                value={query}
+                value={ radioButton === "month" ? query : ""}
+                onChange={(e)=> setQuery(e.target.value)}
                 disabled={radioButton !== "month"}
               />
             </div>
@@ -51,8 +55,8 @@ export default function ModeDateBar({ isSearching, query }) {
                   value="day"
                   className="form-radio"
                   checked={radioButton === "day"}
-                  onChange={()=> setRadioButton("day")}
-                />
+                  onChange={() => setRadioButton("day")}
+                  />
                 <span className="ml-2  shrink-0">by Day</span>
               </label>
 
@@ -61,7 +65,8 @@ export default function ModeDateBar({ isSearching, query }) {
                 type="date"
                 className="ml-2 border-2 border-primary1 bg-transparent focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
                 name="day"
-                value={query}
+                value={ radioButton === "day" ? query : ""}
+                onChange={(e)=> setQuery(e.target.value)}
                 disabled={radioButton !== "day"}
               />
             </div>

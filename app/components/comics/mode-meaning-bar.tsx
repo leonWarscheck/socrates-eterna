@@ -28,7 +28,9 @@ export default function ModeMeaningBar({ isSearching, query }) {
         to="/comics/meaning"
         className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-6 w-[386px] bg-red-5  text-primary1 font-bold mb-4 dmd:mb-0 -mt- 1.5 -ml-1 "
       >
-        <img src="/main/socrates-raw.png" alt="" className=" bg-blac" />
+        <div className=" aspect-[1404/245] h-9 mt-[1.5px]">
+          <img src="/main/socrates-raw.png" alt="" className=" h-full w-full" />
+        </div>
       </Link>
       <div className=" flex  grow ml-auto w-full ">
         <input
