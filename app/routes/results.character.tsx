@@ -30,12 +30,12 @@ interface LoaderData {
 
 
 export async function loader({ request }) {
-    const potentialResults = await getPotentialResults(request);
+    const { results: potentialResults, query} = await getPotentialResults(request);
 
     const { latestResults, session } = await getLatestAndSavedResults(request, potentialResults);
 
     return json(
-        { results: latestResults },
+        { results: latestResults, query },
         { headers: { "Set-Cookie": await commitSession(session) } }
     );
 }

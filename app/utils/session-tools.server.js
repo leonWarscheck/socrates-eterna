@@ -19,7 +19,7 @@ export const { getSession, commitSession } = createCookieSessionStorage({
     const results = query ? await semanticSearch(query) : undefined;
     console.log("results/potential:", !!results);
   
-    return results;
+    return {results, query};
   }
 
  export async function getPotentialDateResults(request){

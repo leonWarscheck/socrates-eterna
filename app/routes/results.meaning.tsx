@@ -25,23 +25,22 @@ interface LoaderData {
 
 
 export async function loader({ request }) {
-    const potentialResults = await getPotentialResults(request);
+    const { results: potentialResults, query} = await getPotentialResults(request);
 
     const { latestResults, session } = await getLatestAndSavedResults(request, potentialResults);
 
     return json(
-        { results: latestResults },
+        { results: latestResults, query },
         { headers: { "Set-Cookie": await commitSession(session) } }
     );
 }
 
 
 export default function ResultsMeaningRoute() {
-    const { results } = useLoaderData<LoaderData>()
+    const { results, query } = useLoaderData<LoaderData>()
     const navigation = useNavigation();
     const isSearching = !!navigation.location?.search;
     const mode = "meaning";
-    const query = ""
 
     return (
         <ResultsPage {...{ mode, results, isSearching, query }}>
