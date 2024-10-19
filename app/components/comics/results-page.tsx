@@ -6,13 +6,6 @@ import { useState, useEffect } from "react";
 
 
 export default function ResultsPage( {children, results, mode, isSearching}) {
-  // const [results, setResults] = useState(latestResults)
-
-  // useEffect(() => {
-  //   if (latestResults.length) {
-  //     setResults(latestResults);
-  //   }
-  // }, [latestResults]);
   console.log("results/pagecomp:", !!results)
 
   return (
