@@ -1,11 +1,8 @@
-import React from 'react'
-import SearchBar from '~/components/comics/search-bar'
 import ResultsPage from '~/components/comics/results-page'
 import ModeMeaningBar from '~/components/comics/mode-meaning-bar'
 import { useLoaderData, useNavigation } from '@remix-run/react'
-import { semanticSearch } from '~/utils/semantic-search-logic'
 import { json, createCookieSessionStorage } from "@remix-run/node";
-import { getLatestAndSavedResults, getPotentialResults, getSession, commitSession} from "~/utils/cookie-stuff.server"
+import { getLatestAndSavedResults, getPotentialResults, commitSession} from "~/utils/session-tools.server"
 
 interface Metadata {
     filename: string;
@@ -26,40 +23,17 @@ interface LoaderData {
     results: ComicData[];
 }
 
-// ! NOT stable
-// {/* 
-
 
 export async function loader({ request }) {
-    const potentialResults = await getPotentialResults(request)
-    const results = await getLatestAndSavedResults(potentialResults)
-
-    const session = await getSession();
-    return json({ results }, { headers: { "Set-Cookie": await commitSession(session) } });
-
-}
-
-// */}
-
-
-
-
-
-// ! stable
-// export async function loader({ request }) {
-//     const url = new URL(request.url);
-
-//     const query = url.searchParams.get("search") || "";
-//     console.log(`query: ${query ? query : "no query"}`);
-
-//     const results = query ? await semanticSearch(query) : [];
-//     console.log("results:", results)
-
-//     return json({ query, results });
-// }
-
-
-
+    const potentialResults = await getPotentialResults(request);
+  
+    const { latestResults, session } = await getLatestAndSavedResults(request, potentialResults);
+  
+    return json(
+      { results: latestResults },
+      { headers: { "Set-Cookie": await commitSession(session) } }
+    );
+  }
 
 
 export default function ResultsMeaningRoute() {

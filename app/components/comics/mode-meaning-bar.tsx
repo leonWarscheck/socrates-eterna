@@ -23,7 +23,6 @@ export default function ModeMeaningBar({ isSearching, query }) {
 
   return (
     <Form className="max-w-4xl flex flex-col dmd:flex-row w-full px-4  mt-6 dmd:mt-8 mb-4">
-      <input type="hidden" name="mode" value="meaning" />
       <Link
         to="/comics/meaning"
         className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-6 w-[386px] bg-red-5  text-primary1 font-bold mb-4 dmd:mb-0 -mt- 1.5 -ml-1 "

@@ -33,12 +33,12 @@ export async function loader({ request }) {
     const query = dateType === "month"? month : dateType === "day"? day :"";
 
 
-    console.log(`query: ${query ? query : "no query"}`);
-    console.log("dateType:", dateType ? dateType : "no dateType")
+    console.log("query/date:", !!query);
+    console.log("dateType:", !!dateType)
 
     const results = query ? await dateSearch(query) : "";
 
-    console.log("results:", results ? results : "no results")
+    console.log("results/date:", !!results)
 
     return json({ query, results });
 }

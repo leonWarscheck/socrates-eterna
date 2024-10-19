@@ -2,7 +2,8 @@ import { format } from "date-fns";
 import ScrollToTopButton from "./scroll-to-top-button";
 
 export default function RenderResults({ loaderResults }) {
-  console.log("results/renderr:", loaderResults)
+  console.log("results/renderR:", !!loaderResults)
+  
 
   return (
     <div className="flex max-w-7xl mx-auto w-full">

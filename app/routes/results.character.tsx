@@ -32,10 +32,11 @@ export async function loader({ request }) {
     const url = new URL(request.url);
 
     const query = url.searchParams.get("search") || "";
-    console.log(`query: ${query ? query : "no query"}`);
+    console.log("query/character:", !!query);
 
-    const results = query ? await semanticSearch(query) : [];
-    console.log("results:", results)
+
+    const results = query ? await semanticSearch(query) : "";
+    console.log("results/character:", !!results)
 
     return json({ query, results });
 }
