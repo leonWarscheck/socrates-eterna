@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "/main/og-title.png"
+      content: "/main/og-title.jpg"
     }
   ];
 };
