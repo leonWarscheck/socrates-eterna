@@ -12,7 +12,7 @@ const placeholders = [
 export default function ModeMeaning({ isSearching }) {
   const [placeholder, setPlaceholder] = useState("");
   // const [searchQuery, setSearchQuery] = useState(""); // State to track input value
-  const indexRef = useRef(1);
+  const indexRef = useRef(0);
   // const navigate = useNavigate(); // Hook to programmatically navigate
 
   const handleFocus = () => {

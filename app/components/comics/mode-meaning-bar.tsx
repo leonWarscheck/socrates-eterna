@@ -18,7 +18,7 @@ const placeholders = [
 export default function ModeMeaningBar({ isSearching, query }) {
   console.log("query/momeba:", query)
   const [placeholder, setPlaceholder] = useState("")
-  const indexRef = useRef(2)
+  const indexRef = useRef(1)
 
   const handleFocus = () => {
     indexRef.current = (indexRef.current + 1) % placeholders.length;
