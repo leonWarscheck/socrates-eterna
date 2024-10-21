@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => {
     },
     {
       property: "og:image",
-      content: "/main/lp2-lg-cmyk-crop4.jpg"
+      content: "/main/og-title.png"
     }
   ];
 };
