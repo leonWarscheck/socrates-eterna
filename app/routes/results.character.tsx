@@ -30,12 +30,12 @@ interface LoaderData {
 
 
 export async function loader({ request }) {
-    const { results: potentialResults, query} = await getPotentialResults(request);
+    const { results: potentialResults, query: potentialQuery} = await getPotentialResults(request);
 
-    const { latestResults, session } = await getLatestAndSavedResults(request, potentialResults);
+    const { latestResults, latestQuery, session } = await getLatestAndSavedResults(request, potentialResults, potentialQuery);
 
     return json(
-        { results: latestResults, query },
+        { results: latestResults, query: latestQuery },
         { headers: { "Set-Cookie": await commitSession(session) } }
     );
 }
@@ -50,7 +50,7 @@ export default function ResultsMeaningRoute() {
 
     return (
         <ResultsPage {...{ mode, results, isSearching, query }}>
-            <ModeCharacterBar {...{ isSearching }} />
+            <ModeCharacterBar {...{ isSearching, query }} />
         </ResultsPage>
     )
 }

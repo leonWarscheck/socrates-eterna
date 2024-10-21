@@ -5,15 +5,20 @@ import { Form, Link } from "@remix-run/react";
 
 
 
-const placeholders = ["'cigar' finds a comic about cuba...", "'branding' finds a comic about Ghandis message...", "'health' finds a comic about physical training..."]
+const placeholders = [
+  "Find a comic by related words not included in its text...",
+  "'cigar' finds a comic about cuba...",
+  "'branding' finds a comic about Ghandis message...",
+  "'health' finds a comic about physical training..."]
 
 
 
 
 
 export default function ModeMeaningBar({ isSearching, query }) {
+  console.log("query/momeba:", query)
   const [placeholder, setPlaceholder] = useState("")
-  const indexRef = useRef(0)
+  const indexRef = useRef(2)
 
   const handleFocus = () => {
     indexRef.current = (indexRef.current + 1) % placeholders.length;

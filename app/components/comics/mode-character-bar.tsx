@@ -2,10 +2,10 @@ import characters from "app/data/characters.json";
 import { Link, useLocation } from "@remix-run/react";
 import { useRef, useEffect, useState } from "react";
 
-export default function ModeCharacterBar({ isSearching }) {
+export default function ModeCharacterBar({ isSearching, query: searchName }) {
   const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const searchName = searchParams.get("search");
+  // const searchParams = new URLSearchParams(location.search);
+  // const searchName = searchParams.get("search");
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
@@ -54,7 +54,7 @@ export default function ModeCharacterBar({ isSearching }) {
         to="/comics/meaning"
         className=" text-3xl dmd:text-[2.9rem]/9 text-center text-primary1 w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
       >
- <div className=" aspect-[1404/245] h-9 mt-[1.5px]">
+        <div className=" aspect-[1404/245] h-9 mt-[1.5px]">
           <img src="/main/socrates-raw.png" alt="" className=" h-full w-full" />
         </div>
       </Link>
@@ -100,6 +100,7 @@ export default function ModeCharacterBar({ isSearching }) {
                 onClick={() => handleSelect(character)}
                 className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
+                prefetch="intent"
                 to={`/results/character?search=${character.name}`}
                 className="text-sm"
               >

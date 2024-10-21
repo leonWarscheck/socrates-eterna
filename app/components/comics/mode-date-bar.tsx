@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
 
 export default function ModeDateBar({ isSearching, query: latestQuery }) {
   const [radioButton, setRadioButton] = useState("month");
   const [query, setQuery]= useState(latestQuery)
+  console.log("useState query/ mdb:", latestQuery)
+
+  useEffect(() => {
+    setQuery(latestQuery);
+  }, []);
 
   return (
     <div className="max-w-4xl flex flex-col dmd:flex-row  w-full    px-4 mt-6 dmd:mt-8 mb-4 bg-teal-5 ">
