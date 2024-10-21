@@ -98,20 +98,20 @@ export default function ModeCharacterBar({ isSearching, query: searchName }) {
               <li
                 key={character.name}
                 onClick={() => handleSelect(character)}
-                className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
+                className="p- hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
                 prefetch="intent"
                 to={`/results/character?search=${character.name}`}
                 className="text-sm"
               >
-                  <div className="flex items-center text-base">
-
-                    <img
-                      src={`/characters/${character.image}`}
-                      alt={`An image of ${character.name}`}
-                      className="w-14 h-14 mr-3 object-cover"
-                    />
-
+                  <div className="flex items-center text-base  ">
+                    <div className=" aspect-square h-14 m-2">
+                      <img
+                        src={`/characters/${character.image}`}
+                        alt={`An image of ${character.name}`}
+                        className="object-cover h-full w-full"
+                      />
+                    </div>
                     {character.name}
 
                   </div>
@@ -121,7 +121,6 @@ export default function ModeCharacterBar({ isSearching, query: searchName }) {
           </ul>
         )}
 
-        {/* <div className={`w-full h-1 ${isOpen ? 'bg-neutral-300' : 'bg-primary1'} `}></div> */}
       </div >
     </div>
   );

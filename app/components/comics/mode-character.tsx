@@ -73,18 +73,20 @@ export default function ModeCharacter({ isSearching }) {
               <li
                 key={character.name}
                 onClick={() => handleSelect(character)}
-                className="p-2 hover:bg-primary1 cursor-pointer odd:bg-purple-950"
+                className=" hover:bg-primary1 cursor-pointer odd:bg-purple-950"
               ><Link
                 to={`/results/character?search=${character.name}`}
                 className="text-sm"
               >
                   <div className="flex items-center text-base">
 
-                    <img
-                      src={`/characters/${character.image}`}
-                      alt={`An image of ${character.name}`}
-                      className="w-14 h-14 mr-3 object-cover"
-                    />
+                  <div className=" aspect-square h-14 m-2">
+                      <img
+                        src={`/characters/${character.image}`}
+                        alt={`An image of ${character.name}`}
+                        className="object-cover h-full w-full"
+                      />
+                    </div>
 
                     {character.name}
 
