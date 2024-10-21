@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 
 const pc = new Pinecone({
-  apiKey: "77c91cfa-38e5-4acd-8000-ada86d4066f7",
+  apiKey: process.env.PINECONE_API_KEY,
 });
 const index = pc.index("socrates-search");
 const namespace = index.namespace("socrates-namespace");

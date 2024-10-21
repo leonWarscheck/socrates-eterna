@@ -1,0 +1,229 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs-eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "routes/results.character": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/comics.character": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/results.meaning": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/comics.meaning": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/results.date": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/comics.date": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/licensing": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/_index": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/about": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/books": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/test": "nodejs-eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "app/root.tsx",
+        "config": {}
+      },
+      "routes/results.character": {
+        "file": "app/routes/results.character.tsx",
+        "id": "routes/results.character",
+        "path": "results/character",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/comics.character": {
+        "file": "app/routes/comics.character.tsx",
+        "id": "routes/comics.character",
+        "path": "comics/character",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/results.meaning": {
+        "file": "app/routes/results.meaning.tsx",
+        "id": "routes/results.meaning",
+        "path": "results/meaning",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/comics.meaning": {
+        "file": "app/routes/comics.meaning.tsx",
+        "id": "routes/comics.meaning",
+        "path": "comics/meaning",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/results.date": {
+        "file": "app/routes/results.date.tsx",
+        "id": "routes/results.date",
+        "path": "results/date",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/comics.date": {
+        "file": "app/routes/comics.date.tsx",
+        "id": "routes/comics.date",
+        "path": "comics/date",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/licensing": {
+        "file": "app/routes/licensing.tsx",
+        "id": "routes/licensing",
+        "path": "licensing",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/_index": {
+        "file": "app/routes/_index.tsx",
+        "id": "routes/_index",
+        "index": true,
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/about": {
+        "file": "app/routes/about.tsx",
+        "id": "routes/about",
+        "path": "about",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/books": {
+        "file": "app/routes/books.tsx",
+        "id": "routes/books",
+        "path": "books",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/test": {
+        "file": "app/routes/test.tsx",
+        "id": "routes/test",
+        "path": "test",
+        "parentId": "root",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    }
+  },
+  "remixConfig": {
+    "appDirectory": "/Users/leon/Documents/code/socrates/app",
+    "basename": "/",
+    "buildDirectory": "/Users/leon/Documents/code/socrates/build",
+    "future": {
+      "v3_fetcherPersist": true,
+      "v3_relativeSplatPath": true,
+      "v3_throwAbortReason": true,
+      "unstable_singleFetch": false,
+      "unstable_lazyRouteDiscovery": false,
+      "unstable_optimizeDeps": false
+    },
+    "manifest": false,
+    "publicPath": "/",
+    "routes": {
+      "root": {
+        "path": "",
+        "id": "root",
+        "file": "root.tsx"
+      },
+      "routes/results.character": {
+        "file": "routes/results.character.tsx",
+        "id": "routes/results.character",
+        "path": "results/character",
+        "parentId": "root"
+      },
+      "routes/comics.character": {
+        "file": "routes/comics.character.tsx",
+        "id": "routes/comics.character",
+        "path": "comics/character",
+        "parentId": "root"
+      },
+      "routes/results.meaning": {
+        "file": "routes/results.meaning.tsx",
+        "id": "routes/results.meaning",
+        "path": "results/meaning",
+        "parentId": "root"
+      },
+      "routes/comics.meaning": {
+        "file": "routes/comics.meaning.tsx",
+        "id": "routes/comics.meaning",
+        "path": "comics/meaning",
+        "parentId": "root"
+      },
+      "routes/results.date": {
+        "file": "routes/results.date.tsx",
+        "id": "routes/results.date",
+        "path": "results/date",
+        "parentId": "root"
+      },
+      "routes/comics.date": {
+        "file": "routes/comics.date.tsx",
+        "id": "routes/comics.date",
+        "path": "comics/date",
+        "parentId": "root"
+      },
+      "routes/licensing": {
+        "file": "routes/licensing.tsx",
+        "id": "routes/licensing",
+        "path": "licensing",
+        "parentId": "root"
+      },
+      "routes/_index": {
+        "file": "routes/_index.tsx",
+        "id": "routes/_index",
+        "index": true,
+        "parentId": "root"
+      },
+      "routes/about": {
+        "file": "routes/about.tsx",
+        "id": "routes/about",
+        "path": "about",
+        "parentId": "root"
+      },
+      "routes/books": {
+        "file": "routes/books.tsx",
+        "id": "routes/books",
+        "path": "books",
+        "parentId": "root"
+      },
+      "routes/test": {
+        "file": "routes/test.tsx",
+        "id": "routes/test",
+        "path": "test",
+        "parentId": "root"
+      }
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
