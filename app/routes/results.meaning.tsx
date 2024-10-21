@@ -26,9 +26,11 @@ interface LoaderData {
 
 
 export async function loader({ request }) {
+   console.log("")
     const { results: potentialResults, query: potentialQuery } = await getPotentialResults(request);
     const { latestResults, latestQuery, session } = await getLatestAndSavedResults(request, potentialResults, potentialQuery);
     const cleanQuery = cleanMeaningQuery(latestQuery, characters)
+    
 
     return json(
         { results: latestResults, query: cleanQuery },
