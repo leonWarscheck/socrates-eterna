@@ -8,7 +8,7 @@
     "**/.client/**/*.tsx",
     "app/utils/createCollection.js",
     "app/utils/insertNewComicDataToDb.js",
-    "app/data/upsert-dataset.js",
+    "app/utils/single-use/upsert-dataset.js",
     "app/components/archive",
     "tailwind.config.js", "app/routes/$.ts",
   ],
@@ -22,10 +22,10 @@
     "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "target": "ES2022",
-    "strict": false,
+    "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": false, // ! was true most of the time
+    "forceConsistentCasingInFileNames": true, 
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]

@@ -1,8 +1,10 @@
 import { format } from "date-fns";
 import ScrollToTopButton from "./scroll-to-top-button";
+import type { LoaderResults, Comic } from "./types";
 
-export default function RenderResults({ loaderResults }) {
-  console.log("results/renderR:", !!loaderResults)
+
+export default function RenderResults({ loaderResults } : {loaderResults: LoaderResults}) {
+  console.log("results/renderR:", loaderResults)
   
 
   return (

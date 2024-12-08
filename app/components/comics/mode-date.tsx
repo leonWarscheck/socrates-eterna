@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Form, Link } from "@remix-run/react";
+import type { Props } from "./types";
 
-export default function ModeDate({isSearching}) {
+export default function ModeDate({isSearching}: Props) {
   const [radioButton, setRadioButton] = useState("month");
   return (
-    <Form id="md" className="max-w-xl dmd:flex flex-col mx-auto px-4 w-full hidden bg-purple-">
-      <div className="flex items-center mx-auto justify-between accent-black w-full my-[2px bg-amber-">
-        <div className="flex items-center mr-auto bg-pink-">
+    <Form id="md" className="max-w-xl dmd:flex flex-col mx-auto px-4 w-full hidden">
+      <div className="flex items-center mx-auto justify-between accent-black w-full">
+        <div className="flex items-center mr-auto">
           <label className="inline-flex items-center">
             <input
               type="radio"
@@ -26,7 +27,7 @@ export default function ModeDate({isSearching}) {
           />
         </div>
 
-        <div className="flex items-center ml-auto bg-teal-">
+        <div className="flex items-center ml-auto">
           <label className="inline-flex items-center">
             <input
               type="radio"
@@ -50,7 +51,7 @@ export default function ModeDate({isSearching}) {
       <div className="flex gap-4 mx-auto mt-6">
         <button
         type="submit"
-          className="bg-primary1 text-sm small:text-sm hover:bg-purple-600 h-9 px-4 rounded "
+          className="bg-primary1 text-sm small:text-sm hover:bg-purple-600 h-9 px-4 rounded"
           disabled={isSearching}
         >
           Eterna Date Search

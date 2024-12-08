@@ -4,7 +4,7 @@ import characters from "app/data/characters.json"
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { json } from "@remix-run/node";
 import { getLatestAndSavedResults, getPotentialResults, commitSession, cleanMeaningQuery } from "~/utils/session-tools.server"
-
+import type { LoaderFunction } from '@remix-run/node';
 interface Metadata {
     filename: string;
     title: string;
@@ -24,17 +24,19 @@ interface LoaderData {
     results: ComicData[];
 }
 
-
+// export async function loader({ request }: { request: Request }): Promise<LoaderData> {
+  
 export async function loader({ request }) {
+    try{
     const { results: potentialResults, query: potentialQuery } = await getPotentialResults(request);
     const { latestResults, latestQuery, session } = await getLatestAndSavedResults(request, potentialResults, potentialQuery);
     const cleanQuery = cleanMeaningQuery(latestQuery, characters)
-    
-
     return json(
         { results: latestResults, query: cleanQuery },
         { headers: { "Set-Cookie": await commitSession(session) } }
     );
+    }catch(error){ console.log(error); return {}}
+
 }
 
 

@@ -1,11 +1,13 @@
 import { LoaderFunctionArgs } from '@remix-run/node'
+import type { LoaderFunction } from '@remix-run/node';
+
 import ComicsPage from '~/components/comics/comics-page'
 import ModeMeaning from '~/components/comics/mode-meaning'
 import { json, redirect } from '@vercel/remix';
-import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
+import {useNavigation } from '@remix-run/react';
 
 
-export function getSearchParams(request: Request) {
+export function getSearchParams(request: Request) : {search: string} {
     const url = new URL(request.url);
     const search = url.searchParams.get('search') || '';
 
@@ -13,30 +15,30 @@ export function getSearchParams(request: Request) {
 }
 
 
-export async function loader({ request }: LoaderFunctionArgs) {
+
+export const loader: LoaderFunction = async ({ request }: LoaderFunctionArgs) => {
     const { search } = getSearchParams(request);
-    // console.log("query in comic/meaning loader:", search)
     if (search) {
         const params = new URLSearchParams(
             Object.fromEntries(
-                Object.entries({ search }).filter(
-                    ([_, value]) => value,
-                ),
-            ),
+                Object.entries({ search }).filter(([, value]) => value)
+            )
         );
         return redirect(`/results/meaning?${params.toString()}`);
     }
     return json({ search });
-}
+};
+
 
 export default function ComicsMeaningRoute() {
     const navigation = useNavigation();
-    const isSearching = !!navigation.location?.search;
-    const mode = "meaning";
+    const isSearching: boolean = !!navigation.location?.search;
+    const mode: string = "meaning";
 
     return (
         <ComicsPage {...{ isSearching, mode }}>
             <ModeMeaning {...{ isSearching }} />
         </ComicsPage>
-    )
+    );
 }
+

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import RandomDilbertButton from "./random-comic-button";
 import { Form, Link } from "@remix-run/react";
+import type { Props } from "./types";
 
 
 
@@ -15,7 +15,7 @@ const placeholders = [
 
 
 
-export default function ModeMeaningBar({ isSearching, query }) {
+export default function ModeMeaningBar({ isSearching, query }: Props) {
   console.log("query/momeba:", query)
   const [placeholder, setPlaceholder] = useState("")
   const indexRef = useRef(1)
@@ -30,7 +30,7 @@ export default function ModeMeaningBar({ isSearching, query }) {
     <Form className="max-w-4xl flex flex-col dmd:flex-row w-full px-4  mt-6 dmd:mt-8 mb-4">
       <Link
         to="/comics/meaning"
-        className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-6 w-[386px] bg-red-5  text-primary1 font-bold mb-4 dmd:mb-0 -mt- 1.5 -ml-1 "
+        className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-6 w-[386px] text-primary1 font-bold mb-4 dmd:mb-0 -ml-1 "
       >
         <div className=" aspect-[1404/245] h-9 mt-[1.5px]">
           <img src="/main/socrates-raw.png" alt="" className=" h-full w-full" />
@@ -38,7 +38,7 @@ export default function ModeMeaningBar({ isSearching, query }) {
       </Link>
       <div className=" flex  grow ml-auto w-full ">
         <input
-          className="border-y-2 border-l-2 border-primary1 rounded-l-lg bg-transparent focus:outline-none focus:bg-purple-1000 grow h-10 px-3 placeholder:text-purple-400 placeholder:text-"
+          className="border-y-2 border-l-2 border-primary1 rounded-l-lg bg-transparent focus:outline-none focus:bg-purple-1000 grow h-10 px-3 placeholder:text-purple-400 "
           type="search"
           defaultValue={query}
           name="search"
@@ -58,7 +58,7 @@ export default function ModeMeaningBar({ isSearching, query }) {
         <button
           type="submit"
           disabled={isSearching}
-          className="bg-primary1  rounded-r-lg  hover:bg-purple-600 text-white  px-4  mr-"
+          className="bg-primary1  rounded-r-lg  hover:bg-purple-600 text-white  px-4 "
         >
           Eterna Search
         </button>

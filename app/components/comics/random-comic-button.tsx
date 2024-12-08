@@ -1,16 +1,15 @@
 import { Form, Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
 import { keywords } from "~/data/keywords";
+import type { Props } from "./types";
 
-export default function RandomComicButton({ isSearching }) {
+export default function RandomComicButton({ isSearching }: Props) {
   const [keyword, setKeyword] = useState("");
   useEffect(() => {
     const randomIndex = Math.trunc(Math.random() * 42);
     const randomKeyword = keywords[randomIndex];
-    // console.log(randomIndex + " = " + randomKeyword)
     setKeyword(randomKeyword);
   }, []);
-  // console.log("keyword: ",keyword)
 
   return (
     <Link

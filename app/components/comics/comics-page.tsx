@@ -1,14 +1,9 @@
-import type {LoaderFunctionArgs} from '@remix-run/node';
-import { json,  redirect } from '@vercel/remix';
-import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
 import ModeSelector from '~/components/comics/mode-selector';
+import type { Props } from './types';
 
 
 
-export default function ComicsPage({children, isSearching, mode}) {
-   
-
-
+export default function ComicsPage({ children, isSearching, mode }: Props) {
     return (
         <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">
             <div className={`flex flex-col landscape-narrow:pt-[5dvh]  my-auto ${isSearching && "animate-pulse"} `}>

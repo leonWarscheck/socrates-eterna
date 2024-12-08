@@ -1,11 +1,10 @@
-import { MetaFunction, useLoaderData, useNavigation } from "@remix-run/react";
 import RenderResults from "~/components/comics/render-results";
 import SearchBar from "~/components/comics/search-bar";
-import { useState, useEffect } from "react";
+import type { Props } from "./types";
 
 
 
-export default function ResultsPage( {children, results, mode, isSearching}) {
+export default function ResultsPage( {children, results, mode, isSearching}: Props) {
   console.log("results/pagecomp:", !!results)
 
   return (
