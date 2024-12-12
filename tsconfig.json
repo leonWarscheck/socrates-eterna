@@ -10,7 +10,7 @@
     "app/utils/insertNewComicDataToDb.js",
     "app/utils/single-use/upsert-dataset.js",
     "app/components/archive",
-    "tailwind.config.js",
+    "tailwind.config.ts",
     "app/routes/$.ts",
     "app/utils/search-helpers.server.ts",
   ],

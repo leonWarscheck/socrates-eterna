@@ -1,6 +1,8 @@
-// import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
+import typography from '@tailwindcss/typography';
+import animate from 'tailwindcss-animate';
 
-const config = {
+const config: Config = {
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -33,34 +35,34 @@ const config = {
           '50%': { borderColor: '#c084fc' },
         },
         pulse: {
-          '0%, 100%': { opacity: 1 },
-          '50%': { opacity: 0.5 },
+          '0%, 100%': { opacity: "1" },
+          '50%': { opacity: "0.5" },
         },
         backgroundPulse: {
-          '0%, 100%': { backgroundColor: '#6b21a8' },// 700
-          '50%':{ backgroundColor: '#9333ea' },  // 400
+          '0%, 100%': { backgroundColor: '#6b21a8' },
+          '50%': { backgroundColor: '#9333ea' },
         },
         backgroundPulse2: {
-          '0%, 100%': { backgroundColor: '#7e22ce' },// 700
-          '50%':{ backgroundColor: '#a855f7' },  // 400
+          '0%, 100%': { backgroundColor: '#7e22ce' },
+          '50%': { backgroundColor: '#a855f7' },
         },
       },
-      fontFamily:{
+      fontFamily: {
         "socrates": ['Toxigenesis', 'sans-serif'],
       },
       screens: {
         xs: '400px',
-        tiny: "360px", // 374
+        tiny: "360px",
         small: "490px",
-        dmd: "667px",//768, 667
+        dmd: "667px",
         'full-md': "887px",
         dlg: "1024px",
         sxl: "1110px",
         xl7: "1280px",
-        'landscape-narrow': { 'raw': '(max-height: 940px) and (orientation: landscape)' }, // 769px
+        'landscape-narrow': { 'raw': '(max-height: 940px) and (orientation: landscape)' },
         'landscape-narrow-2': { 'raw': '(max-width: 940px) and (max-height: 430px )' },
         'landscape-super-narrow': { 'raw': '(max-height: 375px) and (orientation: landscape)' },
-        'portrait-narrow': { 'raw':'(max-height: 770px)'}
+        'portrait-narrow': { 'raw': '(max-height: 770px)' },
       },
       width: {
         '66': '16.5rem',
@@ -72,8 +74,7 @@ const config = {
       },
     },
   },
-  // eslint-disable-next-line unicorn/prefer-module
-  plugins: [require('@tailwindcss/typography'), require('tailwindcss-animate')],
-} // satisfies Config;
+  plugins: [typography, animate],
+};
 
 export default config;
