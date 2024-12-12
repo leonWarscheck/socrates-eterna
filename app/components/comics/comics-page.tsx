@@ -1,9 +1,9 @@
 import ModeSelector from '~/components/comics/mode-selector';
-import type { Props } from './types';
+import { SearchComponentParentProps } from './types';
 
 
 
-export default function ComicsPage({ children, isSearching, mode }: Props) {
+export default function ComicsPage({ children, isSearching, mode }: SearchComponentParentProps) {
     return (
         <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">
             <div className={`flex flex-col landscape-narrow:pt-[5dvh]  my-auto ${isSearching && "animate-pulse"} `}>

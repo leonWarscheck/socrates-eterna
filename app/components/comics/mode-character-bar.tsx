@@ -1,12 +1,12 @@
 import characters from "app/data/characters.json";
 import { Link } from "@remix-run/react";
 import { useRef, useEffect, useState } from "react";
-import type { Character, Props } from "./types";
+import type { Character, ModeBarProps} from "./types";
 
 export default function ModeCharacterBar({
   isSearching,
   query: searchName,
-}: Props) {
+}: ModeBarProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
   const dropdownRef = useRef<HTMLDivElement | null>(null);

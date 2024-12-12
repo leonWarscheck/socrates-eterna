@@ -17,7 +17,6 @@ export default function Footer() {
   }, [location.pathname]);
 
 
-  // console.log(location.hash)
   return (
     <footer className={` ${location.pathname === "/test" && "hidden"}  mt-aut bg-purple-950 items-center flex h-16 w-full ${isSnapEnabled && "snap-start snap-always"} `}>
       

@@ -3,31 +3,15 @@ import {
   Link,
   Links,
   Meta,
-  NavLink,
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLocation,
   useRouteError,
 } from '@remix-run/react';
 import "./tailwind.css";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
 
-// export const meta: MetaFunction = () => {
-//   return {
-//     title: "Your Site Title",
-//     description: "A brief description of your site.",
-//     'og:title': "Your Site Title",
-//     'og:description': "A brief description of your site.",
-//     'og:image': "https://yourdomain.com/path-to-image.jpg",
-//     'og:url': "https://yourdomain.com",
-//     'twitter:card': "summary_large_image",
-//     'twitter:title': "Your Site Title",
-//     'twitter:description': "A brief description of your site.",
-//     'twitter:image': "https://yourdomain.com/path-to-image.jpg"
-//   };
-// };
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -58,11 +42,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return <Outlet />;
 }
-
-
-
-
-
 
 
 function ErrorPage({

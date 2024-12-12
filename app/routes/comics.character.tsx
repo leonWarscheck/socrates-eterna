@@ -1,8 +1,7 @@
 import { LoaderFunctionArgs } from '@remix-run/node'
 import ComicsPage from '~/components/comics/comics-page'
-import ModeMeaning from '~/components/comics/mode-meaning'
-import { json, redirect } from '@vercel/remix';
-import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
+import { redirect } from '@vercel/remix';
+import { useNavigation } from '@remix-run/react';
 import ModeCharacter from '~/components/comics/mode-character';
 
 
@@ -10,7 +9,7 @@ import ModeCharacter from '~/components/comics/mode-character';
 
 export function getSearchParams(request: Request) {
     const url = new URL(request.url);
-    const search = url.searchParams.get('search') || '';
+    const search = url.searchParams.get('search') || ''; // ! catch here neccessary?
 
     return { search };
 }
@@ -18,7 +17,6 @@ export function getSearchParams(request: Request) {
 export async function loader({ request }: LoaderFunctionArgs) {
 
     const { search } = getSearchParams(request);
-    // console.log("queryChar:", search);
     if (search) {
         const params = new URLSearchParams(
             Object.fromEntries(

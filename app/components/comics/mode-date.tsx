@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Form, Link } from "@remix-run/react";
-import type { Props } from "./types";
+import type { IsSearchingProp } from "./types";
 
-export default function ModeDate({isSearching}: Props) {
+export default function ModeDate({ isSearching }: IsSearchingProp) {
   const [radioButton, setRadioButton] = useState("month");
   return (
     <Form id="md" className="max-w-xl dmd:flex flex-col mx-auto px-4 w-full hidden">
@@ -15,7 +15,7 @@ export default function ModeDate({isSearching}: Props) {
               value="month"
               className="form-radio"
               checked={radioButton === "month"}
-              onChange={()=> setRadioButton("month")}
+              onChange={() => setRadioButton("month")}
             />
             <span className="ml-2">by Month</span>
           </label>
@@ -35,7 +35,7 @@ export default function ModeDate({isSearching}: Props) {
               value="day"
               className="form-radio"
               checked={radioButton === "day"}
-              onChange={()=> setRadioButton("day")}
+              onChange={() => setRadioButton("day")}
             />
             <span className="ml-2">by Day</span>
           </label>
@@ -50,7 +50,7 @@ export default function ModeDate({isSearching}: Props) {
 
       <div className="flex gap-4 mx-auto mt-6">
         <button
-        type="submit"
+          type="submit"
           className="bg-primary1 text-sm small:text-sm hover:bg-purple-600 h-9 px-4 rounded"
           disabled={isSearching}
         >

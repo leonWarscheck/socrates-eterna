@@ -1,5 +1,4 @@
-import { Link, useSearchParams } from "@remix-run/react";
-
+// test page to mess with css in isolation
 export default function TestPage() {
   return (
     <main className="bg-black grow">

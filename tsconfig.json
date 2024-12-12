@@ -10,11 +10,20 @@
     "app/utils/insertNewComicDataToDb.js",
     "app/utils/single-use/upsert-dataset.js",
     "app/components/archive",
-    "tailwind.config.js", "app/routes/$.ts",
+    "tailwind.config.js",
+    "app/routes/$.ts",
+    "app/utils/search-helpers.server.ts",
   ],
   "compilerOptions": {
-    "lib": ["DOM", "DOM.Iterable", "ES2022"],
-    "types": ["@vercel/remix", "vite/client"],
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ES2022"
+    ],
+    "types": [
+      "@vercel/remix",
+      "vite/client"
+    ],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
@@ -25,12 +34,13 @@
     "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true, 
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": [
+        "./app/*"
+      ]
     },
-
     // Vite takes care of building everything, not tsc.
     "noEmit": true
   }

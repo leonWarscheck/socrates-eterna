@@ -1,17 +1,16 @@
 import { format } from "date-fns";
 import ScrollToTopButton from "./scroll-to-top-button";
-import type { LoaderResults, Comic } from "./types";
+import type { ResultsProp } from "./types";
 
 
-export default function RenderResults({ loaderResults } : {loaderResults: LoaderResults}) {
-  console.log("results/renderR:", loaderResults)
-  
+export default function RenderResults({ results }: ResultsProp) {
+
 
   return (
     <div className="flex max-w-7xl mx-auto w-full">
       <div className="flex flex-col mx-auto shrink- max-w-4xl px-4 -mt-2 dmd:mt- [13.5rem] ">
-        {loaderResults &&
-          loaderResults.map((comic) => {
+        {results &&
+          results.map((comic) => {
             const publishedDate = new Date(comic.metadata.published);
             const formattedDate = format(publishedDate, "eeee, dd-MM-yyyy");
 
@@ -31,7 +30,7 @@ export default function RenderResults({ loaderResults } : {loaderResults: Loader
               </div>
             );
           })}
-          <ScrollToTopButton/>
+        <ScrollToTopButton />
       </div>
     </div>
   );

@@ -9,10 +9,10 @@ import ModeDate from '~/components/comics/mode-date';
 
 
 
-export const loader = async ({ request }) => {
+export const loader = async ({ request }: LoaderFunctionArgs) => {
     const url = new URL(request.url);
 
-    if (url.searchParams.toString()) {
+    if (url.searchParams.toString()) { // ! make consistent across comics routes
         const newUrl = url.pathname.replace("/comics/", "/results/") + url.search;
 
         return redirect(newUrl);

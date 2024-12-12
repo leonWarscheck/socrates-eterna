@@ -1,10 +1,10 @@
 import { Link } from "@remix-run/react";
 import characters from "app/data/characters.json";
 import { useState, useRef, useEffect } from "react";
-import type { Character, Props } from "./types";
+import type { Character, IsSearchingProp } from "./types";
 
 
-export default function ModeCharacter({ isSearching }: Props) {
+export default function ModeCharacter({ isSearching }: IsSearchingProp) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
   const dropdownRef = useRef<HTMLDivElement | null>(null);

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
-import type { Props } from "./types";
+import type { ModeBarProps} from "./types";
 
 
 
@@ -15,8 +15,7 @@ const placeholders = [
 
 
 
-export default function ModeMeaningBar({ isSearching, query }: Props) {
-  console.log("query/momeba:", query)
+export default function ModeMeaningBar({ isSearching, query }: ModeBarProps ) {
   const [placeholder, setPlaceholder] = useState("")
   const indexRef = useRef(1)
 

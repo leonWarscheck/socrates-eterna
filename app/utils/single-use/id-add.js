@@ -14,18 +14,13 @@ const transformData = (data) => {
   }));
 };
 
-// Main function to read, transform, and save data
 const processComicData = async () => {
   try {
-    // Read the original comic data
     const rawData = await fs.readFile(filePath, "utf8");
     const comicData = JSON.parse(rawData);
-    console.log(comicData)
 
-    // Transform the data
     const transformedData = transformData(comicData);
 
-    // Save the transformed data to a new JSON file
     await fs.writeFile(
       transformedFilePath,
       JSON.stringify(transformedData, null, 2),
@@ -39,5 +34,4 @@ const processComicData = async () => {
   }
 };
 
-// Run the main function
 processComicData();

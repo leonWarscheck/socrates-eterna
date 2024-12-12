@@ -7,7 +7,6 @@ const pc = new Pinecone({
 });
 const index = pc.index("socrates-search");
 const namespace = index.namespace("socrates-namespace");
-// const upsertFunc = index.namespace("poc-dataset").upsert;
 
 const filePath = path.resolve("../data/comic-Data.json");
 const dataset = JSON.parse(fs.readFileSync(filePath, "utf8"));
@@ -18,13 +17,10 @@ async function asyncForEach(array, callback) {
   }
 }
 
-// await asyncForEach(dataset, upsertFunc).then(() =>
-//   console.log("Upserting Dataset Done")
-// );
 async function upsertData() {
   try {
     await asyncForEach(dataset, async (data) => {
-      await namespace.upsert([data]); // Wrap data in an array
+      await namespace.upsert([data]); 
     });
     console.log("Upserting Dataset Done");
   } catch (error) {

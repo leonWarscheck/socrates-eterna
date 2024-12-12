@@ -1,12 +1,17 @@
 import { Pinecone } from "@pinecone-database/pinecone";
-import { getCleanResults } from "./date-search-logic";
+import { getCleanResults } from "../utils/search-helpers.server";
+import invariant from 'tiny-invariant'
 
-const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY,});
+const {PINECONE_API_KEY} = process.env;
+
+invariant( PINECONE_API_KEY, "PINECONE API KEY is required")
+
+const pc = new Pinecone({ apiKey: PINECONE_API_KEY}); 
 
 const index = pc.index("socrates-search");
 const namespace = index.namespace("socrates-namespace");
 
-export async function getPineconeResults(queryEmbeddings) {
+export async function getPineconeResults(queryEmbeddings: number[]) {
   const queryResponse = (
     await namespace.query({
       topK: 3,

@@ -30,9 +30,6 @@ export default function Header() {
     return ()=> window.removeEventListener("scroll", handleScroll);
   }, [])
 
-  // console.log("scrollShow: ", scrollShow)
-
-  // console.log(query || "noquery")
 
   return (
     <>

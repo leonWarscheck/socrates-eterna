@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
-import type { Props } from "./types";
+import { ModeBarProps } from "./types";
 
 
-export default function ModeDateBar({ isSearching, query: latestQuery }: Props) {
+export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBarProps) {
   const [radioButton, setRadioButton] = useState<string>("month");
   const [query, setQuery] = useState<string | undefined>(latestQuery);
 

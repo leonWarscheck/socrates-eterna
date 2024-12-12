@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
-import type { Props } from "./types";
+import type { ModeProp } from "./types";
 
-export default function ModeSelector({ mode }: Props) {
+export default function ModeSelector({ mode }: ModeProp) {
   return (
     <div className="flex dmd:mt-8 mt-6 landscape-narrow:mb- px-4 text-sm text-purple-200 font-ligh ">
       <div className="mx-auto  flex ">

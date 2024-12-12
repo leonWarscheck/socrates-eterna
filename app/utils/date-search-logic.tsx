@@ -1,21 +1,8 @@
 import comicData from "../data/comic-data.json";
-
-export function getCleanResults(matches) {
-    const cleanResults = matches.map((comic) => ({
-        id: comic.id,
-        metadata: {
-            filename: comic.metadata.filename,
-            published: comic.metadata.published,
-            title: comic.metadata.title,
-        },
-    }));
-    return cleanResults;
-}
+import { getCleanResults } from "./search-helpers.server";
 
 
-export async function dateSearch(query, limit = 3) {
-    console.log("query/dateLogic:", !!query)
-    console.log("limit:", limit)
+export async function dateSearch(query: string, limit = 3) {
     const targetDate = new Date(query).getTime();
     const closestToDateComics = [...comicData]
         .sort((a, b) => {
@@ -25,7 +12,6 @@ export async function dateSearch(query, limit = 3) {
         })
         .slice(0, limit);
 
-    console.log("targetDate", targetDate)
     
     const cleanResults = getCleanResults(closestToDateComics);
 
