@@ -7,18 +7,30 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
   const [radioButton, setRadioButton] = useState("month");
   const [query, setQuery] = useState(latestQuery);
 
+
   const fixMonthInputQuery = (query: QueryProp["query"]) => {
-    if (query.length != 7) {
-      return query.slice(0, 7)
-    } return query;
+    const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
+    const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
 
-  }
+    if (!isMonthFormat && !isDayFormat) {
+      return "";
+    } else if (isDayFormat) {
+      return query.slice(0, 7);
+    } else { return query; }
+  };
+
   const fixDayInputQuery = (query: QueryProp["query"]) => {
-    if (query.length != 10) {
-      return query + "-01"
-    } return query;
+    const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
+    const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
 
-  }
+    if (!isMonthFormat && !isDayFormat) {
+      return "";
+    } else if (isMonthFormat) {
+      return query + "-01";
+    } else { return query; }
+  };
+
+
 
   useEffect(() => {
     setQuery(latestQuery);
