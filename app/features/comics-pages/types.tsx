@@ -1,3 +1,4 @@
+import { RecordSparseValues, RecordValues } from '@pinecone-database/pinecone';
 import type { ReactNode, ComponentProps } from 'react';
 
 
@@ -5,7 +6,7 @@ export type ModeProp = { mode: string }
 export type IsSearchingProp = { isSearching: boolean }
 export type ChildrenProp = { children: ReactNode }
 export type QueryProp = { query: string }
-export type ResultsProp = { results: Comic[] }
+export type ResultsProp = { results: ComicCleaned[] }
 
 export type ModeBarProps = IsSearchingProp & QueryProp
 export type SearchComponentParentProps = ChildrenProp & IsSearchingProp & ModeProp
@@ -13,9 +14,9 @@ export type GetCleanMeaningQueryParams = {
     query: QueryProp["query"];
     characters: Character[];
 };
-export type GetLatestAndSavedResultsParams = {
+export type GetLatestAndSavedResultsAndQueryParams = {
     request: Request;
-    potentialResults: Comic[];
+    potentialResults: ComicCleaned[];
     potentialQuery: QueryProp['query'];
 }
 
@@ -23,64 +24,61 @@ export type Character = {
     name: string;
     image: string;
 };
-export type Comic = {
-    id: string;
-    metadata: ComicMetadata;
-};
 
-export type ComicMetadata = {
+
+
+
+
+
+
+// comic types
+
+export type ComicMatch = {
+    id: string;
+    score?: number;
+    values: RecordValues;
+    sparseValues?: RecordSparseValues;
+    metadata?: ComicMatchMetadata;
+}
+
+export type ComicMatchMetadata = {
     filename: string;
     published: string;
     title: string;
     content: string;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export interface Props {
-    children?: ReactNode;
-    isSearching?: boolean;
-    mode?: string;
-    query?: string;
 }
 
-// type MyComponent1Props = { title: string;
-// }
-// type MyComponent2Props = { age: number;}
-// type MyParentComponentProps = MyComponent1Props & MyComponent2Props & {blah: boolean;}
-// const myObject: MyParentComponentProps = {title: "blah"}
-function MyComponent(props: { foo: string; bar: number; }) { return null }
-type MyComponentProps = ComponentProps<typeof MyComponent>
+// passed into getCleanResults from dateSearch
+export type ComicLocal = {
+    id: string;
+    values: number[];
+    metadata: ComicMatchMetadata;
+}
 
-type MyPartenComponentProps = { title: string; age: number; }
-type MyComponent1Props = Pick<MyPartenComponentProps, "title" | "age">
+
+export type ComicCleaned = {
+    id: string;
+    metadata: ComicCleanedMetadata;
+}
+
+export type ComicCleanedMetadata = {
+    filename: string;
+    published: string;
+    title: string;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

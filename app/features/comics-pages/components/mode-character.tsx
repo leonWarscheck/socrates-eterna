@@ -96,7 +96,7 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
         <div className="flex gap-4 mx-auto mt-6 w-full">
           <button
             onClick={() => setIsOpen(true)}
-            className="bg-primary1 text-sm hover:bg-purple-600 px-2 h-9 mx-auto rounded-md"
+            className="bg-primary1 text-sm hover:bg-purple-600 px-4 h-9 mx-auto rounded-md"
             disabled={isSearching}
           >
             Character Search

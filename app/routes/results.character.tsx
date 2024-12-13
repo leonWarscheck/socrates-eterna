@@ -2,12 +2,12 @@ import ResultsPage from '~/features/comics-pages/components/results-page'
 import { useNavigation, useLoaderData } from '@remix-run/react'
 import ModeCharacterBar from '~/features/comics-pages/components/mode-character-bar'
 import { json, LoaderFunctionArgs } from "@remix-run/node";
-import { getLatestAndSavedResults, getPotentialResults, commitSession } from "~/features/comics-pages/search-logic/search-helpers.server"
+import { getLatestAndSavedResultsAndQuery, getPotentialResults, commitSession } from "~/features/comics-pages/search-logic/search-helpers.server"
 
 
 export async function loader({ request }: LoaderFunctionArgs) {
     const { results: potentialResults, query: potentialQuery } = await getPotentialResults(request);
-    const { latestResults, latestQuery, session } = await getLatestAndSavedResults(request, potentialResults, potentialQuery);
+    const { latestResults, latestQuery, session } = await getLatestAndSavedResultsAndQuery(request, potentialResults, potentialQuery);
 
     return json(
         { results: latestResults, query: latestQuery },

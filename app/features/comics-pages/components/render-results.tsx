@@ -5,7 +5,6 @@ import type { ResultsProp } from "../types";
 
 export default function RenderResults({ results }: ResultsProp) {
 
-
   return (
     <div className="flex max-w-7xl mx-auto w-full">
       <div className="flex flex-col mx-auto shrink- max-w-4xl px-4 -mt-2 dmd:mt- [13.5rem] ">

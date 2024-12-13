@@ -1,11 +1,24 @@
 import { useState, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
-import { ModeBarProps } from "../types";
+import { ModeBarProps, QueryProp } from "../types";
 
 
 export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBarProps) {
-  const [radioButton, setRadioButton] = useState<string>("month");
-  const [query, setQuery] = useState<string | undefined>(latestQuery);
+  const [radioButton, setRadioButton] = useState("month");
+  const [query, setQuery] = useState(latestQuery);
+
+  const fixMonthInputQuery = (query: QueryProp["query"]) => {
+    if (query.length != 7) {
+      return query.slice(0, 7)
+    } return query;
+
+  }
+  const fixDayInputQuery = (query: QueryProp["query"]) => {
+    if (query.length != 10) {
+      return query + "-01"
+    } return query;
+
+  }
 
   useEffect(() => {
     setQuery(latestQuery);
@@ -41,7 +54,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
               type="month"
               className="ml-2 border-2 border-primary1 rounded-lg bg-transparent px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
               name="month"
-              value={query}
+              value={fixMonthInputQuery(query)}
               onChange={(e) => setQuery(e.target.value)}
               disabled={radioButton !== "month"}
             />
@@ -64,7 +77,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
               type="date"
               className="ml-2 border-2 border-primary1 bg-transparent focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
               name="day"
-              value={query}
+              value={fixDayInputQuery(query)}
               onChange={(e) => setQuery(e.target.value)}
               disabled={radioButton !== "day"}
             />

@@ -2,13 +2,13 @@ import ModeDateBar from '~/features/comics-pages/components/mode-date-bar'
 import ResultsPage from '~/features/comics-pages/components/results-page'
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { json, LoaderFunctionArgs } from "@remix-run/node";
-import { getPotentialDateResults, getLatestAndSavedResults, commitSession } from '~/features/comics-pages/search-logic/search-helpers.server';
+import { getPotentialDateResults, getLatestAndSavedResultsAndQuery, commitSession } from '~/features/comics-pages/search-logic/search-helpers.server';
 
 
 
 export async function loader({ request }: LoaderFunctionArgs) {
     const { results: potentialResults, query: potentialQuery } = await getPotentialDateResults(request);
-    const { latestResults, latestQuery, session } = await getLatestAndSavedResults(request, potentialResults, potentialQuery);
+    const { latestResults, latestQuery, session } = await getLatestAndSavedResultsAndQuery(request, potentialResults, potentialQuery);
 
     return json(
         { results: latestResults, query: latestQuery },

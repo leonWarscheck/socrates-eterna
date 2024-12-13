@@ -3,16 +3,19 @@ import { semanticSearch } from "./semantic-search-logic";
 import { dateSearch } from "./date-search-logic";
 import {
   GetCleanMeaningQueryParams,
-  Comic,
   QueryProp,
+  ComicCleaned,
+  ComicMatch,
+  ComicLocal,
 } from "~/features/comics-pages/types";
 
 // helpers for cleaning up results and query
-export function getCleanResults(matches: any) {
-  console.log("matches: ", matches)
-  const cleanResults = matches.map((comic: Comic) => ({
-    //! type here or in functions that take in cleanresults?
-    id: comic?.id ?? "", //! do I have to catch undefined here aswell?
+export function getCleanResults(
+  matches: ComicMatch[] | ComicLocal[],
+): ComicCleaned[] {
+  console.log("matches: ", matches);
+  const cleanResults = matches.map((comic) => ({
+    id: comic.id,
     metadata: {
       filename: comic.metadata?.filename ?? "",
       published: comic.metadata?.published ?? "",
@@ -52,7 +55,7 @@ export async function getPotentialResults(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("search") || "";
 
-  const results = query ? await semanticSearch(query) : undefined; //! can I make this function not return anything if query does not exist?
+  const results = query ? await semanticSearch(query) : null;
 
   return { results, query };
 }
@@ -60,22 +63,21 @@ export async function getPotentialResults(request: Request) {
 export async function getPotentialDateResults(request: Request) {
   const url = new URL(request.url);
 
-  const dateType = url.searchParams.get("dateType") || ""; //! correct place for these catches?
+  const dateType = url.searchParams.get("dateType") || "";
   const month = url.searchParams.get("month") || "";
   const day = url.searchParams.get("day") || "";
   const query = dateType === "month" ? month : dateType === "day" ? day : "";
 
-  const results = query ? await dateSearch(query) : null; // ! seems wrong
+  const results = query ? await dateSearch(query) : null;
 
   return { results, query };
 }
 
-export async function getLatestAndSavedResults(
+export async function getLatestAndSavedResultsAndQuery(
   request: Request,
-  potentialResults: Comic[], //! why no beef, that content is not included?
-  potentialQuery: QueryProp["query"], //! or just string directly?
+  potentialResults: ComicCleaned[] | null,
+  potentialQuery: QueryProp["query"],
 ) {
-  console.log("potentialResults: ", potentialResults[1].metadata.content);
   const session = await getSession(request.headers.get("Cookie"));
 
   const savedResults = session.get("savedResults");

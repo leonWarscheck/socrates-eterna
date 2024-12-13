@@ -49,7 +49,7 @@ export default function ModeMeaning({ isSearching }: IsSearchingProp) {
         >
           Eterna Search
         </button>
-        <RandomComicButton isSearching={isSearching} />
+        <RandomComicButton/>
       </div>
     </Form>
   );

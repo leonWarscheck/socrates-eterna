@@ -51,7 +51,7 @@ export default function ModeDate({ isSearching }: IsSearchingProp) {
       <div className="flex gap-4 mx-auto mt-6">
         <button
           type="submit"
-          className="bg-primary1 text-sm small:text-sm hover:bg-purple-600 h-9 px-4 rounded"
+          className="bg-primary1 text-sm small:text-sm hover:bg-purple-600 h-9 px-4 rounded-md"
           disabled={isSearching}
         >
           Eterna Date Search
