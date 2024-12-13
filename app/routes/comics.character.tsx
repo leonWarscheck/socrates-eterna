@@ -1,8 +1,8 @@
 import { LoaderFunctionArgs } from '@remix-run/node'
-import ComicsPage from '~/components/comics/comics-page'
+import ComicsPage from '~/features/comics-pages/components/comics-page'
+import ModeCharacter from '~/features/comics-pages/components/mode-character';
 import { redirect } from '@vercel/remix';
 import { useNavigation } from '@remix-run/react';
-import ModeCharacter from '~/components/comics/mode-character';
 
 
 

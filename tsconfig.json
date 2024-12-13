@@ -6,13 +6,13 @@
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
     "**/.client/**/*.tsx",
-    "app/utils/createCollection.js",
-    "app/utils/insertNewComicDataToDb.js",
-    "app/utils/single-use/upsert-dataset.js",
+    "app/features/comics/search-logic/createCollection.js",
+    "app/features/comics/search-logic/insertNewComicDataToDb.js",
+    "app/features/comics/search-logic/single-use/upsert-dataset.js",
     "app/components/archive",
     "tailwind.config.ts",
     "app/routes/$.ts",
-    "app/utils/search-helpers.server.ts",
+    "app/features/comics/search-logic/search-helpers.server.ts",
   ],
   "compilerOptions": {
     "lib": [

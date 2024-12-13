@@ -1,6 +1,6 @@
-import RenderResults from "~/components/comics/render-results";
-import SearchBar from "~/components/comics/search-bar";
-import { SearchComponentParentProps, ResultsProp } from "./types";
+import RenderResults from "~/features/comics-pages/components/render-results";
+import SearchBar from "~/features/comics-pages/components/search-bar";
+import { SearchComponentParentProps, ResultsProp } from "../types";
 
 
 

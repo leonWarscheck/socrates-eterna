@@ -62,6 +62,8 @@ export type ComicMetadata = {
 
 
 
+
+
 export interface Props {
     children?: ReactNode;
     isSearching?: boolean;

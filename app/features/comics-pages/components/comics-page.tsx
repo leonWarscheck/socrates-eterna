@@ -1,5 +1,5 @@
-import ModeSelector from '~/components/comics/mode-selector';
-import { SearchComponentParentProps } from './types';
+import ModeSelector from '~/features/comics-pages/components/mode-selector';
+import { SearchComponentParentProps } from '../types';
 
 
 

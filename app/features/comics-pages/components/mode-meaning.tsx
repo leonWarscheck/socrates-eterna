@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import RandomComicButton from "./random-comic-button";
 import { Form } from "@remix-run/react";
-import type { IsSearchingProp } from "./types";
+import type { IsSearchingProp } from "../types";
 
 const placeholders = [
   "Find a comic by related words not included in its text...",

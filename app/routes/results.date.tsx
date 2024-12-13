@@ -1,8 +1,8 @@
-import ModeDateBar from '~/components/comics/mode-date-bar'
-import ResultsPage from '~/components/comics/results-page'
+import ModeDateBar from '~/features/comics-pages/components/mode-date-bar'
+import ResultsPage from '~/features/comics-pages/components/results-page'
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { json, LoaderFunctionArgs } from "@remix-run/node";
-import { getPotentialDateResults, getLatestAndSavedResults, commitSession } from '~/utils/search-helpers.server';
+import { getPotentialDateResults, getLatestAndSavedResults, commitSession } from '~/features/comics-pages/search-logic/search-helpers.server';
 
 
 

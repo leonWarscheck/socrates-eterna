@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
-import { ModeBarProps } from "./types";
+import { ModeBarProps } from "../types";
 
 
 export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBarProps) {
@@ -9,7 +9,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
 
   useEffect(() => {
     setQuery(latestQuery);
-  }, []); 
+  }, []);
 
   return (
     <div className="max-w-4xl flex flex-col dmd:flex-row px-4 mt-6 dmd:mt-8 mb-4 w-full">

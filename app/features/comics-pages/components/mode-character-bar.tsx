@@ -1,7 +1,7 @@
-import characters from "app/data/characters.json";
+import characters from "../characters.json";
 import { Link } from "@remix-run/react";
 import { useRef, useEffect, useState } from "react";
-import type { Character, ModeBarProps} from "./types";
+import type { Character, ModeBarProps } from "../types";
 
 export default function ModeCharacterBar({
   isSearching,
@@ -62,9 +62,8 @@ export default function ModeCharacterBar({
         <button
           disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2 h-10 bg-transparent text-left border-primary1 ${
-            isOpen ? "rounded-t-lg" : "rounded-lg"
-          }`}
+          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2 h-10 bg-transparent text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"
+            }`}
         >
           {selectedCharacter ? (
             <div className="flex items-center">
@@ -79,9 +78,8 @@ export default function ModeCharacterBar({
             <span>Select a character</span>
           )}
           <svg
-            className={`w-5 h-5 transform transition-transform ${
-              isOpen ? "rotate-180" : ""
-            }`}
+            className={`w-5 h-5 transform transition-transform ${isOpen ? "rotate-180" : ""
+              }`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

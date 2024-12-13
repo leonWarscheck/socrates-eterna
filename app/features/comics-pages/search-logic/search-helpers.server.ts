@@ -5,10 +5,11 @@ import {
   GetCleanMeaningQueryParams,
   Comic,
   QueryProp,
-} from "~/components/comics/types";
+} from "~/features/comics-pages/types";
 
 // helpers for cleaning up results and query
 export function getCleanResults(matches: any) {
+  console.log("matches: ", matches)
   const cleanResults = matches.map((comic: Comic) => ({
     //! type here or in functions that take in cleanresults?
     id: comic?.id ?? "", //! do I have to catch undefined here aswell?
@@ -51,7 +52,7 @@ export async function getPotentialResults(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("search") || "";
 
-  const results = query ? await semanticSearch(query) : undefined; //! can I make not return anything if query does not exist?
+  const results = query ? await semanticSearch(query) : undefined; //! can I make this function not return anything if query does not exist?
 
   return { results, query };
 }

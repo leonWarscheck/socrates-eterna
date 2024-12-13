@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
-import characters from "app/data/characters.json";
+import characters from "../characters.json";
 import { useState, useRef, useEffect } from "react";
-import type { Character, IsSearchingProp } from "./types";
+import type { Character, IsSearchingProp } from "../types";
 
 
 export default function ModeCharacter({ isSearching }: IsSearchingProp) {

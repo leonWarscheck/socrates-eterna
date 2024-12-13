@@ -1,9 +1,9 @@
-import ResultsPage from '~/components/comics/results-page'
-import ModeMeaningBar from '~/components/comics/mode-meaning-bar'
-import characters from "app/data/characters.json"
+import ResultsPage from '~/features/comics-pages/components/results-page'
+import ModeMeaningBar from '~/features/comics-pages/components/mode-meaning-bar'
+import characters from "~/features/comics-pages/characters.json"
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { json } from "@remix-run/node";
-import { getLatestAndSavedResults, getPotentialResults, commitSession, getCleanMeaningQuery } from "~/utils/search-helpers.server"
+import { getLatestAndSavedResults, getPotentialResults, commitSession, getCleanMeaningQuery } from "~/features/comics-pages/search-logic/search-helpers.server"
 import type { LoaderFunctionArgs } from '@remix-run/node';
 
 export async function loader({ request }: LoaderFunctionArgs) {

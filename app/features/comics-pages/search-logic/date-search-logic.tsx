@@ -1,4 +1,4 @@
-import comicData from "../data/comic-data.json";
+import comicData from "../comic-data.json";
 import { getCleanResults } from "./search-helpers.server";
 
 

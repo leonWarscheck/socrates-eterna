@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Link, MetaFunction } from "@remix-run/react";
-import { showHeader } from "~/utils/scrollHeader";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,8 +9,7 @@ export const meta: MetaFunction = () => {
 };
 
 
-function licensing() {
-  // useEffect(() => showHeader());
+export default function LicensingPage() {
 
   return (
     <main className=" text-justify    pb-6 mt-20 ">
@@ -63,7 +61,7 @@ function licensing() {
         <br />
         For example, a journalist might want to show that a bad habit in the
         workplace is so annoying it appears in a S.E. comic. That’s fair. Or
-        a publication might run a feature story about Erik Holm and include
+        a publication might run a features story about Erik Holm and include
         some S.E. comics as context. That’s fair. Or a student might want to
         show that a topic is easy to mock, as demonstrated by a S.E. comic,
         and include it in an essay. That’s fair. Another student might want to
@@ -116,4 +114,3 @@ function licensing() {
   );
 }
 
-export default licensing;

@@ -1,5 +1,5 @@
 import { Link, MetaFunction } from "@remix-run/react";
-import books from "../data/books-data.json"
+import books from "../features/books-page/books-data.json"
 
 export const meta: MetaFunction = () => {
   return [

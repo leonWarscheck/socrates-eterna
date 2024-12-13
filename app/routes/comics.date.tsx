@@ -1,9 +1,8 @@
 import { LoaderFunctionArgs } from '@remix-run/node'
-import ComicsPage from '~/components/comics/comics-page'
-import ModeMeaning from '~/components/comics/mode-meaning'
-import { json, redirect } from '@vercel/remix';
-import { Form, Link, useLoaderData, useSearchParams, useNavigation } from '@remix-run/react';
-import ModeDate from '~/components/comics/mode-date';
+import ComicsPage from '~/features/comics-pages/components/comics-page'
+import ModeDate from '~/features/comics-pages/components/mode-date';
+import { redirect } from '@vercel/remix';
+import {useNavigation } from '@remix-run/react';
 
 
 

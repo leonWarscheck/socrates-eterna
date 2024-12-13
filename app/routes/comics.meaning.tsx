@@ -1,8 +1,8 @@
 import { LoaderFunctionArgs } from '@remix-run/node'
 import type { LoaderFunction } from '@remix-run/node';
 
-import ComicsPage from '~/components/comics/comics-page'
-import ModeMeaning from '~/components/comics/mode-meaning'
+import ComicsPage from '~/features/comics-pages/components/comics-page'
+import ModeMeaning from '~/features/comics-pages/components/mode-meaning'
 import { json, redirect } from '@vercel/remix';
 import {useNavigation } from '@remix-run/react';
 
@@ -13,8 +13,6 @@ export function getSearchParams(request: Request) : {search: string} {
 
     return { search };
 }
-
-
 
 export const loader: LoaderFunction = async ({ request }: LoaderFunctionArgs) => {
     const { search } = getSearchParams(request);
@@ -28,7 +26,6 @@ export const loader: LoaderFunction = async ({ request }: LoaderFunctionArgs) =>
     }
     return json({ search });
 };
-
 
 export default function ComicsMeaningRoute() {
     const navigation = useNavigation();

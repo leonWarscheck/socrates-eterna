@@ -1,5 +1,5 @@
 import { Link } from "@remix-run/react";
-import type { ModeProp } from "./types";
+import type { ModeProp } from "../types";
 
 export default function ModeSelector({ mode }: ModeProp) {
   return (
