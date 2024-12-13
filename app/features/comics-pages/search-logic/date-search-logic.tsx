@@ -11,7 +11,6 @@ export async function dateSearch(query: string, limit = 3) {
             return aDifference - bDifference;
         })
         .slice(0, limit);
-    console.log("closest: ", closestToDateComics)
     
     const cleanResults = getCleanResults(closestToDateComics);
 

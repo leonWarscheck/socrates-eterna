@@ -3,11 +3,11 @@ import ModeMeaningBar from '~/features/comics-pages/components/mode-meaning-bar'
 import characters from "~/features/comics-pages/characters.json"
 import { useLoaderData, useNavigation } from '@remix-run/react'
 import { json } from "@remix-run/node";
-import { getLatestAndSavedResultsAndQuery, getPotentialResults, commitSession, getCleanMeaningQuery } from "~/features/comics-pages/search-logic/search-helpers.server"
+import { getLatestAndSavedResultsAndQuery, getPotentialResultsAndQuery, commitSession, getCleanMeaningQuery } from "~/features/comics-pages/search-logic/search-helpers.server"
 import type { LoaderFunctionArgs } from '@remix-run/node';
 
 export async function loader({ request }: LoaderFunctionArgs) {
-    const { results: potentialResults, query: potentialQuery } = await getPotentialResults(request);
+    const { results: potentialResults, query: potentialQuery } = await getPotentialResultsAndQuery(request);
     const { latestResults, latestQuery, session } = await getLatestAndSavedResultsAndQuery(request, potentialResults, potentialQuery);
     const cleanQuery = getCleanMeaningQuery({ query: latestQuery, characters })
     return json(

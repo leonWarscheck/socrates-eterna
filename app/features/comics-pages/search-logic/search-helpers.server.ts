@@ -13,7 +13,6 @@ import {
 export function getCleanResults(
   matches: ComicMatch[] | ComicLocal[],
 ): ComicCleaned[] {
-  console.log("matches: ", matches);
   const cleanResults = matches.map((comic) => ({
     id: comic.id,
     metadata: {
@@ -29,6 +28,7 @@ export function getCleanMeaningQuery({
   query,
   characters,
 }: GetCleanMeaningQueryParams) {
+  
   const characterBySearchName = characters.find(
     (character) => character.name === query,
   );
@@ -51,7 +51,7 @@ export const { getSession, commitSession } = createCookieSessionStorage({
   },
 });
 
-export async function getPotentialResults(request: Request) {
+export async function getPotentialResultsAndQuery(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("search") || "";
 

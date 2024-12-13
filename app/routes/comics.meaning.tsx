@@ -3,28 +3,17 @@ import type { LoaderFunction } from '@remix-run/node';
 
 import ComicsPage from '~/features/comics-pages/components/comics-page'
 import ModeMeaning from '~/features/comics-pages/components/mode-meaning'
-import { json, redirect } from '@vercel/remix';
-import {useNavigation } from '@remix-run/react';
+import { redirect } from '@vercel/remix';
+import { useNavigation } from '@remix-run/react';
 
-
-export function getSearchParams(request: Request) : {search: string} {
-    const url = new URL(request.url);
-    const search = url.searchParams.get('search') || '';
-
-    return { search };
-}
 
 export const loader: LoaderFunction = async ({ request }: LoaderFunctionArgs) => {
-    const { search } = getSearchParams(request);
-    if (search) {
-        const params = new URLSearchParams(
-            Object.fromEntries(
-                Object.entries({ search }).filter(([, value]) => value)
-            )
-        );
-        return redirect(`/results/meaning?${params.toString()}`);
+    const url = new URL(request.url);
+    if (url.search) {
+        return redirect(`/results/meaning${url.search}`);
     }
-    return json({ search });
+
+    return false;
 };
 
 export default function ComicsMeaningRoute() {

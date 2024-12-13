@@ -24,7 +24,6 @@ export default function ModeMeaning({ isSearching }: IsSearchingProp) {
 
   return (
     <Form className="max-w-xl flex flex-col mx-auto w-full ">
-      <input type="hidden" name="mode" value="meaning" />
       <div className="relative w-full mx-auto">
         <input
           className="border-2 bg-purple-1000 bg-transparent border-primary1 focus:outline-none grow h-10 px-4 rounded-lg w-full placeholder:text-purple-400"
