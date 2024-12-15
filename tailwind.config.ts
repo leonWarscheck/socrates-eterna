@@ -54,7 +54,8 @@ const config: Config = {
         xs: '400px',
         tiny: "360px",
         small: "490px",
-        dmd: "667px",
+        dmd: "667px", // 667
+        md2: "769px",
         'full-md': "887px",
         dlg: "1024px",
         sxl: "1110px",

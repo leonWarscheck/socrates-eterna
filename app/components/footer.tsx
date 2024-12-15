@@ -18,10 +18,10 @@ export default function Footer() {
 
 
   return (
-    <footer className={` ${location.pathname === "/test" && "hidden"}  mt-aut bg-purple-950 items-center flex h-16 w-full ${isSnapEnabled && "snap-start snap-always"} `}>
+    <footer className={` ${location.pathname === "/test" && "hidden"}  bg-purple-950 items-center flex h-28 md2:h-16 w-full ${isSnapEnabled && "snap-start snap-always"} `}>
       
-      <nav className="max-w-7xl flex gap-x-4 flex-gro items-center px-4 text-neutral-100 text-xs tiny:text-sm mx-auto font-light w-full">
-        <div className="flex gap-x-3 dmd:gap-x-4  mr-auto">
+      <nav className="max-w-7xl flex flex-col md2:flex-row gap-y-3 md2:gap-y-0 gap-x-4 items-center px-4 text-neutral-100 text-xs tiny:text-sm mx-auto font-light w-full">
+        <div className="flex gap-x-3 md2:gap-x-4  md2:mr-auto">
           <Link
             className="hover:underline"
             to="https://www.x.com"
@@ -63,7 +63,7 @@ export default function Footer() {
             Youtube
           </Link>
         </div>
-        <div className="flex gap-x-4 text-center  sm:flex-row flex-col items-center ml-auto  ">
+        <div className="flex  text-center  items-center md2:ml-auto  ">
           <Link
             className="decoration-dotted hover:underline "
             to="/licensing"

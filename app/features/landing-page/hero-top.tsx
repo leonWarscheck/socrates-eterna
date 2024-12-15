@@ -29,22 +29,22 @@ export default function HeroSectionTop() {
           className="
           flex z-10 flex-col px- 4 mx-auto max-w-  text-center dlg:max-w-5x text-white grow "
         >
-          <h2 className="font-socrates leading3 text-[55px] tiny:text-6xl dlg:text-[85px] font-bold text-center leading- [69px]">
+          <h2 className="font-socrates mx-4 text-[55px] tiny:text-6xl dlg:text-[85px] font-bold text-center leading-[69px]">
             JOIN THE PANTHEON
           </h2>
-          <h3 className="font-socrates text-center text-4xl px- dlg:text-5xl hyphens-auto mt-2.5 font-semibold">
+          <h3 className="font-socrates text-center text-4xl mx-4 dlg:text-5xl hyphens-auto mt-2.5 font-semibold">
             Gain Exclusive Insight and Fellowship
           </h3>
           
-          <div className="flex bg-teal- 500 text-xl mt-8 gap-6">
+          <div className="flex flex-col md2:flex-row  text-xl mt-8 gap-5 mx-auto">
             <Link
               to="#join-pantheon"
-              className="block px-8 pt-2.5 font- socrates bg-primary1 animate-bg-pulse-slow  ml-auto border- 2  text-white b rounded-lg border-purple-400  bg-purple- hover:bg-purple-600"
+              className="px-8 py-2.5 bg-primary1 animate-bg-pulse-slow  md2:ml-auto  text-white rounded-lg "
             >
               Pantheon Membership
             </Link>
             <Link
-              className=" text-cente text-purple-40 px-8 py-2 border-2 animate-border-pulse animate-[pulse-border_6s_infinite rounded-lg font-ligh mr-auto  font- socrates"
+              className="text-purple-40 px-8 py-2 border-2 animate-border-pulse animate-[pulse-border_6s_infinite rounded-lg  md2:mr-auto "
               to="/comics/meaning"
             >
               Search Comics

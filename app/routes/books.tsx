@@ -16,8 +16,8 @@ export default function Books() {
 
         {books.map((book) => (
           <li key={book.id}
-            className={`relative flex ${book.new && "bg-purple-900 rounded-xl "}`}>
-            <div className="aspect-[840/1264] max-h-64 mx-6 mt-8 border-2 flex-shrink-0 mb-8">
+            className={`relative flex flex-col md2:flex-row  rounded-xl ${book.new ? "bg-purple-900": "bg-purple-1000 md2:bg-transparent bg-opacity-40"}`}>
+            <div className="aspect-[840/1264] max-h-64 mx-auto md2:mx-6 mt-8 border-2 flex-shrink-0 mb-2 md2:mb-8">
               <img
                 className=" h-full w-full object-cover"
                 src={book.coverimage}
