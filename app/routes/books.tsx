@@ -27,8 +27,8 @@ export default function Books() {
             <p className={`absolute ${book.new ? "": "hidden"} bg-primary1 rounded-lg font-bold text-base top-4 left-4 border-2  px-1`}>
               NEW
             </p>
-            <div className="flex flex-col m-4 pr-2 ">
-              <div className="flex py-4 text-xl">
+            <div className="flex flex-col m-4 pr-2  ">
+              <div className="flex py-4 text-xl gap-1">
                 <h2 className="font-bold ">
                   {book.title}
                   <span className="font-normal text-purple-400 "> ({book.year})</span>
