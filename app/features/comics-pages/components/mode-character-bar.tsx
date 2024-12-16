@@ -1,6 +1,7 @@
-import characters from "../characters.json";
 import { Link } from "@remix-run/react";
-import { useRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+import characters from "../characters.json";
 import type { Character, ModeBarProps } from "../types";
 
 export default function ModeCharacterBar({

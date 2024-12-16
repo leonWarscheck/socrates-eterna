@@ -1,5 +1,6 @@
 import { Form, Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
+
 import { keywords } from "~/features/comics-pages/keywords";
 
 export default function RandomComicButton() {

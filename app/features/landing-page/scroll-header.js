@@ -1,5 +1,5 @@
 export function initScrollHeader() {
-  const header = document.getElementById("header-home");
+  const header = document.querySelector("#header-home");
 
   header.classList.add("opacity-0");
   const handleScroll = () => {
@@ -19,7 +19,7 @@ export function initScrollHeader() {
 }
 
 export function showHeader() {
-  const header = document.getElementById("header");
+  const header = document.querySelector("#header");
 
   header.classList.remove("opacity-0");
 }

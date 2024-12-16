@@ -1,4 +1,5 @@
 import ModeSelector from "~/features/comics-pages/components/mode-selector";
+
 import { SearchComponentParentProps } from "../types";
 
 export default function ComicsPage({

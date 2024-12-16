@@ -1,8 +1,9 @@
 import { LoaderFunctionArgs } from "@remix-run/node";
+import { useNavigation } from "@remix-run/react";
+import { redirect } from "@vercel/remix";
+
 import ComicsPage from "~/features/comics-pages/components/comics-page";
 import ModeDate from "~/features/comics-pages/components/mode-date";
-import { redirect } from "@vercel/remix";
-import { useNavigation } from "@remix-run/react";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);

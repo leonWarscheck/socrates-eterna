@@ -1,7 +1,8 @@
 import type { MetaFunction } from "@remix-run/node";
+
 import CtaBottom from "~/features/landing-page/cta-bottom";
-import HeroSectionTop from "~/features/landing-page/hero-top";
 import HeroStory from "~/features/landing-page/hero-story";
+import HeroSectionTop from "~/features/landing-page/hero-top";
 import PriceTable from "~/features/landing-page/price-table";
 import RetreatSection from "~/features/landing-page/retreat-section";
 

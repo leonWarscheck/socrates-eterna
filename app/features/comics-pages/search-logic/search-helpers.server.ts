@@ -1,13 +1,15 @@
 import { createCookieSessionStorage, json } from "@remix-run/node";
-import { semanticSearch } from "./semantic-search-logic";
-import { dateSearch } from "./date-search-logic";
+
 import {
+  ComicCleaned,
+  ComicLocal,
+  ComicMatch,
   GetCleanMeaningQueryParams,
   QueryProp,
-  ComicCleaned,
-  ComicMatch,
-  ComicLocal,
 } from "~/features/comics-pages/types";
+
+import { dateSearch } from "./date-search-logic";
+import { semanticSearch } from "./semantic-search-logic";
 
 // helpers for cleaning up results and query
 export function getCleanResults(

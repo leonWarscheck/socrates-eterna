@@ -1,11 +1,12 @@
-import ResultsPage from "~/features/comics-pages/components/results-page";
-import { useNavigation, useLoaderData } from "@remix-run/react";
-import ModeCharacterBar from "~/features/comics-pages/components/mode-character-bar";
 import { json, LoaderFunctionArgs } from "@remix-run/node";
+import { useLoaderData, useNavigation } from "@remix-run/react";
+
+import ModeCharacterBar from "~/features/comics-pages/components/mode-character-bar";
+import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
+  commitSession,
   getLatestAndSavedResultsAndQuery,
   getPotentialResultsAndQuery,
-  commitSession,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {

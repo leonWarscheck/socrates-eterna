@@ -1,11 +1,12 @@
+import { json, LoaderFunctionArgs } from "@remix-run/node";
+import { useLoaderData, useNavigation } from "@remix-run/react";
+
 import ModeDateBar from "~/features/comics-pages/components/mode-date-bar";
 import ResultsPage from "~/features/comics-pages/components/results-page";
-import { useLoaderData, useNavigation } from "@remix-run/react";
-import { json, LoaderFunctionArgs } from "@remix-run/node";
 import {
-  getPotentialDateResults,
-  getLatestAndSavedResultsAndQuery,
   commitSession,
+  getLatestAndSavedResultsAndQuery,
+  getPotentialDateResults,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {

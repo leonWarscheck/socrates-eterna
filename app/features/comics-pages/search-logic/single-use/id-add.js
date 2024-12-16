@@ -1,6 +1,7 @@
-import fs from "fs/promises";
+import fs from "node:fs/promises";
+import path from "node:path";
+
 import { v4 as uuidv4 } from "uuid";
-import path from "path";
 
 // Define the path to your JSON file
 const filePath = path.resolve("../data/booksData.json");

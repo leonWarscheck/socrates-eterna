@@ -1,5 +1,6 @@
-import { useState, useRef, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
+import { useEffect, useRef, useState } from "react";
+
 import type { ModeBarProps } from "../types";
 
 const placeholders = [

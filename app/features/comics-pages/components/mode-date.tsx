@@ -1,6 +1,7 @@
-import { useState } from "react";
 import { Form, Link } from "@remix-run/react";
-import type { IsSearchingProp } from "../types";
+import { useState } from "react";
+
+import type { IsSearchingProp} from "../types";
 
 export default function ModeDate({ isSearching }: IsSearchingProp) {
   const [radioButton, setRadioButton] = useState("month");

@@ -1,7 +1,8 @@
 import { Pinecone } from "@pinecone-database/pinecone";
-import { getCleanResults } from "./search-helpers.server";
 import invariant from "tiny-invariant";
+
 import { ComicMatchMetadata } from "../types";
+import { getCleanResults } from "./search-helpers.server";
 
 const { PINECONE_API_KEY } = process.env;
 

@@ -1,5 +1,5 @@
-import ModeSelectorBar from "./mode-selector-bar";
 import { SearchComponentParentProps } from "../types";
+import ModeSelectorBar from "./mode-selector-bar";
 
 export default function SearchBar({
   mode,

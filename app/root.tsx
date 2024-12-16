@@ -1,3 +1,5 @@
+import "./tailwind.css";
+
 import {
   isRouteErrorResponse,
   Link,
@@ -8,9 +10,9 @@ import {
   ScrollRestoration,
   useRouteError,
 } from "@remix-run/react";
-import "./tailwind.css";
-import Header from "~/components/header";
+
 import Footer from "~/components/footer";
+import Header from "~/components/header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

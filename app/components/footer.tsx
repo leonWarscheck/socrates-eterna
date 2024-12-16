@@ -1,4 +1,4 @@
-import { Link, useSearchParams, useLocation } from "@remix-run/react";
+import { Link, useLocation, useSearchParams } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
 export default function Footer() {
@@ -66,7 +66,6 @@ export default function Footer() {
             {" "}
             © 2024 Socrates-Eterna.com - All Rights Reserved.
           </Link>
-          {/* <div className=""> </div> */}
         </div>
       </nav>
     </footer>

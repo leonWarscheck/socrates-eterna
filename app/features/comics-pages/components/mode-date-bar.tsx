@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
-import { ModeBarProps, QueryProp } from "../types";
+import { useEffect, useState } from "react";
+
+import { ModeBarProps, QueryProp} from "../types";
 
 export default function ModeDateBar({
   isSearching,

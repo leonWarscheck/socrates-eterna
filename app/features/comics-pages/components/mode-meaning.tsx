@@ -1,7 +1,8 @@
-import { useState, useRef } from "react";
-import RandomComicButton from "./random-comic-button";
 import { Form } from "@remix-run/react";
-import type { IsSearchingProp } from "../types";
+import { useRef, useState } from "react";
+
+import type { IsSearchingProp as IsSearchingProperty } from "../types";
+import RandomComicButton from "./random-comic-button";
 
 const placeholders = [
   "Find a comic by related words not included in its text...",
@@ -10,7 +11,7 @@ const placeholders = [
   "'health' finds a comic about physical training...",
 ];
 
-export default function ModeMeaning({ isSearching }: IsSearchingProp) {
+export default function ModeMeaning({ isSearching }: IsSearchingProperty) {
   const [placeholder, setPlaceholder] = useState("");
   const indexRef = useRef(0);
 

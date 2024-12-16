@@ -1,10 +1,8 @@
-import { useEffect } from "react";
-import { Link, MetaFunction } from "@remix-run/react";
+import { MetaFunction } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Licencing & Advertisement | Dilbert.com" },
-    // { name: "Uncensored and Spiciere Than Ever!", content: "Find Out What Happened to Dilbert!", 'og:image': "/favicon.ico",  },
   ];
 };
 

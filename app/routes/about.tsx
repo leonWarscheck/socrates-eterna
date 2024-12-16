@@ -1,4 +1,4 @@
-import { MetaFunction, Link } from "@remix-run/react";
+import { Link, MetaFunction } from "@remix-run/react";
 import { useEffect } from "react";
 
 export const meta: MetaFunction = () => {

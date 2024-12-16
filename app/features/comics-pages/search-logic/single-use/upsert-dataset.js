@@ -1,6 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
+
 import { Pinecone } from "@pinecone-database/pinecone";
-import path from "path";
-import fs from "fs";
 
 const pc = new Pinecone({
   apiKey: process.env.PINECONE_API_KEY,

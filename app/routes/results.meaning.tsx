@@ -1,15 +1,16 @@
-import ResultsPage from "~/features/comics-pages/components/results-page";
-import ModeMeaningBar from "~/features/comics-pages/components/mode-meaning-bar";
-import characters from "~/features/comics-pages/characters.json";
-import { useLoaderData, useNavigation } from "@remix-run/react";
+import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
+import { useLoaderData, useNavigation } from "@remix-run/react";
+
+import characters from "~/features/comics-pages/characters.json";
+import ModeMeaningBar from "~/features/comics-pages/components/mode-meaning-bar";
+import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
-  getLatestAndSavedResultsAndQuery,
-  getPotentialResultsAndQuery,
   commitSession,
   getCleanMeaningQuery,
+  getLatestAndSavedResultsAndQuery,
+  getPotentialResultsAndQuery,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
-import type { LoaderFunctionArgs } from "@remix-run/node";
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const { results: potentialResults, query: potentialQuery } =

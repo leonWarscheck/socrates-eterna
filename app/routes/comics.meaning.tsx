@@ -1,10 +1,10 @@
-import { LoaderFunctionArgs } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
+import { LoaderFunctionArgs } from "@remix-run/node";
+import { useNavigation } from "@remix-run/react";
+import { redirect } from "@vercel/remix";
 
 import ComicsPage from "~/features/comics-pages/components/comics-page";
 import ModeMeaning from "~/features/comics-pages/components/mode-meaning";
-import { redirect } from "@vercel/remix";
-import { useNavigation } from "@remix-run/react";
 
 export const loader: LoaderFunction = async ({
   request,
