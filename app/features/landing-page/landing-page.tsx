@@ -10,21 +10,20 @@ export const meta: MetaFunction = () => {
     { title: "Socrates Eterna | PANTHEON" },
     {
       property: "og:title",
-      content: "PANTHEON - Exclusive Insight and Fellowship!"
+      content: "PANTHEON - Exclusive Insight and Fellowship!",
     },
     {
       name: "description",
-      content: "Find Out What Happened to Socrates..."
+      content: "Find Out What Happened to Socrates...",
     },
     {
       property: "og:image",
-      content: "/main/og-title.jpg"
-    }
+      content: "/main/og-title.jpg",
+    },
   ];
 };
 
 export default function Index() {
-
   return (
     <main className="">
       <HeroSectionTop />
@@ -32,6 +31,6 @@ export default function Index() {
       <PriceTable />
       <RetreatSection />
       <CtaBottom />
-    </main >
+    </main>
   );
 }

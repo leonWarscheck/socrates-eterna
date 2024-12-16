@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { Form, Link } from "@remix-run/react";
 import { ModeBarProps, QueryProp } from "../types";
 
-
-export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBarProps) {
+export default function ModeDateBar({
+  isSearching,
+  query: latestQuery,
+}: ModeBarProps) {
   const [radioButton, setRadioButton] = useState("month");
   const [query, setQuery] = useState(latestQuery);
-
 
   const fixMonthInputQuery = (query: QueryProp["query"]) => {
     const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
@@ -16,7 +17,9 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
       return "";
     } else if (isDayFormat) {
       return query.slice(0, 7);
-    } else { return query; }
+    } else {
+      return query;
+    }
   };
 
   const fixDayInputQuery = (query: QueryProp["query"]) => {
@@ -27,30 +30,33 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
       return "";
     } else if (isMonthFormat) {
       return query + "-01";
-    } else { return query; }
+    } else {
+      return query;
+    }
   };
-
-
 
   useEffect(() => {
     setQuery(latestQuery);
   }, []);
 
   return (
-    <div className="max-w-4xl flex flex-col dmd:flex-row px-4 mt-6 dmd:mt-8 mb-4 w-full">
+    <div className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row">
       <Link
         to="/comics/meaning"
-        className="text-3xl dmd:text-[2.9rem]/9 text-center dmd:mr-4 w-[300px] text-primary1 font-bold dmd:mb-0 -ml-1"
+        className="-ml-1 w-[300px] text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:mr-4 dmd:text-[2.9rem]/9"
       >
-        <div className="aspect-[1404/245] h-9 mt-[1.5px]">
+        <div className="mt-[1.5px] aspect-[1404/245] h-9">
           <img src="/main/socrates-raw.png" alt="" className="h-full w-full" />
         </div>
       </Link>
 
-      <Form id="full-md" className="max-w-x full-md:flex flex-col hidden w-full text-base">
-        <div className="flex items-center gap-x-4 accent-black w-full grow my-[2px] dmd:my-0 ">
-          <div className="flex items-center ml-auto">
-            <label className="inline-flex items-center shrink-0">
+      <Form
+        id="full-md"
+        className="max-w-x hidden w-full flex-col text-base full-md:flex"
+      >
+        <div className="my-[2px] flex w-full grow items-center gap-x-4 accent-black dmd:my-0">
+          <div className="ml-auto flex items-center">
+            <label className="inline-flex shrink-0 items-center">
               <input
                 type="radio"
                 name="dateType"
@@ -64,7 +70,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
 
             <input
               type="month"
-              className="ml-2 border-2 border-primary1 rounded-lg bg-transparent px-2 py-1 h-10 focus:bg-purple-1000 focus:outline-none"
+              className="ml-2 h-10 rounded-lg border-2 border-primary1 bg-transparent px-2 py-1 focus:bg-purple-1000 focus:outline-none"
               name="month"
               value={fixMonthInputQuery(query)}
               onChange={(e) => setQuery(e.target.value)}
@@ -72,7 +78,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
             />
           </div>
 
-          <div className="flex items-center ml-4">
+          <div className="ml-4 flex items-center">
             <label className="inline-flex items-center">
               <input
                 type="radio"
@@ -87,7 +93,7 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
 
             <input
               type="date"
-              className="ml-2 border-2 border-primary1 bg-transparent focus:outline-none rounded-lg px-2 py-1 h-10 focus:bg-purple-1000"
+              className="ml-2 h-10 rounded-lg border-2 border-primary1 bg-transparent px-2 py-1 focus:bg-purple-1000 focus:outline-none"
               name="day"
               value={fixDayInputQuery(query)}
               onChange={(e) => setQuery(e.target.value)}
@@ -97,10 +103,14 @@ export default function ModeDateBar({ isSearching, query: latestQuery }: ModeBar
 
           <button
             type="submit"
-            className="bg-primary1 hover:bg-purple-600 rounded-lg h-10 px-4 ml-4"
+            className="ml-4 h-10 rounded-lg bg-primary1 px-4 hover:bg-purple-600"
             disabled={isSearching}
           >
-            <img src="/main/search.png" alt="" className="invert size-3 tiny:size-4" />
+            <img
+              src="/main/search.png"
+              alt=""
+              className="size-3 invert tiny:size-4"
+            />
           </button>
         </div>
       </Form>

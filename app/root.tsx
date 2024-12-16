@@ -7,12 +7,10 @@ import {
   Scripts,
   ScrollRestoration,
   useRouteError,
-} from '@remix-run/react';
+} from "@remix-run/react";
 import "./tailwind.css";
 import Header from "~/components/header";
 import Footer from "~/components/footer";
-
-
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -26,8 +24,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-yellow- overscroll-none fontlight socrates bg-purple-1000 text-purple-100">
-        <div className="min-h-dvh flex flex-col selection:bg-purple-700">
+      <body className="bg-yellow- fontlight socrates overscroll-none bg-purple-1000 text-purple-100">
+        <div className="flex min-h-dvh flex-col selection:bg-purple-700">
           <Header />
           {children}
           <Footer />
@@ -43,7 +41,6 @@ export default function App() {
   return <Outlet />;
 }
 
-
 function ErrorPage({
   title,
   message,
@@ -54,19 +51,17 @@ function ErrorPage({
   subMessage?: string;
 }) {
   return (
-    <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">
-      <div className="flex my-auto flex-col items-center justify-center px-4 text-center ">
-        <h2 className="mb-4 text-4xl font-bold font-socrates ">{title}</h2>
+    <main className="min-h- flex min-h-[calc(100dvh-7rem)] grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900">
+      <div className="my-auto flex flex-col items-center justify-center px-4 text-center">
+        <h2 className="mb-4 font-socrates text-4xl font-bold">{title}</h2>
 
-        <p className="mb-2 text-xl font-socrates">{message}</p>
+        <p className="mb-2 font-socrates text-xl">{message}</p>
 
-        {subMessage && (
-          <p className="mb-8 text-xl ">{subMessage}</p>
-        )}
+        {subMessage && <p className="mb-8 text-xl">{subMessage}</p>}
 
         <Link
           to="/"
-          className="bg-transparent py-2 px-4 rounded-lg animate-border-pulse mt-2 border-2 "
+          className="mt-2 animate-border-pulse rounded-lg border-2 bg-transparent px-4 py-2"
         >
           Go back home
         </Link>

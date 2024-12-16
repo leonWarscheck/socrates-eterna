@@ -28,7 +28,6 @@ export function getCleanMeaningQuery({
   query,
   characters,
 }: GetCleanMeaningQueryParams) {
-  
   const characterBySearchName = characters.find(
     (character) => character.name === query,
   );

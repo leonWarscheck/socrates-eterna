@@ -3,9 +3,9 @@ import type { ModeProp } from "../types";
 
 export default function ModeSelectorBar({ mode }: ModeProp) {
   return (
-    <div className="flex text-base mt- max-w-4xl  px-4 w-full pb-2 bg-teal- ">
-      <h3 className="pr-4 py-0 ml-auto dmd:ml-0 ">Search by:</h3>
-      <ul className=" flex gap-x-4 mr-auto ">
+    <div className="mt- bg-teal- flex w-full max-w-4xl px-4 pb-2 text-base">
+      <h3 className="ml-auto py-0 pr-4 dmd:ml-0">Search by:</h3>
+      <ul className="mr-auto flex gap-x-4">
         <li className="">
           <Link
             to={`/results/meaning`}

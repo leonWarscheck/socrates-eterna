@@ -6,7 +6,7 @@ const transformedFilePath = path.resolve("../data/transformedComicData.json");
 
 const transformData = (data) => {
   return data.map((item) => ({
-    values: [], 
+    values: [],
     metadata: {
       filename: item.filename,
       published: item.publishedAt,

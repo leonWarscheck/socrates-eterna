@@ -1,16 +1,25 @@
-import ModeSelector from '~/features/comics-pages/components/mode-selector';
-import { SearchComponentParentProps } from '../types';
+import ModeSelector from "~/features/comics-pages/components/mode-selector";
+import { SearchComponentParentProps } from "../types";
 
-
-
-export default function ComicsPage({ children, isSearching, mode }: SearchComponentParentProps) {
-    return (
-        <main className=" min-h- flex flex-col grow min-h-[calc(100dvh-7rem)] bg-gradient-to-b from-purple-1000 to-purple-900">
-            <div className={`flex flex-col landscape-narrow:pt-[5dvh]  my-auto ${isSearching && "animate-pulse"} `}>
-                <h2 className="text-7xl dmd:text-8xl text-center text-purple-300 font-bold font-socrates mt- mb-4 tracking- wider"><img src="/main/eterna-raw.png" className="w-[300px] mb-2 mx-auto"></img></h2>
-                {children}
-                <ModeSelector mode={mode} />
-            </div>
-        </main>
-    )
+export default function ComicsPage({
+  children,
+  isSearching,
+  mode,
+}: SearchComponentParentProps) {
+  return (
+    <main className="min-h- flex min-h-[calc(100dvh-7rem)] grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900">
+      <div
+        className={`my-auto flex flex-col landscape-narrow:pt-[5dvh] ${isSearching && "animate-pulse"} `}
+      >
+        <h2 className="mt- tracking- wider mb-4 text-center font-socrates text-7xl font-bold text-purple-300 dmd:text-8xl">
+          <img
+            src="/main/eterna-raw.png"
+            className="mx-auto mb-2 w-[300px]"
+          ></img>
+        </h2>
+        {children}
+        <ModeSelector mode={mode} />
+      </div>
+    </main>
+  );
 }

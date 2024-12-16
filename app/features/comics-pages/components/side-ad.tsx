@@ -1,36 +1,35 @@
-import { Link } from "@remix-run/react"
+import { Link } from "@remix-run/react";
 
 export default function SideAd() {
   return (
-    <div className="mt-16 [15rem] max-h- 96 bg-purple-1000 border- 2 border-primary1 rounded-xl self-start mr-4 hidden sxl:flex flex-col ">
-          <div className="mx-auto aspect-[660/876] max-h-32 mt-8 ">
-            <img
-              className=" h-full w-full  object-cover"
-              src="/books/calendar03.png"
-              alt=""
-            />
+    <div className="[15rem] max-h- 96 border- 2 mr-4 mt-16 hidden flex-col self-start rounded-xl border-primary1 bg-purple-1000 sxl:flex">
+      <div className="mx-auto mt-8 aspect-[660/876] max-h-32">
+        <img
+          className="h-full w-full object-cover"
+          src="/books/calendar03.png"
+          alt=""
+        />
+      </div>
+      <div className="mb-8 ml-6 mr-4 pr-6 text-center">
+        <h2 className="py-3 text-xl font-bold">2025 Page-A-Day Calendar</h2>
 
-          </div>
-          <div className=" mr-4 pr-6 ml-6 text-center mb-8">
-            <h2 className="font-bold py-3 text-xl">
-              2025 Page-A-Day Calendar
-            </h2>
-
-            <p className=" text-base mb-6">
-              <span className="font-bold">Available Now! </span>
-
-              Back by popular demand, now featuring both <span className="font-semibol italic">Socrates Eterna and </span> <span className="font-semibol italic">Socrates Pantheon!</span>  2 comics each day, printed in Athens!
-              <br />
-            </p>
-            <Link
-              to="https://www.amazon.com"
-              className="font-normal text-sm  hover:underline bg-purple-950  h-8 px-4 py-1  mx-auto 4 border-2 border- rounded-lg "
-              target="_blank"
-              rel="noopener norefferrer"
-            >
-              click to shop
-            </Link>
-          </div>
-        </div>
-  )
+        <p className="mb-6 text-base">
+          <span className="font-bold">Available Now! </span>
+          Back by popular demand, now featuring both{" "}
+          <span className="font-semibol italic">Socrates Eterna and </span>{" "}
+          <span className="font-semibol italic">Socrates Pantheon!</span> 2
+          comics each day, printed in Athens!
+          <br />
+        </p>
+        <Link
+          to="https://www.amazon.com"
+          className="4 border- mx-auto h-8 rounded-lg border-2 bg-purple-950 px-4 py-1 text-sm font-normal hover:underline"
+          target="_blank"
+          rel="noopener norefferrer"
+        >
+          click to shop
+        </Link>
+      </div>
+    </div>
+  );
 }

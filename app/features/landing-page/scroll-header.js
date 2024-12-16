@@ -10,7 +10,6 @@ export function initScrollHeader() {
     }
   };
 
-
   window.addEventListener("scroll", handleScroll);
 
   return () => {

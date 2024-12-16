@@ -1,7 +1,7 @@
 import OpenAI from "openai";
 
 // const OPENAI_API_KEY =
-//   "sk-proj-ODL4ukNk3dW0mkygmbLfT3BlbkFJBip53QMdS78DUTjTfhoC"; 
+//   "sk-proj-ODL4ukNk3dW0mkygmbLfT3BlbkFJBip53QMdS78DUTjTfhoC";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,

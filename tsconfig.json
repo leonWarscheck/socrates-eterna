@@ -12,18 +12,11 @@
     "app/components/archive",
     "tailwind.config.ts",
     "app/routes/$.ts",
-    "app/features/comics/search-logic/search-helpers.server.ts",
+    "app/features/comics/search-logic/search-helpers.server.ts"
   ],
   "compilerOptions": {
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES2022"
-    ],
-    "types": [
-      "@vercel/remix",
-      "vite/client"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
+    "types": ["@vercel/remix", "vite/client"],
     "isolatedModules": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
@@ -37,9 +30,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "./app/*"
-      ]
+      "~/*": ["./app/*"]
     },
     // Vite takes care of building everything, not tsc.
     "noEmit": true

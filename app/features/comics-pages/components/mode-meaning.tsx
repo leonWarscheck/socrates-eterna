@@ -10,23 +10,20 @@ const placeholders = [
   "'health' finds a comic about physical training...",
 ];
 
-
 export default function ModeMeaning({ isSearching }: IsSearchingProp) {
   const [placeholder, setPlaceholder] = useState("");
   const indexRef = useRef(0);
 
   const handleFocus = () => {
-    indexRef.current = (++indexRef.current) % placeholders.length;
+    indexRef.current = ++indexRef.current % placeholders.length;
     setPlaceholder(placeholders[indexRef.current]);
   };
 
-
-
   return (
-    <Form className="max-w-xl flex flex-col mx-auto w-full ">
-      <div className="relative w-full mx-auto">
+    <Form className="mx-auto flex w-full max-w-xl flex-col">
+      <div className="relative mx-auto w-full">
         <input
-          className="border-2 bg-purple-1000 bg-transparent border-primary1 focus:outline-none grow h-10 px-4 rounded-lg w-full placeholder:text-purple-400"
+          className="h-10 w-full grow rounded-lg border-2 border-primary1 bg-purple-1000 bg-transparent px-4 placeholder:text-purple-400 focus:outline-none"
           type="text"
           name="search"
           placeholder={placeholder}
@@ -36,19 +33,19 @@ export default function ModeMeaning({ isSearching }: IsSearchingProp) {
         <img
           src="/main/search.png"
           alt="Search"
-          className="absolute invert w-4 right-4 top-1/2 transform -translate-y-1/2 z-20 pointer-events-none"
+          className="pointer-events-none absolute right-4 top-1/2 z-20 w-4 -translate-y-1/2 transform invert"
         />
       </div>
 
-      <div className="flex h-9 mx-auto space-x-4 mt-6">
+      <div className="mx-auto mt-6 flex h-9 space-x-4">
         <button
           type="submit"
           disabled={isSearching}
-          className={`bg-primary1 text-sm hover:bg-purple-600 px-4 py-2 rounded-md`}
+          className={`rounded-md bg-primary1 px-4 py-2 text-sm hover:bg-purple-600`}
         >
           Eterna Search
         </button>
-        <RandomComicButton/>
+        <RandomComicButton />
       </div>
     </Form>
   );

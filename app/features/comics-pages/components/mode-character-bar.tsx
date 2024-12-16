@@ -8,7 +8,9 @@ export default function ModeCharacterBar({
   query: searchName,
 }: ModeBarProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(
+    null,
+  );
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const handleSelect = (character: Character) => {
@@ -19,7 +21,7 @@ export default function ModeCharacterBar({
   useEffect(() => {
     if (searchName) {
       const characterBySearchName = characters.find(
-        (character) => character.name === searchName
+        (character) => character.name === searchName,
       );
       if (characterBySearchName) {
         handleSelect(characterBySearchName);
@@ -29,7 +31,10 @@ export default function ModeCharacterBar({
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -47,30 +52,31 @@ export default function ModeCharacterBar({
 
   return (
     <div
-      className="max-w-4xl flex flex-col dmd:flex-row w-full px-4 mt-6 dmd:mt-8 mb-4"
+      className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row"
       ref={dropdownRef}
     >
       <Link
         to="/comics/meaning"
-        className="text-3xl dmd:text-[2.9rem]/9 text-center text-primary1 w-[303.5px] font-bold mb-4 dmd:mb-0 mx-auto -ml-1"
+        className="mx-auto -ml-1 mb-4 w-[303.5px] text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:text-[2.9rem]/9"
       >
-        <div className="aspect-[1404/245] h-9 mt-[1.5px]">
+        <div className="mt-[1.5px] aspect-[1404/245] h-9">
           <img src="/main/socrates-raw.png" alt="" className="h-full w-full" />
         </div>
       </Link>
-      <div id="sm md dropdown" className="relative dmd:ml-6 w-full">
+      <div id="sm md dropdown" className="relative w-full dmd:ml-6">
         <button
           disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2 h-10 bg-transparent text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"
-            }`}
+          className={`flex h-10 w-full items-center justify-between border-2 border-primary1 bg-transparent p-3 text-left focus:bg-purple-1000 focus:outline-none ${
+            isOpen ? "rounded-t-lg" : "rounded-lg"
+          }`}
         >
           {selectedCharacter ? (
             <div className="flex items-center">
               <img
                 src={`/characters/${selectedCharacter.image}`}
                 alt={`An image of ${selectedCharacter.name}`}
-                className="w-7 h-7 mr-3 object-cover"
+                className="mr-3 h-7 w-7 object-cover"
               />
               <span>{selectedCharacter.name}</span>
             </div>
@@ -78,8 +84,9 @@ export default function ModeCharacterBar({
             <span>Select a character</span>
           )}
           <svg
-            className={`w-5 h-5 transform transition-transform ${isOpen ? "rotate-180" : ""
-              }`}
+            className={`h-5 w-5 transform transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -94,12 +101,12 @@ export default function ModeCharacterBar({
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-primary1 rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0">
+          <ul className="absolute left-0 right-0 z-10 -mt-0.5 h-[40dvh] overflow-y-scroll rounded-b-lg border-x-2 border-b-2 border-primary1 bg-purple-1000">
             {characters.map((character) => (
               <li
                 key={character.name}
                 onClick={() => handleSelect(character)}
-                className="hover:bg-primary1 cursor-pointer odd:bg-purple-950"
+                className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"
               >
                 <Link
                   prefetch="intent"
@@ -107,11 +114,11 @@ export default function ModeCharacterBar({
                   className="text-sm"
                 >
                   <div className="flex items-center text-base">
-                    <div className="aspect-square h-14 m-2">
+                    <div className="m-2 aspect-square h-14">
                       <img
                         src={`/characters/${character.image}`}
                         alt={`An image of ${character.name}`}
-                        className="object-cover h-full w-full"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                     {character.name}

@@ -14,7 +14,7 @@ export default function RandomComicButton() {
     <Link
       prefetch="intent"
       to={`/results/meaning?search=${keyword}`}
-      className="bg-primary1   text-sm small:text-sm hover:bg-purple-600 rounded-md pt-2 px-4 "
+      className="rounded-md bg-primary1 px-4 pt-2 text-sm hover:bg-purple-600 small:text-sm"
     >
       Random Comics
     </Link>

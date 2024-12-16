@@ -2,17 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html,
 body {
-
-    color-scheme: dark;
+  color-scheme: dark;
 }
 
 @font-face {
-    font-family: 'Toxigenisis';
-    src: url('/fonts/toxigenisis-bd.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
-
+  font-family: "Toxigenisis";
+  src: url("/fonts/toxigenisis-bd.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

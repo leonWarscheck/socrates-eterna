@@ -3,10 +3,11 @@ import characters from "../characters.json";
 import { useState, useRef, useEffect } from "react";
 import type { Character, IsSearchingProp } from "../types";
 
-
 export default function ModeCharacter({ isSearching }: IsSearchingProp) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(null);
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(
+    null,
+  );
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const handleSelect = (character: Character) => {
@@ -16,7 +17,10 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     };
@@ -34,17 +38,20 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
 
   return (
     <>
-      <div id="sm md dropdown" className="relative max-w-xl w-full mx-auto px-4">
+      <div
+        id="sm md dropdown"
+        className="relative mx-auto w-full max-w-xl px-4"
+      >
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex items-center justify-between w-full p-3 focus:bg-purple-1000 focus:outline-none border-2 h-10 bg-transparent text-left border-primary1 ${isOpen ? "rounded-t-lg" : "rounded-lg"}`}
+          className={`flex h-10 w-full items-center justify-between border-2 border-primary1 bg-transparent p-3 text-left focus:bg-purple-1000 focus:outline-none ${isOpen ? "rounded-t-lg" : "rounded-lg"}`}
         >
           {selectedCharacter ? (
             <div className="flex items-center px-4">
               <img
                 src={`/characters/${selectedCharacter.image}`}
                 alt={`An image of ${selectedCharacter.name}`}
-                className="w-7 h-7 mr-3 object-cover"
+                className="mr-3 h-7 w-7 object-cover"
               />
               <span>{selectedCharacter.name}</span>
             </div>
@@ -52,7 +59,7 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
             <span>Select a character</span>
           )}
           <svg
-            className={`w-5 h-5 transform transition-transform ${isOpen ? "rotate-180" : ""}`}
+            className={`h-5 w-5 transform transition-transform ${isOpen ? "rotate-180" : ""}`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -67,23 +74,23 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
           </svg>
         </button>
         {isOpen && (
-          <ul className="absolute bg-purple-1000 border-x-2 border-b-2 -mt-0.5 border-primary1 rounded-b-lg z-10 overflow-y-scroll h-[40dvh] right-0 left-0 mx-4">
+          <ul className="absolute left-0 right-0 z-10 mx-4 -mt-0.5 h-[40dvh] overflow-y-scroll rounded-b-lg border-x-2 border-b-2 border-primary1 bg-purple-1000">
             {characters.map((character) => (
               <li
                 key={character.name}
                 onClick={() => handleSelect(character)}
-                className="hover:bg-primary1 cursor-pointer odd:bg-purple-950"
+                className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"
               >
                 <Link
                   to={`/results/character?search=${character.name}`}
                   className="text-sm"
                 >
                   <div className="flex items-center text-base">
-                    <div className="aspect-square h-14 m-2">
+                    <div className="m-2 aspect-square h-14">
                       <img
                         src={`/characters/${character.image}`}
                         alt={`An image of ${character.name}`}
-                        className="object-cover h-full w-full"
+                        className="h-full w-full object-cover"
                       />
                     </div>
                     {character.name}
@@ -93,10 +100,10 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
             ))}
           </ul>
         )}
-        <div className="flex gap-4 mx-auto mt-6 w-full">
+        <div className="mx-auto mt-6 flex w-full gap-4">
           <button
             onClick={() => setIsOpen(true)}
-            className="bg-primary1 text-sm hover:bg-purple-600 px-4 h-9 mx-auto rounded-md"
+            className="mx-auto h-9 rounded-md bg-primary1 px-4 text-sm hover:bg-purple-600"
             disabled={isSearching}
           >
             Character Search

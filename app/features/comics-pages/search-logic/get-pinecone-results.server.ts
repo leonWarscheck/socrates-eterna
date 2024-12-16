@@ -1,11 +1,11 @@
 import { Pinecone } from "@pinecone-database/pinecone";
 import { getCleanResults } from "./search-helpers.server";
-import invariant from 'tiny-invariant'
+import invariant from "tiny-invariant";
 import { ComicMatchMetadata } from "../types";
 
 const { PINECONE_API_KEY } = process.env;
 
-invariant(PINECONE_API_KEY, "PINECONE API KEY is required")
+invariant(PINECONE_API_KEY, "PINECONE API KEY is required");
 
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
 
@@ -21,8 +21,8 @@ export async function getPineconeResults(queryEmbeddings: number[]) {
       includeValues: false,
     })
   ).matches;
-  
-  const cleanResponse = getCleanResults(queryResponse)
+
+  const cleanResponse = getCleanResults(queryResponse);
 
   return cleanResponse;
 }

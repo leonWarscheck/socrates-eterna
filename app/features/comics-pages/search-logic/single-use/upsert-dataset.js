@@ -20,7 +20,7 @@ async function asyncForEach(array, callback) {
 async function upsertData() {
   try {
     await asyncForEach(dataset, async (data) => {
-      await namespace.upsert([data]); 
+      await namespace.upsert([data]);
     });
     console.log("Upserting Dataset Done");
   } catch (error) {

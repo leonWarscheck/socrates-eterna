@@ -5,9 +5,12 @@ import type { IsSearchingProp } from "../types";
 export default function ModeDate({ isSearching }: IsSearchingProp) {
   const [radioButton, setRadioButton] = useState("month");
   return (
-    <Form id="md" className="max-w-xl dmd:flex flex-col mx-auto px-4 w-full hidden">
-      <div className="flex items-center mx-auto justify-between accent-black w-full">
-        <div className="flex items-center mr-auto">
+    <Form
+      id="md"
+      className="mx-auto hidden w-full max-w-xl flex-col px-4 dmd:flex"
+    >
+      <div className="mx-auto flex w-full items-center justify-between accent-black">
+        <div className="mr-auto flex items-center">
           <label className="inline-flex items-center">
             <input
               type="radio"
@@ -21,13 +24,13 @@ export default function ModeDate({ isSearching }: IsSearchingProp) {
           </label>
           <input
             type="month"
-            className="ml-2 border-2 border-primary1 px-2 py-1 h-10 bg-transparent focus:outline-none focus:bg-purple-950 rounded-lg"
+            className="ml-2 h-10 rounded-lg border-2 border-primary1 bg-transparent px-2 py-1 focus:bg-purple-950 focus:outline-none"
             name="month"
             disabled={radioButton !== "month"}
           />
         </div>
 
-        <div className="flex items-center ml-auto">
+        <div className="ml-auto flex items-center">
           <label className="inline-flex items-center">
             <input
               type="radio"
@@ -41,17 +44,17 @@ export default function ModeDate({ isSearching }: IsSearchingProp) {
           </label>
           <input
             type="date"
-            className="ml-2 border-2 bg-transparent border-primary1 px-2 py-1 h-10 focus:outline-none focus:bg-purple-950 rounded-lg"
+            className="ml-2 h-10 rounded-lg border-2 border-primary1 bg-transparent px-2 py-1 focus:bg-purple-950 focus:outline-none"
             name="day"
             disabled={radioButton !== "day"}
           />
         </div>
       </div>
 
-      <div className="flex gap-4 mx-auto mt-6">
+      <div className="mx-auto mt-6 flex gap-4">
         <button
           type="submit"
-          className="bg-primary1 text-sm small:text-sm hover:bg-purple-600 h-9 px-4 rounded-md"
+          className="h-9 rounded-md bg-primary1 px-4 text-sm hover:bg-purple-600 small:text-sm"
           disabled={isSearching}
         >
           Eterna Date Search

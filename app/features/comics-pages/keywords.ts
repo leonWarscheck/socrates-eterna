@@ -41,5 +41,5 @@ export const keywords = [
   "civic duty",
   "self improvement",
   "critical thinking",
-  "virtue ethics"
+  "virtue ethics",
 ];
