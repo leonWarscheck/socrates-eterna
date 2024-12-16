@@ -1,4 +1,4 @@
-import { MetaFunction, Link} from "@remix-run/react"; 
+import { MetaFunction, Link } from "@remix-run/react";
 import { useEffect } from "react";
 
 
@@ -11,15 +11,15 @@ export const meta: MetaFunction = () => {
 
 export default function About() {
 
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 11);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     window.scrollTo(0, 0);
+  //   }, 11);
+  // }, []);
 
   return (
     <>
-      <main id="screen-lg" className=" hidden dlg:block">
+      <main id="screen-lg" className=" ">
 
         <section
           id="0-about-top"
@@ -69,19 +69,25 @@ export default function About() {
 
         <section id="2-school"
           className="relative h-screen flex flex-col  bg-gradient-to-b from-purple-1000 to-purple-900 snap-start snap-always">
-          <div className="flex items-center max-w-4xl my-auto mx-auto gap-10 bg -gradient-to-b from-purple-1000 to-purple-900 h-52 z- rounded-xl">
-            <div className="ml-auto  flex flex-col items-cente text-center my-auto ">
+          <div className="flex flex-col md2:flex-row md2:gap-10 items-center max-w-4xl my-auto mx-auto px-4  md2:h-52 ">
+            <div className="md2:ml-auto  flex flex-col items-cente text-center my-auto mb-10">
               <h2 className=" text-2xl font-bold pb-4 ">2. School</h2>
               <p className="text-md max-w-80">
                 After completing his BA in Psychology at the University of Copenhagen, he went on to earn an MBA from Saïd Business School at the University of Oxford.
               </p>
             </div>
-            <div className=" flex flex-col gap-4 w-5/12  mr-auto ">
-              <div className="flex gap-4 ">
-                <img className="w-56 h-full my-auto" src="/about/oxford.jpg" alt="" />
-                <img className="w-44 h-36 my-auto object-cover " src="/about/kopenhagen2c.jpg" alt="" />
+            <div className="mx-auto space-y-4">
+              <div className="flex space-x-4">
+                <div className="aspect-video max-h-32 my-auto">
+                  <img className="h-full w-full object-cover " src="/about/oxford.jpg" />
+                </div>
+                <div className="aspect-square max-h-36">
+                  <img className="h-full w-full object-cover " src="/about/kopenhagen2c.jpg" />
+                </div>
               </div>
-              <img className="w-2/3 mx-auto" src="/about/kopenhagen.jpg" alt="" />
+              <div className="aspect-video max-h-36 mx-auto">
+                <img className="h-full w-full object-cover " src="/about/kopenhagen.jpg" />
+              </div>
             </div>
           </div>
         </section>
@@ -89,32 +95,17 @@ export default function About() {
 
         <section id="3-pre-socrates"
           className="relative h-screen flex flex-col  bg-purple- 950 snap-start snap-always bg-gradient-to-b from-purple-1000 to-purple-900 ">
-          <div className="flex items-center max-w-4xl my-auto mx-auto gap-10 bg -gradient-to-b from-purple-1000 to-purple-900 h-52 z- rounded-xl">
-            <div className=" flex flex-col  w-6/12  ml-auto ">
-              <div className="flex gap-4 ">
-
-                {/* <img
-                  className="size-1/3 overflow-hidden my-auto"
-                  src="/about/bankteller2.jpg"
-                  alt=""
-                /> */}
-                <img
-                  className="w-full my-auto object-cover"
-                  src="/about/clipboard.jpg"
-                  alt=""
-                />
+          <div className="flex flex-col md2:flex-row md2:gap-10 px-4 items-center max-w-4xl my-auto mx-auto   md2:h-52">
+            <div className="mx-auto md2:ml-auto mb-10">
+              <div className="aspect-video max-h-56 mx-auto">
+                <img className="h-full w-full object-cover " src="/about/clipboard.jpg" />
               </div>
-              {/* <img
-                className="size-2/3 mx-auto"
-                src="/about/telecom2.jpg"
-                alt=""
-              /> */}
             </div>
-            <div className="mr-auto  flex flex-col w-5/12  text-center my-auto ">
+            <div className="md2:mr-auto  flex flex-col md2:w-5/12  text-center my-auto ">
               <h2 className=" text-2xl font-bold pb-4 ">
                 3. Pre 'Socrates Eterna' Career
               </h2>
-              <p className="text-">
+              <p className="text- max-w-96">
                 He spent eight years at Henne Bank as a teller, management trainee, systems analyst, and budget supervisor. After that, he worked for eight years at Eurotel Telecommunications, focusing on financial analysis and behavioral customer research.
               </p>
               <div className="flex gap-3 text-xl pt- pb-"></div>
@@ -168,7 +159,7 @@ export default function About() {
         </section>
 
 
-        <section id="follow"
+        {/* <section id="follow"
           className="relative h-screen flex flex-col  snap-start snap-always bg-gradient-to-b from-purple-1000 to-purple-900">
           <div className="mx-4 my-auto">
             <div className=" animate-border-pulse border-y-2 flex items-center max-w-7xl w-full my-auto mx-auto gap-14 bg -gradient-to-b from-purple-950 to-purple-900 h-52 z- rounded- xl">
@@ -221,7 +212,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
       </main>
     </>
