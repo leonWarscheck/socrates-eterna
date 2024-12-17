@@ -16,7 +16,8 @@ export default function ComicsPage({
           <img
             src="/main/eterna-raw.png"
             className="mx-auto mb-2 w-[300px]"
-          ></img>
+            alt="socrates eterna as text logo"
+          />
         </h2>
         {children}
         <ModeSelector mode={mode} />

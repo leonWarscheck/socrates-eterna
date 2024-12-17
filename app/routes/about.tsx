@@ -6,32 +6,39 @@ export const meta: MetaFunction = () => {
 };
 
 export default function About() {
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     window.scrollTo(0, 0);
-  //   }, 11);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 11);
+  }, []);
 
   return (
     <>
-      <main id="screen-lg" className=" ">
+      <main id="screen-lg" className="">
         <section
           id="0-about-top"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="bg- gradient-to-b z- mx-auto my-auto flex h-52 max-w-4xl items-center gap-14 rounded-xl from-purple-1000 to-purple-900">
-            <div className="font-ligh my-auto ml-auto flex flex-col items-center">
-              <h1 className="-mt-4 mb-6 pl-2 pt-14 text-center text-xl font-bold text-purple-200 tiny:text-3xl">
+          <div className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:h-52 md2:flex-row md2:gap-14">
+            <div className="my-auto flex flex-col items-center md2:ml-auto">
+              <h1 className="-mt-4 mb-6 text-center text-3xl font-bold text-purple-200 md2:pl-2 md2:pt-4">
                 ABOUT{" "}
-                <span className="border- 2 ml- 0.5 px- 3 rounded-lg border-purple-200 py-1.5 font-socrates text-purple-200">
-                  ERIK HOLM
-                </span>
+                <span className="font-socrates text-purple-200">ERIK HOLM</span>
               </h1>
-              <p className="animate-pulse text-xl text-purple-400">
+              <p className="hidden animate-pulse text-xl text-purple-400 md2:flex">
                 scroll to read...
               </p>
             </div>
-            <img className="mr-auto w-1/2" src="/about/author2.jpg" alt="" />
+            <div className="mx-auto aspect-video max-h-60">
+              <img
+                className="h-full w-full object-cover"
+                src="/about/author2.jpg"
+                alt="portrait of Erik Holm in his studio"
+              />
+            </div>
+            <p className="mt-8 animate-pulse text-xl text-purple-400 md2:hidden">
+              scroll to read...
+            </p>
           </div>
         </section>
 
@@ -39,31 +46,48 @@ export default function About() {
           id="1-early-years"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="bg -gradient-to-b z- mx-auto my-auto flex h-52 max-w-4xl items-center gap-12 rounded-xl from-purple-1000 to-purple-900">
-            <div className="ml-auto flex w-5/12 flex-col gap-4">
-              <div className="flex gap-4">
-                <img
-                  className="my-auto size-1/3"
-                  src="/about/home2.jpg"
-                  alt=""
-                />
-                <img className="w-2/3" src="/about/family2.jpg" alt="" />
+          <div
+            id="1-container"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:flex-row md2:gap-10"
+          >
+            <div
+              id="1-images"
+              className=" mx-auto mb-8 flex flex-col gap-4 md2:mx-0 md2:mb-0 md2:ml-auto md2:w-1/2"
+            >
+              <div id="1-image-row" className="flex space-x-4">
+                <div className="my-auto aspect-square max-h-36">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/about/home2.jpg"
+                    alt="Erik Holm in front of Oxford Uni"
+                  />
+                </div>
+                <div className="aspect-video max-h-40">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/about/family2.jpg"
+                    alt="Kopenhagen University"
+                  />
+                </div>
               </div>
-              <img
-                className="mx-auto w-2/3"
-                src="/about/valedictorian.jpg"
-                alt=""
-              />
+              <div className="mx-auto aspect-video max-h-36">
+                <img
+                  className="h-full w-full object-cover"
+                  src="/about/valedictorian.jpg"
+                  alt="Erik in front of Kopenhagen University"
+                />
+              </div>
             </div>
-            <div className="items-cente my-auto mr-auto flex flex-col text-center">
+            <div
+              id="text1"
+              className="mx-auto flex flex-col text-center md2:mx-0 md2:mr-auto"
+            >
               <h2 className="pb-4 text-2xl font-bold">1. Early Years</h2>
               <p className="text-md max-w-80 text-pretty">
-                {" "}
                 Born 7/3/89, Erik grew up in Blåwand, Denmark. He is the last
                 child with two siblings, the son of a an engineer and a
                 herbalist. In high school, he graduated as valedictorian.
               </p>
-              <div className="pt- pb- flex gap-3 text-xl"></div>
             </div>
           </div>
         </section>
@@ -72,8 +96,14 @@ export default function About() {
           id="2-school"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 md2:h-52 md2:flex-row md2:gap-10">
-            <div className="items-cente my-auto mb-10 flex flex-col text-center md2:ml-auto">
+          <div
+            id="2-container"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:flex-row md2:gap-10"
+          >
+            <div
+              id="2-text"
+              className="mb-10 flex flex-col text-center md2:mb-0 md2:ml-auto"
+            >
               <h2 className="pb-4 text-2xl font-bold">2. School</h2>
               <p className="text-md max-w-80">
                 After completing his BA in Psychology at the University of
@@ -81,25 +111,34 @@ export default function About() {
                 at the University of Oxford.
               </p>
             </div>
-            <div className="mx-auto space-y-4">
-              <div className="flex space-x-4">
+            <div
+              id="2-images"
+              className="mx-auto flex flex-col space-y-4 md2:mr-auto"
+            >
+              <div id="2-image-row" className="flex space-x-4">
                 <div className="my-auto aspect-video max-h-32">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/oxford.jpg"
+                    alt="Erik Holm in front of Oxford Uni"
                   />
                 </div>
                 <div className="aspect-square max-h-36">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/kopenhagen2c.jpg"
+                    alt="Kopenhagen University"
                   />
                 </div>
               </div>
-              <div className="mx-auto aspect-video max-h-36">
+              <div
+                id="2-image-bottom"
+                className="mx-auto aspect-video max-h-36"
+              >
                 <img
                   className="h-full w-full object-cover"
                   src="/about/kopenhagen.jpg"
+                  alt="Erik in front of Kopenhagen University"
                 />
               </div>
             </div>
@@ -108,28 +147,37 @@ export default function About() {
 
         <section
           id="3-pre-socrates"
-          className="bg-purple- 950 relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
+          className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 md2:h-52 md2:flex-row md2:gap-10">
-            <div className="mx-auto mb-10 md2:ml-auto">
+          <div
+            id="3-container"
+            className="bg- black mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:flex-row md2:gap-14"
+          >
+            <div
+              id="3-image"
+              className="mx-auto mb-10 md2:mx-0 md2:mb-0 md2:ml-auto"
+            >
               <div className="mx-auto aspect-video max-h-56">
                 <img
                   className="h-full w-full object-cover"
                   src="/about/clipboard.jpg"
+                  alt="Erik holding a clipboard with some sketches at his office job"
                 />
               </div>
             </div>
-            <div className="my-auto flex flex-col text-center md2:mr-auto md2:w-5/12">
+            <div
+              id="3-text"
+              className="flex flex-col text-center md2:mr-auto md2:w-5/12"
+            >
               <h2 className="pb-4 text-2xl font-bold">
                 3. Pre 'Socrates Eterna' Career
               </h2>
-              <p className="text- max-w-96">
+              <p className="max-w-96">
                 He spent eight years at Henne Bank as a teller, management
                 trainee, systems analyst, and budget supervisor. After that, he
                 worked for eight years at Eurotel Telecommunications, focusing
                 on financial analysis and behavioral customer research.
               </p>
-              <div className="pt- pb- flex gap-3 text-xl"></div>
             </div>
           </div>
         </section>
@@ -138,8 +186,14 @@ export default function About() {
           id="4-socrates-1"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="bg -gradient-to-b z- mx-auto my-auto flex h-52 max-w-4xl items-center gap-14 rounded-xl from-purple-1000 to-purple-950">
-            <div className="my-auto ml-auto flex flex-col text-pretty text-center">
+          <div
+            id="4-container"
+            className="mx-auto my-auto flex flex-col max-w-4xl items-center px-4 pt-0 md2:flex-row md2:gap-10"
+          >
+            <div
+              id="4-text"
+              className="mb-10 flex flex-col text-pretty text-center md2:mb-0 md2:ml-auto"
+            >
               <h2 className="pb-4 text-2xl font-bold">4. Socrates Eterna</h2>
               <p className="text-md max-w-80">
                 Socrates Eterna launched in 2008 in select EU countries and is
@@ -148,32 +202,58 @@ export default function About() {
                 the Aurelius Prize.
               </p>
             </div>
-            <div className="mr-auto flex w-5/12 flex-col gap-4">
-              <div className="flex gap-4">
-                <img className="size-1/2" src="/about/award.jpg" alt="" />
+            <div id="4-images" className="mx-auto flex flex-col gap-4 md2:mr-auto">
+              <div id="1-image-row" className="flex space-x-4">
+                <div className="my-auto aspect-square max-h-36">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/about/award.jpg"
+                    alt="Erik at the Aurelius Prize ceremony"
+                  />
+                </div>
+                <div className="aspect-[2/3] max-h-40">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/about/magazine.jpg"
+                    alt="magazine cover of first Socrates Eterna Comics"
+                  />
+                </div>
+              </div>
+              <div className="mx-auto aspect-square max-h-36">
                 <img
-                  className="my-auto size-1/3"
-                  src="/about/magazine.jpg"
-                  alt=""
+                  className="h-full w-full object-cover"
+                  src="/about/site.jpg"
+                  alt="screenshot of old comic subscription website"
                 />
               </div>
-              <img className="mx-auto size-1/2" src="/about/site.jpg" alt="" />
             </div>
           </div>
         </section>
 
         <section
           id="5-socrates-2"
-          className="bg-purple- 950 relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
+          className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="bg -gradient-to-b z- mx-auto my-auto flex h-52 max-w-4xl items-center gap-14 rounded-xl from-purple-1000 to-purple-950">
-            <div className="ml-auto flex w-5/12 flex-col gap-4">
+          <div id="5-container" className="mx-auto my-auto flex flex-col max-w-4xl items-center px-4 pt-0 md2:flex-row md2:gap-10">
+            <div id="5-images" className=" mx-auto md2:ml-auto mb-10 md2:mb-0 flex flex-col gap-4">
               <div className="flex gap-4">
-                <img className="size-1/2" src="/books/tools.jpg" alt="" />
-                <img className="size-1/2" src="/books/secret.jpg" alt="" />
+                <div className="aspect-[840/1264]  max-h-56">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/books/tools.jpg"
+                    alt="book cover of Tools of the Modern Age"
+                  />
+                </div>
+                <div className="aspect-[840/1264]  max-h-56">
+                  <img
+                    className="h-full w-full object-cover"
+                    src="/books/secret.jpg"
+                    alt="book cover of Platos secrets"
+                  />
+                </div>
               </div>
             </div>
-            <div className="my-auto mr-auto flex flex-col text-pretty text-center">
+            <div id="5-text" className="mx-auto md2:mr-auto md2:mx-0 flex flex-col text-pretty text-center">
               <h2 className="pb-4 text-2xl font-bold">
                 5. Socrates Bestsellers
               </h2>
@@ -184,18 +264,21 @@ export default function About() {
                 Lessons from the Academy (Der Spiegel)".
                 <br />
               </p>
-              <div className="pt- pb- flex gap-3 text-xl"></div>
             </div>
           </div>
         </section>
 
-        {/* <section id="follow"
-          className="relative h-screen flex flex-col  snap-start snap-always bg-gradient-to-b from-purple-1000 to-purple-900">
-          <div className="mx-4 my-auto">
-            <div className=" animate-border-pulse border-y-2 flex items-center max-w-7xl w-full my-auto mx-auto gap-14 bg -gradient-to-b from-purple-950 to-purple-900 h-52 z- rounded- xl">
-              <div className="mx-auto justify-center flex flex-col items-center my-auto ">
-                <h2 className="text-4xl font-bold pb-4 drop-shadow-2xl">Follow Erik</h2>
-                <div className="flex gap-3 items-center  text-xl pt- pb-  ">
+        <section
+          id="follow"
+          className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
+        >
+          <div className="mx-4 my-auto pt-0">
+            <div className="mx-auto my-auto flex h-52 w-full max-w-7xl animate-border-pulse items-center gap-14 border-y-2 from-purple-950 to-purple-900">
+              <div className="mx-auto my-auto flex flex-col items-center justify-center">
+                <h2 className="pb-4 text-4xl font-bold drop-shadow-2xl">
+                  Follow Erik
+                </h2>
+                <div className="flex items-center gap-3 text-xl">
                   <Link
                     className="hover:underline"
                     to="https://www.x.com"
@@ -221,7 +304,7 @@ export default function About() {
                     LinkedIn
                   </Link>
                 </div>
-                <div className="flex gap-3 text-xl pt-1 pb-">
+                <div className="pb- flex gap-3 pt-1 text-xl">
                   <Link
                     className="hover:underline"
                     to="https://patreon.com"
@@ -242,7 +325,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
       </main>
     </>
   );

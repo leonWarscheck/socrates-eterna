@@ -18,7 +18,7 @@ export default function RetreatSection() {
               <img
                 className="h-full w-full rounded-2xl object-cover"
                 src="/landing/mount.jpg"
-                alt=""
+                alt="mount olymp at night with stars in the sky"
               />
             </div>
             <h4>Powerful Locations</h4>
@@ -33,7 +33,7 @@ export default function RetreatSection() {
               <img
                 className="h-full w-full rounded-2xl object-cover"
                 src="/landing/r7.jpg"
-                alt=""
+                alt="portrait of author Erik Holm"
               />
             </div>
             <h4>Breakthrough Mentoring</h4>
@@ -48,7 +48,7 @@ export default function RetreatSection() {
               <img
                 className="h-full w-full rounded-2xl object-cover"
                 src="/landing/group.jpg"
-                alt=""
+                alt="a group of mentees at dinner in a greek temple open air"
               />
             </div>
             <h4>Guaranteed Fellowship</h4>

@@ -1,10 +1,7 @@
 import RenderResults from "~/features/comics-pages/components/render-results";
 import SearchBar from "~/features/comics-pages/components/search-bar";
 
-import {
-  ResultsProp,
-  SearchComponentParentProps,
-} from "../types";
+import { ResultsProp, SearchComponentParentProps } from "../types";
 
 export default function ResultsPage({
   children,

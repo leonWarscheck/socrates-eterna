@@ -42,7 +42,7 @@ export default function Header() {
             <img
               className="h-12 hover:opacity-70"
               src="/main/omega-logo.png"
-              alt=""
+              alt="socrates eterna logo: greek symbol omega"
             />
           </Link>
 
@@ -73,7 +73,7 @@ export default function Header() {
             <img
               className="border-dilre border- h-12 hover:opacity-60"
               src="/main/omega-logo.png"
-              alt=""
+              alt="socrates eterna logo: greek symbol omega"
             />
           </Link>
 

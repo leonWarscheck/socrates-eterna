@@ -7,7 +7,7 @@ export default function SideAd() {
         <img
           className="h-full w-full object-cover"
           src="/books/calendar03.png"
-          alt=""
+          alt="socrates physical page a day calendar"
         />
       </div>
       <div className="mb-8 ml-6 mr-4 pr-6 text-center">

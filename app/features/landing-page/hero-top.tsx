@@ -37,7 +37,7 @@ export default function HeroSectionTop() {
       <div className="portrait-narrow:hidde n absolute bottom-[4dvh] w-full">
         <img
           src="/main/down-arrow.png"
-          alt=""
+          alt="downward arrow icon"
           className="mx-auto size-4 animate-pulse opacity-80 invert"
         />
       </div>

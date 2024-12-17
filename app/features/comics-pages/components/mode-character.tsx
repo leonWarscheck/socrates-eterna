@@ -2,10 +2,7 @@ import { Link } from "@remix-run/react";
 import { useEffect, useRef, useState } from "react";
 
 import characters from "../characters.json";
-import type {
-  Character,
-  IsSearchingProp,
-} from "../types";
+import type { Character, IsSearchingProp } from "../types";
 
 export default function ModeCharacter({ isSearching }: IsSearchingProp) {
   const [isOpen, setIsOpen] = useState(false);

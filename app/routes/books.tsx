@@ -22,7 +22,7 @@ export default function Books() {
               <img
                 className="h-full w-full object-cover"
                 src={book.coverimage}
-                alt=""
+                alt={`book cover of ${book.title}`}
               />
             </div>
             <p

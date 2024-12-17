@@ -33,7 +33,7 @@ export default function ModeMeaning({ isSearching }: IsSearchingProperty) {
         />
         <img
           src="/main/search.png"
-          alt="Search"
+          alt="search icon magnifying glass"
           className="pointer-events-none absolute right-4 top-1/2 z-20 w-4 -translate-y-1/2 transform invert"
         />
       </div>

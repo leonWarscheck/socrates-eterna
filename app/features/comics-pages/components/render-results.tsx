@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 
-import type { ResultsProp} from "../types";
+import type { ResultsProp } from "../types";
 import ScrollToTopButton from "./scroll-to-top-button";
 
 export default function RenderResults({ results }: ResultsProp) {

@@ -38,7 +38,7 @@ export default function ScrollToTopButton() {
         <img
           src="/main/triangle.svg"
           className="mx-auto my-auto size-8"
-          alt=""
+          alt="upward arrow triangle"
         />
       </button>
     </div>

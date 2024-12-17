@@ -52,7 +52,7 @@ export default function PriceTable() {
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
               <td className="bg-purple-950">
@@ -60,7 +60,7 @@ export default function PriceTable() {
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
             </tr>
@@ -73,7 +73,7 @@ export default function PriceTable() {
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
               <td className="bg-purple-950">
@@ -81,7 +81,7 @@ export default function PriceTable() {
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
             </tr>
@@ -94,7 +94,7 @@ export default function PriceTable() {
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
               <td className="bg-purple-950">
@@ -102,7 +102,7 @@ export default function PriceTable() {
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
             </tr>
@@ -114,14 +114,18 @@ export default function PriceTable() {
 
               <td className="">
                 {" "}
-                <img className="mx-auto h-6" src="/main/dash.svg" alt="" />
+                <img
+                  className="mx-auto h-6"
+                  src="/main/dash.svg"
+                  alt="dash icon"
+                />
               </td>
               <td className="bg-purple-950">
                 {" "}
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
             </tr>
@@ -133,14 +137,18 @@ export default function PriceTable() {
               </td>
               <td className="">
                 {" "}
-                <img className="mx-auto h-6" src="/main/dash.svg" alt="" />
+                <img
+                  className="mx-auto h-6"
+                  src="/main/dash.svg"
+                  alt="dash icon"
+                />
               </td>
               <td className="bg-purple-950">
                 {" "}
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
             </tr>
@@ -150,14 +158,18 @@ export default function PriceTable() {
               </td>
               <td className="">
                 {" "}
-                <img className="mx-auto h-6" src="/main/dash.svg" alt="" />
+                <img
+                  className="mx-auto h-6"
+                  src="/main/dash.svg"
+                  alt="dash icon"
+                />
               </td>
               <td className="bg-purple-950">
                 {" "}
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
             </tr>
@@ -168,14 +180,18 @@ export default function PriceTable() {
               </td>
               <td className="">
                 {" "}
-                <img className="mx-auto h-6" src="/main/dash.svg" alt="" />
+                <img
+                  className="mx-auto h-6"
+                  src="/main/dash.svg"
+                  alt="dash icon"
+                />
               </td>
               <td className="bg-purple-950">
                 {" "}
                 <img
                   className="mx-auto size-4"
                   src="/main/checkmark-rounded.svg"
-                  alt=""
+                  alt="checkmark icon"
                 />
               </td>
             </tr>

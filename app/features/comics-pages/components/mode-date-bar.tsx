@@ -1,7 +1,7 @@
 import { Form, Link } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
-import { ModeBarProps, QueryProp} from "../types";
+import { ModeBarProps, QueryProp } from "../types";
 
 export default function ModeDateBar({
   isSearching,
@@ -47,7 +47,11 @@ export default function ModeDateBar({
         className="-ml-1 w-[300px] text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:mr-4 dmd:text-[2.9rem]/9"
       >
         <div className="mt-[1.5px] aspect-[1404/245] h-9">
-          <img src="/main/socrates-raw.png" alt="" className="h-full w-full" />
+          <img
+            src="/main/socrates-raw.png"
+            alt="socrates as text logo"
+            className="h-full w-full"
+          />
         </div>
       </Link>
 
@@ -109,7 +113,7 @@ export default function ModeDateBar({
           >
             <img
               src="/main/search.png"
-              alt=""
+              alt="search icon magnifying glass"
               className="size-3 invert tiny:size-4"
             />
           </button>

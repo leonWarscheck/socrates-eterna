@@ -1,9 +1,7 @@
 import { MetaFunction } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
-  return [
-    { title: "Licencing & Advertisement | Dilbert.com" },
-  ];
+  return [{ title: "Licencing & Advertisement | Dilbert.com" }];
 };
 
 export default function LicensingPage() {

@@ -26,7 +26,11 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
         className="-ml-1 mb-4 w-[386px] text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:mr-6 dmd:text-[2.9rem]/9"
       >
         <div className="mt-[1.5px] aspect-[1404/245] h-9">
-          <img src="/main/socrates-raw.png" alt="" className="h-full w-full" />
+          <img
+            src="/main/socrates-raw.png"
+            alt="socrates as text logo"
+            className="h-full w-full"
+          />
         </div>
       </Link>
       <div className="ml-auto flex w-full grow">
@@ -43,7 +47,11 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
           type="submit"
           className="rounded-r-lg bg-primary1 px-2 pb-1 pt-1.5 text-white hover:bg-purple-600 dmd:hidden"
         >
-          <img src="/main/search.png" alt="" className="size-4 invert" />
+          <img
+            src="/main/search.png"
+            alt="search icon magnifying glass"
+            className="size-4 invert"
+          />
         </button>
       </div>
 

@@ -9,12 +9,11 @@ export default function HeroStory() {
       <h2 className="mx-4 pt-28 text-center text-3xl font-bold md2:hidden">
         What Happened to Socrates?
       </h2>
-      {/* <img className="flex md2:hidden  object-cover  mt-12" src="/hero/fade1a.jpeg" alt="" /> */}
       <div className="mt-10 flex aspect-square max-h-56 md2:hidden">
         <img
           className="h-full w-full object-cover"
           src="/hero/fade2cut2.jpg"
-          alt=""
+          alt="socrates main character closeup on a mountaintop staring into the distance at golden hour"
         />
       </div>
       <div
@@ -52,7 +51,7 @@ export default function HeroStory() {
       <img
         className="hidden w-2/4 object-cover md2:flex xl7:pr-4"
         src="/hero/fade1a.jpeg"
-        alt=""
+        alt="socrates main character closeup on a mountaintop staring into the distance at golden hour"
       />
     </div>
   );
