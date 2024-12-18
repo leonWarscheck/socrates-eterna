@@ -51,8 +51,8 @@ const config: Config = {
         socrates: ["Toxigenesis", "sans-serif"],
       },
       screens: {
-        xs: "400px",
         tiny: "360px",
+        xs: "400px",
         small: "490px",
         dmd: "667px", // 667
         md2: "769px",
@@ -69,7 +69,7 @@ const config: Config = {
         "landscape-super-narrow": {
           raw: "(max-height: 375px) and (orientation: landscape)",
         },
-        "portrait-narrow": { raw: "(max-height: 770px)" },
+        "portrait-narrow": { raw: "(max-height: 800px)" },
       },
       width: {
         "66": "16.5rem",

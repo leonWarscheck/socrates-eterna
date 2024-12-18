@@ -14,18 +14,18 @@ export default function About() {
 
   return (
     <>
-      <main id="screen-lg" className="">
+      <main id="screen-lg">
         <section
           id="0-about-top"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:h-52 md2:flex-row md2:gap-14">
+          <div className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:h-52 md2:flex-row md2:gap-14 md2:pt-0 landscape-narrow-2:pt-16 landscape-super-narrow:flex-row landscape-super-narrow:gap-8">
             <div className="my-auto flex flex-col items-center md2:ml-auto">
               <h1 className="-mt-4 mb-6 text-center text-3xl font-bold text-purple-200 md2:pl-2 md2:pt-4">
                 ABOUT{" "}
                 <span className="font-socrates text-purple-200">ERIK HOLM</span>
               </h1>
-              <p className="hidden animate-pulse text-xl text-purple-400 md2:flex">
+              <p className="hidden animate-pulse text-xl text-purple-400 md2:flex landscape-super-narrow:flex">
                 scroll to read...
               </p>
             </div>
@@ -36,7 +36,7 @@ export default function About() {
                 alt="portrait of Erik Holm in his studio"
               />
             </div>
-            <p className="mt-8 animate-pulse text-xl text-purple-400 md2:hidden">
+            <p className="mt-8 animate-pulse text-xl text-purple-400 md2:hidden landscape-super-narrow:hidden">
               scroll to read...
             </p>
           </div>
@@ -48,21 +48,21 @@ export default function About() {
         >
           <div
             id="1-container"
-            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:flex-row md2:gap-10 md2:pt-0 landscape-narrow-2:pt-16 landscape-super-narrow:flex-row landscape-super-narrow:gap-8"
           >
             <div
               id="1-images"
               className="mx-auto mb-8 flex flex-col gap-4 md2:mx-0 md2:mb-0 md2:ml-auto md2:w-1/2"
             >
               <div id="1-image-row" className="flex space-x-4">
-                <div className="my-auto aspect-square max-h-36">
+                <div className="my-auto aspect-square max-h-36 landscape-narrow-2:max-h-28">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/home2.jpg"
                     alt="Erik Holm in front of Oxford Uni"
                   />
                 </div>
-                <div className="aspect-video max-h-40">
+                <div className="aspect-video max-h-40 landscape-narrow-2:max-h-32">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/family2.jpg"
@@ -70,7 +70,7 @@ export default function About() {
                   />
                 </div>
               </div>
-              <div className="mx-auto aspect-video max-h-36">
+              <div className="mx-auto aspect-video max-h-36 landscape-narrow-2:max-h-28">
                 <img
                   className="h-full w-full object-cover"
                   src="/about/valedictorian.jpg"
@@ -98,7 +98,7 @@ export default function About() {
         >
           <div
             id="2-container"
-            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:flex-row md2:gap-10 md2:pt-0 landscape-narrow-2:pt-16 landscape-super-narrow:flex-row landscape-super-narrow:gap-8"
           >
             <div
               id="2-text"
@@ -116,14 +116,14 @@ export default function About() {
               className="mx-auto flex flex-col space-y-4 md2:mr-auto"
             >
               <div id="2-image-row" className="flex space-x-4">
-                <div className="my-auto aspect-video max-h-32">
+                <div className="my-auto aspect-video max-h-32 landscape-narrow-2:max-h-24">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/oxford.jpg"
                     alt="Erik Holm in front of Oxford Uni"
                   />
                 </div>
-                <div className="aspect-square max-h-36">
+                <div className="aspect-square max-h-36 landscape-narrow-2:max-h-28">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/kopenhagen2c.jpg"
@@ -133,7 +133,7 @@ export default function About() {
               </div>
               <div
                 id="2-image-bottom"
-                className="mx-auto aspect-video max-h-36"
+                className="mx-auto aspect-video max-h-36 landscape-narrow-2:max-h-28"
               >
                 <img
                   className="h-full w-full object-cover"
@@ -151,7 +151,7 @@ export default function About() {
         >
           <div
             id="3-container"
-            className="bg- black mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-14"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:flex-row md2:gap-14 md2:pt-0 landscape-narrow-2:pt-16 landscape-super-narrow:flex-row landscape-super-narrow:gap-8"
           >
             <div
               id="3-image"
@@ -188,7 +188,7 @@ export default function About() {
         >
           <div
             id="4-container"
-            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:flex-row md2:gap-10 md2:pt-0 landscape-narrow-2:pt-16 landscape-super-narrow:flex-row landscape-super-narrow:gap-8"
           >
             <div
               id="4-text"
@@ -207,14 +207,14 @@ export default function About() {
               className="mx-auto flex flex-col gap-4 md2:mr-auto"
             >
               <div id="1-image-row" className="flex space-x-4">
-                <div className="my-auto aspect-square max-h-36">
+                <div className="my-auto aspect-square max-h-36 landscape-narrow-2:max-h-28">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/award.jpg"
                     alt="Erik at the Aurelius Prize ceremony"
                   />
                 </div>
-                <div className="aspect-[2/3] max-h-40">
+                <div className="aspect-[2/3] max-h-40 landscape-narrow-2:max-h-32">
                   <img
                     className="h-full w-full object-cover"
                     src="/about/magazine.jpg"
@@ -222,7 +222,7 @@ export default function About() {
                   />
                 </div>
               </div>
-              <div className="mx-auto aspect-square max-h-36">
+              <div className="mx-auto aspect-square max-h-36 landscape-narrow-2:max-h-28">
                 <img
                   className="h-full w-full object-cover"
                   src="/about/site.jpg"
@@ -239,7 +239,7 @@ export default function About() {
         >
           <div
             id="5-container"
-            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:flex-row md2:gap-10 md2:pt-0 landscape-narrow-2:pt-16 landscape-super-narrow:flex-row landscape-super-narrow:gap-8"
           >
             <div
               id="5-images"
@@ -284,8 +284,8 @@ export default function About() {
           id="follow"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="mx-4 my-auto pt-16 md2:pt-0">
-            <div className="mx-auto my-auto flex h-52 w-full max-w-7xl animate-border-pulse items-center gap-14 border-y-2 from-purple-950 to-purple-900">
+          <div className="mx-4 my-auto pt-16 md2:pt-0 landscape-narrow-2:pt-16">
+            <div className="mx-auto my-auto flex h-52 w-full max-w-7xl animate-border-pulse items-center gap-14 border-y-4 from-purple-950 to-purple-900">
               <div className="mx-auto my-auto flex flex-col items-center justify-center">
                 <h2 className="pb-4 text-4xl font-bold drop-shadow-2xl">
                   Follow Erik
@@ -316,7 +316,7 @@ export default function About() {
                     LinkedIn
                   </Link>
                 </div>
-                <div className="pb- flex gap-3 pt-1 text-xl">
+                <div className="flex gap-3 pt-1 text-xl">
                   <Link
                     className="hover:underline"
                     to="https://patreon.com"

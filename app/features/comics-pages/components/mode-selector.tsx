@@ -18,9 +18,8 @@ export default function ModeSelector({ mode }: ModeProp) {
                 `hover:text-purple-400`
               }
             >
-              {" "}
-              Meaning<span className="text-x align-supe"></span>
-            </Link>{" "}
+              Meaning
+            </Link>
           </li>
           <li>
             <Link
@@ -35,7 +34,6 @@ export default function ModeSelector({ mode }: ModeProp) {
             </Link>
           </li>
           <li>
-            {" "}
             <Link
               prefetch="render"
               to={`/comics/character`}

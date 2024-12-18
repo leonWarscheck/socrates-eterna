@@ -8,11 +8,11 @@ export default function ComicsPage({
   mode,
 }: SearchComponentParentProps) {
   return (
-    <main className="min-h- flex min-h-dvh grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900 md2:min-h-[calc(100dvh-7rem)]">
+    <main className="flex min-h-dvh grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900 md2:min-h-[calc(100dvh-7rem)] landscape-narrow-2:min-h-dvh">
       <div
-        className={`landscape-narrow:pt- [5dvh] my-auto flex flex-col pt-16 ${isSearching && "animate-pulse"} `}
+        className={`my-auto flex flex-col pt-16 ${isSearching && "animate-pulse"} `}
       >
-        <h2 className="mt- tracking- wider mb-4 text-center font-socrates text-7xl font-bold text-purple-300 dmd:text-8xl">
+        <h2 className=" mb-4 text-center font-socrates text-7xl font-bold text-purple-300 md2:text-8xl">
           <img
             src="/main/eterna-raw.png"
             className="mx-auto mb-2 w-[300px]"

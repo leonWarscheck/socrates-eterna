@@ -4,7 +4,7 @@ export default function HeroStory() {
   return (
     <div
       id="copy"
-      className="bg-teal- 500 mb- mx-auto flex w-full max-w-7xl grow flex-col md2:flex-row"
+      className="mx-auto flex w-full max-w-7xl grow flex-col md2:flex-row"
     >
       <h2 className="mx-4 pt-28 text-center text-3xl font-bold md2:hidden">
         What Happened to Socrates?
@@ -18,13 +18,13 @@ export default function HeroStory() {
       </div>
       <div
         id="text"
-        className="pt- bg -gradient-to-r flex flex-col text-pretty from-purple-1000 to-purple-900 px-4 md2:w-3/5 md2:px-0 md2:pl-4 md2:pr-12 md2:pt-28"
+        className="flex flex-col text-pretty from-purple-1000 to-purple-900 px-4 md2:w-3/5 md2:px-0 md2:pl-4 md2:pr-12 md2:pt-28"
       >
-        <h2 className="bg-blue- 400 hidden text-left text-4xl font-bold md2:flex">
+        <h2 className="hidden text-left text-4xl font-bold md2:flex">
           What Happened to Socrates?
         </h2>
         <br />
-        <p className="text-justif text-lg font-bold">
+        <p className=" text-lg font-bold">
           Cartoonist and soul explorer Erik Holm has emerged from his 3 year
           retreat with a refined mission - launching Socrates Pantheon.
         </p>

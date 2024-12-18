@@ -197,7 +197,7 @@ export default function PriceTable() {
             </tr>
           </tbody>
         </table>
-        <div className="12 bg-purple- 950 mx-auto w-full max-w-7xl rounded-2xl">
+        <div className="mx-auto w-full max-w-7xl rounded-2xl">
           <p className="mt-6 max-w-lg text-pretty pl-4 text-xs text-purple-200">
             If you are a company or individual who wants to use a Socrates
             Eterna comic in a legal manner, or wants to advertise on the Eterna

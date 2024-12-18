@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 
 export default function SideAd() {
   return (
-    <div className="[15rem] max-h- 96 border- 2 mr-4 mt-16 hidden flex-col self-start rounded-xl border-primary1 bg-purple-1000 sxl:flex">
+    <div className="mr-4 mt-16 hidden flex-col self-start rounded-xl border-primary1 bg-purple-1000 sxl:flex">
       <div className="mx-auto mt-8 aspect-[660/876] max-h-32">
         <img
           className="h-full w-full object-cover"
@@ -23,7 +23,7 @@ export default function SideAd() {
         </p>
         <Link
           to="https://www.amazon.com"
-          className="4 border- mx-auto h-8 rounded-lg border-2 bg-purple-950 px-4 py-1 text-sm font-normal hover:underline"
+          className="mx-auto h-8 rounded-lg border-2 bg-purple-950 px-4 py-1 text-sm font-normal hover:underline"
           target="_blank"
           rel="noopener norefferrer"
         >

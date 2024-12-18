@@ -1,6 +1,6 @@
 export default function RetreatSection() {
   return (
-    <div className="mx- 32 bg-gradient-to-b from-purple-1000 to-purple-950">
+    <div className="bg-gradient-to-b from-purple-1000 to-purple-950">
       <div
         id="retreat"
         className="mx-auto flex w-full max-w-7xl flex-col px-8 pb-24 pt-16 md2:pt-24"
@@ -32,7 +32,7 @@ export default function RetreatSection() {
             <div className="mx-auto mb-6 aspect-square max-h-56 md2:mb-8">
               <img
                 className="h-full w-full rounded-2xl object-cover"
-                src="/landing/r7.jpg"
+                src="/landing/r1.jpg"
                 alt="portrait of author Erik Holm"
               />
             </div>

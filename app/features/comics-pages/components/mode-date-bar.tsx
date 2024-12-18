@@ -41,12 +41,12 @@ export default function ModeDateBar({
   }, []);
 
   return (
-    <div className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row ">
+    <div className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row">
       <Link
-        to="/comics/meaning" 
-        className="dmd:-ml-1 text-center text-3xl font-bold text-primary1 mb-4  dmd:mb-0 dmd:mr-6 dmd:text-[2.9rem]/9 "
+        to="/comics/meaning"
+        className="mb-4 text-center text-3xl font-bold text-primary1 dmd:-ml-1 dmd:mb-0 dmd:mr-6 dmd:text-[2.9rem]/9"
       >
-        <div className="mt-[1.5px] aspect-[1404/245] h-9 mx-auto dmd:mx-0">
+        <div className="mx-auto mt-[1.5px] aspect-[1404/245] h-9 dmd:mx-0">
           <img
             src="/main/socrates-raw.png"
             alt="socrates as text logo"
@@ -54,8 +54,8 @@ export default function ModeDateBar({
           />
         </div>
       </Link>
-      <Form id="sm" className="mx-auto flex w-full grow max-w-2xl ">
-        <div className="flex w-full items-center gap- text-sm dmd:text-base accent-black">
+      <Form id="sm" className="mx-auto flex w-full max-w-2xl grow">
+        <div className="flex w-full items-center text-sm accent-black dmd:text-base">
           <div className="ml-auto flex items-center">
             <select
               value={radioButton}
@@ -71,21 +71,21 @@ export default function ModeDateBar({
               <input
                 type="month"
                 name="month"
-                className="h-10 w-full  border-y-2 border-primary1 bg-transparent px-2 pl-4 tiny:px-4 py-1 focus:outline-none"
+                className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none tiny:px-4"
               />
             )}
             {radioButton === "day" && (
               <input
                 type="date"
                 name="day"
-                className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 pl-4 tiny:px-4 py-1 focus:outline-none"
+                className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none tiny:px-4"
               />
             )}
           </div>
         </div>
         <button
           type="submit"
-          className=" h-10 rounded-r-lg bg-primary1 px-2 tiny:px-4 hover:bg-purple-600"
+          className="h-10 rounded-r-lg bg-primary1 px-2 hover:bg-purple-600 tiny:px-4"
           disabled={isSearching}
         >
           <img
@@ -94,73 +94,7 @@ export default function ModeDateBar({
             className="size-3 invert tiny:size-4"
           />
         </button>
-
       </Form>
-
-      {/* <Form
-        id="full-md"
-        className="max-w-x hidden w-full flex-col text-base full-md:flex"
-      >
-        <div className="my-[2px] flex w-full grow items-center gap-x-4 accent-black dmd:my-0">
-          <div className="ml-auto flex items-center">
-            <label className="inline-flex shrink-0 items-center">
-              <input
-                type="radio"
-                name="dateType"
-                value="month"
-                className="form-radio"
-                checked={radioButton === "month"}
-                onChange={() => setRadioButton("month")}
-              />
-              <span className="ml-2 shrink-0">by Month</span>
-            </label>
-
-            <input
-              type="month"
-              className="ml-2 h-10 rounded-lg border-2 border-primary1 bg-transparent px-2 py-1 focus:bg-purple-1000 focus:outline-none"
-              name="month"
-              value={fixMonthInputQuery(query)}
-              onChange={(e) => setQuery(e.target.value)}
-              disabled={radioButton !== "month"}
-            />
-          </div>
-
-          <div className="ml-4 flex items-center">
-            <label className="inline-flex items-center">
-              <input
-                type="radio"
-                name="dateType"
-                value="day"
-                className="form-radio"
-                checked={radioButton === "day"}
-                onChange={() => setRadioButton("day")}
-              />
-              <span className="ml-2 shrink-0">by Day</span>
-            </label>
-
-            <input
-              type="date"
-              className="ml-2 h-10 rounded-lg border-2 border-primary1 bg-transparent px-2 py-1 focus:bg-purple-1000 focus:outline-none"
-              name="day"
-              value={fixDayInputQuery(query)}
-              onChange={(e) => setQuery(e.target.value)}
-              disabled={radioButton !== "day"}
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="ml-4 h-10 rounded-lg bg-primary1 px-4 hover:bg-purple-600"
-            disabled={isSearching}
-          >
-            <img
-              src="/main/search.png"
-              alt="search icon magnifying glass"
-              className="size-3 invert tiny:size-4"
-            />
-          </button>
-        </div>
-      </Form> */}
     </div>
   );
 }

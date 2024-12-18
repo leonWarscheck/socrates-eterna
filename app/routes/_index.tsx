@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <main className="">
+    <main>
       <HeroSectionTop />
       <HeroStory />
       <PriceTable />

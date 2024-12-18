@@ -18,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
-      className="scroll-pt -24 snap-y snap-mandatory scroll-smooth"
+      className=" snap-y snap-mandatory scroll-smooth"
     >
       <head>
         <meta charSet="utf-8" />
@@ -26,7 +26,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-yellow- fontlight socrates overscroll-none bg-purple-1000 text-purple-100">
+      <body className="overscroll-none bg-purple-1000 text-purple-100">
         <div className="flex min-h-dvh flex-col selection:bg-purple-700">
           <Header />
           {children}
@@ -53,7 +53,7 @@ function ErrorPage({
   subMessage?: string;
 }) {
   return (
-    <main className="min-h- flex min-h-[calc(100dvh-7rem)] grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900">
+    <main className="flex min-h-[calc(100dvh-7rem)] grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900">
       <div className="my-auto flex flex-col items-center justify-center px-4 text-center">
         <h2 className="mb-4 font-socrates text-4xl font-bold">{title}</h2>
 
