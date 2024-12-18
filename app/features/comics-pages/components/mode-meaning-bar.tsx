@@ -20,16 +20,16 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
   };
 
   return (
-    <Form className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row">
+    <Form className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row ">
       <Link
         to="/comics/meaning"
-        className="-ml-1 mb-4 w-[386px] text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:mr-6 dmd:text-[2.9rem]/9"
+        className="dmd:-ml-1 mb-4 text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:mr-6 dmd:text-[2.9rem]/9"
       >
-        <div className="mt-[1.5px] aspect-[1404/245] h-9">
+        <div className="mt-[1.5px] aspect-[1404/245] h-9 mx-auto dmd:mx-0">
           <img
             src="/main/socrates-raw.png"
             alt="socrates as text logo"
-            className="h-full w-full"
+            className="h-full w-full "
           />
         </div>
       </Link>

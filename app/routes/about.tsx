@@ -19,7 +19,7 @@ export default function About() {
           id="0-about-top"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:h-52 md2:flex-row md2:gap-14">
+          <div className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:h-52 md2:flex-row md2:gap-14">
             <div className="my-auto flex flex-col items-center md2:ml-auto">
               <h1 className="-mt-4 mb-6 text-center text-3xl font-bold text-purple-200 md2:pl-2 md2:pt-4">
                 ABOUT{" "}
@@ -48,11 +48,11 @@ export default function About() {
         >
           <div
             id="1-container"
-            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:flex-row md2:gap-10"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
           >
             <div
               id="1-images"
-              className=" mx-auto mb-8 flex flex-col gap-4 md2:mx-0 md2:mb-0 md2:ml-auto md2:w-1/2"
+              className="mx-auto mb-8 flex flex-col gap-4 md2:mx-0 md2:mb-0 md2:ml-auto md2:w-1/2"
             >
               <div id="1-image-row" className="flex space-x-4">
                 <div className="my-auto aspect-square max-h-36">
@@ -98,7 +98,7 @@ export default function About() {
         >
           <div
             id="2-container"
-            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:flex-row md2:gap-10"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
           >
             <div
               id="2-text"
@@ -151,7 +151,7 @@ export default function About() {
         >
           <div
             id="3-container"
-            className="bg- black mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-0 md2:flex-row md2:gap-14"
+            className="bg- black mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-14"
           >
             <div
               id="3-image"
@@ -188,7 +188,7 @@ export default function About() {
         >
           <div
             id="4-container"
-            className="mx-auto my-auto flex flex-col max-w-4xl items-center px-4 pt-0 md2:flex-row md2:gap-10"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
           >
             <div
               id="4-text"
@@ -202,7 +202,10 @@ export default function About() {
                 the Aurelius Prize.
               </p>
             </div>
-            <div id="4-images" className="mx-auto flex flex-col gap-4 md2:mr-auto">
+            <div
+              id="4-images"
+              className="mx-auto flex flex-col gap-4 md2:mr-auto"
+            >
               <div id="1-image-row" className="flex space-x-4">
                 <div className="my-auto aspect-square max-h-36">
                   <img
@@ -234,17 +237,23 @@ export default function About() {
           id="5-socrates-2"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div id="5-container" className="mx-auto my-auto flex flex-col max-w-4xl items-center px-4 pt-0 md2:flex-row md2:gap-10">
-            <div id="5-images" className=" mx-auto md2:ml-auto mb-10 md2:mb-0 flex flex-col gap-4">
+          <div
+            id="5-container"
+            className="mx-auto my-auto flex max-w-4xl flex-col items-center px-4 pt-16 md2:pt-0 md2:flex-row md2:gap-10"
+          >
+            <div
+              id="5-images"
+              className="mx-auto mb-10 flex flex-col gap-4 md2:mb-0 md2:ml-auto"
+            >
               <div className="flex gap-4">
-                <div className="aspect-[840/1264]  max-h-56">
+                <div className="aspect-[840/1264] max-h-56">
                   <img
                     className="h-full w-full object-cover"
                     src="/books/tools.jpg"
                     alt="book cover of Tools of the Modern Age"
                   />
                 </div>
-                <div className="aspect-[840/1264]  max-h-56">
+                <div className="aspect-[840/1264] max-h-56">
                   <img
                     className="h-full w-full object-cover"
                     src="/books/secret.jpg"
@@ -253,7 +262,10 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div id="5-text" className="mx-auto md2:mr-auto md2:mx-0 flex flex-col text-pretty text-center">
+            <div
+              id="5-text"
+              className="mx-auto flex flex-col text-pretty text-center md2:mx-0 md2:mr-auto"
+            >
               <h2 className="pb-4 text-2xl font-bold">
                 5. Socrates Bestsellers
               </h2>
@@ -272,7 +284,7 @@ export default function About() {
           id="follow"
           className="relative flex h-screen snap-start snap-always flex-col bg-gradient-to-b from-purple-1000 to-purple-900"
         >
-          <div className="mx-4 my-auto pt-0">
+          <div className="mx-4 my-auto pt-16 md2:pt-0">
             <div className="mx-auto my-auto flex h-52 w-full max-w-7xl animate-border-pulse items-center gap-14 border-y-2 from-purple-950 to-purple-900">
               <div className="mx-auto my-auto flex flex-col items-center justify-center">
                 <h2 className="pb-4 text-4xl font-bold drop-shadow-2xl">

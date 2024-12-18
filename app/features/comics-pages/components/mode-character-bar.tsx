@@ -58,9 +58,9 @@ export default function ModeCharacterBar({
     >
       <Link
         to="/comics/meaning"
-        className="mx-auto -ml-1 mb-4 w-[303.5px] text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:text-[2.9rem]/9"
+        className="mx-auto dmd:-ml-1 mb-4   text-center text-3xl font-bold text-primary1 dmd:mb-0 dmd:text-[2.9rem]/9"
       >
-        <div className="mt-[1.5px] aspect-[1404/245] h-9">
+        <div className="mt-[1.5px] aspect-[1404/245] h-9 mx-auto dmd:mx-0">
           <img
             src="/main/socrates-raw.png"
             alt="socrates as text logo"
@@ -68,7 +68,7 @@ export default function ModeCharacterBar({
           />
         </div>
       </Link>
-      <div id="sm md dropdown" className="relative w-full dmd:ml-6">
+      <div id="sm md dropdown" className="relative w-full grow dmd:ml-6">
         <button
           disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}

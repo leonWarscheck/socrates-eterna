@@ -22,7 +22,7 @@ export default function ModeMeaning({ isSearching }: IsSearchingProperty) {
 
   return (
     <Form className="mx-auto flex w-full max-w-xl flex-col">
-      <div className="relative mx-auto w-full">
+      <div className="relative mx-auto w-full px-4">
         <input
           className="h-10 w-full grow rounded-lg border-2 border-primary1 bg-purple-1000 bg-transparent px-4 placeholder:text-purple-400 focus:outline-none"
           type="text"
@@ -34,7 +34,7 @@ export default function ModeMeaning({ isSearching }: IsSearchingProperty) {
         <img
           src="/main/search.png"
           alt="search icon magnifying glass"
-          className="pointer-events-none absolute right-4 top-1/2 z-20 w-4 -translate-y-1/2 transform invert"
+          className="pointer-events-none absolute right-8 top-1/2 z-20 w-4 -translate-y-1/2 transform invert"
         />
       </div>
 

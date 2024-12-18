@@ -12,7 +12,7 @@ export default function RetreatSection() {
           The high level mastermind journey for longer-than-6-months members.
         </p>
 
-        <div className="flex w-full flex-col justify-between gap-12 pt-14 text-center text-2xl font-bold md2:flex-row md2:gap-x-12 md2:pt-20">
+        <div className="flex w-full flex-col justify-between gap-16 pt-14 text-center text-2xl font-bold md2:flex-row md2:gap-x-12 md2:pt-20">
           <div className="mx-auto flex max-w-96 flex-col">
             <div className="mx-auto mb-6 aspect-square max-h-56 md2:mb-8">
               <img
@@ -22,7 +22,7 @@ export default function RetreatSection() {
               />
             </div>
             <h4>Powerful Locations</h4>
-            <p className="pt-4 text-base font-normal">
+            <p className="pt-3 text-base font-normal">
               The most powerful transformations happen in magical locations with
               professional guidance.
             </p>
@@ -37,7 +37,7 @@ export default function RetreatSection() {
               />
             </div>
             <h4>Breakthrough Mentoring</h4>
-            <p className="pt-4 text-base font-normal">
+            <p className="pt-3 text-base font-normal">
               Get personal mentoring from Erik Holm to take your life to the
               next level and awaken the peaceful warrior within yourself.{" "}
             </p>
@@ -52,7 +52,7 @@ export default function RetreatSection() {
               />
             </div>
             <h4>Guaranteed Fellowship</h4>
-            <p className="pt-4 text-base font-normal">
+            <p className="pt-3 text-base font-normal">
               Deepen your relationships in the Pantheon Network. Minimum one
               friendship for life, guaranteed.
             </p>

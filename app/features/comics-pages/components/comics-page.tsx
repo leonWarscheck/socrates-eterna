@@ -8,9 +8,9 @@ export default function ComicsPage({
   mode,
 }: SearchComponentParentProps) {
   return (
-    <main className="min-h- flex min-h-[calc(100dvh-7rem)] grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900">
+    <main className="min-h- flex min-h-dvh grow flex-col bg-gradient-to-b from-purple-1000 to-purple-900 md2:min-h-[calc(100dvh-7rem)]">
       <div
-        className={`my-auto flex flex-col landscape-narrow:pt-[5dvh] ${isSearching && "animate-pulse"} `}
+        className={`landscape-narrow:pt- [5dvh] my-auto flex flex-col pt-16 ${isSearching && "animate-pulse"} `}
       >
         <h2 className="mt- tracking- wider mb-4 text-center font-socrates text-7xl font-bold text-purple-300 dmd:text-8xl">
           <img
