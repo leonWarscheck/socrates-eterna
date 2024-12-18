@@ -2,7 +2,7 @@ import { Link } from "@remix-run/react";
 
 export default function SideAd() {
   return (
-    <div className="mr-4 mt-16 hidden flex-col self-start rounded-xl border-primary1 bg-purple-1000 sxl:flex">
+    <div className="mr-4 mt-16 hidden flex-col self-start rounded-xl border-primary1 bg-purple-1000 xl1:flex">
       <div className="mx-auto mt-8 aspect-[660/876] max-h-32">
         <img
           className="h-full w-full object-cover"

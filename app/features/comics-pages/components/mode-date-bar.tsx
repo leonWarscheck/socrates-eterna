@@ -41,12 +41,12 @@ export default function ModeDateBar({
   }, []);
 
   return (
-    <div className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row">
+    <div className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 md1:mt-8 md1:flex-row">
       <Link
         to="/comics/meaning"
-        className="mb-4 text-center text-3xl font-bold text-primary1 dmd:-ml-1 dmd:mb-0 dmd:mr-6 dmd:text-[2.9rem]/9"
+        className="mb-4 text-center text-3xl font-bold text-primary1 md1:-ml-1 md1:mb-0 md1:mr-6 md1:text-[2.9rem]/9"
       >
-        <div className="mx-auto mt-[1.5px] aspect-[1404/245] h-9 dmd:mx-0">
+        <div className="mx-auto mt-[1.5px] aspect-[1404/245] h-9 md1:mx-0">
           <img
             src="/main/socrates-raw.png"
             alt="socrates as text logo"
@@ -55,7 +55,7 @@ export default function ModeDateBar({
         </div>
       </Link>
       <Form id="sm" className="mx-auto flex w-full max-w-2xl grow">
-        <div className="flex w-full items-center text-sm accent-black dmd:text-base">
+        <div className="flex w-full items-center text-sm accent-black md1:text-base">
           <div className="ml-auto flex items-center">
             <select
               value={radioButton}
@@ -71,27 +71,27 @@ export default function ModeDateBar({
               <input
                 type="month"
                 name="month"
-                className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none tiny:px-4"
+                className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}
             {radioButton === "day" && (
               <input
                 type="date"
                 name="day"
-                className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none tiny:px-4"
+                className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}
           </div>
         </div>
         <button
           type="submit"
-          className="h-10 rounded-r-lg bg-primary1 px-2 hover:bg-purple-600 tiny:px-4"
+          className="h-10 rounded-r-lg bg-primary1 px-2 hover:bg-purple-600 xs1:px-4"
           disabled={isSearching}
         >
           <img
             src="/main/search.png"
             alt="search icon magnifying glass"
-            className="size-3 invert tiny:size-4"
+            className="size-3 invert xs1:size-4"
           />
         </button>
       </Form>

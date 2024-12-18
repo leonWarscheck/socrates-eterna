@@ -66,7 +66,7 @@ export default function Header() {
 
       <header
         id="header"
-        className={`fixed z-20 flex h-16 w-full grow items-center bg-purple-950 ${location.pathname === "/comics" && "landscape-super-narrow:bg-opacity- 0"} ${location.pathname === "/" && "hidden"} ${location.pathname === "/test" && "hidden"} ${query ? "hidde" : ""} `}
+        className={`fixed z-20 flex h-16 w-full grow items-center bg-purple-950 ${location.pathname === "/" && "hidden"} ${location.pathname === "/test" && "hidden"} ${query ? "hidde" : ""} `}
       >
         <nav className="mx-auto flex max-w-7xl flex-grow items-center px-4">
           <Link to="/" className="">

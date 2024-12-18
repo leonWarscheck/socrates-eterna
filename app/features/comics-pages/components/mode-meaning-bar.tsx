@@ -20,12 +20,12 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
   };
 
   return (
-    <Form className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row">
+    <Form className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 md1:mt-8 md1:flex-row">
       <Link
         to="/comics/meaning"
-        className="mb-4 text-center text-3xl font-bold text-primary1 dmd:-ml-1 dmd:mb-0 dmd:mr-6 dmd:text-[2.9rem]/9"
+        className="mb-4 text-center text-3xl font-bold text-primary1 md1:-ml-1 md1:mb-0 md1:mr-6 md1:text-[2.9rem]/9"
       >
-        <div className="mx-auto mt-[1.5px] aspect-[1404/245] h-9 dmd:mx-0">
+        <div className="mx-auto mt-[1.5px] aspect-[1404/245] h-9 md1:mx-0">
           <img
             src="/main/socrates-raw.png"
             alt="socrates as text logo"
@@ -45,7 +45,7 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
         />
         <button
           type="submit"
-          className="rounded-r-lg bg-primary1 px-2 pb-1 pt-1.5 text-white hover:bg-purple-600 dmd:hidden"
+          className="rounded-r-lg bg-primary1 px-2 pb-1 pt-1.5 text-white hover:bg-purple-600 md1:hidden"
         >
           <img
             src="/main/search.png"
@@ -55,7 +55,7 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
         </button>
       </div>
 
-      <div className="mr-auto hidden h-10 shrink-0 dmd:flex">
+      <div className="mr-auto hidden h-10 shrink-0 md1:flex">
         <button
           type="submit"
           disabled={isSearching}

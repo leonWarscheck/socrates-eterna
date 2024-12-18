@@ -5,7 +5,7 @@ import type { ModeProp } from "../types";
 export default function ModeSelectorBar({ mode }: ModeProp) {
   return (
     <div className="mt- bg-teal- flex w-full max-w-4xl px-4 pb-2 text-base">
-      <h3 className="ml-auto py-0 pr-4 dmd:ml-0">Search by:</h3>
+      <h3 className="ml-auto py-0 pr-4 md1:ml-0">Search by:</h3>
       <ul className="mr-auto flex gap-x-4">
         <li className="">
           <Link

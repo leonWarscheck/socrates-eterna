@@ -18,7 +18,7 @@ export default function Footer() {
     <footer
       className={` ${location.pathname === "/test" && "hidden"} flex h-28 w-full items-center bg-purple-950 md2:h-16 ${isSnapEnabled && "snap-start snap-always"} `}
     >
-      <nav className="mx-auto flex w-full max-w-7xl flex-col items-center gap-x-4 gap-y-3 px-4 text-xs font-light text-neutral-100 tiny:text-sm md2:flex-row md2:gap-y-0">
+      <nav className="mx-auto flex w-full max-w-7xl flex-col items-center gap-x-4 gap-y-3 px-4 text-xs font-light text-neutral-100 xs1:text-sm md2:flex-row md2:gap-y-0">
         <div className="flex gap-x-3 md2:mr-auto md2:gap-x-4">
           <Link
             className="hover:underline"

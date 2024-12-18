@@ -53,14 +53,14 @@ export default function ModeCharacterBar({
 
   return (
     <div
-      className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 dmd:mt-8 dmd:flex-row"
+      className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 md1:mt-8 md1:flex-row"
       ref={dropdownRef}
     >
       <Link
         to="/comics/meaning"
-        className="mx-auto mb-4 text-center text-3xl font-bold text-primary1 dmd:-ml-1 dmd:mb-0 dmd:text-[2.9rem]/9"
+        className="mx-auto mb-4 text-center text-3xl font-bold text-primary1 md1:-ml-1 md1:mb-0 md1:text-[2.9rem]/9"
       >
-        <div className="mx-auto mt-[1.5px] aspect-[1404/245] h-9 dmd:mx-0">
+        <div className="mx-auto mt-[1.5px] aspect-[1404/245] h-9 md1:mx-0">
           <img
             src="/main/socrates-raw.png"
             alt="socrates as text logo"
@@ -68,13 +68,12 @@ export default function ModeCharacterBar({
           />
         </div>
       </Link>
-      <div id="sm md dropdown" className="relative w-full grow dmd:ml-6">
+      <div id="sm md dropdown" className="relative w-full grow md1:ml-6">
         <button
           disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex h-10 w-full items-center justify-between border-2 border-primary1 bg-transparent p-3 text-left focus:bg-purple-1000 focus:outline-none ${
-            isOpen ? "rounded-t-lg" : "rounded-lg"
-          }`}
+          className={`flex h-10 w-full items-center justify-between border-2 border-primary1 bg-transparent p-3 text-left focus:bg-purple-1000 focus:outline-none ${isOpen ? "rounded-t-lg" : "rounded-lg"
+            }`}
         >
           {selectedCharacter ? (
             <div className="flex items-center">
@@ -89,9 +88,8 @@ export default function ModeCharacterBar({
             <span>Select a character</span>
           )}
           <svg
-            className={`h-5 w-5 transform transition-transform ${
-              isOpen ? "rotate-180" : ""
-            }`}
+            className={`h-5 w-5 transform transition-transform ${isOpen ? "rotate-180" : ""
+              }`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"

@@ -49,7 +49,7 @@ export default function HeroStory() {
         <p id="join-pantheon"></p>
       </div>
       <img
-        className="hidden w-2/4 object-cover md2:flex xl7:pr-4"
+        className="hidden w-2/4 object-cover md2:flex xl2:pr-4"
         src="/hero/fade1a.jpeg"
         alt="socrates main character closeup on a mountaintop staring into the distance at golden hour"
       />
