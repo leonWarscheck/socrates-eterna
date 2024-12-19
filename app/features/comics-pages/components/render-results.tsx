@@ -6,7 +6,7 @@ import ScrollToTopButton from "./scroll-to-top-button";
 export default function RenderResults({ results }: ResultsProp) {
   return (
     <div className="mx-auto flex w-full max-w-7xl">
-      <div className=" mx-auto -mt-2 flex max-w-4xl flex-col px-4">
+      <div className="mx-auto -mt-2 flex max-w-4xl flex-col px-4">
         {results &&
           results.map((comic) => {
             const publishedDate = new Date(comic.metadata.published);

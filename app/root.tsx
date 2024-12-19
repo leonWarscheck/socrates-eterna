@@ -16,17 +16,14 @@ import Header from "~/components/header";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className=" snap-y snap-mandatory scroll-smooth"
-    >
+    <html lang="en" className="snap-y snap-mandatory scroll-smooth">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body className="overscroll-none bg-purple-1000 text-purple-100 font-socrates">
+      <body className="overscroll-none bg-purple-1000 font-socrates text-purple-100">
         <div className="flex min-h-dvh flex-col selection:bg-purple-700">
           <Header />
           {children}

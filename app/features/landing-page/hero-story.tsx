@@ -24,7 +24,7 @@ export default function HeroStory() {
           What Happened to Socrates?
         </h2>
         <br />
-        <p className=" text-lg font-bold">
+        <p className="text-lg font-bold">
           Cartoonist and soul explorer Erik Holm has emerged from his 3 year
           retreat with a refined mission - launching Socrates Pantheon.
         </p>

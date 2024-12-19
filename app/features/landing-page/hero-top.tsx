@@ -26,7 +26,7 @@ export default function HeroSectionTop() {
             Pantheon Membership
           </Link>
           <Link
-            className=" animate-[pulse-border_6s_infinite animate-border-pulse rounded-lg border-2 px-8 py-2 md2:mr-auto"
+            className="animate-[pulse-border_6s_infinite animate-border-pulse rounded-lg border-2 px-8 py-2 md2:mr-auto"
             to="/comics/meaning"
           >
             Search Comics

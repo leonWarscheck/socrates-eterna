@@ -45,6 +45,7 @@ module.exports = {
   },
 
   rules: {
+    "unicorn/no-abusive-eslint-disable": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "unicorn/no-array-callback-reference": "off",
@@ -62,6 +63,7 @@ module.exports = {
         replacements: {
           env: false,
           props: false,
+          prop: false,
           ref: false,
           params: false,
         },
@@ -94,7 +96,10 @@ module.exports = {
         },
       },
       rules: {
+        "react/no-unescaped-entities": "off",
+        "react-hooks/exhaustive-deps": "off",
         "react/prop-types": "off",
+        "react/jsx-no-target-blank": "off",
       },
     },
 

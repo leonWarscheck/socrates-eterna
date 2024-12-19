@@ -7,9 +7,7 @@ export default function SearchBar({
   isSearching,
 }: SearchComponentParentProps) {
   return (
-    <div
-      className={`min-h-30 mt-16 w-full ${isSearching && "animate-pulse"} `}
-    >
+    <div className={`min-h-30 mt-16 w-full ${isSearching && "animate-pulse"} `}>
       <div className="min-h-30 relative mx-auto flex w-full max-w-7xl">
         <div className="mx-auto flex w-full max-w-4xl flex-col">
           {children}

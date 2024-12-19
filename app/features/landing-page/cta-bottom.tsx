@@ -12,7 +12,7 @@ export default function CtaBottom() {
       </h4>
       <Link
         to="#join-pantheon"
-        className=" mx-auto mt-7 animate-bg-pulse-slow rounded-lg bg-primary1 px-6 py-2 text-xl text-white hover:bg-purple-600"
+        className="mx-auto mt-7 animate-bg-pulse-slow rounded-lg bg-primary1 px-6 py-2 text-xl text-white hover:bg-purple-600"
       >
         Get Started
       </Link>

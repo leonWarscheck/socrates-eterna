@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
 
-import OpenAI from "openai";
+import openai from "openai";
 
 const filePath = path.resolve("../../data/comic-data.json");
 
-const openai = new OpenAI({
+const openai = new openai({
   apiKey: process.env.OPENAI_API_KEY,
   project: "proj_Ob5R64Ai0u4futQmHQe7P8xp",
   organization: "org-jRQ76nlnndQiu2Oyzq5jxe8p",

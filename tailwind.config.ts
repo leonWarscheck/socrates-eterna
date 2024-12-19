@@ -46,10 +46,10 @@ const config: Config = {
         lg1: "1024px",
         xl1: "1110px",
         xl2: "1280px",
-        "landscape1": {
+        landscape1: {
           raw: "(max-width: 940px) and (max-height: 430px )",
         },
-        "landscape2": {
+        landscape2: {
           raw: "(max-height: 375px) and (orientation: landscape)",
         },
         "screen-h-sm": { raw: "(max-height: 800px)" },

@@ -72,8 +72,9 @@ export default function ModeCharacterBar({
         <button
           disabled={isSearching}
           onClick={() => setIsOpen(!isOpen)}
-          className={`flex h-10 w-full items-center justify-between border-2 border-primary1 bg-transparent p-3 text-left focus:bg-purple-1000 focus:outline-none ${isOpen ? "rounded-t-lg" : "rounded-lg"
-            }`}
+          className={`flex h-10 w-full items-center justify-between border-2 border-primary1 bg-transparent p-3 text-left focus:bg-purple-1000 focus:outline-none ${
+            isOpen ? "rounded-t-lg" : "rounded-lg"
+          }`}
         >
           {selectedCharacter ? (
             <div className="flex items-center">
@@ -88,8 +89,9 @@ export default function ModeCharacterBar({
             <span>Select a character</span>
           )}
           <svg
-            className={`h-5 w-5 transform transition-transform ${isOpen ? "rotate-180" : ""
-              }`}
+            className={`h-5 w-5 transform transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -107,6 +109,7 @@ export default function ModeCharacterBar({
           <ul className="absolute left-0 right-0 z-10 -mt-0.5 h-[40dvh] overflow-y-scroll rounded-b-lg border-x-2 border-b-2 border-primary1 bg-purple-1000">
             {characters.map((character) => (
               <li
+                role="button"
                 key={character.name}
                 onClick={() => handleSelect(character)}
                 className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"
