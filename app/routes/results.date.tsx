@@ -12,13 +12,13 @@ import {
 export async function loader({ request }: LoaderFunctionArgs) {
   const { results: potentialResults, query: potentialQuery } =
     await getPotentialDateResults(request);
-  const { latestResults, latestQuery, session } =
+    const { latestResults, latestQuery, session } =
     await getLatestAndSavedResultsAndQuery(
       request,
       potentialResults,
       potentialQuery,
     );
-
+    
   return json(
     { results: latestResults, query: latestQuery },
     { headers: { "Set-Cookie": await commitSession(session) } },

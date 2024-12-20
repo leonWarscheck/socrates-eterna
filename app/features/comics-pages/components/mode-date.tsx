@@ -4,14 +4,15 @@ import { useState } from "react";
 import type { IsSearchingProp } from "../types";
 
 export default function ModeDate({ isSearching }: IsSearchingProp) {
-  const [radioButton, setRadioButton] = useState("month");
+  const [selectValue, setSelectValue] = useState("month");
   return (
     <Form id="sm" className="mx-auto flex w-full max-w-xl flex-col">
       <div className="flex w-full items-center px-4 text-base accent-black">
         <div className="ml-auto flex items-center">
           <select
-            value={radioButton}
-            onChange={(event) => setRadioButton(event.target.value)}
+            value={selectValue}
+            name="dateType"
+            onChange={(event) => setSelectValue(event.target.value)}
             className="h-10 w-full min-w-28 max-w-44 rounded-l-lg border-y-2 border-l-2 border-primary1 bg-transparent px-2 focus:outline-none"
           >
             <option value="month">by Month</option>
@@ -19,14 +20,14 @@ export default function ModeDate({ isSearching }: IsSearchingProp) {
           </select>
         </div>
         <div className="mr-auto flex w-full items-center justify-center">
-          {radioButton === "month" && (
+          {selectValue === "month" && (
             <input
               type="month"
               name="month"
               className="h-10 w-full rounded-r-lg border-y-2 border-r-2 border-primary1 bg-transparent px-2 py-1 focus:outline-none"
             />
           )}
-          {radioButton === "day" && (
+          {selectValue === "day" && (
             <input
               type="date"
               name="day"

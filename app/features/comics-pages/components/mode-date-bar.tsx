@@ -29,11 +29,12 @@ const fixDayInputQuery = (query: QueryProp["query"]) => {
   }
 };
 
+
 export default function ModeDateBar({
   isSearching,
   query: latestQuery,
 }: ModeBarProps) {
-  const [radioButton, setRadioButton] = useState("month");
+  const [selectValue, setSelectValue] = useState("month");
   const [query, setQuery] = useState(latestQuery);
 
   useEffect(() => {
@@ -58,8 +59,9 @@ export default function ModeDateBar({
         <div className="flex w-full items-center text-sm accent-black md1:text-base">
           <div className="ml-auto flex items-center">
             <select
-              value={radioButton}
-              onChange={(event) => setRadioButton(event.target.value)}
+              name="dateType"
+              value={selectValue}
+              onChange={(event) => setSelectValue(event.target.value)}
               className="h-10 w-full min-w-28 max-w-44 rounded-l-lg border-y-2 border-l-2 border-primary1 bg-transparent px-2 focus:outline-none"
             >
               <option value="month">by Month</option>
@@ -67,19 +69,19 @@ export default function ModeDateBar({
             </select>
           </div>
           <div className="mr-auto flex w-full items-center justify-center">
-            {radioButton === "month" && (
+            {selectValue === "month" && (
               <input
                 type="month"
                 name="month"
-                value={fixMonthInputQuery(query)}
+                defaultValue={fixMonthInputQuery(query)}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}
-            {radioButton === "day" && (
+            {selectValue === "day" && (
               <input
                 type="date"
                 name="day"
-                value={fixDayInputQuery(query)}
+                defaultValue={fixDayInputQuery(query)}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}
