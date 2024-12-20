@@ -29,7 +29,6 @@ const fixDayInputQuery = (query: QueryProp["query"]) => {
   }
 };
 
-
 export default function ModeDateBar({
   isSearching,
   query: latestQuery,

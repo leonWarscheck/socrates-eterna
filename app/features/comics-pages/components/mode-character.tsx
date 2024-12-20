@@ -6,8 +6,8 @@ import type { Character, IsSearchingProp } from "../types";
 
 export default function ModeCharacter({ isSearching }: IsSearchingProp) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCharacter, setSelectedCharacter] = useState<Character | null>(
-    null,
+  const [selectedCharacter, setSelectedCharacter] = useState<Character | "">(
+    "",
   );
   const dropdownRef = useRef<HTMLDivElement | null>(null);
 

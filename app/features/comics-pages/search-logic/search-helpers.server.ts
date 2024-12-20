@@ -56,26 +56,26 @@ export async function getPotentialResultsAndQuery(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("search") || "";
 
-  const results = query ? await semanticSearch(query) : null;
+  const results = query ? await semanticSearch(query) : "";
 
   return { results, query };
 }
 
 export async function getPotentialDateResults(request: Request) {
   const url = new URL(request.url);
-  
+
   const dateType = url.searchParams.get("dateType") || "";
   const month = url.searchParams.get("month") || "";
   const day = url.searchParams.get("day") || "";
   const query = dateType === "month" ? month : dateType === "day" ? day : "";
-  const results = query ? await dateSearch(query) : null;
+  const results = query ? await dateSearch(query) : "";
 
   return { results, query };
 }
 
 export async function getLatestAndSavedResultsAndQuery(
   request: Request,
-  potentialResults: ComicCleaned[] | null,
+  potentialResults: ComicCleaned[] | "",
   potentialQuery: QueryProp["query"],
 ) {
   const session = await getSession(request.headers.get("Cookie"));
