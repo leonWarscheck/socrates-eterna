@@ -14,16 +14,14 @@ const index = pc.index<ComicMatchMetadata>("socrates-search");
 const namespace = index.namespace("socrates-namespace");
 
 export async function getPineconeResults(queryEmbeddings: number[]) {
-  const queryResponse = (
-    await namespace.query({
-      topK: 3,
-      vector: queryEmbeddings,
-      includeMetadata: true,
-      includeValues: false,
-    })
-  ).matches;
+  const queryResponse = await namespace.query({
+    topK: 3,
+    vector: queryEmbeddings,
+    includeMetadata: true,
+    includeValues: false,
+  });
 
-  const cleanResponse = getCleanResults(queryResponse);
+  const cleanResponse = getCleanResults(queryResponse.matches);
 
   return cleanResponse;
 }

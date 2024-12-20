@@ -80,7 +80,7 @@ export default function ModeCharacterBar({
             <div className="flex items-center">
               <img
                 src={`/characters/${selectedCharacter.image}`}
-                alt={`An image of ${selectedCharacter.name}`}
+                alt={`${selectedCharacter.name}`}
                 className="mr-3 h-7 w-7 object-cover"
               />
               <span>{selectedCharacter.name}</span>
@@ -110,6 +110,11 @@ export default function ModeCharacterBar({
             {characters.map((character) => (
               <li
                 role="button"
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" || event.key === " ")
+                    handleSelect(character);
+                }}
+                tabIndex={0}
                 key={character.name}
                 onClick={() => handleSelect(character)}
                 className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"

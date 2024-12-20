@@ -90,7 +90,7 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
                     <div className="m-2 aspect-square h-14">
                       <img
                         src={`/characters/${character.image}`}
-                        alt={`An image of ${character.name}`}
+                        alt={`Character: ${character.name}`}
                         className="h-full w-full object-cover"
                       />
                     </div>

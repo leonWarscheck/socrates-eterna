@@ -1,4 +1,4 @@
-import { Link, useLocation, useSearchParams } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import { useEffect, useState } from "react";
 
 export default function Footer() {

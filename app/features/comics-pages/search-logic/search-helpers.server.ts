@@ -1,4 +1,4 @@
-import { createCookieSessionStorage, json } from "@remix-run/node";
+import { createCookieSessionStorage } from "@remix-run/node";
 
 import {
   ComicCleaned,

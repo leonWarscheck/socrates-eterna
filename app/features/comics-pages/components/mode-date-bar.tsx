@@ -3,6 +3,32 @@ import { useEffect, useState } from "react";
 
 import { ModeBarProps, QueryProp } from "../types";
 
+const fixMonthInputQuery = (query: QueryProp["query"]) => {
+  const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
+  const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
+
+  if (!isMonthFormat && !isDayFormat) {
+    return "";
+  } else if (isDayFormat) {
+    return query.slice(0, 7);
+  } else {
+    return query;
+  }
+};
+
+const fixDayInputQuery = (query: QueryProp["query"]) => {
+  const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
+  const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
+
+  if (!isMonthFormat && !isDayFormat) {
+    return "";
+  } else if (isMonthFormat) {
+    return query + "-01";
+  } else {
+    return query;
+  }
+};
+
 export default function ModeDateBar({
   isSearching,
   query: latestQuery,
@@ -10,31 +36,6 @@ export default function ModeDateBar({
   const [radioButton, setRadioButton] = useState("month");
   const [query, setQuery] = useState(latestQuery);
 
-  const fixMonthInputQuery = (query: QueryProp["query"]) => {
-    const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
-    const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
-
-    if (!isMonthFormat && !isDayFormat) {
-      return "";
-    } else if (isDayFormat) {
-      return query.slice(0, 7);
-    } else {
-      return query;
-    }
-  };
-
-  const fixDayInputQuery = (query: QueryProp["query"]) => {
-    const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
-    const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
-
-    if (!isMonthFormat && !isDayFormat) {
-      return "";
-    } else if (isMonthFormat) {
-      return query + "-01";
-    } else {
-      return query;
-    }
-  };
 
   useEffect(() => {
     setQuery(latestQuery);
@@ -59,7 +60,7 @@ export default function ModeDateBar({
           <div className="ml-auto flex items-center">
             <select
               value={radioButton}
-              onChange={(e) => setRadioButton(e.target.value)}
+              onChange={(event) => setRadioButton(event.target.value)}
               className="h-10 w-full min-w-28 max-w-44 rounded-l-lg border-y-2 border-l-2 border-primary1 bg-transparent px-2 focus:outline-none"
             >
               <option value="month">by Month</option>
@@ -71,6 +72,7 @@ export default function ModeDateBar({
               <input
                 type="month"
                 name="month"
+                value={fixMonthInputQuery(query)}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}
@@ -78,6 +80,7 @@ export default function ModeDateBar({
               <input
                 type="date"
                 name="day"
+                value={fixDayInputQuery(query)}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}

@@ -18,15 +18,11 @@ async function asyncForEach(array, callback) {
   }
 }
 
-async function upsertData() {
-  try {
-    await asyncForEach(dataset, async (data) => {
-      await namespace.upsert([data]);
-    });
-    console.log("Upserting Dataset Done");
-  } catch (error) {
-    console.error("Error upserting dataset:", error);
-  }
+try {
+  await asyncForEach(dataset, async (data) => {
+    await namespace.upsert([data]);
+  });
+  console.log("Upserting Dataset Done");
+} catch (error) {
+  console.error("Error upserting dataset:", error);
 }
-
-upsertData();

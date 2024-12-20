@@ -11,7 +11,7 @@ export default function ModeDate({ isSearching }: IsSearchingProp) {
         <div className="ml-auto flex items-center">
           <select
             value={radioButton}
-            onChange={(e) => setRadioButton(e.target.value)}
+            onChange={(event) => setRadioButton(event.target.value)}
             className="h-10 w-full min-w-28 max-w-44 rounded-l-lg border-y-2 border-l-2 border-primary1 bg-transparent px-2 focus:outline-none"
           >
             <option value="month">by Month</option>
