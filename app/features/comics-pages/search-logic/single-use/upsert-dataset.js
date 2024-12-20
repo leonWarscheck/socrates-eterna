@@ -4,6 +4,7 @@ import path from "node:path";
 import { Pinecone } from "@pinecone-database/pinecone";
 
 const pc = new Pinecone({
+  // eslint-disable-next-line no-undef
   apiKey: process.env.PINECONE_API_KEY,
 });
 const index = pc.index("socrates-search");

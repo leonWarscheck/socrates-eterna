@@ -1,5 +1,5 @@
 import { RecordSparseValues, RecordValues } from "@pinecone-database/pinecone";
-import type { ComponentProps, ReactNode } from "react";
+import type { ReactNode } from "react";
 
 export type ModeProp = { mode: string };
 export type IsSearchingProp = { isSearching: boolean };

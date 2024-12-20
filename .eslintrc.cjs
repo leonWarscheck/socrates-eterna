@@ -45,6 +45,7 @@ module.exports = {
   },
 
   rules: {
+    "unicorn/no-null": "warn",
     "unicorn/no-abusive-eslint-disable": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
@@ -118,6 +119,12 @@ module.exports = {
             alwaysTryTypes: true,
           },
         },
+      },
+      rules: {
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          { vars: "all", args: "after-used", ignoreRestSiblings: true },
+        ],
       },
       extends: [
         "plugin:@typescript-eslint/recommended",

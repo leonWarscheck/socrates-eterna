@@ -109,26 +109,25 @@ export default function ModeCharacterBar({
           <ul className="absolute left-0 right-0 z-10 -mt-0.5 h-[40dvh] overflow-y-scroll rounded-b-lg border-x-2 border-b-2 border-primary1 bg-purple-1000">
             {characters.map((character) => (
               <li
-                role="button"
-                onKeyDown={(event) => {
-                  if (event.key === "Enter" || event.key === " ")
-                    handleSelect(character);
-                }}
-                tabIndex={0}
                 key={character.name}
-                onClick={() => handleSelect(character)}
                 className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"
               >
                 <Link
                   prefetch="intent"
                   to={`/results/character?search=${character.name}`}
-                  className="text-sm"
+                  className="w-full text-sm"
+                  onClick={() => handleSelect(character)}
+                  role="button"
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ")
+                      handleSelect(character);
+                  }}
                 >
                   <div className="flex items-center text-base">
                     <div className="m-2 aspect-square h-14">
                       <img
                         src={`/characters/${character.image}`}
-                        alt={`An image of ${character.name}`}
+                        alt={`Character: ${character.name}`}
                         className="h-full w-full object-cover"
                       />
                     </div>

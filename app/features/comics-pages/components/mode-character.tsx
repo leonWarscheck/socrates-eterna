@@ -51,7 +51,7 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
             <div className="flex items-center px-4">
               <img
                 src={`/characters/${selectedCharacter.image}`}
-                alt={`An image of ${selectedCharacter.name}`}
+                alt={`Character: ${selectedCharacter.name}`}
                 className="mr-3 h-7 w-7 object-cover"
               />
               <span>{selectedCharacter.name}</span>
@@ -79,12 +79,18 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
             {characters.map((character) => (
               <li
                 key={character.name}
-                onClick={() => handleSelect(character)}
                 className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"
               >
                 <Link
+                  prefetch="intent"
                   to={`/results/character?search=${character.name}`}
                   className="text-sm"
+                  onClick={() => handleSelect(character)}
+                  role="button"
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ")
+                      handleSelect(character);
+                  }}
                 >
                   <div className="flex items-center text-base">
                     <div className="m-2 aspect-square h-14">

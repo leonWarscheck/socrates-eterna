@@ -36,7 +36,6 @@ export default function ModeDateBar({
   const [radioButton, setRadioButton] = useState("month");
   const [query, setQuery] = useState(latestQuery);
 
-
   useEffect(() => {
     setQuery(latestQuery);
   }, []);

@@ -15,24 +15,20 @@ const transformData = (data) => {
   }));
 };
 
-const processComicData = async () => {
-  try {
-    const rawData = await fs.readFile(filePath, "utf8");
-    const comicData = JSON.parse(rawData);
+try {
+  const rawData = await fs.readFile(filePath, "utf8");
+  const comicData = JSON.parse(rawData);
 
-    const transformedData = transformData(comicData);
+  const transformedData = transformData(comicData);
 
-    await fs.writeFile(
-      transformedFilePath,
-      JSON.stringify(transformedData, null, 2),
-    );
+  await fs.writeFile(
+    transformedFilePath,
+    JSON.stringify(transformedData, null, 2),
+  );
 
-    console.log(
-      "Data transformation complete. Transformed data saved to comicData.json",
-    );
-  } catch (error) {
-    console.error("Error processing comic data:", error);
-  }
-};
-
-processComicData();
+  console.log(
+    "Data transformation complete. Transformed data saved to comicData.json",
+  );
+} catch (error) {
+  console.error("Error processing comic data:", error);
+}
