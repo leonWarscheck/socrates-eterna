@@ -1,1 +1,1 @@
-A search engine using Ai generated vectors/ embeddingt to find comics by related words, that are not included in their scripts.
+A search engine using Ai generated vectors/ embeddings, to find a comic by related words that are not included in its script.
