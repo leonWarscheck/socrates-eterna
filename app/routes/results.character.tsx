@@ -5,22 +5,27 @@ import ModeCharacterBar from "~/features/comics-pages/components/mode-character-
 import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
   commitSession,
-  getLatestAndSavedResultsAndQuery,
-  getPotentialResultsAndQuery,
+  getSyncedResultsAndQuery,
+  getNewResultsAndQuery,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
 
+// Recieves form data from mode-character and mode-character-bar.
 export async function loader({ request }: LoaderFunctionArgs) {
-  const { results: potentialResults, query: potentialQuery } =
-    await getPotentialResultsAndQuery(request);
-  const { latestResults, latestQuery, session } =
-    await getLatestAndSavedResultsAndQuery(
+  // Fetches (comic) results. 
+  const { results: newResults, query: newQuery } =
+    await getNewResultsAndQuery(request);
+
+  // Syncs results and query with session storage.
+  const { syncedResults, syncedQuery, session } =
+    await getSyncedResultsAndQuery(
       request,
-      potentialResults,
-      potentialQuery,
+      newResults,
+      newQuery,
     );
 
   return json(
-    { results: latestResults, query: latestQuery },
+    { results: syncedResults, query: syncedQuery },
+    // Sends the synced session header to the browser.
     { headers: { "Set-Cookie": await commitSession(session) } },
   );
 }

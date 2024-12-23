@@ -15,11 +15,7 @@ export type GetCleanMeaningQueryParams = {
   query: QueryProp["query"];
   characters: Character[];
 };
-export type GetLatestAndSavedResultsAndQueryParams = {
-  request: Request;
-  potentialResults: ComicCleaned[];
-  potentialQuery: QueryProp["query"];
-};
+
 
 export type Character = {
   name: string;

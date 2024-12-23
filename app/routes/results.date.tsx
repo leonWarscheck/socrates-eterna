@@ -5,22 +5,22 @@ import ModeDateBar from "~/features/comics-pages/components/mode-date-bar";
 import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
   commitSession,
-  getLatestAndSavedResultsAndQuery,
-  getPotentialDateResults,
+  getSyncedResultsAndQuery,
+  getNewDateResults,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
-  const { results: potentialResults, query: potentialQuery } =
-    await getPotentialDateResults(request);
-  const { latestResults, latestQuery, session } =
-    await getLatestAndSavedResultsAndQuery(
+  const { results: newResults, query: newQuery } =
+    await getNewDateResults(request);
+  const { syncedResults, syncedQuery, session } =
+    await getSyncedResultsAndQuery(
       request,
-      potentialResults,
-      potentialQuery,
+      newResults,
+      newQuery,
     );
 
   return json(
-    { results: latestResults, query: latestQuery },
+    { results: syncedResults, query: syncedQuery },
     { headers: { "Set-Cookie": await commitSession(session) } },
   );
 }

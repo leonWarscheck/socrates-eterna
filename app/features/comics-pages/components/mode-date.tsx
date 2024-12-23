@@ -39,6 +39,9 @@ export default function ModeDate({ isSearching }: IsSearchingProp) {
 
       <div className="mx-auto mt-6 flex gap-4">
         <button
+          // This submission is a `GET` request per default. In Remix, `GET`
+          // requests send form data as search params via the URL. The request
+          // is recieved by the loader in comics.date.
           type="submit"
           className="h-9 rounded-md bg-primary1 px-4 text-sm hover:bg-purple-600 sm1:text-sm"
           disabled={isSearching}

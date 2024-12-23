@@ -8,22 +8,22 @@ import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
   commitSession,
   getCleanMeaningQuery,
-  getLatestAndSavedResultsAndQuery,
-  getPotentialResultsAndQuery,
+  getSyncedResultsAndQuery,
+  getNewResultsAndQuery,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
 
 export async function loader({ request }: LoaderFunctionArgs) {
-  const { results: potentialResults, query: potentialQuery } =
-    await getPotentialResultsAndQuery(request);
-  const { latestResults, latestQuery, session } =
-    await getLatestAndSavedResultsAndQuery(
+  const { results: newResults, query: newQuery } =
+    await getNewResultsAndQuery(request);
+  const { syncedResults, syncedQuery, session } =
+    await getSyncedResultsAndQuery(
       request,
-      potentialResults,
-      potentialQuery,
+      newResults,
+      newQuery,
     );
-  const cleanQuery = getCleanMeaningQuery({ query: latestQuery, characters });
+  const cleanQuery = getCleanMeaningQuery({ query: syncedQuery, characters });
   return json(
-    { results: latestResults, query: cleanQuery },
+    { results: syncedResults, query: cleanQuery },
     { headers: { "Set-Cookie": await commitSession(session) } },
   );
 }

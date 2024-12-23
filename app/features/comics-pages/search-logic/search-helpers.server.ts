@@ -15,6 +15,7 @@ import { semanticSearch } from "./semantic-search-logic";
 export function getCleanResults(
   matches: ComicMatch[] | ComicLocal[],
 ): ComicCleaned[] {
+  // Returns trimmed results objects without unneeded keys.
   const cleanResults = matches.map((comic) => ({
     id: comic.id,
     metadata: {
@@ -30,11 +31,15 @@ export function getCleanMeaningQuery({
   query,
   characters,
 }: GetCleanMeaningQueryParams) {
+  // Filters out queries that could have come from character search to not get
+  // rendered in the meaning search input, when switching between search modes
+  // in the search bar.
   const characterBySearchName = characters.find(
     (character) => character.name === query,
   );
   const noCharacterQuery = characterBySearchName ? "" : query;
 
+  // Does the same for date queries.
   const datePattern = /^(?:\d{4}-\d{2}-\d{2}|\d{4}-\d{2})$/;
   const alsoNoDateQuery = datePattern.test(noCharacterQuery)
     ? ""
@@ -52,45 +57,44 @@ export const { getSession, commitSession } = createCookieSessionStorage({
   },
 });
 
-export async function getPotentialResultsAndQuery(request: Request) {
+export async function getNewResultsAndQuery(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("search") || "";
-
-  const results = query ? await semanticSearch(query) : "";
-
+  const results = query ? await semanticSearch(query) : ("" as const);
   return { results, query };
 }
 
-export async function getPotentialDateResults(request: Request) {
+export async function getNewDateResults(request: Request) {
   const url = new URL(request.url);
-
-  const dateType = url.searchParams.get("dateType") || "";
-  const month = url.searchParams.get("month") || "";
-  const day = url.searchParams.get("day") || "";
-  const query = dateType === "month" ? month : dateType === "day" ? day : "";
-  const results = query ? await dateSearch(query) : "";
-
+  const query =
+    url.searchParams.get("month") || url.searchParams.get("day") || "";
+  const results = query ? await dateSearch(query) : ("" as const);
   return { results, query };
 }
 
-export async function getLatestAndSavedResultsAndQuery(
+export async function getSyncedResultsAndQuery(
   request: Request,
-  potentialResults: ComicCleaned[] | "",
-  potentialQuery: QueryProp["query"],
+  newResults: ComicCleaned[] | "",
+  newQuery: QueryProp["query"],
 ) {
+  // Recieves session from browser.
   const session = await getSession(request.headers.get("Cookie"));
 
+  // If newResults are available, returns and saves them to session,
+  // else returns backup results that got saved before.
   const savedResults = session.get("savedResults");
-  const latestResults = potentialResults || savedResults;
-  if (potentialResults) {
-    session.set("savedResults", latestResults);
+  const syncedResults = newResults || savedResults;
+  if (newResults) {
+    session.set("savedResults", syncedResults);
   }
 
   const savedQuery = session.get("savedQuery");
-  const latestQuery = potentialQuery || savedQuery;
-  if (potentialQuery) {
-    session.set("savedQuery", latestQuery);
+  const syncedQuery = newQuery || savedQuery;
+  if (newQuery) {
+    session.set("savedQuery", syncedQuery);
   }
 
-  return { latestResults, latestQuery, session };
+  // Also returns the newly modified session, as we can only push it to the
+  // browser from the loader return.
+  return { syncedResults, syncedQuery, session };
 }

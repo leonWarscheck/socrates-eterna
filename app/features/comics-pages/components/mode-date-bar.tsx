@@ -31,13 +31,13 @@ const fixDayInputQuery = (query: QueryProp["query"]) => {
 
 export default function ModeDateBar({
   isSearching,
-  query: latestQuery,
+  query: syncedQuery,
 }: ModeBarProps) {
   const [selectValue, setSelectValue] = useState("month");
-  const [query, setQuery] = useState(latestQuery);
+  const [query, setQuery] = useState(syncedQuery);
 
   useEffect(() => {
-    setQuery(latestQuery);
+    setQuery(syncedQuery);
   }, []);
 
   return (

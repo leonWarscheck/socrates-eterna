@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 export default function Footer() {
   const location = useLocation();
 
+  // Snap should only be active when on about page, because it is the only page
+  // that has snaps itself to counteract this footer snap. On other pages it is
+  // disabling any kind of scroll away from the footer.
   const [isSnapEnabled, setIsSnapEnabled] = useState(false);
 
   useEffect(() => {

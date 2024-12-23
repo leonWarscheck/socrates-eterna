@@ -16,6 +16,7 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
     setIsOpen(false);
   };
 
+    // Closes the dropdown menu when clicking outside of it.
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -82,6 +83,7 @@ export default function ModeCharacter({ isSearching }: IsSearchingProp) {
                 className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"
               >
                 <Link
+                  // The Url of this navigation is recieved by the loader in results.character.
                   prefetch="intent"
                   to={`/results/character?search=${character.name}`}
                   className="text-sm"
