@@ -3,6 +3,10 @@ import path from "node:path";
 
 import { Pinecone } from "@pinecone-database/pinecone";
 
+
+// Upserts the `comic-data.json` dataset (now in the right datashape and
+// including the embeddings) to Pinecone DB.
+
 const pc = new Pinecone({
   // eslint-disable-next-line no-undef
   apiKey: process.env.PINECONE_API_KEY,

@@ -8,14 +8,15 @@ export type QueryProp = { query: string };
 export type ResultsProp = { results: ComicCleaned[] };
 
 export type ModeBarProps = IsSearchingProp & QueryProp;
+
 export type SearchComponentParentProps = ChildrenProp &
   IsSearchingProp &
   ModeProp;
+
 export type GetCleanMeaningQueryParams = {
   query: QueryProp["query"];
   characters: Character[];
 };
-
 
 export type Character = {
   name: string;
@@ -39,7 +40,6 @@ export type ComicMatchMetadata = {
   content: string;
 };
 
-// passed into getCleanResults from dateSearch
 export type ComicLocal = {
   id: string;
   values: number[];

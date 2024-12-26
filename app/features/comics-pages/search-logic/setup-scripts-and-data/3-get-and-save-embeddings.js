@@ -3,6 +3,11 @@ import path from "node:path";
 
 import openai from "openai";
 
+// Sends `comic.metadata.content` (containing comic scripts and character names)
+// of all comic data objects to OpenAI embeddings API. Then returns the
+// embeddings/ vector data and writes it into the local `comic-data.json` at
+// `comic.values`.
+
 const filePath = path.resolve("../../data/comic-data.json");
 
 const openaiClient = new openai({

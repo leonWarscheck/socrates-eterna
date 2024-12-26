@@ -5,6 +5,7 @@ import { redirect } from "@vercel/remix";
 
 import ComicsPage from "~/features/comics-pages/components/comics-page";
 import ModeMeaning from "~/features/comics-pages/components/mode-meaning";
+import useIsSearching from "~/features/comics-pages/use-is-searching";
 
 export const loader: LoaderFunction = async ({
   request,
@@ -18,8 +19,7 @@ export const loader: LoaderFunction = async ({
 };
 
 export default function ComicsMeaningRoute() {
-  const navigation = useNavigation();
-  const isSearching: boolean = !!navigation.location?.search;
+  const isSearching: boolean = useIsSearching();
   const mode: string = "meaning";
 
   return (

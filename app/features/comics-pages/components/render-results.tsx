@@ -3,6 +3,11 @@ import { format } from "date-fns";
 import type { ResultsProp } from "../types";
 import ScrollToTopButton from "./scroll-to-top-button";
 
+// Results comic data comes from Pinecone DB (see `search-logic` folder).
+// Results does not include the image files themselfes, but file paths, which we
+// use to load the corresponding images from the public folder (see `<img
+// src={}/>`). This way, as the dataset is not too big, we can minimize the
+// payload from external storage.
 export default function RenderResults({ results }: ResultsProp) {
   return (
     <div className="mx-auto flex w-full max-w-7xl">

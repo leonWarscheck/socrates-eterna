@@ -1,17 +1,23 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-
 import { v4 as uuidv4 } from "uuid";
 
-// Define the path to your JSON file
-const filePath = path.resolve("../data/booksData.json");
-const transformedFilePath = path.resolve("../data/booksData.json");
+// Optional script to convert existing comic data in to datashape required by
+// pinecone. Only needed when migrating from other database or at initial setup.
 
-// Function to transform the data
+const filePath = path.resolve("../data/comicData2.json");
+const transformedFilePath = path.resolve("../data/transformedComicData.json");
+
 const transformData = (data) => {
   return data.map((item) => ({
     id: uuidv4(),
-    ...item,
+    values: [],
+    metadata: {
+      filename: item.filename,
+      published: item.publishedAt,
+      title: item.title,
+      content: item.content,
+    },
   }));
 };
 
@@ -27,7 +33,7 @@ try {
   );
 
   console.log(
-    "Data transformation complete. Transformed data saved to comicData.json",
+    "Data transformation complete. Transformed data saved to transformedComicData.json",
   );
 } catch (error) {
   console.error("Error processing comic data:", error);

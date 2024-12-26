@@ -1,5 +1,7 @@
 import openai from "openai";
 
+// Optional script to test API connection.
+
 const openaiClient = new openai({
   // eslint-disable-next-line no-undef
   apiKey: process.env.OPENAI_API_KEY,

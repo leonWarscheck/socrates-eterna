@@ -6,6 +6,8 @@ import { getCleanResults } from "./search-helpers.server";
 
 const { PINECONE_API_KEY } = process.env;
 
+// Ensures value exists on running the app. Typescript cannot check environment
+// variables so it would always throw a type error without this measure.
 invariant(PINECONE_API_KEY, "PINECONE API KEY is required");
 
 const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
@@ -21,6 +23,8 @@ export async function getPineconeResults(queryEmbeddings: number[]) {
     includeValues: false,
   });
 
+  // Trimming unneeded keys additionally returned by Pinecone DB like
+  // `sparseValues`, `values` and `score`.
   const cleanResponse = getCleanResults(queryResponse.matches);
 
   return cleanResponse;

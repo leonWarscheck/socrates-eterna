@@ -8,10 +8,12 @@ import {
   getSyncedResultsAndQuery,
   getNewResultsAndQuery,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
+import useIsSearching from "~/features/comics-pages/use-is-searching";
 
-// Recieves form data from mode-character and mode-character-bar.
+// Recieves form data/ search params from mode-character and mode-character-bar.
 export async function loader({ request }: LoaderFunctionArgs) {
-  // Fetches (comic) results. 
+
+  // Fetches (comic) results matching the character query. 
   const { results: newResults, query: newQuery } =
     await getNewResultsAndQuery(request);
 
@@ -25,6 +27,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
   return json(
     { results: syncedResults, query: syncedQuery },
+
     // Sends the synced session header to the browser.
     { headers: { "Set-Cookie": await commitSession(session) } },
   );
@@ -32,8 +35,7 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 export default function ResultsMeaningRoute() {
   const { results, query } = useLoaderData<typeof loader>();
-  const navigation = useNavigation();
-  const isSearching = !!navigation.location?.search;
+  const isSearching = useIsSearching();
   const mode = "character";
 
   return (

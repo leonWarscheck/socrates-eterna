@@ -15,6 +15,8 @@ export default function ModeMeaning({ isSearching }: IsSearchingProperty) {
   const [placeholder, setPlaceholder] = useState("");
   const indexRef = useRef(0);
 
+  // Sets different descriptive placeholders, which change in rotation on
+  // clicking the input.
   const handleFocus = () => {
     indexRef.current = ++indexRef.current % placeholders.length;
     setPlaceholder(placeholders[indexRef.current]);

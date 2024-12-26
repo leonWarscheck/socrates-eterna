@@ -14,6 +14,8 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
   const [placeholder, setPlaceholder] = useState("");
   const indexRef = useRef(1);
 
+  // Sets different descriptive placeholders, which change in rotation on
+  // clicking the input.
   const handleFocus = () => {
     indexRef.current = (indexRef.current + 1) % placeholders.length;
     setPlaceholder(placeholders[indexRef.current]);

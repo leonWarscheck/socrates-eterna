@@ -1,3 +1,4 @@
+// Keywords for `random-comic-button`, the equivalent for "Lucky Search" by Google.
 export const keywords = [
   "virtue",
   "wisdom",

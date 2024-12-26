@@ -64,7 +64,7 @@ export async function getNewResultsAndQuery(request: Request) {
   return { results, query };
 }
 
-export async function getNewDateResults(request: Request) {
+export async function getNewDateResultsAndQuery(request: Request) {
   const url = new URL(request.url);
   const query =
     url.searchParams.get("month") || url.searchParams.get("day") || "";
