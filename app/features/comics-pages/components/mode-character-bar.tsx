@@ -1,7 +1,7 @@
 import { Link } from "@remix-run/react";
 import { useEffect, useRef, useState } from "react";
 
-import characters from "../characters.json";
+import characters from "../search-logic/setup-scripts-and-data/characters.json";
 import type { Character, ModeBarProps } from "../types";
 
 export default function ModeCharacterBar({

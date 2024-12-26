@@ -2,7 +2,7 @@ import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, useNavigation } from "@remix-run/react";
 
-import characters from "~/features/comics-pages/characters.json";
+import characters from "~/features/comics-pages/search-logic/setup-scripts-and-data/characters.json";
 import ModeMeaningBar from "~/features/comics-pages/components/mode-meaning-bar";
 import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
