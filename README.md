@@ -17,4 +17,4 @@ You could even describe what you are looking for in full sentences, but single w
 
 
 
-Explore the meaning-based search in action: socrates-eterna.com/comics/meaning
+Explore the meaning-based search in action: [socrates-eterna.com/comics/meaning](https://socrates-eterna.com/comics/meaning)
