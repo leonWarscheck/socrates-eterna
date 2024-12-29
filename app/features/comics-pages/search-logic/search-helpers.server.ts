@@ -68,8 +68,8 @@ export const { getSession, commitSession } = createCookieSessionStorage({
 });
 
 /**
- * Gets query from request object and calls `semanticSearch` to fetch (comic)
- * results matching the query.
+ * Gets query from request object and calls the core engine `semanticSearch` to
+ * fetch (comic) results matching the query.
  *
  * @param request - Request object from loaders in `results.meaning` and
  * `results.character`.
