@@ -27,9 +27,10 @@ https://solid-meme-g44rxwpx677gcvr66.github.dev/
 
 There you have an instant, full IDE in your browser, including:
 
-- `cmd + click` to navigate to function definitions etc.
+- `cmd + click` navigation to function definitions etc.
 - TSDoc comments on hovering
 - Type Information on hovering
+- full search functionality
 
 You can find the core search engine and results processing in `/app/features/comics-pages/search-logic/`
 
