@@ -19,18 +19,9 @@ You could even describe what you are looking for in full sentences, but single w
 
 Explore the meaning-based search in action: [socrates-eterna.com/comics/meaning](https://socrates-eterna.com/comics/meaning)
 
-## Codebase Structure / Core Engine
+## Core Engine
 
-The best way to explore the codebase is to open it as a codespace at:
 
-https://solid-meme-g44rxwpx677gcvr66.github.dev/
-
-There you have an instant, full IDE in your browser, including:
-
-- `cmd + click` navigation to function definitions etc.
-- TSDoc comments on hovering
-- Type Information on hovering
-- full search functionality
 
 You can find the core search engine and results processing in `/app/features/comics-pages/search-logic/`
 
@@ -53,3 +44,16 @@ routes/
 ├── (results.date.tsx)
 └── results.meaning.tsx
 ```
+
+## Explore the Codebase
+
+The best way to explore the codebase is to open it as a codespace at:
+
+https://solid-meme-g44rxwpx677gcvr66.github.dev/
+
+There you have an instant, full IDE in your browser, including:
+
+- `cmd + click` navigation to function definitions etc.
+- TSDoc comments on hovering
+- Type Information on hovering
+- full search functionality
