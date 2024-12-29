@@ -23,7 +23,9 @@ export type Character = {
   image: string;
 };
 
-// comic types
+/* 
+comic types
+*/
 
 export type ComicMatch = {
   id: string;

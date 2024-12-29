@@ -11,11 +11,17 @@ import {
 import { dateSearch } from "./date-search-logic";
 import { semanticSearch } from "./semantic-search-logic";
 
-// helpers for cleaning up results and query
+/*
+helpers for cleaning up results and query
+*/
+
+/**
+ * Trimms unneeded keys that get additionally returned in `dateSearch` or by
+ * Pinecone DB like `values`, sparseValues` and `score`.
+ */
 export function getCleanResults(
   matches: ComicMatch[] | ComicLocal[],
 ): ComicCleaned[] {
-  // Returns trimmed results objects without unneeded keys.
   const cleanResults = matches.map((comic) => ({
     id: comic.id,
     metadata: {
@@ -27,19 +33,20 @@ export function getCleanResults(
   return cleanResults;
 }
 
+/**
+ * Filters out queries that could be coming from character search or date
+ * search, to prevent them from being rendered in the meaning search input, when
+ * switching between search modes in the search bar.
+ */
 export function getCleanMeaningQuery({
   query,
   characters,
 }: GetCleanMeaningQueryParams) {
-  // Filters out queries that could have come from character search to not get
-  // rendered in the meaning search input, when switching between search modes
-  // in the search bar.
   const characterBySearchName = characters.find(
     (character) => character.name === query,
   );
   const noCharacterQuery = characterBySearchName ? "" : query;
 
-  // Does the same for date queries.
   const datePattern = /^(?:\d{4}-\d{2}-\d{2}|\d{4}-\d{2})$/;
   const alsoNoDateQuery = datePattern.test(noCharacterQuery)
     ? ""
@@ -48,7 +55,10 @@ export function getCleanMeaningQuery({
   return alsoNoDateQuery;
 }
 
-// helpers for managing session storage of results and query
+/*
+helpers for managing session storage of results and query
+*/
+
 export const { getSession, commitSession } = createCookieSessionStorage({
   cookie: {
     name: "__session",
@@ -57,6 +67,14 @@ export const { getSession, commitSession } = createCookieSessionStorage({
   },
 });
 
+/**
+ * Gets query from request object and calls semanticSearch to fetch (comic)
+ * results matching the query.
+ *
+ * @param request - Request object from loaders in results.meaning and
+ * results.character.
+ * @returns The comic results and the query.
+ */
 export async function getNewResultsAndQuery(request: Request) {
   const url = new URL(request.url);
   const query = url.searchParams.get("search") || "";
@@ -64,6 +82,13 @@ export async function getNewResultsAndQuery(request: Request) {
   return { results, query };
 }
 
+/**
+ * Gets date query from request object and calls dateSearch to fetch (comic)
+ * results matching the date query.
+ *
+ * @param request - Request object from loader in result.date.
+ * @returns The comic results and the date query.
+ */
 export async function getNewDateResultsAndQuery(request: Request) {
   const url = new URL(request.url);
   const query =
@@ -72,12 +97,15 @@ export async function getNewDateResultsAndQuery(request: Request) {
   return { results, query };
 }
 
+/**
+ * Syncronizes results and query with session storage.
+ */
 export async function getSyncedResultsAndQuery(
   request: Request,
   newResults: ComicCleaned[] | "",
   newQuery: QueryProp["query"],
 ) {
-  // Recieves session from browser.
+  // Recieves session from browser via the request object.
   const session = await getSession(request.headers.get("Cookie"));
 
   // If newResults are available, returns and saves them to session,

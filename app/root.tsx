@@ -40,6 +40,10 @@ export default function App() {
   return <Outlet />;
 }
 
+/*
+route error handling
+*/
+
 function ErrorPage({
   title,
   message,
@@ -69,6 +73,12 @@ function ErrorPage({
   );
 }
 
+/**
+ * Displays route error messages based on the error type and status retrieved from
+ * `useRouteError` hook.
+ *
+ * @returns The ErrorPage component with a message related to the error.
+ */
 export function ErrorBoundary() {
   const error = useRouteError();
 

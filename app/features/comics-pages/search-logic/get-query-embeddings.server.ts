@@ -6,8 +6,10 @@ const openai = new OpenAI({
   organization: "org-jRQ76nlnndQiu2Oyzq5jxe8p",
 });
 
- // Sends query to OpenAI embeddings API, which converts the query into an
-  // embedding/ vector and returns it.
+/**
+ * Sends query to OpenAI embeddings API, which converts the query into an
+ * embedding/vector and returns it.
+ */
 export async function getQueryEmbeddings(query: string) {
   const response = await openai.embeddings.create({
     model: "text-embedding-ada-002",

@@ -3,7 +3,6 @@ import path from "node:path";
 
 import { Pinecone } from "@pinecone-database/pinecone";
 
-
 // Upserts the `comic-data.json` dataset (now in the right datashape and
 // including the embeddings) to Pinecone DB.
 

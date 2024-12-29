@@ -3,11 +3,19 @@ import { format } from "date-fns";
 import type { ResultsProp } from "../types";
 import ScrollToTopButton from "./scroll-to-top-button";
 
-// Results comic data comes from Pinecone DB (see `search-logic` folder).
-// Results does not include the image files themselfes, but file paths, which we
-// use to load the corresponding images from the public folder (see `<img
-// src={}/>`). This way, as the dataset is not too big, we can minimize the
-// payload from external storage.
+/**
+ * Renders a list of comics, including their publication date and title.
+ *
+ * Results comic data comes from Pinecone DB (see `search-logic` folder).
+ * Results does not include the image files themselfes, but file paths, which we
+ * use to load the corresponding images from the public folder (see `<img
+ * src={}/>`). This way, as the dataset is not too big, we can minimize the
+ * payload from external storage.
+ *
+ * @param results - An array of comic objects fetched from Pinecone DB.
+ * @returns A rendered list of comic results with their images, titles, and
+ * publication dates.
+ */
 export default function RenderResults({ results }: ResultsProp) {
   return (
     <div className="mx-auto flex w-full max-w-7xl">

@@ -15,6 +15,11 @@ const pc = new Pinecone({ apiKey: PINECONE_API_KEY });
 const index = pc.index<ComicMatchMetadata>("socrates-search");
 const namespace = index.namespace("socrates-namespace");
 
+/**
+ * Sends vectorized query to Pinecone DB, which compares it to the embeddings of
+ * the comic data we upserted. It then returns a set amount of the closest
+ * matching comics.
+ */
 export async function getPineconeResults(queryEmbeddings: number[]) {
   const queryResponse = await namespace.query({
     topK: 3,
@@ -23,8 +28,6 @@ export async function getPineconeResults(queryEmbeddings: number[]) {
     includeValues: false,
   });
 
-  // Trimming unneeded keys additionally returned by Pinecone DB like
-  // `sparseValues`, `values` and `score`.
   const cleanResponse = getCleanResults(queryResponse.matches);
 
   return cleanResponse;

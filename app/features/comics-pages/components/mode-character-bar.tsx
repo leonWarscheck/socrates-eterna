@@ -19,10 +19,10 @@ export default function ModeCharacterBar({
     setIsOpen(false);
   };
 
-  // Sets the selected character (which is shown on closed select element) with
-  // query, if query matches one of the characters. This is needed to keep the
-  // select ui up to date even after switching between search modes (without a
-  // new query) in the search bar.
+  // Sets the selected character to be shown on closed select element, if query
+  // matches one of the characters. This is needed to keep the select-ui up to
+  // date, even after switching between search modes in the search bar, when
+  // there is no new query yet.
   useEffect(() => {
     if (searchName) {
       const characterBySearchName = characters.find(
@@ -34,7 +34,6 @@ export default function ModeCharacterBar({
     }
   }, [searchName]);
 
-  // Closes the dropdown menu when clicking outside of it.
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -118,7 +117,7 @@ export default function ModeCharacterBar({
                 className="cursor-pointer odd:bg-purple-950 hover:bg-primary1"
               >
                 <Link
-                  // The Url of this navigation is recieved by the loader in results.character.
+                  // The URL of this navigation is passed to the loader in results.character (as part of a request).
                   prefetch="intent"
                   to={`/results/character?search=${character.name}`}
                   className="w-full text-sm"

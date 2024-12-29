@@ -1,34 +1,27 @@
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
-import { useLoaderData, useNavigation } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 
-import characters from "~/features/comics-pages/search-logic/setup-scripts-and-data/characters.json";
 import ModeMeaningBar from "~/features/comics-pages/components/mode-meaning-bar";
 import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
   commitSession,
   getCleanMeaningQuery,
-  getSyncedResultsAndQuery,
   getNewResultsAndQuery,
+  getSyncedResultsAndQuery,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
+import characters from "~/features/comics-pages/search-logic/setup-scripts-and-data/characters.json";
 import useIsSearching from "~/features/comics-pages/use-is-searching";
 
-// Recieves form data/ search params from mode-meaning and mode-meaning-bar.
+//Receives URL request including form data as search params from `mode-meaning`
+//and `mode-meaning-bar`.
 export async function loader({ request }: LoaderFunctionArgs) {
-
-  // Fetches (comic) results matching the meaning query. 
   const { results: newResults, query: newQuery } =
     await getNewResultsAndQuery(request);
 
-  // Syncs results and query with session storage.
   const { syncedResults, syncedQuery, session } =
-    await getSyncedResultsAndQuery(
-      request,
-      newResults,
-      newQuery,
-    );
+    await getSyncedResultsAndQuery(request, newResults, newQuery);
 
-  // Stops date and character queries from being rendered in the meaning search input.
   const cleanQuery = getCleanMeaningQuery({ query: syncedQuery, characters });
 
   return json(

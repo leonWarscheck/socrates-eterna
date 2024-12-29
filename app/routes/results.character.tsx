@@ -1,29 +1,23 @@
 import { json, LoaderFunctionArgs } from "@remix-run/node";
-import { useLoaderData, useNavigation } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 
 import ModeCharacterBar from "~/features/comics-pages/components/mode-character-bar";
 import ResultsPage from "~/features/comics-pages/components/results-page";
 import {
   commitSession,
-  getSyncedResultsAndQuery,
   getNewResultsAndQuery,
+  getSyncedResultsAndQuery,
 } from "~/features/comics-pages/search-logic/search-helpers.server";
 import useIsSearching from "~/features/comics-pages/use-is-searching";
 
-// Recieves form data/ search params from mode-character and mode-character-bar.
+// Receives URL request including form data as search params from
+// `mode-character` and `mode-character-bar`.
 export async function loader({ request }: LoaderFunctionArgs) {
-
-  // Fetches (comic) results matching the character query. 
   const { results: newResults, query: newQuery } =
     await getNewResultsAndQuery(request);
 
-  // Syncs results and query with session storage.
   const { syncedResults, syncedQuery, session } =
-    await getSyncedResultsAndQuery(
-      request,
-      newResults,
-      newQuery,
-    );
+    await getSyncedResultsAndQuery(request, newResults, newQuery);
 
   return json(
     { results: syncedResults, query: syncedQuery },

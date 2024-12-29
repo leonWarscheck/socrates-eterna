@@ -1,10 +1,14 @@
-import comicData from "./setup-scripts-and-data/comic-data.json";
 import { getCleanResults } from "./search-helpers.server";
+import comicData from "./setup-scripts-and-data/comic-data.json";
 
-// Sorts a copy of local mirror or comic dataset by time distance to the query date and
-// returns the closest comics objects (trimmed of anything unneeded for
-// rendering the render-results component). Date search is independent of
-// embeddings and Pinecone DB. 
+/**
+ *
+ * Sorts a copy of a local mirror of the comic dataset by time distance to the
+ * query date. It returns the closest comics objects (trimmed of anything
+ * unneeded for rendering the render-results component).
+ *
+ * Date search is independent of embeddings and Pinecone DB.
+ */
 export async function dateSearch(query: string, limit = 3) {
   const targetDate = new Date(query).getTime();
   const closestToDateComics = [...comicData]

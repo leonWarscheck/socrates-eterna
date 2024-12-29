@@ -42,6 +42,9 @@ export default function ModeMeaning({ isSearching }: IsSearchingProperty) {
 
       <div className="mx-auto mt-6 flex h-9 space-x-4">
         <button
+          // This submission is a `GET` request per default. In Remix, `GET`
+          // requests send form data as search params via the URL. The request
+          // is recieved by the loader in comics.meaning.
           type="submit"
           disabled={isSearching}
           className={`rounded-md bg-primary1 px-4 py-2 text-sm hover:bg-purple-600`}

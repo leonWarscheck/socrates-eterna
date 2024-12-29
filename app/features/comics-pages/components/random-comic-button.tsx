@@ -6,7 +6,7 @@ import { keywords } from "~/features/comics-pages/search-logic/setup-scripts-and
 export default function RandomComicButton() {
   const [keyword, setKeyword] = useState("");
 
-  // Returns random keyword from a list of topics related to socrates. On
+  // Sets random keyword from a list of topics related to socrates. On
   // clicking the Link-(button), the keywords are then used as the query,
   // similar to the 'Lucky Search' feature in google search.
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function RandomComicButton() {
 
   return (
     <Link
-      // Indirectly sends the keyword query to the loader in results.meaning.
+      // Sends the keyword query to the loader in results.meaning (via the URL request).
       to={`/results/meaning?search=${keyword}`}
       className="rounded-md bg-primary1 px-4 pt-2 text-sm hover:bg-purple-600 sm1:text-sm"
     >

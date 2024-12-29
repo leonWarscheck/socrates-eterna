@@ -1,5 +1,7 @@
+/* eslint-disable */
 import fs from "node:fs/promises";
 import path from "node:path";
+
 import { v4 as uuidv4 } from "uuid";
 
 // Optional script to convert existing comic data in to datashape required by

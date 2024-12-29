@@ -59,6 +59,9 @@ export default function ModeMeaningBar({ isSearching, query }: ModeBarProps) {
 
       <div className="mr-auto hidden h-10 shrink-0 md1:flex">
         <button
+          // This submission is a `GET` request per default. In Remix, `GET`
+          // requests send form data as search params via the URL. The request
+          // is recieved by the loader in results.meaning.
           type="submit"
           disabled={isSearching}
           className="rounded-r-lg bg-primary1 px-4 text-white hover:bg-purple-600"

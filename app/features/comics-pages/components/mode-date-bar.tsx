@@ -3,29 +3,48 @@ import { useEffect, useState } from "react";
 
 import { ModeBarProps, QueryProp } from "../types";
 
-const fixMonthInputQuery = (query: QueryProp["query"]) => {
+/**
+ * Adjusts date query string to match day or month format, or if not a date
+ * query returns "".
+ *
+ * Empty string renders the date inputs in their empty default state so a new,
+ * valid date query can be selected.
+ *
+ * Has to be rendered clientside, because otherwise we would have to pass additional
+ * `dayQuery` and `monthQuery` props through the whole component chain.
+ *
+ * @param query - The input query string, expected to be in `YYYY-MM` or
+ * `YYYY-MM-DD` format.
+ * @param dateInputType - Flag for intended format: `"day"` or `"month"`.
+ * @returns A string formatted as `YYYY-MM` or `YYYY-MM-DD`, or an empty string
+ * if the query is invalid.
+ */
+const fixDateInputQuery = (
+  query: QueryProp["query"],
+  dateInputType: "day" | "month",
+) => {
   const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
   const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
 
-  if (!isMonthFormat && !isDayFormat) {
-    return "";
-  } else if (isDayFormat) {
-    return query.slice(0, 7);
-  } else {
-    return query;
-  }
-};
-
-const fixDayInputQuery = (query: QueryProp["query"]) => {
-  const isMonthFormat = /^\d{4}-\d{2}$/.test(query);
-  const isDayFormat = /^\d{4}-\d{2}-\d{2}$/.test(query);
-
-  if (!isMonthFormat && !isDayFormat) {
-    return "";
-  } else if (isMonthFormat) {
-    return query + "-01";
-  } else {
-    return query;
+  switch (true) {
+    case !isMonthFormat && !isDayFormat: {
+      return "";
+    }
+    case isDayFormat && dateInputType === "month": {
+      return query.slice(0, 7);
+    }
+    case isMonthFormat && dateInputType === "day": {
+      return query + "-01";
+    }
+    case isDayFormat && dateInputType === "day": {
+      return query;
+    }
+    case isMonthFormat && dateInputType === "month": {
+      return query;
+    }
+    default: {
+      return "";
+    }
   }
 };
 
@@ -72,7 +91,7 @@ export default function ModeDateBar({
               <input
                 type="month"
                 name="month"
-                defaultValue={fixMonthInputQuery(query)}
+                defaultValue={fixDateInputQuery(query, "month")}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}
@@ -80,13 +99,16 @@ export default function ModeDateBar({
               <input
                 type="date"
                 name="day"
-                defaultValue={fixDayInputQuery(query)}
+                defaultValue={fixDateInputQuery(query, "day")}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
               />
             )}
           </div>
         </div>
         <button
+          // This submission is a `GET` request per default. In Remix, `GET`
+          // requests send form data as search params via the URL. The request
+          // is recieved by the loader in results.date.
           type="submit"
           className="h-10 rounded-r-lg bg-primary1 px-2 hover:bg-purple-600 xs1:px-4"
           disabled={isSearching}
