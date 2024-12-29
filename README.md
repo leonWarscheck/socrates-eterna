@@ -24,7 +24,7 @@ Explore the meaning-based search in action: [socrates-eterna.com/comics/meaning]
 ## Codebase Structure / Core Engine
 
 The best way to explore the codebase is to open it as a codespace at:
-https://stunning-potato-7vv574x7w75ghxx59.github.dev/
+https://solid-meme-g44rxwpx677gcvr66.github.dev/
 
 There you have an instant, full IDE in your browser, including:
 
