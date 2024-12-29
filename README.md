@@ -11,8 +11,45 @@ For example:
 
 ![screen-recording of meaning search terms in action](public/main/meaning-search-screen-recording.gif)
 
-The search enginge works, **eventhough none of the search terms are contained in the actual scripts of the comics**. That's because it creates mathematical representations from the scripts and your query and then compares their "numerical distance". The closer the distance the more a comic and a search term are related by meaning.
+The search enginge works, **eventhough none of the search terms are contained in the actual scripts of the comics**.
+
+That's because it creates mathematical representations from the scripts and your query and then compares their "mathematical distance". The closer the distance the more a comic and a search term are related by meaning.
 
 You could even describe what you are looking for in full sentences, but single words are often enough already.
 
 Explore the meaning-based search in action: [socrates-eterna.com/comics/meaning](https://socrates-eterna.com/comics/meaning)
+
+---
+
+## Codebase Structure / Core Engine
+
+The best way to explore the codebase is to open it as a codespace at:
+https://stunning-potato-7vv574x7w75ghxx59.github.dev/
+
+There you have an instant, full IDE in your browser, including:
+
+- `cmd + click` to navigate to function definitions etc.
+- TSDoc comments on hovering
+- Type Information on hovering
+
+You can find the core search engine and results processing in `/app/features/comics-pages/search-logic/`
+
+```
+search-logic/
+├── (setup-scripts-and-data/)
+├── (date-search-logic.ts)
+├── get-pinecone-results.server.ts
+├── get-query-embeddings.server.ts
+├── search-helpers.server.ts
+└── semantic-search-logic.ts
+```
+
+...which are implemented in the following files in `/app/routes/`
+
+```
+routes/
+├── ...
+├── (results.character.tsx)
+├── (results.date.tsx)
+└── results.meaning.tsx
+```

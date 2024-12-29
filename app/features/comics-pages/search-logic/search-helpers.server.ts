@@ -68,11 +68,11 @@ export const { getSession, commitSession } = createCookieSessionStorage({
 });
 
 /**
- * Gets query from request object and calls semanticSearch to fetch (comic)
+ * Gets query from request object and calls `semanticSearch` to fetch (comic)
  * results matching the query.
  *
- * @param request - Request object from loaders in results.meaning and
- * results.character.
+ * @param request - Request object from loaders in `results.meaning` and
+ * `results.character`.
  * @returns The comic results and the query.
  */
 export async function getNewResultsAndQuery(request: Request) {
@@ -83,10 +83,10 @@ export async function getNewResultsAndQuery(request: Request) {
 }
 
 /**
- * Gets date query from request object and calls dateSearch to fetch (comic)
+ * Gets date query from request object and calls `dateSearch` to fetch (comic)
  * results matching the date query.
  *
- * @param request - Request object from loader in result.date.
+ * @param request - Request object from loader in `result.date`.
  * @returns The comic results and the date query.
  */
 export async function getNewDateResultsAndQuery(request: Request) {
