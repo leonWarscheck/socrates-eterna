@@ -34,9 +34,12 @@ export function getCleanResults(
 }
 
 /**
- * Filters out queries that could be coming from character search or date
- * search, to prevent them from being rendered in the meaning search input, when
- * switching between search modes in the search bar.
+ * Removes queries coming from character or date search, to prevent them from
+ * being rendered in the meaning search input. 
+ *
+ * @remarks When switching between search modes in the search bar, queries
+ * should only be rendered in the input they originated from. In contrast, the
+ * latest comic results should be rendered on all search mode pages.
  */
 export function getCleanMeaningQuery({
   query,
