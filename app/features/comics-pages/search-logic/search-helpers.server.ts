@@ -38,8 +38,8 @@ export function getCleanResults(
  * being rendered in the meaning search input. 
  *
  * @remarks When switching between search modes in the search bar, queries
- * should only be rendered in the input they originated from. In contrast, the
- * latest comic results should be rendered on all search mode pages.
+ * should only be rendered in the input they originated from. (In contrast, the
+ * latest comic results should be rendered on all search mode pages.)
  */
 export function getCleanMeaningQuery({
   query,
