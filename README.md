@@ -23,25 +23,22 @@ Explore the meaning-based search in action: [socrates-eterna.com/comics/meaning]
 
 
 
-You can find the core search engine and results processing in `/app/features/comics-pages/search-logic/`
+You can find the core search engine and results processing in:
 
 ```
-search-logic/
-├── (setup-scripts-and-data/)
-├── (date-search-logic.ts)
+/app/features/comics-pages/search-logic/
+├── ...
 ├── get-pinecone-results.server.ts
 ├── get-query-embeddings.server.ts
 ├── search-helpers.server.ts
 └── semantic-search-logic.ts
 ```
 
-...which are implemented in the following files in `/app/routes/`
+...which are implemented in:
 
 ```
-routes/
+/app/routes/
 ├── ...
-├── (results.character.tsx)
-├── (results.date.tsx)
 └── results.meaning.tsx
 ```
 
