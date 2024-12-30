@@ -98,7 +98,8 @@ export async function getNewDateResultsAndQuery(request: Request) {
 }
 
 /**
- * Syncronizes results and query with session storage.
+ * Syncronizes results and query with session storage. This enables persisting
+ * rendered comics when switching between the different search mode routes.
  */
 export async function getSyncedResultsAndQuery(
   request: Request,
