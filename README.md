@@ -1,4 +1,6 @@
-# Socrates Eterna
+# [Socrates-Eterna.com](https://socrates-eterna.com/)
+>*Explore the repository in a fully functional one-click IDE:
+https://stackblitz.com/~/github.com/leonWarscheck/socrates-eterna*
 
 A comic search engine using AI generated vectors/ embeddings. It can find comics by related meaning rather than having to match exact keywords.
 
@@ -42,15 +44,14 @@ You can find the core search engine and results processing in:
 └── results.meaning.tsx
 ```
 
+
 ## Explore the Codebase
 
-The most fluent way to explore the codebase is to **open it as a codespace** like this:
+As mentioned above, the most fluent way to explore the codebase is at:
 
-<!-- ![screen-recording of meaning search terms in action](public/main/meaning-search-screen-recording.gif) -->
+https://stackblitz.com/~/github.com/leonWarscheck/socrates-eterna
 
-*Important: Run `npm install` to remove the Import and TypeScript errors that appear all over the place otherwise.*
-
-Now, with the codespace you have **an instant, full IDE in your browser**, including:
+Here you have **an instant, full IDE in your browser**, including:
 
 - `cmd + click` navigation to function definitions etc.
 - TSDoc comments on hovering
