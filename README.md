@@ -1,6 +1,9 @@
-# [Socrates-Eterna.com](https://socrates-eterna.com/)
->*Explore the repository in a fully functional one-click IDE:
-https://stackblitz.com/~/github.com/leonWarscheck/socrates-eterna*
+# Socrates Eterna
+
+> deployed at: [socrates-eterna.com](https://socrates-eterna.com/)
+
+> _Explore the repository in a fully functional one-click IDE:
+> https://stackblitz.com/~/github.com/leonWarscheck/socrates-eterna_
 
 A comic search engine using AI generated vectors/ embeddings. It can find comics by related meaning rather than having to match exact keywords.
 
@@ -23,8 +26,6 @@ Explore the meaning-based search in action: [socrates-eterna.com/comics/meaning]
 
 ## Core Engine
 
-
-
 You can find the core search engine and results processing in:
 
 ```
@@ -44,6 +45,7 @@ You can find the core search engine and results processing in:
 └── results.meaning.tsx
 ```
 
+</br>
 
 ## Explore the Codebase
 
