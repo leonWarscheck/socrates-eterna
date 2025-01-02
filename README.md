@@ -44,11 +44,13 @@ You can find the core search engine and results processing in:
 
 ## Explore the Codebase
 
-The best way to explore the codebase is to open it as a codespace at:
+The most fluent way to explore the codebase is to **open it as a codespace** like this:
 
-https://solid-meme-g44rxwpx677gcvr66.github.dev/
+<!-- ![screen-recording of meaning search terms in action](public/main/meaning-search-screen-recording.gif) -->
 
-There you have an instant, full IDE in your browser, including:
+*Important: Run `npm install` to remove the Import and TypeScript errors that appear all over the place otherwise.*
+
+Now, with the codespace you have **an instant, full IDE in your browser**, including:
 
 - `cmd + click` navigation to function definitions etc.
 - TSDoc comments on hovering

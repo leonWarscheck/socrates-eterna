@@ -16,12 +16,17 @@ import useIsSearching from "~/features/comics-pages/use-is-searching";
 //Receives URL request including form data as search params from `mode-meaning`
 //and `mode-meaning-bar`.
 export async function loader({ request }: LoaderFunctionArgs) {
+  // Gets query from request object and calls the core engine `semanticSearch` to
+  // fetch (comic) results matching the query.
   const { results: newResults, query: newQuery } =
     await getNewResultsAndQuery(request);
 
+  // Syncronizes results and query with session storage.
   const { syncedResults, syncedQuery, session } =
     await getSyncedResultsAndQuery(request, newResults, newQuery);
 
+  // Removes queries coming from character or date search, to prevent them from
+  // being rendered in the meaning search input.
   const cleanQuery = getCleanMeaningQuery({ query: syncedQuery, characters });
 
   return json(

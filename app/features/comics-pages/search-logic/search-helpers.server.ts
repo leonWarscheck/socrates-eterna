@@ -1,4 +1,5 @@
 import { createCookieSessionStorage } from "@remix-run/node";
+import type { Session } from "@remix-run/node";
 
 import {
   ComicCleaned,
@@ -102,13 +103,21 @@ export async function getNewDateResultsAndQuery(request: Request) {
 
 /**
  * Syncronizes results and query with session storage. This enables persisting
- * rendered comics when switching between the different search mode routes.
+ * rendered comics when clicking/switching between the different search mode
+ * routes.
+ *
+ * @returns The latest available results and query. Either from
+ * `getNewResultsAndQuery` or from `session` storage. 
  */
 export async function getSyncedResultsAndQuery(
   request: Request,
   newResults: ComicCleaned[] | "",
   newQuery: QueryProp["query"],
-) {
+): Promise<{ 
+  syncedResults: ComicCleaned[]; 
+  syncedQuery: QueryProp["query"]; 
+  session: Session; 
+}> {
   // Recieves session from browser via the request object.
   const session = await getSession(request.headers.get("Cookie"));
 
