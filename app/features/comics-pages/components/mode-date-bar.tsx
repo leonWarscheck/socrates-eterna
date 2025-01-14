@@ -54,10 +54,24 @@ export default function ModeDateBar({
 }: ModeBarProps) {
   const [selectValue, setSelectValue] = useState("month");
   const [query, setQuery] = useState(syncedQuery);
+  const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
 
   useEffect(() => {
     setQuery(syncedQuery);
   }, []);
+
+  /**
+   * Enables opening the datepicker window of both inputs, by clicking
+   * anywhere across their widths, not just on their right side icon. 
+   */
+  const toggleDatePicker = (event: React.MouseEvent<HTMLInputElement>) => {
+    if (isDatePickerOpen) {
+      event.currentTarget.blur();
+    } else {
+      event.currentTarget.showPicker();
+    }
+    setIsDatePickerOpen(!isDatePickerOpen);
+  };
 
   return (
     <div className="mb-4 mt-6 flex w-full max-w-4xl flex-col px-4 md1:mt-8 md1:flex-row">
@@ -93,6 +107,8 @@ export default function ModeDateBar({
                 name="month"
                 defaultValue={fixDateInputQuery(query, "month")}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
+                onClick={toggleDatePicker}
+                onBlur={() => setIsDatePickerOpen(false)}
               />
             )}
             {selectValue === "day" && (
@@ -101,6 +117,8 @@ export default function ModeDateBar({
                 name="day"
                 defaultValue={fixDateInputQuery(query, "day")}
                 className="h-10 w-full border-y-2 border-primary1 bg-transparent px-2 py-1 pl-4 focus:outline-none xs1:px-4"
+                onClick={toggleDatePicker}
+                onBlur={() => setIsDatePickerOpen(false)}
               />
             )}
           </div>

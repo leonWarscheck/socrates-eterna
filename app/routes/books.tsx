@@ -26,7 +26,7 @@ export default function Books() {
               />
             </div>
             <p
-              className={`absolute ${book.new ? "" : "hidden"} left-4 top-4 rounded-lg border-2 bg-primary1 px-1 text-base font-bold`}
+              className={`absolute ${book.new && "hidden"} left-4 top-4 rounded-lg border-2 bg-primary1 px-1 text-base font-bold`}
             >
               NEW
             </p>

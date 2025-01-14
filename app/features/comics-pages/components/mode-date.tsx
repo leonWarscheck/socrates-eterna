@@ -5,6 +5,21 @@ import type { IsSearchingProp } from "../types";
 
 export default function ModeDate({ isSearching }: IsSearchingProp) {
   const [selectValue, setSelectValue] = useState("month");
+  const [isDatePickerOpen, setIsDatePickerOpen] = useState(false);
+
+  /**
+   * Enables opening the datepicker window of both inputs, by clicking
+   * anywhere across their widths, not just on their right side icon. 
+   */
+  const toggleDatePicker = (event: React.MouseEvent<HTMLInputElement>) => {
+    if (isDatePickerOpen) {
+      event.currentTarget.blur();
+    } else {
+      event.currentTarget.showPicker();
+    }
+    setIsDatePickerOpen(!isDatePickerOpen);
+  };
+
   return (
     <Form id="sm" className="mx-auto flex w-full max-w-xl flex-col">
       <div className="flex w-full items-center px-4 text-base accent-black">
@@ -24,14 +39,18 @@ export default function ModeDate({ isSearching }: IsSearchingProp) {
             <input
               type="month"
               name="month"
-              className="h-10 w-full rounded-r-lg border-y-2 border-r-2 border-primary1 bg-transparent px-2 py-1 focus:outline-none"
+              className="h-10 w-full rounded-r-lg border-y-2 border-r-2 border-primary1 bg-transparent pr-2 pl-4 py-1 focus:outline-none"
+              onClick={toggleDatePicker}
+              onBlur={() => setIsDatePickerOpen(false)}
             />
           )}
           {selectValue === "day" && (
             <input
               type="date"
               name="day"
-              className="h-10 w-full rounded-r-lg border-y-2 border-r-2 border-primary1 bg-transparent px-4 py-1 focus:outline-none"
+              className="h-10 w-full rounded-r-lg border-y-2 border-r-2 border-primary1 bg-transparent pr-2 pl-4 py-1 focus:outline-none"
+              onClick={toggleDatePicker}
+              onBlur={() => setIsDatePickerOpen(false)}
             />
           )}
         </div>
